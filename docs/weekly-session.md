@@ -30,7 +30,9 @@ session. Merging it is the only approval and triggers the executor.
 | 80–85 | Merge the release PR | GitHub |
 | 85–90 | Watch the executor summary; merge the `ledger:` PR it opens; confirm no `red` issues | GitHub |
 
-Deleting a manifest line changes nothing else: hashes are per op, so the remaining ops stay valid.
+Removing an asset: delete its whole op group (create, uploads, activate, pins). Hashes are per op, but
+`$ref:ops[N]` points by position, so deleting ops shifts later refs. Safer: comment on the PR and let
+the engine regenerate the manifest; CI's dry-run must pass again before you merge.
 
 ## After merge
 
