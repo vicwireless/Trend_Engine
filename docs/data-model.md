@@ -176,5 +176,7 @@ time from the result of op N in the same manifest; the hash covers the unresolve
 Compute hashes with `python -m src.executor.hashing releases/<file>.yaml`.
 
 The playbook also lists `approver` and `merge_sha` on the manifest. They do not exist until the PR
-is merged, so the executor records them in the ledger instead of the manifest (pending: approval
-verification, see the PR's open items).
+is merged, so the executor records them on every ledger line instead. Approval rule (owner decision,
+2026-10-21): **merge-only, no review count**. The executor runs only for the merge commit of a PR
+into `main` merged by a login in `approval.owner_logins` (`src/executor/approval.py`); a direct push
+or anyone else's merge writes nothing.

@@ -11,6 +11,11 @@ price_floor_margin:
 offsite_ads_opted_in: false
 niches_active_max: 3
 
+# Approval rule (owner decision 2026-10-21): merge-only, no review count. The executor runs only
+# for the merge commit of a PR into main merged by one of these logins (src/executor/approval.py).
+approval:
+  owner_logins: [vicwireless]
+
 # --- Additions beyond the SP-01 brief. Values cite docs/playbook-v3.0.md where it sets them. ---
 cost_snapshot_max_age_days: 14        # CLAUDE.md rule 6
 niche_active_window_days: 28          # how far back the ledger counts a niche as "active"

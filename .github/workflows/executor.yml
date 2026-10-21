@@ -42,6 +42,17 @@ jobs:
           echo "files=$files" >> "$GITHUB_OUTPUT"
           echo "Manifests: $files"
 
+      - name: Verify the owner merged this (approval record)
+        # Owner's rule: merge-only, no review count. A direct push or a merge by anyone not in
+        # approval.owner_logins is not approval, so nothing runs (playbook SP-07).
+        id: approval
+        if: steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" \
+            | python -m src.executor.approval "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+
       - name: Refuse to run while a ledger PR is unmerged
         # Ceilings, cool-downs and idempotency read the ledger on main. A run with an unmerged
         # ledger PR would undercount, so fail closed (CLAUDE.md rule 8).
@@ -55,6 +66,8 @@ jobs:
       - name: Execute
         if: steps.changed.outputs.files != ''
         env:
+          APPROVER: ${{ steps.approval.outputs.approver }}
+          MERGE_SHA: ${{ github.sha }}
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_WRITE_TOKEN: ${{ secrets.ETSY_WRITE_TOKEN }}
           ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}

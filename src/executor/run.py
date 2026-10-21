@@ -61,7 +61,7 @@ def resolve_refs(payload: dict, results: dict[int, dict]) -> dict:
 
 
 def execute(manifest_path: Path, ctx: Context, ledger: Ledger, *, today: dt.date | None = None,
-            dry_run: bool = False) -> dict:
+            dry_run: bool = False, approval: dict | None = None) -> dict:
     today = today or dt.datetime.now(dt.timezone.utc).date()
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
     errors = preflight(manifest, manifest_path, ctx.root, ctx.config, ledger, today)
@@ -81,7 +81,7 @@ def execute(manifest_path: Path, ctx: Context, ledger: Ledger, *, today: dt.date
         key = idempotency_key(mid, i)
         prev = latest.get(key)
         base = {"manifest_id": mid, "op_index": i, "idempotency_key": key, "op": op["op"],
-                "niche": op["niche"], "payload_sha256": op["payload_sha256"]}
+                "niche": op["niche"], "payload_sha256": op["payload_sha256"], **(approval or {})}
         if prev and prev["status"] == "ok":
             summary["ops"].append({**base, "status": "skipped_duplicate"})
             continue
@@ -130,6 +130,13 @@ def main(argv: list[str] | None = None) -> int:
         print("Refusing to write outside GitHub Actions. Use --dry-run locally.", file=sys.stderr)
         return 2
 
+    approval = None
+    if not args.dry_run:
+        approval = {"approver": os.environ.get("APPROVER"), "merge_sha": os.environ.get("MERGE_SHA")}
+        if not all(approval.values()):
+            print("Refusing to write without APPROVER and MERGE_SHA from the approval step.", file=sys.stderr)
+            return 2
+
     config = load_config(ROOT)
     ctx = Context(ROOT, config)
     ledger = Ledger(ROOT / "data" / "ledger")
@@ -137,7 +144,7 @@ def main(argv: list[str] | None = None) -> int:
     for m in args.manifests:
         path = (ROOT / m) if not Path(m).is_absolute() else Path(m)
         try:
-            summary = execute(path, ctx, ledger, dry_run=args.dry_run)
+            summary = execute(path, ctx, ledger, dry_run=args.dry_run, approval=approval)
             print(json.dumps(summary, indent=2))
         except ExecutorError as e:
             rc = 1

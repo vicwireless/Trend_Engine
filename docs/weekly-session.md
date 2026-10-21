@@ -34,6 +34,11 @@ Deleting a manifest line changes nothing else: hashes are per op, so the remaini
 
 ## After merge
 
+Only your merge counts as approval: the executor checks that the push is the merge commit of a PR
+merged by a login in `approval.owner_logins` and writes `approver` and `merge_sha` on every ledger
+line. Branch protection on `main`: require a pull request and the `test` check, **no required
+review count** (GitHub blocks approving your own PRs).
+
 - The executor writes `data/ledger/YYYY-MM-DD.jsonl` and opens a `ledger:` PR (data only). Merge it
   before the next release: the executor refuses to run while a ledger PR is open, because
   ceilings, cool-downs and idempotency read the ledger on `main`. If a run was refused for this

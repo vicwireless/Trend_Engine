@@ -526,6 +526,16 @@ def test_dry_run_validates_without_writes(repo):
     assert out["ops"][0]["status"] == "validated" and ledger_lines(repo) == []
 
 
+@responses.activate
+def test_ledger_lines_carry_the_approval_record(repo):
+    mock_digital_flow()
+    responses.get(f"{ETSY_BASE}/listings/2001", json=R["etsy_listing_active"])
+    path = digital_manifest(repo)
+    runner.execute(path, ctx_for(repo), ledger_for(repo), today=TODAY,
+                   approval={"approver": "vicwireless", "merge_sha": "abc123"})
+    assert all(l["approver"] == "vicwireless" and l["merge_sha"] == "abc123" for l in ledger_lines(repo))
+
+
 def test_refuses_to_write_outside_github_actions(monkeypatch, capsys):
     monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
     assert runner.main(["releases/whatever.yaml"]) == 2
