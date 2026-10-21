@@ -23,6 +23,10 @@ class OpDisabled(RuntimeError):
     pass
 
 
+class PreconditionFailed(RuntimeError):
+    """Raised before any write when live state makes the op unsafe. Nothing was written."""
+
+
 @dataclass
 class Context:
     root: Path
@@ -165,6 +169,11 @@ def etsy_deactivate_listing(p: dict, ctx: Context) -> dict:
 def etsy_update_price(p: dict, ctx: Context) -> dict:
     lid = p["listing_id"]
     inv = ctx.etsy.get_json(f"listings/{lid}/inventory")
+    max_pct = ctx.config.get("price_change_max_pct", 0.10)
+    for current in {_etsy_price(o) for prod in inv.get("products", []) for o in prod.get("offerings", [])}:
+        if current and abs(p["price_usd"] / current - 1) > max_pct + 1e-9:
+            raise PreconditionFailed(f"listing {lid}: ${current:.2f} -> ${p['price_usd']:.2f} exceeds "
+                                     f"the ±{max_pct:.0%} price step")
     body = {
         "products": [{
             "sku": prod.get("sku", ""),

@@ -28,10 +28,15 @@
     },
     "tags": {
       "type": "boolean"
+    },
+    "partner_checked": {
+      "type": "boolean",
+      "description": "Owner confirmed the Printify production partner is attached in Etsy (playbook \u00a76, SP-07)."
     }
   },
   "required": [
-    "product_id"
+    "product_id",
+    "partner_checked"
   ],
   "additionalProperties": false
 }

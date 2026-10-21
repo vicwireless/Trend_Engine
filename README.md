@@ -2,7 +2,8 @@
 
 Trend-to-Revenue Engine for an Etsy shop: sense trends, define original digital and print-on-demand
 offers, produce compliant assets and listings, publish through an approval-gated executor, measure
-cohorts, and redefine weekly. The operating charter is [CLAUDE.md](CLAUDE.md).
+cohorts, and redefine weekly. The operating charter is [CLAUDE.md](CLAUDE.md); the full operating
+playbook (v3.0, 21 Oct 2026) is archived at [docs/playbook-v3.0.md](docs/playbook-v3.0.md).
 
 **The model proposes, the owner approves by merging, the executor publishes.**
 
@@ -20,7 +21,7 @@ cohorts, and redefine weekly. The operating charter is [CLAUDE.md](CLAUDE.md).
 | `assets/` | digital, pod, pins (`masters/*.psd` gitignored) |
 | `releases/` | Release manifests. Merging one to `main` triggers the executor |
 | `reports/` | weekly, monthly, incidents |
-| `docs/` | data model, scoring, cohort rules ([redefine](docs/redefine.md)), [weekly session](docs/weekly-session.md) |
+| `docs/` | [playbook](docs/playbook-v3.0.md), data model, scoring, [redefine](docs/redefine.md), [weekly session](docs/weekly-session.md), [pricing](docs/pricing.md), [gates](docs/gates.md) |
 
 ## Develop
 

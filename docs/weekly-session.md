@@ -1,45 +1,55 @@
 # Weekly owner session (runbook)
 
-> **Draft standing in for playbook §9.1**, which was not in the repo when this was written.
-
-Budget: **≤ 90 minutes of owner time per week** (`owner_hours_cap_per_week: 1.5`). The engine
-prepares everything as one PR before the session; the owner reviews, edits, and merges. Merging is
-the only approval. If the session would run over budget, cut scope, not checks.
+Source: playbook v3.0 §9.1 (`docs/playbook-v3.0.md`). Target **60–90 minutes**; steady-state cap
+`owner_hours_cap_per_week: 1.5`. The engine prepares one release PR (`release/week-NN`) before the
+session. Merging it is the only approval and triggers the executor.
 
 ## Before the session (automated, no external writes)
 
-1. Refresh signals: Etsy search counts/prices/favorites, SerpApi Google Trends, EverBee
-   (labelled as estimates). Write `data/signals/YYYY-MM-DD/`.
-2. Refresh cost snapshots older than 14 days in `data/costs/` (Printify catalog + shipping,
-   channel fees). Pricing stops if a snapshot is stale or unverified.
-3. Score niches/offers (`src/scoring/score.py`) into `data/scores/YYYY-MM-DD/`.
-4. Pull receipts (sanitized) and listing stats; update cohort checkpoints in `data/cohorts/`.
-5. Apply `docs/redefine.md` rules and draft decisions.
-6. Generate concepts, assets (with prompt provenance) and run print QA.
-7. Draft `releases/YYYY-MM-DD-<slug>.yaml` with hashes (`python -m src.executor.hashing`).
-8. Write `reports/weekly/YYYY-Www.md` and open one PR. The PR description is the owner's brief.
-   CI dry-runs the manifest so ceilings and compliance are checked before the owner looks.
-
-## The session (owner, ~75 min)
-
-| Block | Minutes | What the owner does |
+| Task | When | Output |
 |---|---|---|
-| Brief | 10 | Read the PR description: last week's numbers, cohort decisions, what is proposed and why. |
-| Cohort decisions | 10 | Accept or change each non-hold decision. Check the rule id and numbers. |
-| Concepts & IP | 20 | Veto anything with IP doubt (doubt = veto). Check differentiation. |
-| Listings & assets | 25 | Spot-check titles, tags, prices vs floor, mockups, QA reports, AI disclosure. Edit in the PR. |
-| Compliance checklist | 5 | Tick the PR template checklist. |
-| Merge | 5 | Merge. The executor runs; check the ledger commit and any incident file. |
+| `sense` (SP-02) | daily 06:07 | `data/signals/YYYY-MM-DD/`, rolling `signals: week NN` PR (data only) |
+| `measure` (SP-08) | daily 07:07 | `data/cohorts/`, `data/orders/`, `reports/daily/` |
+| `order-guardian` (SP-09) | every 6 h | `data/orders/holds.json`; `red` GitHub issue on alert |
+| `define-make` (SP-03→06) | Thu 03:07 | PR `release/week-NN` with `define.md`, `contact_sheet.md`, manifest, `pins.yaml`, `ads.yaml` |
+| `weekly-close` (SP-10) | Fri 05:07 | `reports/weekly/NN/brief.md`, `decisions.yaml`, appended to the PR |
+| `compliance-watch` (SP-12) | daily 08:07 | `reports/incidents/` |
+| `monthly-gate` (SP-11) | 1st, 04:07 | `reports/monthly/` |
+
+## The session
+
+| Min | Step | Where |
+|---|---|---|
+| 0–10 | Read `brief.md`; note owner yield and the single most-off assumption | PR |
+| 10–20 | Resolve holds in `holds.json`: release, message buyer (paste the drafted message in Etsy), or refund | Etsy, Printify |
+| 20–35 | Review `define.md`: accept the niche set or edit weights in `docs/scoring.md` | PR |
+| 35–55 | Skim `contact_sheet.md`; delete weak assets' lines from the manifest | PR |
+| 55–65 | Validate the top 5 new keywords in Etsy Marketplace Insights; drop a screenshot or CSV in `data/insights/` | Shop Manager |
+| 65–75 | Tick the PR checklist: partner attached on new POD listings, disclosure sentence spot-checked on 3 listings, ads changes applied per `ads.yaml` | Shop Manager |
+| 75–80 | Export Shop Stats CSV to `data/stats_exports/`; append minutes to `data/time_log.csv` | Shop Manager, repo |
+| 80–85 | Merge the release PR | GitHub |
+| 85–90 | Watch the executor summary; merge the `ledger:` PR it opens; confirm no `red` issues | GitHub |
+
+Deleting a manifest line changes nothing else: hashes are per op, so the remaining ops stay valid.
 
 ## After merge
 
-- The executor writes `data/ledger/YYYY-MM-DD.jsonl` and commits it. Any failure writes
-  `reports/incidents/` and stops the run.
-- Incidents: resolve by hand (check the channel, record the true outcome in the ledger), then
-  re-merge or re-run. Never delete ledger lines.
-- Monthly: roll weekly reports into `reports/monthly/YYYY-MM.md` with $/owner-hour.
+- The executor writes `data/ledger/YYYY-MM-DD.jsonl` and opens a `ledger:` PR (data only). Merge it
+  before the next release: the executor refuses to run while a ledger PR is open, because
+  ceilings, cool-downs and idempotency read the ledger on `main`. If a run was refused for this
+  reason, merge the ledger PR and use "Re-run jobs" on the executor workflow.
+- Any failure writes `reports/incidents/` and stops the run. Reconcile by hand (check the channel,
+  record the true outcome in the ledger), then re-run. Never delete ledger lines.
 
-## Owner-hour log
+## Labor rule
 
-Record actual minutes in the weekly report. Two weeks over budget in a row = cut
-`max_new_listings_per_week` in `config/engine.yaml` by a third.
+If the session exceeds **2 hours for two consecutive weeks**, the monthly gate must propose a labor
+fix (fewer concepts per week, stricter QA thresholds, or more automation) before any revenue
+expansion (§9.1).
+
+## Monthly and seasonal (§9.2)
+
+- Monthly: SP-11 gate; rotate Etsy Ads spend; check the Offsite Ads position against $10K.
+- Seasonal: launch collections 8–10 weeks before each peak in `data/calendar.yaml`; stop new
+  seasonal POD listings once the provider's holiday cutoff is inside the processing window.
+- Twice a year: paste new Etsy Seller Trend Report URLs into `data/trend_reports/queue.txt`.

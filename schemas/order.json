@@ -61,6 +61,45 @@
         "string",
         "null"
       ]
+    },
+    "is_digital": {
+      "type": "boolean"
+    },
+    "fees_usd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "offsite_ads_attributed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hold_state": {
+      "enum": [
+        "none",
+        "held",
+        "released",
+        "refunded",
+        "cancelled"
+      ]
+    },
+    "supplier_order_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "refund_usd": {
+      "type": "number"
     }
   },
   "required": [

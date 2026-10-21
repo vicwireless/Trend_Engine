@@ -18,6 +18,13 @@
 - [ ] Titles ≤ 15 words, 13 specific tags, accurate attributes
 - [ ] No secrets or `.env` files committed; no raw order exports committed
 - [ ] Cohort decisions follow `docs/redefine.md` with the rule id cited; nothing retired on views alone
+- [ ] POD only: production partner attached in Etsy for every new POD listing (Shop Manager); `partner_checked: true` set on each `printify_publish`
+- [ ] Disclosure sentence and AI attribute spot-checked on 3 live listings
+- [ ] Etsy Ads changes applied by hand per `ads.yaml` (≤ $3/day, ≤ 10 listings, ROAS ≥ 3 rule)
+- [ ] Top 5 new keywords validated in Marketplace Insights (`data/insights/`)
+- [ ] Shop Stats CSV exported to `data/stats_exports/`; session minutes appended to `data/time_log.csv`
+- [ ] Holds in `data/orders/holds.json` resolved
+- [ ] No open `ledger:` PR from the previous run
 - [ ] CI is green, including the manifest dry-run
 
 ## Owner time

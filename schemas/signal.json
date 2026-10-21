@@ -59,6 +59,13 @@
     },
     "notes": {
       "type": "string"
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Terms the data was obtained under (playbook \u00a75.3, SP-02)"
     }
   },
   "required": [

@@ -1,7 +1,24 @@
 # Niche / offer score (scoring-v0.1)
 
-> **Draft.** The playbook's scoring section was not in the repo when this was written. Weights,
-> normalisation ranges and bands below are starting assumptions to tune after the first 4 cohorts.
+> **Draft, not yet aligned with the playbook.** Playbook v3.0 SP-03 says weights live in this file
+> but does not set them. It names **eight** inputs; this v0.1 implements five. Weights, ranges and
+> bands below are assumptions to tune after the first 4 cohorts.
+
+## Playbook SP-03 inputs vs this version
+
+| SP-03 input | v0.1 coverage | Gap |
+|---|---|---|
+| `demand_momentum` (Trends slope + EverBee delta) | Demand **D** (SerpApi only) | EverBee delta not used |
+| `competition_gap` (result count vs top-25 median favorites) | Openness **O** + Engagement **E** | Uses top 100, not top 25 |
+| `gift_intent` (occasion words, "personalized" share) | — | Missing |
+| `digital_fit` | — | Missing |
+| `pod_fit` (blueprints, landed cost, margin at floor) | Price headroom **P** (partial) | Blueprint fit not scored |
+| `seasonality` (weeks to next peak) | — | Missing; `data/calendar.yaml` now exists |
+| `ip_risk` | Hard zero (veto before scoring) | Matches |
+| `our_evidence` (cohort orders/visits) | — | Missing |
+| — | Production fit **F** (owner minutes) | Not in SP-03; kept because it drives $/owner-hour |
+
+scoring-v0.2 should add the four missing inputs. That needs the owner to pick weights.
 
 The score ranks a niche + offer pair (e.g. "minimalist pickleball wall art, printable") from 0 to
 100 so the weekly session spends owner time on the best few. It is a proxy for expected

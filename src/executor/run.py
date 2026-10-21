@@ -23,7 +23,7 @@ import yaml
 from src.clients.base import ClientError, MissingCredential
 
 from .ledger import Ledger, idempotency_key
-from .ops import OPS, Context, OpDisabled
+from .ops import OPS, Context, OpDisabled, PreconditionFailed
 from .validate import REF_RE, preflight
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -93,7 +93,7 @@ def execute(manifest_path: Path, ctx: Context, ledger: Ledger, *, today: dt.date
         ledger.append({**base, "status": "pending", "write_attempted": True})
         try:
             out = OPS[op["op"]](payload, ctx)
-        except (MissingCredential, OpDisabled) as e:
+        except (MissingCredential, OpDisabled, PreconditionFailed) as e:
             ledger.append({**base, "status": "failed", "write_attempted": False, "error": str(e)})
             raise ExecutorError(f"{key}: {e}") from e
         except (ClientError, OSError, KeyError, ValueError) as e:

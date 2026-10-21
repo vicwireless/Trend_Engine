@@ -4,18 +4,22 @@ Every number from here is an estimate (CLAUDE.md rule 5); results carry source a
 Auth is the client_id / client_secret header pair. Quota headers (x-remaining-*) are tracked by
 HttpClient: a per-second limit at 0 pauses, any other limit at 0 stops the run.
 
-ASSUMPTION: EverBee's public API base URL and endpoint paths are not confirmed in this repo.
-They are constructor arguments so they can be corrected without touching callers.
+Base URL, auth headers and paths are from the EverBee Research Open API guide and OpenAPI
+document (https://research-open-api.everbee.com/docs/research-open-api-guide.html, read
+2026-10-21). Limits: 10 QPS and 50,000 queries per rolling 24 h per client_id; quota headers are
+x-remaining-this-second and x-remaining-today. Response field names are not pinned yet; callers
+should read data defensively until a live response is captured as a fixture.
 """
 from __future__ import annotations
 
 import datetime as dt
 import os
 from typing import Any
+from urllib.parse import quote
 
 from .base import HttpClient, require
 
-DEFAULT_BASE_URL = "https://api.everbee.io"
+DEFAULT_BASE_URL = "https://research-open-api.everbee.com"
 
 
 class EverBee:
@@ -37,8 +41,14 @@ class EverBee:
             "remaining": dict(self.http.remaining),
         }
 
-    def keyword_research(self, keyword: str, path: str = "/v1/keyword_research") -> dict:
-        return self.get(path, {"keyword": keyword})
+    def keyword_research(self, keyword: str, **params: Any) -> dict:
+        """GET /api/v1/keywords/{keyword}: suggestions and analytics for one keyword."""
+        return self.get(f"/api/v1/keywords/{quote(keyword, safe='')}", params)
 
-    def product_analytics(self, keyword: str, path: str = "/v1/product_analytics") -> dict:
-        return self.get(path, {"search_term": keyword})
+    def trending_keywords(self, **params: Any) -> dict:
+        """GET /api/v1/keywords: default or trending keyword suggestions."""
+        return self.get("/api/v1/keywords", params)
+
+    def product_analytics(self, keyword: str, **params: Any) -> dict:
+        """GET /api/v1/listings filtered by title_include: top-listing sales estimates."""
+        return self.get("/api/v1/listings", {"title_include": keyword, **params})

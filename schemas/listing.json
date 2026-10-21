@@ -78,6 +78,7 @@
         "draft",
         "active",
         "inactive",
+        "expired",
         "retired"
       ]
     },
@@ -94,6 +95,42 @@
     "updated_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "cost_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^data/costs/.+\\.json$"
+    },
+    "disclosure_checked": {
+      "type": "boolean"
+    },
+    "partner_checked": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "sibling_skus": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
@@ -113,7 +150,13 @@
     "state",
     "cohort_id",
     "created_at",
-    "updated_at"
+    "updated_at",
+    "sku",
+    "cost_snapshot_id",
+    "disclosure_checked",
+    "partner_checked",
+    "version",
+    "published_at"
   ],
   "additionalProperties": false
 }

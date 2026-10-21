@@ -89,6 +89,40 @@
     "created_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "licenses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "font",
+              "mockup",
+              "texture",
+              "other"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "record_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "name",
+          "license"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

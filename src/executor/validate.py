@@ -73,6 +73,11 @@ def preflight(manifest: dict, manifest_path: Path, root: Path, config: dict, led
             errors.append(f"{where}: payhip is disabled until payhip.api_base_url is configured")
         if fees and name in _PRICED_OPS:
             errors += _check_price(name, p, root, today, max_age, floors, fees, where)
+        if name == "etsy_update_price":
+            errors += _check_price_cooldown(p, config, ledger, today, where)
+        if name == "printify_publish" and p.get("partner_checked") is not True:
+            errors.append(f"{where}: POD publish requires partner_checked: true (owner attaches the production "
+                          "partner in Etsy and ticks the PR checklist)")
 
     errors += _check_ceilings(manifest, config, ledger, today, done)
     return errors
@@ -112,15 +117,31 @@ def _check_text(name: str, p: dict, config: dict, blocklist: Blocklist, where: s
         if len(title.split()) > MAX_TITLE_WORDS:
             errs.append(f"{where}: title has {len(title.split())} words (max {MAX_TITLE_WORDS})")
         if p.get("ai_assisted"):
-            sentence = config["compliance"]["ai_disclosure_sentence"].strip()
-            if sentence not in p["description"]:
+            sentence = " ".join(config["compliance"]["ai_disclosure_sentence"].split())
+            if sentence not in " ".join(p["description"].split()):
                 errs.append(f"{where}: ai_assisted listing is missing the AI disclosure sentence")
             etsy = config.get("etsy") or {}
             if (name == "etsy_create_digital_listing" and etsy.get("require_ai_disclosure_attribute", True)
                     and not (etsy.get("ai_disclosure_property") or {}).get("property_id")):
                 errs.append(f"{where}: AI disclosure attribute is required but etsy.ai_disclosure_property "
                             "is not configured")
+        if name == "printify_create_product":
+            partner = " ".join(config["compliance"]["pod_partner_sentence"].split())
+            if partner not in " ".join(p["description"].split()):
+                errs.append(f"{where}: POD listing is missing the production-partner sentence")
     return errs
+
+
+def _check_price_cooldown(p: dict, config: dict, ledger: Ledger, today: dt.date, where: str) -> list[str]:
+    days = config.get("price_change_cooldown_days", 28)
+    since = today - dt.timedelta(days=days)
+    for e in ledger.entries():
+        if (e.get("op") == "etsy_update_price" and e.get("status") == "ok"
+                and str((e.get("result") or {}).get("listing_id")) == str(p["listing_id"])
+                and dt.date.fromisoformat(e["ts"][:10]) > since):
+            return [f"{where}: listing {p['listing_id']} was repriced on {e['ts'][:10]}; "
+                    f"cool-down is {days} days"]
+    return []
 
 
 def _check_price(name, p, root, today, max_age, floors, fees, where) -> list[str]:
@@ -138,6 +159,9 @@ def _check_price(name, p, root, today, max_age, floors, fees, where) -> list[str
         return [f"{where}: {e}"]
     errs = []
     for price, cost, floor, channel_fees, label in checks:
+        if channel_fees.get("verified") is False:
+            errs.append(f"{where}: channel fees for this channel are not verified in the fee snapshot")
+            continue
         m = margin(price, cost, channel_fees)
         if m < floor:
             errs.append(f"{where}: {label + ' ' if label else ''}margin {m:.2f} at ${price:.2f} is below floor {floor:.2f}")

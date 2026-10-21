@@ -1,0 +1,2 @@
+# Etsy Seller Handbook trend-report URLs, one per line (playbook SP-02 D, §9.2).
+# The sense task extracts each new URL the next morning.

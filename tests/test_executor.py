@@ -20,7 +20,9 @@ NOW = dt.datetime(2026, 10, 21, 12, 0, tzinfo=dt.timezone.utc)
 R = load("executor/responses.json")
 SHOP, PSHOP = "77", "555"
 PAYHIP = "https://payhip.test/api/v1"
-DISCLOSURE = "This design was created with the help of AI tools and finished by hand."
+DISCLOSURE = ("This design was created by the seller using AI image tools from the seller's original prompts "
+              "and then edited; see shop policies.")
+PARTNER = "Produced by a production partner; see partner disclosure."
 TITLE = "Minimalist Pickleball Court Line Art Printable Wall Decor"
 TAGS = ["pickleball", "pickleball gift", "court art", "line art", "printable", "wall decor", "sports print",
         "minimalist", "game room", "coach gift", "dink", "paddle sport", "digital download"]
@@ -40,6 +42,7 @@ def repo(tmp_path, monkeypatch):
     costs.mkdir(parents=True)
     fees = json.loads((REPO / "data" / "costs" / "2026-10-21-channel-fees.json").read_text())
     fees.update(as_of="2026-10-20", verified=True)
+    fees["channels"]["payhip"]["verified"] = True
     (costs / "2026-10-20-channel-fees.json").write_text(json.dumps(fees))
     (costs / "2026-10-20-products.json").write_text(json.dumps({
         "as_of": "2026-10-20", "verified": True, "source": "test",
@@ -110,7 +113,7 @@ def image_payload(root, ref="$ref:ops[0].listing_id"):
 
 
 def printify_payload(**kw):
-    return {"title": "Retro Court Club Tee", "description": f"Soft tee.\n\n{DISCLOSURE}", "tags": ["pickleball"],
+    return {"title": "Retro Court Club Tee", "description": f"Soft tee.\n\n{DISCLOSURE}\n\n{PARTNER}", "tags": ["pickleball"],
             "blueprint_id": 6, "print_provider_id": 99, "ai_assisted": True,
             "variants": [{"id": 12100, "price_usd": 25.99, "cost_key": "tee-s"},
                          {"id": 12101, "price_usd": 25.99, "cost_key": "tee-m"}],
@@ -278,12 +281,37 @@ def test_update_price(repo):
     responses.put(f"{ETSY_BASE}/listings/2001/inventory", json={})
     responses.get(f"{ETSY_BASE}/listings/2001/inventory", json=R["etsy_inventory_after"])
     path = write_manifest(repo, [("etsy_update_price", "pickleball", {
-        "listing_id": 2001, "offer_type": "digital", "price_usd": 8.99,
+        "listing_id": 2001, "offer_type": "digital", "price_usd": 8.75,
         "cost_snapshot": "data/costs/2026-10-20-products.json", "cost_key": "digital"})])
     out = execute(repo, path)["ops"][0]
-    assert out["status"] == "ok" and out["readback"] == {"prices_usd": [8.99]}
+    assert out["status"] == "ok" and out["readback"] == {"prices_usd": [8.75]}
     put = json.loads(next(c for c in responses.calls if c.request.method == "PUT").request.body)
-    assert put["products"][0]["offerings"][0] == {"price": 8.99, "quantity": 999, "is_enabled": True}
+    assert put["products"][0]["offerings"][0] == {"price": 8.75, "quantity": 999, "is_enabled": True}
+
+
+@responses.activate
+def test_update_price_over_10pct_step_refused_before_write(repo):
+    responses.get(f"{ETSY_BASE}/listings/2001/inventory", json=R["etsy_inventory_before"])
+    path = write_manifest(repo, [("etsy_update_price", "pickleball", {
+        "listing_id": 2001, "offer_type": "digital", "price_usd": 8.99,
+        "cost_snapshot": "data/costs/2026-10-20-products.json", "cost_key": "digital"})])
+    with pytest.raises(runner.ExecutorError, match="price step"):
+        execute(repo, path)
+    assert all(c.request.method == "GET" for c in responses.calls)
+    assert ledger_lines(repo)[-1]["write_attempted"] is False
+
+
+@responses.activate
+def test_update_price_cooldown_blocks_second_change(repo):
+    responses.get(f"{ETSY_BASE}/listings/2001/inventory", json=R["etsy_inventory_before"])
+    responses.put(f"{ETSY_BASE}/listings/2001/inventory", json={})
+    responses.get(f"{ETSY_BASE}/listings/2001/inventory", json=R["etsy_inventory_after"])
+    op = ("etsy_update_price", "pickleball", {"listing_id": 2001, "offer_type": "digital", "price_usd": 8.75,
+          "cost_snapshot": "data/costs/2026-10-20-products.json", "cost_key": "digital"})
+    execute(repo, write_manifest(repo, [op]))
+    second = write_manifest(repo, [op], mid="2026-10-21-wk43b")
+    with pytest.raises(runner.PreflightFailed, match="cool-down"):
+        execute(repo, second)
 
 
 @responses.activate
@@ -303,13 +331,39 @@ def test_printify_create_and_publish(repo):
     responses.get(f"{PRINTIFY_BASE}/shops/{PSHOP}/products/pf_abc123.json", json=R["printify_product_locked"])
     path = write_manifest(repo, [
         ("printify_create_product", "pickleball", printify_payload()),
-        ("printify_publish", "pickleball", {"product_id": "$ref:ops[0].product_id"}),
+        ("printify_publish", "pickleball", {"product_id": "$ref:ops[0].product_id", "partner_checked": True}),
     ])
     summary = execute(repo, path)
     assert [o["status"] for o in summary["ops"]] == ["ok", "ok"]
     body = json.loads(responses.calls[0].request.body)
     assert body["variants"][0] == {"id": 12100, "price": 2599, "is_enabled": True}
     assert "/products/pf_abc123/publish.json" in responses.calls[2].request.url
+
+
+def test_pod_publish_requires_partner_checked(repo):
+    path = write_manifest(repo, [("printify_publish", "pickleball", {"product_id": "pf_abc123", "partner_checked": False})])
+    with pytest.raises(runner.PreflightFailed, match="partner_checked"):
+        execute(repo, path)
+
+
+def test_pod_listing_requires_partner_sentence(repo):
+    payload = printify_payload(description=f"Soft tee.\n\n{DISCLOSURE}")
+    path = write_manifest(repo, [("printify_create_product", "pickleball", payload)])
+    with pytest.raises(runner.PreflightFailed, match="production-partner sentence"):
+        execute(repo, path)
+
+
+def test_unverified_channel_fees_block_that_channel(repo):
+    p = repo / "data" / "costs" / "2026-10-20-channel-fees.json"
+    fees = json.loads(p.read_text())
+    fees["channels"]["payhip"]["verified"] = False
+    p.write_text(json.dumps(fees))
+    path = write_manifest(repo, [("payhip_create_product", "pickleball", {
+        "name": "Pickleball Court Printable", "description": f"Printable.\n\n{DISCLOSURE}", "price_usd": 7.99,
+        "path": "assets/digital/court.pdf", "file_sha256": file_sha256(repo / "assets/digital/court.pdf"),
+        "ai_assisted": True, "cost_snapshot": "data/costs/2026-10-20-products.json", "cost_key": "digital"})])
+    with pytest.raises(runner.PreflightFailed, match="not verified"):
+        execute(repo, path)
 
 
 @responses.activate

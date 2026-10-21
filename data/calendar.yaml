@@ -1,0 +1,15 @@
+# Seasonal calendar (playbook §3.2 item 5, §9.2, SP-06 step 4).
+# Launch collections 8–10 weeks before each peak. Stop new seasonal POD listings when the
+# provider's holiday cutoff falls inside the processing window.
+launch_lead_weeks: [8, 10]
+peaks:
+  - {name: thanksgiving_friendsgiving, peak: 2026-11-26}
+  - {name: christmas_hanukkah, peak: 2026-12-25, notes: "Hanukkah 2026 begins Dec 4"}
+  - {name: new_year_planners, peak: 2027-01-01}
+  - {name: valentines_day, peak: 2027-02-14}
+  - {name: mothers_day, peak: 2027-05-09}
+  - {name: graduation, peak: 2027-05-31, notes: "season spans May–June; date is a midpoint"}
+  - {name: wedding_season, peak: 2027-06-15, notes: "season spans May–October; date is a midpoint"}
+  - {name: fathers_day, peak: 2027-06-20}
+  - {name: back_to_school, peak: 2027-08-15, notes: "season, not a single day"}
+  - {name: halloween, peak: 2027-10-31}

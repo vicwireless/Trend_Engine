@@ -86,7 +86,7 @@
             "quantity": 999,
             "is_enabled": true,
             "price": {
-              "amount": 899,
+              "amount": 875,
               "divisor": 100,
               "currency_code": "USD"
             }
