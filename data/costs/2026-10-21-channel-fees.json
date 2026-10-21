@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-10-21",
+  "kind": "channel_fees",
+  "source": "Owned Channel Operating Playbook v3.0 §4.1 (docs/playbook-v3.0.md). Etsy stack is marked [V], verified against https://www.etsy.com/legal/fees/ on or before 2026-10-21. Payhip 5% platform fee cited from https://payhip.com/pricing; card processing is passed through by Stripe/PayPal and is [C] (confirm in the live account).",
+  "verified": true,
+  "verify_urls": [
+    "https://www.etsy.com/legal/fees/",
+    "https://help.etsy.com/hc/en-us/articles/360000338367-How-Etsy-s-Offsite-Ads-Work",
+    "https://www.etsy.com/seller-handbook/article/1503753198977",
+    "https://payhip.com/pricing"
+  ],
+  "channels": {
+    "etsy": {
+      "verified": true,
+      "listing_fee_usd": 0.20,
+      "transaction_fee_rate": 0.065,
+      "payment_processing_rate": 0.03,
+      "payment_processing_fixed_usd": 0.25,
+      "notes": "Transaction fee applies to price + shipping + gift wrap, not US sales tax. Processing applies to the total incl. tax and shipping."
+    },
+    "payhip": {
+      "verified": false,
+      "listing_fee_usd": 0.0,
+      "transaction_fee_rate": 0.05,
+      "payment_processing_rate": 0.029,
+      "payment_processing_fixed_usd": 0.30,
+      "notes": "5% is the free-plan platform fee. The 2.9% + $0.30 processing line is an assumed Stripe US rate, not confirmed."
+    }
+  },
+  "etsy_modifiers": {
+    "offsite_ads_rate_under_10k": 0.15,
+    "offsite_ads_rate_10k_plus": 0.12,
+    "offsite_ads_cap_per_order_usd": 100,
+    "offsite_ads_mandatory_threshold_trailing_365d_usd": 10000,
+    "share_and_save_refund_rate": 0.04,
+    "share_and_save_refund_rate_first_two_weeks": 0.065,
+    "etsy_plus_monthly_usd": 10
+  }
+}

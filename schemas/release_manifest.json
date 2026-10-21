@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "release_manifest",
+  "type": "object",
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+|week-[0-9]{4}-W[0-9]{2}[a-z0-9-]*)$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_minutes_estimate": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ads": {
+      "type": "object",
+      "properties": {
+        "daily_budget_usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "offsite_ads_opted_in": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "ops": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "op": {
+            "enum": [
+              "etsy_create_digital_listing",
+              "etsy_upload_file",
+              "etsy_upload_image",
+              "etsy_activate_listing",
+              "etsy_update_price",
+              "etsy_deactivate_listing",
+              "printify_create_product",
+              "printify_publish",
+              "pinterest_create_pin",
+              "payhip_create_product"
+            ]
+          },
+          "niche": {
+            "type": "string",
+            "minLength": 1
+          },
+          "payload": {
+            "type": "object"
+          },
+          "payload_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "op",
+          "niche",
+          "payload",
+          "payload_sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "week": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-W[0-9]{2}$"
+    }
+  },
+  "required": [
+    "manifest_id",
+    "created_at",
+    "created_by",
+    "summary",
+    "owner_minutes_estimate",
+    "ops"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "etsy_upload_image",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string",
+          "pattern": "^\\$ref:ops\\[[0-9]+\\]\\.[a-z_]+$"
+        }
+      ]
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "file_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "rank": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "alt_text": {
+      "type": "string",
+      "maxLength": 500
+    }
+  },
+  "required": [
+    "listing_id",
+    "path",
+    "file_sha256",
+    "rank"
+  ],
+  "additionalProperties": false
+}

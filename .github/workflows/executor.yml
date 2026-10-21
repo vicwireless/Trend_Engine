@@ -1,0 +1,94 @@
+name: executor
+
+# Runs ONLY when a merge to main adds or changes a release manifest. Merging the PR is the owner's
+# approval (CLAUDE.md). No schedule, no manual trigger, no other paths.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "releases/*.yaml"
+
+concurrency:
+  group: executor
+  cancel-in-progress: false
+
+permissions:
+  contents: write        # to push the ledger branch
+  pull-requests: write   # to open the 'ledger:' PR (playbook SP-07); main stays protected
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Find changed manifests
+        id: changed
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD^"; fi
+          files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'releases/*.yaml' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Manifests: $files"
+
+      - name: Verify the owner merged this (approval record)
+        # Owner's rule: merge-only, no review count. A direct push or a merge by anyone not in
+        # approval.owner_logins is not approval, so nothing runs (playbook SP-07).
+        id: approval
+        if: steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" \
+            | python -m src.executor.approval "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Refuse to run while a ledger PR is unmerged
+        # Ceilings, cool-downs and idempotency read the ledger on main. A run with an unmerged
+        # ledger PR would undercount, so fail closed (CLAUDE.md rule 8).
+        if: steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh pr list --state open --search "ledger: in:title" --json number --jq 'length')
+          if [ "$open" != "0" ]; then echo "Unmerged ledger PR(s) exist; merge them, then re-run."; exit 1; fi
+
+      - name: Execute
+        if: steps.changed.outputs.files != ''
+        env:
+          APPROVER: ${{ steps.approval.outputs.approver }}
+          MERGE_SHA: ${{ github.sha }}
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_WRITE_TOKEN: ${{ secrets.ETSY_WRITE_TOKEN }}
+          ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+          PRINTIFY_WRITE_TOKEN: ${{ secrets.PRINTIFY_WRITE_TOKEN }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+        run: python -m src.executor.run ${{ steps.changed.outputs.files }}
+
+      - name: Open ledger PR (data only)
+        if: always() && steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "trend-engine-executor"
+          git config user.email "executor@users.noreply.github.com"
+          git add data/ledger reports/incidents
+          if git diff --cached --quiet; then exit 0; fi
+          branch="ledger/${GITHUB_SHA::12}"
+          git checkout -b "$branch"
+          git commit -m "ledger: ${GITHUB_SHA::12}"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "ledger: ${GITHUB_SHA::12}" \
+            --body "Executor ledger and incidents for merge ${GITHUB_SHA}. Touches data/ledger and reports/incidents only. The owner merges it."

@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "order",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channel": {
+      "enum": [
+        "etsy",
+        "payhip"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "listing_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "external_listing_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "item_price_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "shipping_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "discount_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cogs_usd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "personalization_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1024
+    },
+    "cohort_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_digital": {
+      "type": "boolean"
+    },
+    "fees_usd": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "offsite_ads_attributed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hold_state": {
+      "enum": [
+        "none",
+        "held",
+        "released",
+        "refunded",
+        "cancelled"
+      ]
+    },
+    "supplier_order_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "refund_usd": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "order_id",
+    "channel",
+    "created_at",
+    "listing_id",
+    "external_listing_id",
+    "quantity",
+    "item_price_usd",
+    "shipping_usd",
+    "discount_usd",
+    "cogs_usd",
+    "personalization_text",
+    "cohort_id"
+  ],
+  "additionalProperties": false,
+  "description": "Buyer identity is never stored (CLAUDE.md rule 4). additionalProperties is false so PII fields cannot be added."
+}

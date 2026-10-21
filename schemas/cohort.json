@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "cohort",
+  "type": "object",
+  "properties": {
+    "cohort_id": {
+      "type": "string",
+      "pattern": "^coh-.+"
+    },
+    "listing_id": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "niche": {
+      "type": "string"
+    },
+    "week_launched": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-W[0-9]{2}$"
+    },
+    "offer_type": {
+      "enum": [
+        "digital",
+        "pod"
+      ]
+    },
+    "visits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "orders": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "revenue_usd": {
+      "type": "number"
+    },
+    "fees_usd": {
+      "type": "number"
+    },
+    "pod_cost_usd": {
+      "type": "number"
+    },
+    "ad_spend_usd": {
+      "type": "number"
+    },
+    "contribution_usd": {
+      "type": "number"
+    },
+    "contribution_per_100_visits": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "days_live": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "renewal_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "last_price_change_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "stats_source": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "hold",
+        "promote_pod",
+        "bundle",
+        "reprice_up",
+        "reprice_down",
+        "retire_at_renewal"
+      ]
+    },
+    "decision_rule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decided_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "cohort_id",
+    "listing_id",
+    "sku",
+    "niche",
+    "week_launched",
+    "offer_type",
+    "visits",
+    "orders",
+    "revenue_usd",
+    "fees_usd",
+    "pod_cost_usd",
+    "ad_spend_usd",
+    "contribution_usd",
+    "days_live",
+    "stats_source",
+    "decision"
+  ],
+  "additionalProperties": false
+}

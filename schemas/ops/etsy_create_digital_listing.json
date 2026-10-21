@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "etsy_create_digital_listing",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 140
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20
+      },
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true
+    },
+    "taxonomy_id": {
+      "type": "integer"
+    },
+    "who_made": {
+      "enum": [
+        "i_did",
+        "someone_else",
+        "collective"
+      ]
+    },
+    "when_made": {
+      "type": "string"
+    },
+    "ai_assisted": {
+      "type": "boolean"
+    },
+    "price_usd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "cost_snapshot": {
+      "type": "string",
+      "pattern": "^data/costs/.+\\.json$"
+    },
+    "cost_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "tags",
+    "taxonomy_id",
+    "who_made",
+    "when_made",
+    "ai_assisted",
+    "price_usd",
+    "cost_snapshot",
+    "cost_key"
+  ],
+  "additionalProperties": false
+}

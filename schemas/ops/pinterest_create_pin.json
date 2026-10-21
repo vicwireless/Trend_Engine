@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pinterest_create_pin",
+  "type": "object",
+  "properties": {
+    "board_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "link": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "image_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "alt_text": {
+      "type": "string",
+      "maxLength": 500
+    }
+  },
+  "required": [
+    "board_id",
+    "title",
+    "link",
+    "image_url"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,60 @@
+# Engine ceilings. The executor refuses any manifest that would exceed these.
+# Changing a ceiling is itself a PR the owner merges.
+
+owner_hours_cap_per_week: 1.5
+max_new_listings_per_week: 60
+max_pod_candidates_per_week: 10
+etsy_ads_daily_cap_usd: 3
+price_floor_margin:
+  digital: 0.60
+  pod: 0.30        # before ads
+offsite_ads_opted_in: false
+niches_active_max: 3
+
+# Approval rule (owner decision 2026-10-21): merge-only, no review count. The executor runs only
+# for the merge commit of a PR into main merged by one of these logins (src/executor/approval.py).
+approval:
+  owner_logins: [vicwireless]
+
+# --- Additions beyond the SP-01 brief. Values cite docs/playbook-v3.0.md where it sets them. ---
+cost_snapshot_max_age_days: 14        # CLAUDE.md rule 6
+niche_active_window_days: 28          # how far back the ledger counts a niche as "active"
+compliance:
+  # Exact sentence from playbook SP-05. The executor requires it verbatim in every ai_assisted
+  # listing description.
+  ai_disclosure_sentence: >-
+    This design was created by the seller using AI image tools from the seller's original prompts
+    and then edited; see shop policies.
+  # Playbook SP-05: required in every POD listing description.
+  pod_partner_sentence: >-
+    Produced by a production partner; see partner disclosure.
+  min_text_contrast_ratio: 4.5        # WCAG AA, used by print QA (assumption; playbook gives no figure)
+  max_personalization_fields: 5       # Printify/Etsy personalization limit (playbook §3.2)
+
+# Redefine rails (playbook §9.3 rule 4, SP-10). Enforced on etsy_update_price.
+price_change_max_pct: 0.10            # ±10% per change
+price_change_cooldown_days: 28        # one change per SKU per 4 weeks
+
+# Marketing and sensing budgets (playbook SP-02, SP-04, SP-06, §4.3)
+pins_per_day_max: 8
+etsy_ads_max_listings: 10
+etsy_ads_min_roas_14d: 3
+serpapi_max_queries_per_day: 8        # free tier, 250/month
+image_api_budget_usd_per_month: 15    # Lean stack line item
+everbee:
+  max_qps: 10                         # EverBee Research API guide
+  max_queries_per_day: 50000
+printify:
+  publish_limit_per_30_min: 200       # Printify rate limits page
+etsy:
+  # CLAUDE.md rule 2 requires the AI-disclosure attribute on every AI-assisted listing.
+  # The Etsy property id / value ids for it are not confirmed yet, so the executor refuses
+  # ai_assisted listings until they are set here (fail closed). Set via updateListingProperty.
+  require_ai_disclosure_attribute: true
+  ai_disclosure_property:
+    property_id: null
+    value_ids: []
+    values: []
+payhip:
+  # Payhip has no confirmed public product-create API. Op stays disabled until this is set.
+  api_base_url: null

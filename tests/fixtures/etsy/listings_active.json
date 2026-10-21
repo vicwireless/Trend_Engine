@@ -1,0 +1,14 @@
+{
+  "count": 18342,
+  "results": [
+    {"listing_id": 1001, "title": "Minimalist pickleball print", "shop_id": 77, "num_favorers": 412,
+     "price": {"amount": 1299, "divisor": 100, "currency_code": "USD"}, "tags": ["pickleball", "wall art"],
+     "created_timestamp": 1760000000},
+    {"listing_id": 1002, "title": "Pickleball paddle line art", "shop_id": 78, "num_favorers": 37,
+     "price": {"amount": 850, "divisor": 100, "currency_code": "USD"}, "tags": ["pickleball"],
+     "created_timestamp": 1760100000},
+    {"listing_id": 1003, "title": "Pickleball court poster", "shop_id": 79, "num_favorers": 5,
+     "price": {"amount": 1500, "divisor": 100, "currency_code": "EUR"}, "tags": [],
+     "created_timestamp": 1760200000}
+  ]
+}

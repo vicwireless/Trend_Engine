@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "etsy_activate_listing",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string",
+          "pattern": "^\\$ref:ops\\[[0-9]+\\]\\.[a-z_]+$"
+        }
+      ]
+    }
+  },
+  "required": [
+    "listing_id"
+  ],
+  "additionalProperties": false
+}

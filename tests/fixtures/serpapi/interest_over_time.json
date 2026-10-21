@@ -1,0 +1,273 @@
+{
+ "search_metadata": {
+  "status": "Success"
+ },
+ "interest_over_time": {
+  "timeline_data": [
+   {
+    "date": "week 0",
+    "timestamp": "1730000000",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 1",
+    "timestamp": "1730604800",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 2",
+    "timestamp": "1731209600",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 3",
+    "timestamp": "1731814400",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 4",
+    "timestamp": "1732419200",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 5",
+    "timestamp": "1733024000",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 6",
+    "timestamp": "1733628800",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 7",
+    "timestamp": "1734233600",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 8",
+    "timestamp": "1734838400",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 9",
+    "timestamp": "1735443200",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 10",
+    "timestamp": "1736048000",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 11",
+    "timestamp": "1736652800",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "40",
+      "extracted_value": 40
+     }
+    ]
+   },
+   {
+    "date": "week 12",
+    "timestamp": "1737257600",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 13",
+    "timestamp": "1737862400",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 14",
+    "timestamp": "1738467200",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 15",
+    "timestamp": "1739072000",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 16",
+    "timestamp": "1739676800",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 17",
+    "timestamp": "1740281600",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 18",
+    "timestamp": "1740886400",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 19",
+    "timestamp": "1741491200",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 20",
+    "timestamp": "1742096000",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 21",
+    "timestamp": "1742700800",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 22",
+    "timestamp": "1743305600",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   },
+   {
+    "date": "week 23",
+    "timestamp": "1743910400",
+    "values": [
+     {
+      "query": "pickleball gift",
+      "value": "60",
+      "extracted_value": 60
+     }
+    ]
+   }
+  ]
+ }
+}

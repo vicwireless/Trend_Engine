@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "etsy_update_price",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string",
+          "pattern": "^\\$ref:ops\\[[0-9]+\\]\\.[a-z_]+$"
+        }
+      ]
+    },
+    "offer_type": {
+      "enum": [
+        "digital",
+        "pod"
+      ]
+    },
+    "price_usd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "cost_snapshot": {
+      "type": "string",
+      "pattern": "^data/costs/.+\\.json$"
+    },
+    "cost_key": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "listing_id",
+    "offer_type",
+    "price_usd",
+    "cost_snapshot",
+    "cost_key"
+  ],
+  "additionalProperties": false
+}

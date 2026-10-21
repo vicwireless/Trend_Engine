@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "listing",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concept_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channel": {
+      "enum": [
+        "etsy",
+        "printify_etsy",
+        "payhip",
+        "pinterest"
+      ]
+    },
+    "external_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "offer_type": {
+      "enum": [
+        "digital",
+        "pod"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 140
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20
+      },
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true
+    },
+    "price_usd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "taxonomy_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ai_assisted": {
+      "type": "boolean"
+    },
+    "ai_disclosure_included": {
+      "type": "boolean"
+    },
+    "asset_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state": {
+      "enum": [
+        "draft",
+        "active",
+        "inactive",
+        "expired",
+        "retired"
+      ]
+    },
+    "cohort_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "cost_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^data/costs/.+\\.json$"
+    },
+    "disclosure_checked": {
+      "type": "boolean"
+    },
+    "partner_checked": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "sibling_skus": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "listing_id",
+    "concept_id",
+    "channel",
+    "external_id",
+    "offer_type",
+    "title",
+    "description",
+    "tags",
+    "price_usd",
+    "taxonomy_id",
+    "ai_assisted",
+    "ai_disclosure_included",
+    "asset_ids",
+    "state",
+    "cohort_id",
+    "created_at",
+    "updated_at",
+    "sku",
+    "cost_snapshot_id",
+    "disclosure_checked",
+    "partner_checked",
+    "version",
+    "published_at"
+  ],
+  "additionalProperties": false
+}

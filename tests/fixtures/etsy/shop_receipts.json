@@ -1,0 +1,46 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "receipt_id": 555001,
+      "receipt_type": 0,
+      "seller_user_id": 9,
+      "seller_email": "seller@example.com",
+      "buyer_user_id": 31337,
+      "buyer_email": "jane.buyer@example.com",
+      "name": "Jane Buyer",
+      "first_line": "12 Elm Street",
+      "second_line": "Apt 4",
+      "city": "Springfield",
+      "state": "IL",
+      "zip": "62701",
+      "formatted_address": "Jane Buyer\n12 Elm Street\nSpringfield, IL 62701",
+      "country_iso": "US",
+      "message_from_buyer": "Please gift wrap for my sister Ann",
+      "status": "Paid",
+      "is_paid": true,
+      "is_shipped": false,
+      "create_timestamp": 1761000000,
+      "grandtotal": {"amount": 2598, "divisor": 100, "currency_code": "USD"},
+      "subtotal": {"amount": 2598, "divisor": 100, "currency_code": "USD"},
+      "total_shipping_cost": {"amount": 0, "divisor": 100, "currency_code": "USD"},
+      "discount_amt": {"amount": 0, "divisor": 100, "currency_code": "USD"},
+      "transactions": [
+        {
+          "transaction_id": 9001,
+          "listing_id": 1001,
+          "product_id": 4001,
+          "buyer_user_id": 31337,
+          "quantity": 2,
+          "sku": "PB-01",
+          "is_digital": true,
+          "price": {"amount": 1299, "divisor": 100, "currency_code": "USD"},
+          "shipping_cost": {"amount": 0, "divisor": 100, "currency_code": "USD"},
+          "variations": [
+            {"property_id": 54, "value_id": null, "formatted_name": "Personalization", "formatted_value": "Team Dink 2026"}
+          ]
+        }
+      ]
+    }
+  ]
+}

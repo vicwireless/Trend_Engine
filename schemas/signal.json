@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "signal",
+  "type": "object",
+  "properties": {
+    "signal_id": {
+      "type": "string",
+      "pattern": "^sig-[0-9]{8}-[a-z0-9-]+$"
+    },
+    "source": {
+      "enum": [
+        "etsy_open_api",
+        "etsy_marketplace_insights",
+        "everbee",
+        "erank",
+        "serpapi_google_trends",
+        "pinterest_trends",
+        "manual"
+      ]
+    },
+    "is_estimate": {
+      "type": "boolean"
+    },
+    "keyword": {
+      "type": "string",
+      "minLength": 1
+    },
+    "niche": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "window_start": {
+      "type": "string",
+      "format": "date"
+    },
+    "window_end": {
+      "type": "string",
+      "format": "date"
+    },
+    "fetched_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "raw_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Terms the data was obtained under (playbook \u00a75.3, SP-02)"
+    }
+  },
+  "required": [
+    "signal_id",
+    "source",
+    "is_estimate",
+    "keyword",
+    "niche",
+    "metric",
+    "value",
+    "unit",
+    "window_start",
+    "window_end",
+    "fetched_at"
+  ],
+  "additionalProperties": false
+}

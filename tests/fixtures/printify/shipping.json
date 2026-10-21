@@ -1,0 +1,4 @@
+{"handling_time": {"value": 3, "unit": "day"}, "profiles": [
+  {"variant_ids": [12100, 12101], "first_item": {"cost": 475, "currency": "USD"}, "additional_items": {"cost": 240, "currency": "USD"}, "countries": ["US"]},
+  {"variant_ids": [12100, 12101], "first_item": {"cost": 1000, "currency": "USD"}, "additional_items": {"cost": 500, "currency": "USD"}, "countries": ["REST_OF_THE_WORLD"]}
+]}
