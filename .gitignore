@@ -1,0 +1,18 @@
+# Secrets: never commit. Real values live in GitHub Actions secrets / cloud env secrets.
+.env
+.env.*
+!.env.example
+
+# Raw order exports may contain buyer PII (CLAUDE.md rule 4). Never commit.
+data/orders/raw/*
+!data/orders/raw/.gitkeep
+
+# Layered masters are large and stay local.
+assets/**/masters/*.psd
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/

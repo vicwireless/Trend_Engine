@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "asset",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concept_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "master",
+        "print_file",
+        "mockup",
+        "digital_download",
+        "pin_image"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "width_px": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "height_px": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ppi": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "color_profile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "file_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ai_assisted": {
+      "type": "boolean"
+    },
+    "provenance_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "qa": {
+      "type": "object",
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "report_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "passed",
+        "report_path",
+        "checked_at"
+      ],
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "asset_id",
+    "concept_id",
+    "kind",
+    "path",
+    "sha256",
+    "width_px",
+    "height_px",
+    "ppi",
+    "color_profile",
+    "file_bytes",
+    "ai_assisted",
+    "provenance_path",
+    "qa",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

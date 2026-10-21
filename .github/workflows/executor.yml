@@ -1,0 +1,64 @@
+name: executor
+
+# Runs ONLY when a merge to main adds or changes a release manifest. Merging the PR is the owner's
+# approval (CLAUDE.md). No schedule, no manual trigger, no other paths.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "releases/*.yaml"
+
+concurrency:
+  group: executor
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # to commit the ledger back
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Find changed manifests
+        id: changed
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD^"; fi
+          files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'releases/*.yaml' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Manifests: $files"
+
+      - name: Execute
+        if: steps.changed.outputs.files != ''
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_WRITE_TOKEN: ${{ secrets.ETSY_WRITE_TOKEN }}
+          ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+          PRINTIFY_WRITE_TOKEN: ${{ secrets.PRINTIFY_WRITE_TOKEN }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+        run: python -m src.executor.run ${{ steps.changed.outputs.files }}
+
+      - name: Commit ledger and incidents
+        if: always() && steps.changed.outputs.files != ''
+        run: |
+          git config user.name "trend-engine-executor"
+          git config user.email "executor@users.noreply.github.com"
+          git add data/ledger reports/incidents
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "ledger: ${{ github.sha }}"
+          git push origin HEAD:main

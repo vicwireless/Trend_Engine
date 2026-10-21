@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "concept",
+  "type": "object",
+  "properties": {
+    "concept_id": {
+      "type": "string",
+      "pattern": "^con-[0-9]{8}-[a-z0-9-]+$"
+    },
+    "niche": {
+      "type": "string",
+      "minLength": 1
+    },
+    "working_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offer_type": {
+      "enum": [
+        "digital",
+        "pod"
+      ]
+    },
+    "product_format": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_buyer": {
+      "type": "string"
+    },
+    "gift_occasion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "differentiation": {
+      "type": "string",
+      "minLength": 10
+    },
+    "signal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "score_version": {
+      "type": "string"
+    },
+    "ip_review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "pass",
+            "veto"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "status",
+        "reasons",
+        "reviewed_at"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "approved",
+        "vetoed",
+        "built",
+        "parked"
+      ]
+    },
+    "ai_assisted": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "concept_id",
+    "niche",
+    "working_title",
+    "offer_type",
+    "product_format",
+    "target_buyer",
+    "gift_occasion",
+    "differentiation",
+    "signal_ids",
+    "score",
+    "score_version",
+    "ip_review",
+    "status",
+    "ai_assisted",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

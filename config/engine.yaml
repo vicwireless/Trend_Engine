@@ -1,0 +1,32 @@
+# Engine ceilings. The executor refuses any manifest that would exceed these.
+# Changing a ceiling is itself a PR the owner merges.
+
+owner_hours_cap_per_week: 1.5
+max_new_listings_per_week: 60
+max_pod_candidates_per_week: 10
+etsy_ads_daily_cap_usd: 3
+price_floor_margin:
+  digital: 0.60
+  pod: 0.30        # before ads
+offsite_ads_opted_in: false
+niches_active_max: 3
+
+# --- Additions beyond the Day-0 brief (assumptions; see PR) ---
+cost_snapshot_max_age_days: 14        # CLAUDE.md rule 6
+niche_active_window_days: 28          # how far back the ledger counts a niche as "active"
+compliance:
+  ai_disclosure_sentence: >-
+    This design was created with the help of AI tools and finished by hand.
+  min_text_contrast_ratio: 4.5        # WCAG AA, used by print QA
+etsy:
+  # CLAUDE.md rule 2 requires the AI-disclosure attribute on every AI-assisted listing.
+  # The Etsy property id / value ids for it are not confirmed yet, so the executor refuses
+  # ai_assisted listings until they are set here (fail closed). Set via updateListingProperty.
+  require_ai_disclosure_attribute: true
+  ai_disclosure_property:
+    property_id: null
+    value_ids: []
+    values: []
+payhip:
+  # Payhip has no confirmed public product-create API. Op stays disabled until this is set.
+  api_base_url: null

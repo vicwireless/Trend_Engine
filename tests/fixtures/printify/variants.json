@@ -1,0 +1,4 @@
+{"id": 99, "title": "Printify Choice", "variants": [
+  {"id": 12100, "title": "White / S", "options": {"color": "White", "size": "S"}, "placeholders": [{"position": "front", "height": 5100, "width": 4500}]},
+  {"id": 12101, "title": "White / M", "options": {"color": "White", "size": "M"}, "placeholders": [{"position": "front", "height": 5100, "width": 4500}]}
+]}

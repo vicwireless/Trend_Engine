@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-10-21",
+  "kind": "channel_fees",
+  "source": "Seeded from recalled public fee schedules (Etsy US seller fees; Payhip free plan + card processing). NOT verified against the live pages.",
+  "verified": false,
+  "verify_urls": [
+    "https://www.etsy.com/legal/fees/",
+    "https://payhip.com/pricing"
+  ],
+  "channels": {
+    "etsy": {
+      "listing_fee_usd": 0.20,
+      "transaction_fee_rate": 0.065,
+      "payment_processing_rate": 0.03,
+      "payment_processing_fixed_usd": 0.25
+    },
+    "payhip": {
+      "listing_fee_usd": 0.0,
+      "transaction_fee_rate": 0.05,
+      "payment_processing_rate": 0.029,
+      "payment_processing_fixed_usd": 0.30
+    }
+  }
+}

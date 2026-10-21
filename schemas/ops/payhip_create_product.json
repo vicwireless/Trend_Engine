@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "payhip_create_product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "price_usd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "file_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "ai_assisted": {
+      "type": "boolean"
+    },
+    "cost_snapshot": {
+      "type": "string",
+      "pattern": "^data/costs/.+\\.json$"
+    },
+    "cost_key": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "price_usd",
+    "path",
+    "file_sha256",
+    "ai_assisted",
+    "cost_snapshot",
+    "cost_key"
+  ],
+  "additionalProperties": false
+}

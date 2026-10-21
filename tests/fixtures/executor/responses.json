@@ -1,0 +1,141 @@
+{
+  "etsy_create_listing": {
+    "listing_id": 2001,
+    "state": "draft",
+    "title": "Minimalist Pickleball Court Line Art Printable Wall Decor",
+    "price": {
+      "amount": 799,
+      "divisor": 100,
+      "currency_code": "USD"
+    }
+  },
+  "etsy_listing_draft": {
+    "listing_id": 2001,
+    "state": "draft",
+    "title": "Minimalist Pickleball Court Line Art Printable Wall Decor",
+    "price": {
+      "amount": 799,
+      "divisor": 100,
+      "currency_code": "USD"
+    }
+  },
+  "etsy_listing_active": {
+    "listing_id": 2001,
+    "state": "active",
+    "title": "Minimalist Pickleball Court Line Art Printable Wall Decor",
+    "price": {
+      "amount": 799,
+      "divisor": 100,
+      "currency_code": "USD"
+    }
+  },
+  "etsy_listing_inactive": {
+    "listing_id": 2001,
+    "state": "inactive"
+  },
+  "etsy_property": {
+    "property_id": 900001,
+    "values": [
+      "Yes"
+    ]
+  },
+  "etsy_file": {
+    "listing_file_id": 3001,
+    "listing_id": 2001,
+    "filename": "pickleball-court-8x10.pdf",
+    "filesize": "1.2 MB"
+  },
+  "etsy_image": {
+    "listing_image_id": 4001,
+    "listing_id": 2001,
+    "rank": 1
+  },
+  "etsy_inventory_before": {
+    "products": [
+      {
+        "product_id": 1,
+        "sku": "",
+        "property_values": [],
+        "offerings": [
+          {
+            "offering_id": 1,
+            "quantity": 999,
+            "is_enabled": true,
+            "price": {
+              "amount": 799,
+              "divisor": 100,
+              "currency_code": "USD"
+            }
+          }
+        ]
+      }
+    ],
+    "price_on_property": [],
+    "quantity_on_property": [],
+    "sku_on_property": []
+  },
+  "etsy_inventory_after": {
+    "products": [
+      {
+        "product_id": 1,
+        "sku": "",
+        "property_values": [],
+        "offerings": [
+          {
+            "offering_id": 1,
+            "quantity": 999,
+            "is_enabled": true,
+            "price": {
+              "amount": 899,
+              "divisor": 100,
+              "currency_code": "USD"
+            }
+          }
+        ]
+      }
+    ],
+    "price_on_property": [],
+    "quantity_on_property": [],
+    "sku_on_property": []
+  },
+  "printify_product_created": {
+    "id": "pf_abc123",
+    "title": "Retro Court Club Tee"
+  },
+  "printify_product": {
+    "id": "pf_abc123",
+    "title": "Retro Court Club Tee",
+    "is_locked": false,
+    "external": null,
+    "variants": [
+      {
+        "id": 12100,
+        "price": 2599
+      },
+      {
+        "id": 12101,
+        "price": 2599
+      },
+      {
+        "id": 99999,
+        "price": 3000
+      }
+    ]
+  },
+  "printify_product_locked": {
+    "id": "pf_abc123",
+    "title": "Retro Court Club Tee",
+    "is_locked": true,
+    "external": null
+  },
+  "pinterest_pin": {
+    "id": "pin_777",
+    "board_id": "board_1",
+    "link": "https://www.etsy.com/listing/2001",
+    "title": "Pickleball court art"
+  },
+  "payhip_product": {
+    "id": "ph_42",
+    "name": "Pickleball Court Printable"
+  }
+}

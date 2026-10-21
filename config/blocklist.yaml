@@ -1,0 +1,93 @@
+# IP blocklist. Any hit = veto (CLAUDE.md rule 3). Uncertainty = veto too; record the reason.
+# Terms are matched case-insensitively on whole words. Regexes use Python `re` syntax with IGNORECASE.
+# See config/README.md for how to extend.
+
+version: 1
+categories:
+  brands:
+    - disney
+    - nike
+    - adidas
+    - coca-cola
+    - starbucks
+    - lego
+    - barbie
+    - hello kitty
+    - stanley cup
+  sports_leagues:
+    - nfl
+    - nba
+    - mlb
+    - nhl
+    - mls
+    - ncaa
+    - fifa
+    - uefa
+    - premier league
+    - super bowl
+    - march madness
+  entertainment_franchises:
+    - star wars
+    - marvel
+    - harry potter
+    - hogwarts
+    - pokemon
+    - pokémon
+    - taylor swift eras
+    - lord of the rings
+    - star trek
+    - stranger things
+    - bluey
+    - sanrio
+    - minecraft
+  celebrities:
+    - taylor swift
+    - beyonce
+    - beyoncé
+    - harry styles
+    - travis kelce
+    - oprah
+  song_lyrics:
+    - shake it off
+    - all too well
+    - bohemian rhapsody
+  attributed_quotes:
+    # Quote text attributed to a person is blocked regardless of whether the name appears.
+    - be the change you wish to see
+    - keep calm and carry on
+  universities:
+    - harvard
+    - yale
+    - stanford
+    - princeton
+    - notre dame
+    - alabama crimson tide
+  military_insignia:
+    - usmc
+    - marine corps
+    - navy seal
+    - army ranger
+    - 82nd airborne
+    - semper fi
+  national_park_logos:
+    - nps arrowhead
+    - national park service
+    - find your park
+
+regex:
+  # Lookalike / workaround spellings and generic risk patterns.
+  - name: trademark_symbols
+    pattern: '[™®©]'
+  - name: inspired_by_hedge
+    pattern: '\b(inspired by|in the style of|dupe|lookalike|knock[- ]?off|parody of)\b'
+  - name: disney_lookalike
+    pattern: '\bd[i1!]sn[e3]y\b'
+  - name: swiftie
+    pattern: '\bswift(ie|ies)\b'
+  - name: team_mascot_city
+    pattern: '\b(chiefs|eagles|cowboys|lakers|yankees|dodgers|packers|49ers)\b'
+  - name: lyric_marker
+    pattern: '\b(lyrics?|song quote)\b'
+  - name: quote_attribution
+    pattern: '["“].{3,120}["”]\s*[-–—]\s*[A-Z][a-z]+'
+    case_sensitive: true
