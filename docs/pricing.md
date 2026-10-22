@@ -31,7 +31,7 @@ stack in `data/costs/*-channel-fees.json` (playbook §4.1):
 | Payment processing (US) | 3% + $0.25 on the total incl. tax and shipping |
 | Offsite Ads (attributed) | 15% under $10K trailing 365-day sales (optional); 12% at or above (mandatory); cap $100/order |
 | Share & Save | 4% of order value back on orders from your own links (6.5% for the first two weeks) |
-| Payhip (free plan) | 5% + card processing passed through [C] |
+| Payhip (free plan) | 5% + Stripe 2.9% + $0.30 (owner-confirmed 2026-10-22; PayPal rate not modeled) |
 
 ## Reprice
 
