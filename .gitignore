@@ -16,3 +16,6 @@ __pycache__/
 .pytest_cache/
 .venv/
 *.egg-info/
+
+# Local Etsy OAuth output (tools/etsy_oauth.py)
+.etsy_tokens*.json

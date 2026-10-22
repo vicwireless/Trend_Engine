@@ -57,7 +57,7 @@ def repo(tmp_path, monkeypatch):
     (root / "assets" / "digital" / "court.jpg").write_bytes(b"\xff\xd8 jpg")
     (root / "releases").mkdir()
 
-    for k, v in {"ETSY_KEYSTRING": "k", "ETSY_WRITE_TOKEN": "w", "ETSY_SHOP_ID": SHOP,
+    for k, v in {"ETSY_KEYSTRING": "k", "ETSY_SHARED_SECRET": "s", "ETSY_WRITE_TOKEN": "w", "ETSY_SHOP_ID": SHOP,
                  "PRINTIFY_WRITE_TOKEN": "p", "PRINTIFY_SHOP_ID": PSHOP,
                  "PINTEREST_TOKEN": "pin", "PAYHIP_API_KEY": "ph"}.items():
         monkeypatch.setenv(k, v)
@@ -159,7 +159,7 @@ def test_digital_listing_flow_resolves_refs_and_reads_back(repo):
     assert [o["status"] for o in summary["ops"]] == ["ok"] * 4
     assert summary["ops"][1]["result"] == {"listing_id": 2001, "listing_file_id": 3001}
     create = responses.calls[0].request
-    assert create.headers["x-api-key"] == "k" and create.headers["Authorization"] == "Bearer w"
+    assert create.headers["x-api-key"] == "k:s" and create.headers["Authorization"] == "Bearer w"
     assert "type=download" in create.body and "tags=pickleball%2Cpickleball+gift" in create.body
     assert any("/properties/900001" in c.request.url for c in responses.calls)  # AI disclosure attribute
     lines = ledger_lines(repo)

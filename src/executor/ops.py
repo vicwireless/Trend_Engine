@@ -12,6 +12,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
 
+from src.clients import etsy_auth
 from src.clients.base import HttpClient, require
 
 ETSY_BASE = "https://openapi.etsy.com/v3/application"
@@ -42,8 +43,9 @@ class Context:
     @property
     def etsy(self) -> HttpClient:
         return self._client("etsy", lambda: HttpClient(ETSY_BASE, {
-            "x-api-key": require(os.environ.get("ETSY_KEYSTRING"), "ETSY_KEYSTRING"),
-            "Authorization": "Bearer " + require(os.environ.get("ETSY_WRITE_TOKEN"), "ETSY_WRITE_TOKEN"),
+            "x-api-key": etsy_auth.api_key(),
+            "Authorization": "Bearer " + require(
+                etsy_auth.access_token("ETSY_WRITE_TOKEN", "ETSY_WRITE_REFRESH_TOKEN"), "ETSY_WRITE_TOKEN"),
         }, **self.http_kwargs))
 
     @property

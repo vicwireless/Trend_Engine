@@ -9,6 +9,7 @@ import os
 from typing import Any
 
 from .base import HttpClient, require
+from .etsy_auth import access_token, api_key
 
 BASE_URL = "https://openapi.etsy.com/v3/application"
 
@@ -26,10 +27,10 @@ def money(m: dict | None) -> float | None:
 
 
 class EtsyRead:
-    def __init__(self, keystring: str | None = None, read_token: str | None = None, **http_kwargs: Any):
-        keystring = require(keystring or os.environ.get("ETSY_KEYSTRING"), "ETSY_KEYSTRING")
-        headers = {"x-api-key": keystring}
-        token = read_token or os.environ.get("ETSY_READ_TOKEN")
+    def __init__(self, keystring: str | None = None, read_token: str | None = None,
+                 shared_secret: str | None = None, **http_kwargs: Any):
+        headers = {"x-api-key": api_key(keystring, shared_secret)}
+        token = read_token or access_token("ETSY_READ_TOKEN", "ETSY_REFRESH_TOKEN")
         if token:
             headers["Authorization"] = f"Bearer {token}"
         self.http = HttpClient(BASE_URL, headers, **http_kwargs)
