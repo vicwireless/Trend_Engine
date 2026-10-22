@@ -69,7 +69,8 @@ jobs:
           APPROVER: ${{ steps.approval.outputs.approver }}
           MERGE_SHA: ${{ github.sha }}
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
-          ETSY_WRITE_TOKEN: ${{ secrets.ETSY_WRITE_TOKEN }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_WRITE_REFRESH_TOKEN: ${{ secrets.ETSY_WRITE_REFRESH_TOKEN }}
           ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
           PRINTIFY_WRITE_TOKEN: ${{ secrets.PRINTIFY_WRITE_TOKEN }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
