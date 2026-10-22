@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-10-22",
+  "kind": "channel_fees",
+  "source": "Etsy stack: Owned Channel Operating Playbook v3.0 \u00a74.1, verified against https://www.etsy.com/legal/fees/ on or before 2026-10-21. Payhip: owner-confirmed from the live account on 2026-10-22 (Payhip charges no processing rate of its own; Stripe US standard 2.9% + $0.30 applies, plus Payhip's 5% Free-plan fee).",
+  "verified": true,
+  "verify_urls": [
+    "https://www.etsy.com/legal/fees/",
+    "https://help.etsy.com/hc/en-us/articles/360000338367-How-Etsy-s-Offsite-Ads-Work",
+    "https://www.etsy.com/seller-handbook/article/1503753198977",
+    "https://payhip.com/pricing",
+    "https://stripe.com/pricing"
+  ],
+  "channels": {
+    "etsy": {
+      "verified": true,
+      "listing_fee_usd": 0.2,
+      "transaction_fee_rate": 0.065,
+      "payment_processing_rate": 0.03,
+      "payment_processing_fixed_usd": 0.25,
+      "notes": "Transaction fee applies to price + shipping + gift wrap, not US sales tax. Processing applies to the total incl. tax and shipping."
+    },
+    "payhip": {
+      "verified": true,
+      "listing_fee_usd": 0.0,
+      "transaction_fee_rate": 0.05,
+      "payment_processing_rate": 0.029,
+      "payment_processing_fixed_usd": 0.3,
+      "notes": "5% is the Free-plan platform fee. 2.9% + $0.30 is Stripe US standard processing, confirmed by the owner on 2026-10-22. PayPal checkout uses PayPal's own rate, not modeled here; re-snapshot if PayPal is enabled."
+    }
+  },
+  "etsy_modifiers": {
+    "offsite_ads_rate_under_10k": 0.15,
+    "offsite_ads_rate_10k_plus": 0.12,
+    "offsite_ads_cap_per_order_usd": 100,
+    "offsite_ads_mandatory_threshold_trailing_365d_usd": 10000,
+    "share_and_save_refund_rate": 0.04,
+    "share_and_save_refund_rate_first_two_weeks": 0.065,
+    "etsy_plus_monthly_usd": 10
+  },
+  "one_time": {
+    "etsy_shop_setup_fee_usd": 29.0,
+    "notes": "Paid once at Etsy shop opening (owner-reported 2026-10-22). Counts toward Day 0 cash, not per-sale fees."
+  }
+}

@@ -47,6 +47,8 @@ everbee:
 printify:
   publish_limit_per_30_min: 200       # Printify rate limits page
 etsy:
+  shop_name: LMCGrows                 # owner, 2026-10-22
+  shop_url: https://lmcgrows.etsy.com
   # CLAUDE.md rule 2 requires the AI-disclosure attribute on every AI-assisted listing.
   # The Etsy property id / value ids for it are not confirmed yet, so the executor refuses
   # ai_assisted listings until they are set here (fail closed). Set via updateListingProperty.
@@ -56,5 +58,6 @@ etsy:
     value_ids: []
     values: []
 payhip:
-  # Payhip has no confirmed public product-create API. Op stays disabled until this is set.
+  # The owner has a Payhip API key (2026-10-22), but no product-create endpoint is confirmed yet.
+  # payhip_create_product stays disabled until this is set from Payhip's API docs.
   api_base_url: null
