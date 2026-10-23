@@ -7,6 +7,7 @@ GitHub Actions secrets.
 """
 from __future__ import annotations
 
+import mimetypes
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -123,12 +124,17 @@ def etsy_create_digital_listing(p: dict, ctx: Context) -> dict:
             "readback": {"title": rb.get("title"), "price_usd": _etsy_price(rb), "state": rb.get("state")}}
 
 
+def _content_type(path) -> str:
+    return mimetypes.guess_type(str(path))[0] or "application/octet-stream"
+
+
 def etsy_upload_file(p: dict, ctx: Context) -> dict:
     lid = p["listing_id"]
     path = ctx.file(p["path"])
     with open(path, "rb") as f:
         created = ctx.etsy.request("POST", f"shops/{ctx.etsy_shop}/listings/{lid}/files",
-                                   data={"name": p["name"]}, files={"file": (p["name"], f)}).json()
+                                   data={"name": p["name"]},
+                                   files={"file": (p["name"], f, _content_type(path))}).json()
     fid = created["listing_file_id"]
     rb = ctx.etsy.get_json(f"shops/{ctx.etsy_shop}/listings/{lid}/files/{fid}")
     ok = rb.get("listing_file_id") == fid and rb.get("filename") == p["name"]
@@ -144,7 +150,7 @@ def etsy_upload_image(p: dict, ctx: Context) -> dict:
         data["alt_text"] = p["alt_text"]
     with open(path, "rb") as f:
         created = ctx.etsy.request("POST", f"shops/{ctx.etsy_shop}/listings/{lid}/images",
-                                   data=data, files={"image": (path.name, f)}).json()
+                                   data=data, files={"image": (path.name, f, _content_type(path))}).json()
     iid = created["listing_image_id"]
     rb = ctx.etsy.get_json(f"listings/{lid}/images/{iid}")
     ok = rb.get("listing_image_id") == iid and rb.get("rank") == p["rank"]
