@@ -318,13 +318,14 @@ def text_block(d, x, y, lines, font, fill="#2B2B2B", gap=1.35):
     return y
 
 
-def images(out: Path, stem: str, title: str, tagline: str, inside: list[str], sample_pages: list[int], pdf: Path, details: list[str]):
+def images(out: Path, stem: str, title: str, tagline: str, inside: list[str], sample_pages: list[int], pdf: Path, details: list[str],
+           year_label: str | None = None, week_note: bool = True):
     # 1 cover
     img, d = card()
     for i, idx in enumerate(sample_pages[:2]):
         pg = render_page(pdf, idx, 900)
         paste_shadow(img, pg, (1180 + i * 360, 160 + i * 140))
-    d.text((140, 200), str(YEAR), font=pil_font("serif-b", 260), fill="#4F6F5B")
+    d.text((140, 200), year_label or str(YEAR), font=pil_font("serif-b", 260), fill="#4F6F5B")
     y = text_block(d, 140, 520, wrap(d, title, pil_font("serif-b", 120), 1050), pil_font("serif-b", 120), gap=1.15)
     text_block(d, 140, y + 30, wrap(d, tagline, pil_font("serif", 56), 1050), pil_font("serif", 56), fill="#6B6B6B")
     d.text((140, 1560), "Printable PDF  |  US Letter + A4  |  Instant download", font=pil_font("sans-b", 44), fill="#2B2B2B")
@@ -354,7 +355,8 @@ def images(out: Path, stem: str, title: str, tagline: str, inside: list[str], sa
     # 4 sizes
     img, d = card()
     d.text((140, 140), "Two sizes included", font=pil_font("serif-b", 110), fill="#2B2B2B")
-    rows = ["US Letter  8.5 x 11 in  (weeks start Sunday)", "A4  210 x 297 mm  (weeks start Monday)", *details]
+    rows = (["US Letter  8.5 x 11 in  (weeks start Sunday)", "A4  210 x 297 mm  (weeks start Monday)"] if week_note
+            else ["US Letter  8.5 x 11 in", "A4  210 x 297 mm"]) + list(details)
     y = 380
     for r in rows:
         for ln in wrap(d, r, pil_font("sans", 62), 2000):
