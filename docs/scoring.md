@@ -40,7 +40,7 @@ as cohorts come in.
 | `active_listings` | Etsy `findAllListingsActive` count for the keyword | Etsy data |
 | `median_favorites`, `median_price_usd` | Median `num_favorers` and USD price of the top 25 Etsy results | Etsy data |
 | `gift_share` | Share of top 25 titles matching the gift/occasion word list (`score.gift_share`) | Etsy data |
-| `digital_share` | Share of top 25 results with `type` download or both (`score.digital_share`) | Etsy data |
+| `digital_share` | Share of top 25 results with `listing_type` download or both (`score.digital_share`) | Etsy data |
 | `pod_blueprints` | Matching Printify blueprints with an in-stock provider (POD offers only) | Printify |
 | `weeks_to_peak` | `score.weeks_to_next_peak` over the niche's peaks in `data/calendar.yaml`; none = evergreen | calendar |
 | `cohort_orders`, `cohort_contribution_per_100_visits` | `data/cohorts/` for the niche | our data |

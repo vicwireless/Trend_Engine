@@ -81,7 +81,7 @@ def gift_share(titles: list[str]) -> float | None:
 
 
 def digital_share(listing_types: list[str]) -> float | None:
-    """Share of the top 25 Etsy results whose `type` is "download" or "both"."""
+    """Share of the top 25 Etsy results whose `listing_type` is "download" or "both"."""
     types = listing_types[:25]
     return sum(t in ("download", "both") for t in types) / len(types) if types else None
 
