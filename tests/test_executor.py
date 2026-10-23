@@ -162,6 +162,8 @@ def test_digital_listing_flow_resolves_refs_and_reads_back(repo):
     assert create.headers["x-api-key"] == "k:s" and create.headers["Authorization"] == "Bearer w"
     assert "type=download" in create.body and "tags=pickleball%2Cpickleball+gift" in create.body
     assert any("/properties/900001" in c.request.url for c in responses.calls)  # AI disclosure attribute
+    upload = next(c.request for c in responses.calls if c.request.url.endswith("/files") and c.request.method == "POST")
+    assert b"Content-Type: application/pdf" in upload.body  # Etsy rejects typeless file parts
     lines = ledger_lines(repo)
     assert [e["status"] for e in lines] == ["pending", "ok"] * 4
     assert lines[1]["idempotency_key"] == "2026-10-21-wk43+0"
