@@ -150,7 +150,7 @@ def etsy_upload_image(p: dict, ctx: Context) -> dict:
         data["alt_text"] = p["alt_text"]
     with open(path, "rb") as f:
         created = ctx.etsy.request("POST", f"shops/{ctx.etsy_shop}/listings/{lid}/images",
-                                   data=data, files={"image": (path.name, f)}).json()
+                                   data=data, files={"image": (path.name, f, _content_type(path))}).json()
     iid = created["listing_image_id"]
     rb = ctx.etsy.get_json(f"listings/{lid}/images/{iid}")
     ok = rb.get("listing_image_id") == iid and rb.get("rank") == p["rank"]
