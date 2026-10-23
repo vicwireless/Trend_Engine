@@ -1,0 +1,1886 @@
+manifest_id: 2026-10-23-release-2
+created_at: '2026-10-23T18:00:00Z'
+created_by: claude
+summary: 'Release 2: 15 draft Etsy listings (9 more planners, 5 Christmas/holiday printables, 2 bundles) to reach the 20-listing
+  Day 7 gate by 30 Oct. Drafts only; owner ticks the AI-generator field and publishes each.'
+owner_minutes_estimate: 150
+ops:
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Monthly Planner Printable, Month-at-a-Glance Calendar Pages, Letter and A4 PDF
+    description: 'A minimal 2027 monthly planner to print at home: twelve month spreads with a clear date grid, top goals
+      and notes.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF, weeks start Sunday
+
+      • A4 PDF, weeks start Monday
+
+      • 14 pages in each size: year-at-a-glance, 12 months, notes
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - 2027 monthly planner
+    - monthly calendar
+    - 2027 calendar
+    - printable planner
+    - planner pdf
+    - month at a glance
+    - minimal planner
+    - monthly layout
+    - goal planner
+    - new year planner
+    - calendar pages
+    - a4 planner
+    - letter planner
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 987fdb9ab10d0068eec12e01f59309f56562bd850410551fbcfecd92e0850b85
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-letter.pdf
+    file_sha256: 56285ac4f2f985e9092c8df801a9995fd8fb7a2882b70526446a4fa641527279
+    name: monthly-planner-letter.pdf
+  payload_sha256: e34aa3fc6d12b0714394de9ee2e12ad95de79d7d20e3e57ecdee1d139ad548d3
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-a4.pdf
+    file_sha256: dd9e828aecddd1aceef5f312cf3801bb1d5ef963140a09cef78602069deb3c34
+    name: monthly-planner-a4.pdf
+  payload_sha256: a1cac89ef7c62cc6ddbb569dd68667daf1d9b38d26d07d54f784590ce89dc1e5
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-how-to-print.pdf
+    file_sha256: 53f8786e442d6e1c164f35dc3b01882b364ec91965edda22748f0870e0d6f656
+    name: monthly-planner-how-to-print.pdf
+  payload_sha256: f2fcaa99aef3c906007a41ed4885bb4c1944b264865409f4e760ec4af9f3951d
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/images/monthly-planner-1-cover.png
+    file_sha256: bbc2c043da9667c60dedc8aa15f8b16735312ecf5723670b4804a1b5496c0a38
+    rank: 1
+    alt_text: Monthly planner page with a seven-column date grid, top goals and notes
+  payload_sha256: cfd351c82317de849d6c52ee9c83088175706e637f7973fb6c98fb3300e8f930
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/images/monthly-planner-2-inside.png
+    file_sha256: 788e5a97c9a551858020d51f0c64d605a8e6fd483d22d46c983ba1d426c39524
+    rank: 2
+    alt_text: '2027 Monthly Planner Printable: inside image'
+  payload_sha256: 6bb3d752d78329c84a4087fb329070a113c8732b963c99bd7793ea2a55cecf40
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/images/monthly-planner-3-pages.png
+    file_sha256: a4733d26a9a01f9e3a06b74f80232e4e4a223f25410dc5dfea3dd26857073372
+    rank: 3
+    alt_text: Monthly planner page with a seven-column date grid, top goals and notes
+  payload_sha256: 69924f946492562ca6c3688aa1c236a8e7d1712d62e684a1b96b7d27f5afe380
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/images/monthly-planner-4-sizes.png
+    file_sha256: 3ac9a74fe9a8c8867dc5c6154cab7fad116d1ebc40a06a335978aea12bef393d
+    rank: 4
+    alt_text: '2027 Monthly Planner Printable: sizes image'
+  payload_sha256: debcd1fdbb3ba6ee79bb95b3abcab4c369e17e01676d417d77049823e834ff88
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-23-release-2/monthly-planner/images/monthly-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Monthly Planner Printable: print image'
+  payload_sha256: 4b665a88d928d635f67c2ee121767152a880df143222316b19291aee5d0cf28f
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Daily Planner Printable, One Page Per Day, Hourly Schedule, Letter and A4 PDF
+    description: 'A 2027 daily planner to print at home: one page for every day of the year with an hourly schedule, top three
+      priorities, to-dos and notes.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 365 daily pages in each size, 6 am to 9 pm schedule
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - 2027 daily planner
+    - daily planner
+    - day planner
+    - hourly planner
+    - planner pdf
+    - printable planner
+    - to do list
+    - daily schedule
+    - 2027 planner
+    - productivity
+    - a4 planner
+    - letter planner
+    - new year gift
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 12.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 21ead8e3641c1572657c1793c5e0dee11f6bc2bd28e4476a39ef256b611e0033
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-letter.pdf
+    file_sha256: 736242665b00213a46940165479fa052f9ef31c6ee314595ad575332a5108668
+    name: daily-planner-letter.pdf
+  payload_sha256: 7b11b7113e4a171f9bfa8f1d3a9645c905d3db699a28ab592fcbe77396b51bb6
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-a4.pdf
+    file_sha256: b62cda5f2cac5482affa0c0662b1b20f1e09938b7af346d5cd441d86ad197695
+    name: daily-planner-a4.pdf
+  payload_sha256: bd0ebefe65918fd7bcf0636fe2abb646a0394101bf53720896524a0da56d4f3c
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-how-to-print.pdf
+    file_sha256: a419f280b78a9fae6fbe633bab75350d688b1fe084a3f74cc6ff5effefa5ca8f
+    name: daily-planner-how-to-print.pdf
+  payload_sha256: 024ea129a40b1b74516e36e70ba40d33d543c207bf055b5b2cdd962f5a0fc5e6
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/images/daily-planner-1-cover.png
+    file_sha256: 92ba73a7064a2a3c02d55ee4256e907066121cdde433193d86e1f5bee5db3604
+    rank: 1
+    alt_text: Daily planner page with hourly schedule, top three priorities and to-do list
+  payload_sha256: 67685aa19c8f8ecb511363ed79a940eaf248075232f138ad597208fe70ce910c
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/images/daily-planner-2-inside.png
+    file_sha256: a9cc38209c125ef7ba8a76a2164e67af85669723424a92e7b1c8ba7587b40ce1
+    rank: 2
+    alt_text: '2027 Daily Planner Printable: inside image'
+  payload_sha256: c604468043edbff543bea2b4389bb100fd07fca8080c581f4954c2a7e658574e
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/images/daily-planner-3-pages.png
+    file_sha256: feffefa922e9f9e3a55718a48e7e99caf6c5f683107cf3d43548bd2db0a87ea5
+    rank: 3
+    alt_text: Daily planner page with hourly schedule, top three priorities and to-do list
+  payload_sha256: 49fcee05fa155c9c4cf58677382ace7c6abde7440b195e2d22636e134a8aaa9c
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/images/daily-planner-4-sizes.png
+    file_sha256: 5369a6a0491cf60d5d4738a57606a880f5026c24461a498707c0ac1eff8a4d6c
+    rank: 4
+    alt_text: '2027 Daily Planner Printable: sizes image'
+  payload_sha256: c68608a4e4909740e248aaf8bfbd6e6cab1922f1e96384d8480ab2437c3ef3c7
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[9].listing_id
+    path: assets/digital/2026-10-23-release-2/daily-planner/images/daily-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Daily Planner Printable: print image'
+  payload_sha256: 6b557195f50ab597b37f28380d376c389a835bcffadbc0b7b0cca27128428dc2
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Monthly Budget Planner Printable, Yearly Overview, Income and Expense Tracker PDF
+    description: 'A minimal 2027 budget planner to print at home: a yearly overview, twelve monthly budget pages and a year-in-review.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 14 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - budget planner
+    - 2027 budget
+    - monthly budget
+    - finance planner
+    - expense tracker
+    - savings planner
+    - planner pdf
+    - budget printable
+    - money planner
+    - new year budget
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: ff81a47d3f0e413f6448e0129354b8b9ff1a88e87e7db43860a052811d645035
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-letter.pdf
+    file_sha256: 194b9eb1064d32b5d7cd4f8c2c25cf2638482cd5a2f2fb3b9df3ae21b901ba18
+    name: budget-planner-letter.pdf
+  payload_sha256: 102b05a22a188e1e5e3f4255d2bbf463eb7f7d6b52540e3ed50abea632155fa3
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-a4.pdf
+    file_sha256: ba97d1c2c6efe2c98460966eb35ffb4330da534e46d8d551a7073ef9e274a4d5
+    name: budget-planner-a4.pdf
+  payload_sha256: fec3bac21160f9a3d30fdb0fe62bf47cf10adeb2bb80c9b608a5875bcb77fcd8
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-how-to-print.pdf
+    file_sha256: 185b7fac74feda62d033649b31761d5bf8ab3c767cb8c2b4f61a2be383217846
+    name: budget-planner-how-to-print.pdf
+  payload_sha256: c264ce3fe8cd5fb8b0d64b366c179cc946ea42597fde19a557d10a220c44f4fa
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/images/budget-planner-1-cover.png
+    file_sha256: 7ed6dd3ade992f04cee4bf69a2b76754764000619908d17272230b48635f3eb2
+    rank: 1
+    alt_text: Monthly budget page with income, fixed expenses, everyday spending and savings tables
+  payload_sha256: 968266272294c75aee63b8cf4e970608ccd0b5e942268b80b8620d21eba0d6d3
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/images/budget-planner-2-inside.png
+    file_sha256: 75a97193b3d903969bb14db76a755163dcabe49d5f65e3bb22acb214d8a91206
+    rank: 2
+    alt_text: '2027 Monthly Budget Planner Printable: inside image'
+  payload_sha256: 0ef517c9254a8960f3409c2d336d48fb4697808aaea07554331bfff73bc3bce2
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/images/budget-planner-3-pages.png
+    file_sha256: bbee906894d7434e72a300314ec91245de5c7e3420728cbb904dc8e11b13cf81
+    rank: 3
+    alt_text: Monthly budget page with income, fixed expenses, everyday spending and savings tables
+  payload_sha256: 831483b6a4ed2a6da6dfc7e71d2a0ea2a4b069ae08869653a03542bcd8ee1603
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/images/budget-planner-4-sizes.png
+    file_sha256: 2ca1d7282408d133eec8a1d85e26fd99a22dfc9c1a325970507954dd2c7f97fa
+    rank: 4
+    alt_text: '2027 Monthly Budget Planner Printable: sizes image'
+  payload_sha256: f3383d94d2c7dd97ec46d3b0b0a8986f4e9221ded97274e122fb814498875c98
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[18].listing_id
+    path: assets/digital/2026-10-23-release-2/budget-planner/images/budget-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Monthly Budget Planner Printable: print image'
+  payload_sha256: 522ab7981e8fcdeaf8e17bb90e8aca188abe15b2768f14afb7b85f211763dde4
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Weekly Meal Planner Printable, Grocery List, Breakfast Lunch Dinner Pages, PDF
+    description: 'A weekly meal planner to print at home: 53 weekly pages for 2027 with space for breakfast, lunch, dinner
+      and snacks, plus a grocery list.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 54 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - meal planner
+    - weekly meal plan
+    - grocery list
+    - 2027 meal planner
+    - menu planner
+    - meal prep
+    - planner pdf
+    - food planner
+    - family meal plan
+    - kitchen printable
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 37477ac0d35810dfb97e8813fa74e1b68f4ed8609ed03a67b7cb06e485ab826c
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-letter.pdf
+    file_sha256: 5de455401c8a7381cd3d7197d9a20005cbc60972e64f8d602aaa0407db2a951d
+    name: meal-planner-letter.pdf
+  payload_sha256: a5ffb867b8e601a324a264ec5f9f657fe2abb0b641a35fb21606129bf7489931
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-a4.pdf
+    file_sha256: 012aa335340a90e01df0072ebc38f179e0fd58e2c7b99582c3c111adaa1bfbf3
+    name: meal-planner-a4.pdf
+  payload_sha256: 3ebe587b466427322bf177d7cb905943652d744a8779785103c1e2b96b9a45b1
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-how-to-print.pdf
+    file_sha256: b23ecd02dfcfc473ca5a3df05cc0b46e3d740949b930db504c7440ad00af206c
+    name: meal-planner-how-to-print.pdf
+  payload_sha256: b3451a4075f349a5e206d9759a5769914fc98477b1f3ff07e4d65115c88d619d
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/images/meal-planner-1-cover.png
+    file_sha256: b01cbcec6a6adeef857891310c5e5fcc76267e778226fdb116bd2bd0c41f23be
+    rank: 1
+    alt_text: Weekly meal planner page with breakfast, lunch, dinner and snack columns
+  payload_sha256: 08d9327466b6d97d64ab1f0d2b344cef0d34a612d08bf5af71abc8ecaa80d7e0
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/images/meal-planner-2-inside.png
+    file_sha256: ce665c96d2df37bd71e52ea5745c9c0766c59bb486bf9c8a001d23e861396ec8
+    rank: 2
+    alt_text: '2027 Weekly Meal Planner Printable: inside image'
+  payload_sha256: 726967722592fbf3bd9ac66ddbda91eaac42bce8b422be72b9e0c6d499ff0f1b
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/images/meal-planner-3-pages.png
+    file_sha256: c243f880e386c11ae54743bf2c7a3d1b106f375090692ffa44717a306856bc40
+    rank: 3
+    alt_text: Weekly meal planner page with breakfast, lunch, dinner and snack columns
+  payload_sha256: 50a9dbc3f1bd5f4b49607f95b042da9f3d36f565b56843954a8e0b7c962639f7
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/images/meal-planner-4-sizes.png
+    file_sha256: c1b26de1e9862d4b427fa87cdb027c89f7b6525e3d1fac5f806327891ac9cf67
+    rank: 4
+    alt_text: '2027 Weekly Meal Planner Printable: sizes image'
+  payload_sha256: f86f7eb411df1eef2dc5d79dd2211d2ad67a70b3835ab0d3ee39bdfedf9e96e6
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[27].listing_id
+    path: assets/digital/2026-10-23-release-2/meal-planner/images/meal-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Weekly Meal Planner Printable: print image'
+  payload_sha256: f7c4c8b2d715f519db94df519555b4e8eaeebf3bb80dcf3b677f19afc01a922c
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: Cleaning Planner Printable, Daily, Weekly and Monthly Cleaning Checklists, PDF
+    description: 'A calm cleaning planner to print at home: a daily reset, weekly rotation, seven room checklists and twelve
+      monthly deep-clean pages.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 22 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - cleaning planner
+    - cleaning checklist
+    - house cleaning
+    - chore chart
+    - home planner
+    - cleaning schedule
+    - planner pdf
+    - weekly cleaning
+    - deep clean
+    - home organizer
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: e90381b95560b9aba2510f9b1f9c6ed5d85290ebdca52b0fd00413f8a6083a4f
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-letter.pdf
+    file_sha256: 34c93fc6deb28493e904d2e6f9035bcb28c077770c6150c4d9cffd769ce187e7
+    name: cleaning-planner-letter.pdf
+  payload_sha256: 95bddc6b93d8f7b2c5edeaf577c41be4251fba95a041bd49d104002fb4b52231
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-a4.pdf
+    file_sha256: 0dd77805f7c4c5ebd3bc196f9bbf8e4a087a8c83feaae91ca191482daa877a5f
+    name: cleaning-planner-a4.pdf
+  payload_sha256: 6a409c6956178e2f5abbfa52f6a8cf85d6ab6756d6bc8d29a358c9802af17425
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-how-to-print.pdf
+    file_sha256: 8a68f4a6c12067deeb2a4b47c9e3627b901abf1bcc56ed74a807a069d989864e
+    name: cleaning-planner-how-to-print.pdf
+  payload_sha256: aa90e21e312633077bd93d93178f9f5986790e90bf1a6f05b734dc7ed022f4df
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/images/cleaning-planner-1-cover.png
+    file_sha256: d67f3a5f37ec5d3bbbc2af2510bdee850b94e4d69b7e2df769c67ee2514a16ca
+    rank: 1
+    alt_text: Cleaning planner page with daily and weekly checklists
+  payload_sha256: 02eca76337fca06a5a89899abea0240ead89901694e7d88d00dc160f5144ac06
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/images/cleaning-planner-2-inside.png
+    file_sha256: 63979f80200ebdb1eea2ebd2b3955ecbcfc1399c29ee35131a61ea6568ad26a9
+    rank: 2
+    alt_text: 'Cleaning Planner Printable: inside image'
+  payload_sha256: dec08a121ed0ff8bd0d9a14685377545cbb0acdbd2cac009fdacc5aa3c3f99b2
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/images/cleaning-planner-3-pages.png
+    file_sha256: 33794037ca41af62b738b0ce1d0443a3209c31ed542eac1987f27294743cec25
+    rank: 3
+    alt_text: Cleaning planner page with daily and weekly checklists
+  payload_sha256: eac8d9cd13592a7c96251becd0d3b66e70127cfea135bfa1b9a8bc435f357ab3
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/images/cleaning-planner-4-sizes.png
+    file_sha256: 267a77d333227cde719241111ba3dc72cb6a34f7d3af151a291b7012eb0329de
+    rank: 4
+    alt_text: 'Cleaning Planner Printable: sizes image'
+  payload_sha256: 83d8c7ecffb88fd0f35d9dd7121059b93bb68c716d2619a5f8abee9534415463
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[36].listing_id
+    path: assets/digital/2026-10-23-release-2/cleaning-planner/images/cleaning-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Cleaning Planner Printable: print image'
+  payload_sha256: 6e554ca55d15edec291e96cb0f7cc90a54e0262d12d904d58cdda5af0055e980
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Reading Log Printable, Book Tracker, Want to Read List, Letter and A4 PDF
+    description: 'A reading log to print at home: set a 2027 goal, log every book, keep a want-to-read list and pick your
+      favorites.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 9 pages in each size, room for over 100 books
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - reading log
+    - book tracker
+    - 2027 reading log
+    - reading journal
+    - book log
+    - reading challenge
+    - planner pdf
+    - book lover gift
+    - want to read
+    - printable log
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 5.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: f98fea4932864a274a62f90f1f9e697a7d4b85db6355c24680d1d1072f8ea1dd
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/reading-log-letter.pdf
+    file_sha256: 553b03d052e6f210ea7420dece5d18b4c2d2e202835e6e0d8219c5d7a00119b2
+    name: reading-log-letter.pdf
+  payload_sha256: b40a7776ea849ad03b2e2ad1ed0b665b11077a342d08d4e07ce663e35d1fbbf6
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/reading-log-a4.pdf
+    file_sha256: adb1379a8ee81a3b3c69346300d677f2bdd630eed214401b83381c20a34c788e
+    name: reading-log-a4.pdf
+  payload_sha256: b6c2b0a5fbf6ae582f6f9502c97a51775171de5af5411afe37d7990d1474a292
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/reading-log-how-to-print.pdf
+    file_sha256: 544609b7e1f0ca6f591db66774c3c74ac43c161f94b350a9c8d7708efe2fddb7
+    name: reading-log-how-to-print.pdf
+  payload_sha256: 0ec0239b178c0bdc1b29cd9feafd41d5b189cbda09bddd3b0e963fa2845f3c07
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/images/reading-log-1-cover.png
+    file_sha256: 6008b27ef02d7d0c5648cf81402db2c78cf94031f3b285c7189ebf6db34e03b1
+    rank: 1
+    alt_text: Reading log page with title, author, dates, rating and notes columns
+  payload_sha256: da22375f4551390d2d18a3d56a7da9b8d797ae7a83f398a075e76bd23aa99c0a
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/images/reading-log-2-inside.png
+    file_sha256: c1b883bd9c2dc2106501a44f768e6a4196b76f5c68b7f448ef6f5859287cf4e1
+    rank: 2
+    alt_text: '2027 Reading Log Printable: inside image'
+  payload_sha256: 0577cabc574d5a4cb24ac2745ef1a80356e3ffba9f9422ad4926893830695246
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/images/reading-log-3-pages.png
+    file_sha256: 3714ffb728278eadfc22cbe0b651df070520d9964981dca685b2c469ab8b1764
+    rank: 3
+    alt_text: Reading log page with title, author, dates, rating and notes columns
+  payload_sha256: aa09edf9f5503b5c56d6e40161500763da1cb88779a27ee990d95e56c6418d63
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/images/reading-log-4-sizes.png
+    file_sha256: e19e62eac2831cd97275ed5d550a60b437e3cd8fc3a0361ee4db058099d1239b
+    rank: 4
+    alt_text: '2027 Reading Log Printable: sizes image'
+  payload_sha256: 87c549a2000989d3e12a0219d6b6a7a268b66c10dd5959640de7ffe5c527c8db
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[45].listing_id
+    path: assets/digital/2026-10-23-release-2/reading-log/images/reading-log-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Reading Log Printable: print image'
+  payload_sha256: e665ff52ebcd4571ad1991fb82f34112da2d8165a82facebc5db2c65e1dfb592
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Fitness Log Printable, Monthly Workout Tracker, Goals and Check-ins, PDF
+    description: 'A fitness log to print at home: goals, a body check-in page and twelve monthly workout logs with minutes,
+      effort and notes.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 14 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - fitness log
+    - workout tracker
+    - workout log
+    - 2027 fitness
+    - exercise log
+    - gym planner
+    - planner pdf
+    - fitness planner
+    - health tracker
+    - new year fitness
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 2ea4f89976abce591034d57edd805ddeb513f8e75b10c96f0c92a272ba46870e
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-letter.pdf
+    file_sha256: 93f46c8fc68350e56374e568152fb65b0b47b39114d66416e5f1ec08ee234947
+    name: fitness-log-letter.pdf
+  payload_sha256: fae65e35b968fb65b68f2bcad473c42932aa8b777f6cb549615dec886a466b3a
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-a4.pdf
+    file_sha256: 349d92073a70cf52c96b26767386681a0c68346c04e4881d903822bd71f348b1
+    name: fitness-log-a4.pdf
+  payload_sha256: 3abdc3a3fd342ce3654067211d2c4d6da7d3edbbc47d73f79d9526a8a10524dc
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-how-to-print.pdf
+    file_sha256: 78cf32ddeaefdff5f8a151b7fb7e61ced0d61068364696d3793ef88fd624a945
+    name: fitness-log-how-to-print.pdf
+  payload_sha256: 2cb01fb0c73ab7e3ad1ac1d5797bfe24c0ad74d2c044db9e8d084a9d06ec0b61
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/images/fitness-log-1-cover.png
+    file_sha256: 71a426dbd588b1eeb6a41b696196d7c24525b22104273aff0bf31f516ea5f58e
+    rank: 1
+    alt_text: Monthly workout log page with a row for each day
+  payload_sha256: 3ff982d73c9e7f0602fa72c4f362d876422f1c0ba5560251dbf8c58ae7da1654
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/images/fitness-log-2-inside.png
+    file_sha256: f9a797ccd4014b867f7dea43409c9887c214f1fe0b54eccbad9809891bb39ec0
+    rank: 2
+    alt_text: '2027 Fitness Log Printable: inside image'
+  payload_sha256: 15b252e247550babd81ea4a4e78e221b1d9e23e2f95f641377eb6c890ed9ad67
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/images/fitness-log-3-pages.png
+    file_sha256: 3048763964e7ce907af21bf6a1a25a1ea1a5ce52cd62ac1e117c9cd845245f28
+    rank: 3
+    alt_text: Monthly workout log page with a row for each day
+  payload_sha256: 758f3097848104981cc7a37471753d7a5f63e4bd03040597a10d49c6248a6efa
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/images/fitness-log-4-sizes.png
+    file_sha256: 2ca1d7282408d133eec8a1d85e26fd99a22dfc9c1a325970507954dd2c7f97fa
+    rank: 4
+    alt_text: '2027 Fitness Log Printable: sizes image'
+  payload_sha256: aa09cad035ba7b4f4064f99740691e199946e120b41e0b496d19643c9540a328
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[54].listing_id
+    path: assets/digital/2026-10-23-release-2/fitness-log/images/fitness-log-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Fitness Log Printable: print image'
+  payload_sha256: 04470139ef6851afa00983f257bca2543eead45ef53711908c34f19f17bfe2a1
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: To-Do List and Project Planner Printable, Undated Task Pages, Letter and A4 PDF
+    description: 'An undated to-do list and project planner to print at home as many times as you like.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • To-do and project pages, print as many copies as you need
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - to do list
+    - project planner
+    - task planner
+    - undated planner
+    - checklist printable
+    - productivity planner
+    - planner pdf
+    - work planner
+    - weekly tasks
+    - goal planner
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 5.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: de8609c7afe2c3183ca39293055788ffae15c2635189a98cea65ba321c008643
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/todo-project-letter.pdf
+    file_sha256: d7b5ad2ab5889c7cb2e41daaae0119e4280e2cb09687a993ee4bd74bffc485db
+    name: todo-project-letter.pdf
+  payload_sha256: 1dd79e742e604063838ecf7c6c9349eed30e0e66009c88a08d47ad184e3c3b33
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/todo-project-a4.pdf
+    file_sha256: 9574bc3f9685ace723281b47480e02e4bd051a9464adbfd90f4a634dd6f72c9d
+    name: todo-project-a4.pdf
+  payload_sha256: bb3d8946955add9e1598f0c2c9882fcaaf82d22af4226c9a2d720878e77b4f63
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/todo-project-how-to-print.pdf
+    file_sha256: c4e88737b0b237c32a1aebcf38bc3e26121c8cf350614f14533df5051555ba72
+    name: todo-project-how-to-print.pdf
+  payload_sha256: c6615fdeea2d1e6b4e18a3d79ba596fee41fd03058f8995b2dd3cbd7a146e487
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/images/todo-project-1-cover.png
+    file_sha256: d378b840ff3e311e3fb4c400af56982b9f6f227243dc59df7d0b1f6feef83fe1
+    rank: 1
+    alt_text: To-do list page with four sections and checkboxes
+  payload_sha256: b54ad00a8d9f0abfb40cbde82191596f98241c73ada2cb6e0a6db1f59d56f87a
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/images/todo-project-2-inside.png
+    file_sha256: e015377d3d8f6e244a100b38249617ecace4a1439b079ab339d552d67dc30046
+    rank: 2
+    alt_text: 'To-Do List and Project Planner Printable: inside image'
+  payload_sha256: 0e9d302a7098e439092024dfbec3a08d4f698242bab643efe39c34872c0d47c5
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/images/todo-project-3-pages.png
+    file_sha256: 01fc78a0f542833d2df12733928f335b3f4960d1611d627f4e1e5d8b978e7979
+    rank: 3
+    alt_text: To-do list page with four sections and checkboxes
+  payload_sha256: 3f23fa94ae7719b660dc3d548f844ef9b3cc5fb64ec5aefc8fb4230671fac73a
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/images/todo-project-4-sizes.png
+    file_sha256: 8b1b7a54acec6879dc6f04a14b8503a83153b88c684241dca7fe6cfe937bbb77
+    rank: 4
+    alt_text: 'To-Do List and Project Planner Printable: sizes image'
+  payload_sha256: 265c0d07fa988469a2994483e9397c2420fa8833d6c62a3a18f0f9c34d237044
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[63].listing_id
+    path: assets/digital/2026-10-23-release-2/todo-project/images/todo-project-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'To-Do List and Project Planner Printable: print image'
+  payload_sha256: e6fadfa35bccab3e87babcb1643b0fc4b56de21473431e9cfe7a3d207a4cb00f
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: Gratitude Journal Printable, Daily Gratitude Log, Undated Monthly Pages, Letter and A4 PDF
+    description: 'A gratitude journal to print at home: an intentions page, twelve undated monthly logs for three good things
+      a day, and a looking-back page.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 14 pages in each size, undated so you can start any month
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - gratitude journal
+    - gratitude log
+    - daily gratitude
+    - self care planner
+    - mindfulness
+    - wellness journal
+    - planner pdf
+    - journal printable
+    - positive habits
+    - daily journal
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 0dc938d96f8ac40f4d3a9618e677ca2e7e480b557177a4a1c0f19360b31f97a6
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-letter.pdf
+    file_sha256: cf8c878b1ff4c5616a1dc894f1e43964be5acb7795a740321ce13f26454dfc4b
+    name: gratitude-journal-letter.pdf
+  payload_sha256: 27d1d9364173881bbc6bfe51bc34e91e7ed697c71e9010f21f1759f8a4d2fbfc
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-a4.pdf
+    file_sha256: f39fe16d0653ea1336e893f2cf15596ee1f685e311784a713048d82583d6f80a
+    name: gratitude-journal-a4.pdf
+  payload_sha256: 15395b4ab81cb013b85518fd0c3958511fd2061b6e813c9e98e4c958354bbd56
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-how-to-print.pdf
+    file_sha256: 3b0cfcc56cf7265b53752d9b591f7e4764c28aa2f3fbba860af9a083e5a32e2e
+    name: gratitude-journal-how-to-print.pdf
+  payload_sha256: 8629fa4772504cf8598ffec2576d41984f8b6d46e198b95b471741d73fc77a07
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/images/gratitude-journal-1-cover.png
+    file_sha256: f38c33bd9553c06806dfa3080f31055cf35a79176b8aedb37dc0d392fdfcbc33
+    rank: 1
+    alt_text: Gratitude log page with a row for each day of the month
+  payload_sha256: cb0902fd82d5394735fb728e6f3df05a79d9f96ecd7b191dada9385043553a81
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/images/gratitude-journal-2-inside.png
+    file_sha256: db21307c586a9c31458e8ca5648d568fd7e3e63c789d1484da3e1fb0110847cd
+    rank: 2
+    alt_text: 'Gratitude Journal Printable: inside image'
+  payload_sha256: f5becafc2251ddd6f4ff6e490212135e538208ed0b78cb3bfdf77742edc04f45
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/images/gratitude-journal-3-pages.png
+    file_sha256: d6d0e597197ebfa7b39f9fd1c4e117f92695dee13ae131fe09c1b084be1f7d11
+    rank: 3
+    alt_text: Gratitude log page with a row for each day of the month
+  payload_sha256: 22ad3442f79612931bb2afd80a12c429190c942d1c1e370d16fcfd5ffc197bd2
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/images/gratitude-journal-4-sizes.png
+    file_sha256: 2ca1d7282408d133eec8a1d85e26fd99a22dfc9c1a325970507954dd2c7f97fa
+    rank: 4
+    alt_text: 'Gratitude Journal Printable: sizes image'
+  payload_sha256: b4d1f6aeb772fe48adadc6b5a4a69b074c2536951a6f3c939ea169b22683959e
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[72].listing_id
+    path: assets/digital/2026-10-23-release-2/gratitude-journal/images/gratitude-journal-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Gratitude Journal Printable: print image'
+  payload_sha256: d45d30fe9eb29d8161fb7b27e737bf78354b9f14cd6d09149489c939bb78e9ed
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: 2026 Christmas Planner Printable, Holiday Budget, Gift List, Card List, Countdown PDF
+    description: 'A Christmas and holiday planner to print at home: budget, gift and card lists, nine weekly countdown pages,
+      meals, decorating and memories.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 19 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas planner
+    - holiday planner
+    - 2026 christmas
+    - gift list
+    - holiday budget
+    - christmas printable
+    - planner pdf
+    - christmas countdown
+    - holiday organizer
+    - gift tracker
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 8.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 77d5787b4f88fe265968d2e066693555dbd486014fbc1c5b2fc52d0dda00d513
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-letter.pdf
+    file_sha256: 63076e303f736d469e7c21b6e58393a80f3cbf22d8304ca7cf9b7c7f9c70346f
+    name: holiday-planner-letter.pdf
+  payload_sha256: 3a71eabbeea48c5e2209ad9504f8fac0348ce7481eef04991b30dc251490ac4d
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-a4.pdf
+    file_sha256: 9e0cc0cedc098f69abec11caa6f65649cdebfe306e77b8fb3105ff203d492f17
+    name: holiday-planner-a4.pdf
+  payload_sha256: 10a012543f7d4087c604111951f1a25c37300e43cf76bfdf3adea6ae4c3c87df
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-how-to-print.pdf
+    file_sha256: cf21eaa9884825c998b3a15adb24eb01f74dc1fd74bb6585ca2de5fe56b01a93
+    name: holiday-planner-how-to-print.pdf
+  payload_sha256: 19a35215f2b14a385fda21415a1da4d7fd483e3ab88cbfa5c7b1189f87f9845d
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/images/holiday-planner-1-cover.png
+    file_sha256: 17a6c4b88a0742fd41e10d3f8339b11b8c4bf0eff97ff39fce1f4ce3f8d99c58
+    rank: 1
+    alt_text: Holiday planner page with weekly countdown to-do list
+  payload_sha256: e621791f4e44a36be71e6f03e6acd4ed1d97d9999779f33f3ffb8c5cc34a40ce
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/images/holiday-planner-2-inside.png
+    file_sha256: 1f98338520092b0e9c1ef54b0f7d0ec39c1c7caa10afa08694b9f8c237e7fc4b
+    rank: 2
+    alt_text: '2026 Christmas Planner Printable: inside image'
+  payload_sha256: cd8d31042cd6d81c2b7d02474a73726ad37fa733d9be80ac8f9bae008f5e7259
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/images/holiday-planner-3-pages.png
+    file_sha256: 759fa13bdfd60d6e19f8ed75055c9ec91f2001e1151a91fbd1fe301eedbe8008
+    rank: 3
+    alt_text: Holiday planner page with weekly countdown to-do list
+  payload_sha256: e0b4da92af53db4fab30dc26e906947b5d1d2038ce50053055a567cf8d5a6560
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/images/holiday-planner-4-sizes.png
+    file_sha256: df57373a8481b5e40dcc1bd9f9f219489f0ad4262b87cd24d606d53388439cbf
+    rank: 4
+    alt_text: '2026 Christmas Planner Printable: sizes image'
+  payload_sha256: f544f62ece62c704db92acaf5e8688b8e1ba5a63c2e8dec0cee5b9763c24521b
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[81].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-planner/images/holiday-planner-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2026 Christmas Planner Printable: print image'
+  payload_sha256: 26cce371eb8abe883f5e135354efc793597083966d5be82ec82c5d45b0d7ca9a
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Christmas Gift Tracker Printable, 2026 Gift List and Budget by Person, PDF
+    description: 'A gift tracker to print at home: a budget by person, four tracker pages and a page for gift ideas.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 6 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - gift tracker
+    - christmas gift list
+    - gift list
+    - holiday budget
+    - christmas planner
+    - gift planner
+    - planner pdf
+    - shopping list
+    - christmas printable
+    - 2026 christmas
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 8b361a502ba84157e0573b29523f1b597508f0b918f309e38e8fe94895aa997d
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-letter.pdf
+    file_sha256: 3b194c7f4d660d5cfffb24620774559793c8015b57deddbf677ad6b210d36a34
+    name: gift-tracker-letter.pdf
+  payload_sha256: e887c786ec56d14c550528ac4ae25f0809dec6dfd3b7fecf5293f039c1cf187f
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-a4.pdf
+    file_sha256: 28e78568156845905b7867f974b533acd8c0c6238d47399564a629d269758095
+    name: gift-tracker-a4.pdf
+  payload_sha256: 7d95a4dd1b5ab088706bb584085dae6f441786edc32f68c710232f729ee93522
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-how-to-print.pdf
+    file_sha256: ac301c3f053e287796bae63e9e4938136deaa60809684c7c07311a33ba2371e3
+    name: gift-tracker-how-to-print.pdf
+  payload_sha256: 077aa4f3e35e15cf8e2ad44b7ac8f6fa52430a3f985de9299401a35244122aac
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/images/gift-tracker-1-cover.png
+    file_sha256: 344aae0e3c968ac21ad7dae2e17946023ea37f6c25a3ee12e17486e633d7f7ee
+    rank: 1
+    alt_text: Gift tracker page with columns for recipient, idea, store, price and status
+  payload_sha256: bdbd68b0dc237ec837d04f3d5f1587b7bfc385338c7ab68f13b02a8061aa54ad
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/images/gift-tracker-2-inside.png
+    file_sha256: a7057d1442211d767c4b50abf10b876d4a9dbdca7a699746f6f63d58d139bfe8
+    rank: 2
+    alt_text: 'Christmas Gift Tracker Printable: inside image'
+  payload_sha256: 50f6dac54a2d92951f20a3978f567d36e23bb7af4a506e36cf172017d359dfb5
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/images/gift-tracker-3-pages.png
+    file_sha256: e14247c906312b22dd2a72ae2984813705ac9a648035bc13a788939ac5451791
+    rank: 3
+    alt_text: Gift tracker page with columns for recipient, idea, store, price and status
+  payload_sha256: 642b793aec32f0b6390e6f480a8eaa8c66b81de0d5864d9c6c3332923761bbab
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/images/gift-tracker-4-sizes.png
+    file_sha256: 7b35a946d30a3e107a209be309d358b82ffe62709ad4a6c41acd1bc154bd06ee
+    rank: 4
+    alt_text: 'Christmas Gift Tracker Printable: sizes image'
+  payload_sha256: 9c41c14044634c64018b6f7d57fa8c4f8a171117ba818a684a3204f00196fffb
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[90].listing_id
+    path: assets/digital/2026-10-23-release-2/gift-tracker/images/gift-tracker-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Christmas Gift Tracker Printable: print image'
+  payload_sha256: 2e02ad0137de43e170368debd52b8e11b381db288455b040632e471f14d175cf
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Holiday Card List Printable, Christmas Card Tracker, Sent and Received, PDF
+    description: 'A holiday card list to print at home: four pages of 20 names with written, mailed and received columns.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 5 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas card list
+    - holiday card list
+    - card tracker
+    - address list
+    - christmas planner
+    - christmas printable
+    - planner pdf
+    - greeting cards
+    - 2026 christmas
+    - holiday organizer
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 3e2b476c16588c3cd4c3d34e1d26aac659588c5f7f99f36e4623374776bf6272
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/card-list-letter.pdf
+    file_sha256: 630f4c6a231adbe47481617294c94ce06172506587f5bec946a21f823dcc01b9
+    name: card-list-letter.pdf
+  payload_sha256: 48d275d8d306db8906f611f8a1ba7010c8e6566d08317efd9a22df2429ffbafb
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/card-list-a4.pdf
+    file_sha256: eb87679b665354ddbf28918373e78677771f9011af51e67a6aca181e9ea3da9e
+    name: card-list-a4.pdf
+  payload_sha256: eccc4de404f043ade67ff85869b661050cd9567e0464a5764f977ab8fe779ae6
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/card-list-how-to-print.pdf
+    file_sha256: bce0d2c9de7dc8ecd4f3e5c5c070809793c6abef24cb19a7601bc3e3c5da3fac
+    name: card-list-how-to-print.pdf
+  payload_sha256: 64d8751910c65d6fbf7652059bb245441ab044b35910b273bb868ba922bb262b
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/images/card-list-1-cover.png
+    file_sha256: 49db3ae08f671a908b4eb5ffb47c473aa7a3d8bf6cbb11b31aa84c402b66ea5d
+    rank: 1
+    alt_text: Card list page with name, written, mailed, received and note columns
+  payload_sha256: 40ddaa5e5cb9a93e105a6a3dc52574c1bbf709cd93501d55e8888d6b2de230ad
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/images/card-list-2-inside.png
+    file_sha256: c909b9acdeaf9b9ac5293936dd4c969291d4cacea19e1d9f65f7fd23a9c6310e
+    rank: 2
+    alt_text: 'Holiday Card List Printable: inside image'
+  payload_sha256: fcdc22de862e60ac7653e627d1ed90ab034cfeb19ee6f05bee61c75fed9635b3
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/images/card-list-3-pages.png
+    file_sha256: 8a15ced40a41572f945a985bf08282e56e9d8b72206166a2266e30e4e87208db
+    rank: 3
+    alt_text: Card list page with name, written, mailed, received and note columns
+  payload_sha256: a8bab0fde54f3e32f650dc264c703f8317e62f880deefb7f395e5c08ffed5787
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/images/card-list-4-sizes.png
+    file_sha256: 5e5caa50b77264e5538f47eb428ed38bd86b32f86156bf6f855eebd28b3449a3
+    rank: 4
+    alt_text: 'Holiday Card List Printable: sizes image'
+  payload_sha256: 073440b0af78794019350d8dc586f2363ed5e888a96b85688dac1d1c13598093
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[99].listing_id
+    path: assets/digital/2026-10-23-release-2/card-list/images/card-list-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Holiday Card List Printable: print image'
+  payload_sha256: b31a9fe01d5722180c1a3bad3d2ba13c71f88b10f9b0315e54a73ca4fbde2872
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Holiday Meal Planner Printable, Christmas Menu, Cooking Timeline and Grocery List PDF
+    description: 'A holiday meal planner to print at home: menu, cooking timeline and three grocery lists.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 5 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - holiday meal planner
+    - christmas menu
+    - menu planner
+    - cooking timeline
+    - grocery list
+    - christmas dinner
+    - planner pdf
+    - thanksgiving planner
+    - meal planner
+    - holiday printable
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 29dbdddee3aeb3751394ec18be5e6c55ecec1c3a18880ad4d3e8ea2f51d6ea67
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-letter.pdf
+    file_sha256: 37685b3ed49942b3847543271afd0590c6595bf1b3c33a818e51edf557f77e8d
+    name: holiday-meal-letter.pdf
+  payload_sha256: c0cfcdeba18e776154e7284da3a33f01d6a361e30aa493075fbc23aea6721757
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-a4.pdf
+    file_sha256: 99d36bdc9676c5b1673f8d09ae6d9bf6a11ca97b76be08ecf47a2ede9eb4d0bc
+    name: holiday-meal-a4.pdf
+  payload_sha256: 31feb7f4a6068309af039f649137f0f94fdf1a6409aa775e0413f549d2ada721
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-how-to-print.pdf
+    file_sha256: 717fe603a8c2b5ef088f1f153445e06c908d0c62bdad7a4e50e89deaf0e6173f
+    name: holiday-meal-how-to-print.pdf
+  payload_sha256: 12daf3969b0931ffc021b08c721e372d6c18f77cb3445b7ac6e063cbdf19dd47
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/images/holiday-meal-1-cover.png
+    file_sha256: b1c45f1853dd2f45b6ba175eea395348fe3aa296751f408edc9eafd1d35d9064
+    rank: 1
+    alt_text: Holiday menu page with starters, mains, sides, desserts and drinks
+  payload_sha256: 4b1d424443a775398c25f85d501bb48902fca9039fc8c9e0ceb931ad9106f631
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/images/holiday-meal-2-inside.png
+    file_sha256: f6a20683b3a6e99c50bd81f9f54753f3f325a44bb5db0e85bdd1190b3b58cc61
+    rank: 2
+    alt_text: 'Holiday Meal Planner Printable: inside image'
+  payload_sha256: b0eb1d00b1bb00216c3b15f5fc3d6531b8fee8f896ad58dd83efa71823ea5c70
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/images/holiday-meal-3-pages.png
+    file_sha256: 02ee8d8f5a84b6611ec6c86b4f0e0c9999bd4e9f9a3571f0dd3bfc32eb257ae1
+    rank: 3
+    alt_text: Holiday menu page with starters, mains, sides, desserts and drinks
+  payload_sha256: 8dc15bdc5e8d52413fcf775bd0602d04a9ae4d1047dbb9d33796fda39dd87061
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/images/holiday-meal-4-sizes.png
+    file_sha256: 5e5caa50b77264e5538f47eb428ed38bd86b32f86156bf6f855eebd28b3449a3
+    rank: 4
+    alt_text: 'Holiday Meal Planner Printable: sizes image'
+  payload_sha256: 9774981c461930e27fd4c53a408db1ba0c127cbd91c1050a65fc8c73a60fa527
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-meal/images/holiday-meal-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Holiday Meal Planner Printable: print image'
+  payload_sha256: 2acf117ea984e6c17f45bfc3d23913bfd6e45ce5d32b8ad490a679c56adca5a9
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: December Countdown Planner Printable, Dec 1 to 25 Daily Checklist, Letter and A4
+    description: 'A December countdown planner to print at home: a daily checklist from Dec 1 to 25, four weekly plan pages
+      and a traditions page.
+
+
+      WHAT YOU GET
+
+      • US Letter PDF
+
+      • A4 PDF
+
+      • 6 pages in each size
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas countdown
+    - december planner
+    - advent checklist
+    - countdown calendar
+    - christmas planner
+    - holiday traditions
+    - planner pdf
+    - christmas printable
+    - daily checklist
+    - 2026 christmas
+    - a4 planner
+    - letter planner
+    - instant download
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: fa8b3eaf39bf3f9a31772ff05521c33d82da22bf0b3d126e2ace2de1a787f2b0
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-letter.pdf
+    file_sha256: 16deff5aafc711f37a02b075e4a6f0b88550afaa254e80c89074e8df06645000
+    name: december-countdown-letter.pdf
+  payload_sha256: 4896ca58764674bf2783ff9844f0f679190a04be1f1d63b03abf61ba5c70c123
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-a4.pdf
+    file_sha256: b93edda8e06c22f1308eab6b2610047c4b27ae66a3dbc1a543ab293c509a1ac6
+    name: december-countdown-a4.pdf
+  payload_sha256: 0313385b6f58b472869b155e70864f97acf219cba96cd3b4b95be9be894ca02f
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-how-to-print.pdf
+    file_sha256: cd8cbb6a88f7b1cfe0bb0c264a5bd56fb161001d06728857f4073ddadada5280
+    name: december-countdown-how-to-print.pdf
+  payload_sha256: 1a923199c30fb96361af21f21c81832c49d09e5fddc15d00c2f51b9cc9f19589
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/images/december-countdown-1-cover.png
+    file_sha256: 237d82b5942bff4f61f395d4958d16211dea2d47437e98f56ee3cbd7c85040f9
+    rank: 1
+    alt_text: December countdown page with a checklist for each day
+  payload_sha256: 7daee7a9322713ac1db6d63dd6f051ef5e39958ba2ae46e5b08bbdd5270f475c
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/images/december-countdown-2-inside.png
+    file_sha256: 6067db64d247c6af358c11041cfcc4ac5123d81f41f2854ee4093610f6c7b692
+    rank: 2
+    alt_text: 'December Countdown Planner Printable: inside image'
+  payload_sha256: 02b69bd0dd147549e2c066b74a6988e2ddbb9ec89943ed08a2ac093f09b38403
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/images/december-countdown-3-pages.png
+    file_sha256: b398caaa68476c59014de9e72a26dd10a4fd3f231735412a38afcea0dccf32e2
+    rank: 3
+    alt_text: December countdown page with a checklist for each day
+  payload_sha256: 7395cff41dedb463f0b30b0460474fc46c01185bc438beceb15d03b1850d6c58
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/images/december-countdown-4-sizes.png
+    file_sha256: 7b35a946d30a3e107a209be309d358b82ffe62709ad4a6c41acd1bc154bd06ee
+    rank: 4
+    alt_text: 'December Countdown Planner Printable: sizes image'
+  payload_sha256: a2eb1e97668372fdf4db4f45582cc7350ed831226f981f33ce69c251c8d4920e
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-10-23-release-2/december-countdown/images/december-countdown-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'December Countdown Planner Printable: print image'
+  payload_sha256: eaea90a7d618cad7ee6b50b8a61fa039c5e62db745da8c9cdf005d7366bfd935
+- op: etsy_create_digital_listing
+  niche: new-year-planners
+  payload:
+    title: 2027 Planner Bundle Printable, 11 Planners, Weekly, Monthly, Daily, Budget, Meal, PDF
+    description: 'Eleven 2027 printable planners in one download: weekly, monthly, daily, goal, habit, budget, meal, cleaning,
+      reading, fitness and to-do.
+
+
+      WHAT YOU GET
+
+      • Letter zip: 11 planner PDFs
+
+      • A4 zip: 11 planner PDFs
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - planner bundle
+    - 2027 planner
+    - printable bundle
+    - planner pdf
+    - daily planner
+    - weekly planner
+    - monthly planner
+    - budget planner
+    - meal planner
+    - habit tracker
+    - new year bundle
+    - a4 planner
+    - letter planner
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 19.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: b6acfdee7b7ac29eee9700f60267d1a401b6e604960a651235fe903ace290c64
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-letter.zip
+    file_sha256: 678ce8379a9579196c8d4490e47c29a7596250fa79c4b8cfb1719ed14e365ec9
+    name: planner-bundle-2027-letter.zip
+  payload_sha256: 53d7994ac1fcbbe151c87ea82ed6039dfe073bf91da8a38cd7baf51e261ab219
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-a4.zip
+    file_sha256: 0e779138a77bb8b03c48135c90655a05247980313efe2ffd41688509f7942453
+    name: planner-bundle-2027-a4.zip
+  payload_sha256: 358858fd938c1a850911c71f96f6fbb7c04a2e4d32d89c37f59bab29f12edf97
+- op: etsy_upload_file
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-how-to-print.pdf
+    file_sha256: a3b2a6105a39a6ed23f1a88f88685f31a6c4c84d007906a8f29de64f1b122a11
+    name: planner-bundle-2027-how-to-print.pdf
+  payload_sha256: c4cdc09b82a67c3287f5cb2b0948c3aa9abf54993fce1ef76ec87148166754a7
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-1-cover.png
+    file_sha256: 73076c2a5ce1352a45c5dfd3080ce80be7a5ac0dded10f0c4a298a94272693dd
+    rank: 1
+    alt_text: Planner bundle preview showing six planner pages
+  payload_sha256: 8bb1fc804cc3027b26d33594a6110ccbf94cdf649138c0e60318ac0690615046
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-2-inside.png
+    file_sha256: 5176b2a6d82faf16cc82bf108c36bcd99cd64ed8a5d617b0d8600f733f334627
+    rank: 2
+    alt_text: '2027 Planner Bundle Printable: inside image'
+  payload_sha256: 7d4c81baa6c67daf8c58587568118ba242a662ebcfdce79f744784aac86912ab
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-3-pages.png
+    file_sha256: 95ececdc3b466576321079973fe736fc3cd1d277cba3b6bf6ed3e1f818010de6
+    rank: 3
+    alt_text: Planner bundle preview showing six planner pages
+  payload_sha256: a9121f3b9e269230a43afacea42b5a5789e00e03e189bd44c16526a48a203d6c
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-4-sizes.png
+    file_sha256: 14247d6749b6cbde86ca06fd99f1c766fbb96f101f2559c8041f9b42b70eb86c
+    rank: 4
+    alt_text: '2027 Planner Bundle Printable: sizes image'
+  payload_sha256: 4d840ea0df1f95e9713d3b108a99080442524a65ed5cd3825231160c7bc80aa8
+- op: etsy_upload_image
+  niche: new-year-planners
+  payload:
+    listing_id: $ref:ops[126].listing_id
+    path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: '2027 Planner Bundle Printable: print image'
+  payload_sha256: 00c39a71bc415e7dde3e0838d47bedb3923b92ebd860a3c82ee443ca336ee431
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Christmas and Holiday Bundle Printable, Planner, Gift Tracker, Card List, Meal Plan
+    description: 'Five holiday printables in one download: Christmas planner, gift tracker, card list, holiday meal planner
+      and December countdown.
+
+
+      WHAT YOU GET
+
+      • Letter zip: 5 holiday PDFs
+
+      • A4 zip: 5 holiday PDFs
+
+      • A how-to-print guide (PDF)
+
+
+      Print at 100% / "Actual size". Matte cardstock or plain paper both work. It''s mostly white space, so it''s light on
+      ink.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas bundle
+    - holiday bundle
+    - christmas planner
+    - gift tracker
+    - card list
+    - meal planner
+    - christmas printable
+    - countdown planner
+    - planner pdf
+    - holiday organizer
+    - 2026 christmas
+    - a4 planner
+    - letter planner
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 12.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: f52195f5945148046c195f8d4a5fd5eecf597a9c148683a147cafe8ca1a18ec8
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-letter.zip
+    file_sha256: 206755154ca1afb72e57144a780a9ca913673e4b755aeac3aa5d01c80ef644aa
+    name: holiday-bundle-2026-letter.zip
+  payload_sha256: 894e2e852c618bf8a899612dc0c7e14a93fb4e3afc0ed6d0c224febff0c30bd6
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-a4.zip
+    file_sha256: 5837a0fc5565834a1ee0148e88ec9e17c76963e6ace6ca388c214c6799862188
+    name: holiday-bundle-2026-a4.zip
+  payload_sha256: c1cd5a1b111565a3ebec99204d788f4edabe262f0f3f651ba1420f7d96eddb91
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-how-to-print.pdf
+    file_sha256: fef0d8fb1c7817bc3e664da24bccd56d1981725d1fc2c6815ead2b12793b7bc6
+    name: holiday-bundle-2026-how-to-print.pdf
+  payload_sha256: e6c68faf6f0565c52b3340e6041b79dc1c3d70bdc2590f3768a646597c412a76
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/images/holiday-bundle-2026-1-cover.png
+    file_sha256: 004ae1e7a24952810deb55c58eaabb773480025a9397cd5c6ce47b9181820188
+    rank: 1
+    alt_text: Holiday bundle preview showing five holiday pages
+  payload_sha256: f69a511212acf5c13c91b7644fa71bf7d779ec42d6856cd00b2e3de480d08847
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/images/holiday-bundle-2026-2-inside.png
+    file_sha256: da0fa2962d6f5f2159d2e6bc76233aa82da7df5ab01113fd0cee9b6c14d26e46
+    rank: 2
+    alt_text: 'Christmas and Holiday Bundle Printable: inside image'
+  payload_sha256: aacf7071c513219388d06fd5a724a6f7a1a15add1d78e71d8c29fc57aef41483
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/images/holiday-bundle-2026-3-pages.png
+    file_sha256: e85189542ca267d353b268648354ac692e364c06c9e743df9fd20ea295b59892
+    rank: 3
+    alt_text: Holiday bundle preview showing five holiday pages
+  payload_sha256: 77f7a4eaadfbf25841d90fc3587a0324f7d5a392a4076fd7b3ddb7ec191d16e9
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/images/holiday-bundle-2026-4-sizes.png
+    file_sha256: 0db6bd6e64cae3f65dab3ff12a6617bb881f21d746fff834bb548e7592d8e118
+    rank: 4
+    alt_text: 'Christmas and Holiday Bundle Printable: sizes image'
+  payload_sha256: d0c8a19cb51536c237d572cd20268440b22c38657f6b339d8a749f1a51191e47
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[135].listing_id
+    path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/images/holiday-bundle-2026-5-print.png
+    file_sha256: 9df8a8467d1d2f4771e40fbb77068310d17dbd276843cbf1306af388ba5e0296
+    rank: 5
+    alt_text: 'Christmas and Holiday Bundle Printable: print image'
+  payload_sha256: 71cbe85b8d5a8b522c6a0fd2efa3ab12f8191548a67f191a0e64eb44558da336
