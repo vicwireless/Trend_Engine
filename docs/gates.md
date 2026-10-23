@@ -23,7 +23,7 @@ Printify charges; Star Seller metrics (response rate, on-time shipping, rating).
 
 | Gate | Criteria | If met | If missed |
 |---|---|---|---|
-| Day 7 | ≥ 50 digital listings live with disclosures; executor ledger clean; pins posting | continue | fix pipeline before adding concepts |
+| Day 7 | ≥ 20 digital listings live with disclosures by 30 Oct 2026; executor ledger clean; pins posting (owner decision 2026-10-23; the playbook says ≥ 50 by day 7, and the clock starts at the first release publish, 23 Oct) | continue | fix pipeline before adding concepts |
 | Day 21 | 2+ samples passed; first POD listings live with partner attached; personalized test order rendered correctly | enable personalized POD | keep digital-only |
 | Day 45 | Any niche with ≥ 10 orders or contribution/100 visits above $15 | shift 50% of new concepts to it; start bundle ladder | broaden candidates; no new spend |
 | Day 90 | Operating result positive 2 consecutive weeks; owner time ≤ 2 h/week; no unresolved policy issues | release ROI-gated budget per SP-11 (EverBee API, Claude Max, ads to $10/day) | HOLD; 4 more cycles; if still negative, CONTRACT to digital-only lean stack |

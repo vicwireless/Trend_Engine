@@ -1,0 +1,10 @@
+{
+  "as_of": "2026-10-23",
+  "source": "Owner confirmed all three live and sent the addresses in chat 2026-10-23T17:20Z (release 2026-10-23-planner-family). Calendar 4601035546 was published by hand on 2026-10-22.",
+  "listings": [
+    {"listing_id": 4601035546, "key": "wall-calendar", "price_usd": 6.99, "url": "https://www.etsy.com/listing/4601035546"},
+    {"listing_id": 4601751471, "key": "weekly-planner", "price_usd": 8.99, "url": "https://www.etsy.com/listing/4601751471"},
+    {"listing_id": 4601781508, "key": "goal-planner", "price_usd": 7.99, "url": "https://www.etsy.com/listing/4601781508"},
+    {"listing_id": 4601756001, "key": "habit-tracker", "price_usd": 6.99, "url": "https://www.etsy.com/listing/4601756001"}
+  ]
+}

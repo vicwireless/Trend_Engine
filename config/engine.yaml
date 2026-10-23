@@ -1,7 +1,7 @@
 # Engine ceilings. The executor refuses any manifest that would exceed these.
 # Changing a ceiling is itself a PR the owner merges.
 
-owner_hours_cap_per_week: 1.5
+owner_hours_cap_per_week: 15      # STARTUP PHASE (owner decision 2026-10-23: revenue speed over labor hours). Playbook value is 1.5; restore at the Day 21 gate review (about 13 Nov).
 max_new_listings_per_week: 60
 max_pod_candidates_per_week: 10
 etsy_ads_daily_cap_usd: 3

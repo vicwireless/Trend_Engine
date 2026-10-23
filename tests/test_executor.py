@@ -438,7 +438,7 @@ CASES = {
     "id_mismatch": (lambda r: write_manifest(r, [("etsy_activate_listing", "n", {"listing_id": 1})], mid="2026-10-21-other"),
                     lambda p: p.rename(p.with_name("2026-10-21-renamed.yaml")), "does not match filename"),
     "owner_hours": (lambda r: write_manifest(r, [("etsy_activate_listing", "n", {"listing_id": 1})],
-                                             owner_minutes_estimate=120), None, "owner_minutes_estimate"),
+                                             owner_minutes_estimate=7 * 24 * 60), None, "owner_minutes_estimate"),
     "ads_cap": (lambda r: write_manifest(r, [("etsy_activate_listing", "n", {"listing_id": 1})],
                                          ads={"daily_budget_usd": 5}), None, "exceeds cap"),
     "offsite_ads": (lambda r: write_manifest(r, [("etsy_activate_listing", "n", {"listing_id": 1})],
