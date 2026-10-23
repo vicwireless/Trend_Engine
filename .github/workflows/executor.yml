@@ -50,8 +50,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" \
-            | python -m src.executor.approval "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+          # The commit-to-PRs list omits merged_by, so fetch each PR in full.
+          for n in $(gh api "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" --jq '.[].number'); do
+            gh api "repos/${GITHUB_REPOSITORY}/pulls/$n"
+          done | jq -s . | python -m src.executor.approval "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Refuse to run while a ledger PR is unmerged
         # Ceilings, cool-downs and idempotency read the ledger on main. A run with an unmerged
