@@ -59,25 +59,25 @@ ops:
   payload:
     listing_id: $ref:ops[0].listing_id
     path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-letter.pdf
-    file_sha256: a11935539fcd45519b1e0ab33919477d421c6f866106be5a7b283732821179d1
+    file_sha256: 56285ac4f2f985e9092c8df801a9995fd8fb7a2882b70526446a4fa641527279
     name: monthly-planner-letter.pdf
-  payload_sha256: 7f48144ccf30a6b580c1574b4187ba1aa0bb6449b44cb260e43046aac64d701f
+  payload_sha256: e34aa3fc6d12b0714394de9ee2e12ad95de79d7d20e3e57ecdee1d139ad548d3
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[0].listing_id
     path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-a4.pdf
-    file_sha256: ebe26f0c34278d19f56cf13320afd08f5aceacd060eeb113ea4cd2f4f1f9b753
+    file_sha256: dd9e828aecddd1aceef5f312cf3801bb1d5ef963140a09cef78602069deb3c34
     name: monthly-planner-a4.pdf
-  payload_sha256: b3971b31aa8ca2a8e8b59711e835045232d667aa1b6e5a5b4f2e7b5e7ceaaeca
+  payload_sha256: a1cac89ef7c62cc6ddbb569dd68667daf1d9b38d26d07d54f784590ce89dc1e5
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[0].listing_id
     path: assets/digital/2026-10-23-release-2/monthly-planner/monthly-planner-how-to-print.pdf
-    file_sha256: a0c86561db1f56158e917f4868b55941fe30450a37c252e5af26ca3965bd313a
+    file_sha256: 53f8786e442d6e1c164f35dc3b01882b364ec91965edda22748f0870e0d6f656
     name: monthly-planner-how-to-print.pdf
-  payload_sha256: a916cfb30b22050285f416d06859da9afff9a96ad057729e0925952b85e71037
+  payload_sha256: f2fcaa99aef3c906007a41ed4885bb4c1944b264865409f4e760ec4af9f3951d
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -177,25 +177,25 @@ ops:
   payload:
     listing_id: $ref:ops[9].listing_id
     path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-letter.pdf
-    file_sha256: b0e3a6c87c62b9316be3be0d36bf32bde98df8892e4cb682362b3ebd23943ba3
+    file_sha256: 736242665b00213a46940165479fa052f9ef31c6ee314595ad575332a5108668
     name: daily-planner-letter.pdf
-  payload_sha256: e32ad1dc0eb200020475bd307da2e3b6867887cc0d57a2fa4ddb12886ef00077
+  payload_sha256: 7b11b7113e4a171f9bfa8f1d3a9645c905d3db699a28ab592fcbe77396b51bb6
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[9].listing_id
     path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-a4.pdf
-    file_sha256: 33297bbe998ce1eb66c47788a56ba76d76f66c86a519585fe8beae222a6a0ce4
+    file_sha256: b62cda5f2cac5482affa0c0662b1b20f1e09938b7af346d5cd441d86ad197695
     name: daily-planner-a4.pdf
-  payload_sha256: 0ba84422e86835dcfaafa4de3bce1d6b82ac902b813105ee344c779515bdf294
+  payload_sha256: bd0ebefe65918fd7bcf0636fe2abb646a0394101bf53720896524a0da56d4f3c
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[9].listing_id
     path: assets/digital/2026-10-23-release-2/daily-planner/daily-planner-how-to-print.pdf
-    file_sha256: 6d4960ee1dc51ba0ecc9c42d665bdf1b841697fb6424c2c40228e94bb2a2eb84
+    file_sha256: a419f280b78a9fae6fbe633bab75350d688b1fe084a3f74cc6ff5effefa5ca8f
     name: daily-planner-how-to-print.pdf
-  payload_sha256: 74c755c533ffba2987b584fef355873250edea437d68c42ad5dd412361ed6089
+  payload_sha256: 024ea129a40b1b74516e36e70ba40d33d543c207bf055b5b2cdd962f5a0fc5e6
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -294,25 +294,25 @@ ops:
   payload:
     listing_id: $ref:ops[18].listing_id
     path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-letter.pdf
-    file_sha256: 80302cae1f4870fede26d7f77c55550d0ea67abab688bc60366c849653a1b9c8
+    file_sha256: 194b9eb1064d32b5d7cd4f8c2c25cf2638482cd5a2f2fb3b9df3ae21b901ba18
     name: budget-planner-letter.pdf
-  payload_sha256: d2c4e66bbd50498506644f1d794c951d325c062ec175ecc17fac54aa37ebc004
+  payload_sha256: 102b05a22a188e1e5e3f4255d2bbf463eb7f7d6b52540e3ed50abea632155fa3
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[18].listing_id
     path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-a4.pdf
-    file_sha256: c1705b9cdd46c7a0193a3d3bcee957405426f9bf8c6736c0fd918b9d8237c7ff
+    file_sha256: ba97d1c2c6efe2c98460966eb35ffb4330da534e46d8d551a7073ef9e274a4d5
     name: budget-planner-a4.pdf
-  payload_sha256: 6b828237cb2df43817b20e86be6d90716b8379aa7319a0b071586631c0d17e65
+  payload_sha256: fec3bac21160f9a3d30fdb0fe62bf47cf10adeb2bb80c9b608a5875bcb77fcd8
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[18].listing_id
     path: assets/digital/2026-10-23-release-2/budget-planner/budget-planner-how-to-print.pdf
-    file_sha256: c589dc030007f9ad0e09c94578a79a89300fde1803032f10be2ce4944cd31d01
+    file_sha256: 185b7fac74feda62d033649b31761d5bf8ab3c767cb8c2b4f61a2be383217846
     name: budget-planner-how-to-print.pdf
-  payload_sha256: efb3b3877a358bf26e8e0b8a15d480d16b9e81e10730fb269cc16cfab93412d4
+  payload_sha256: c264ce3fe8cd5fb8b0d64b366c179cc946ea42597fde19a557d10a220c44f4fa
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -412,25 +412,25 @@ ops:
   payload:
     listing_id: $ref:ops[27].listing_id
     path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-letter.pdf
-    file_sha256: d5da00b1b230dfde9ec5a269fe4e9f4b9555e08e18618752d3a6f52b5c915993
+    file_sha256: 5de455401c8a7381cd3d7197d9a20005cbc60972e64f8d602aaa0407db2a951d
     name: meal-planner-letter.pdf
-  payload_sha256: f8961040a4e30e60f50c21f5e840209ed55b30d139ff40a35ebc01789f9ad720
+  payload_sha256: a5ffb867b8e601a324a264ec5f9f657fe2abb0b641a35fb21606129bf7489931
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[27].listing_id
     path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-a4.pdf
-    file_sha256: 6ea5b3142b20cabcb31b58deacd661cba1b48a465ff579554da93939868d5f91
+    file_sha256: 012aa335340a90e01df0072ebc38f179e0fd58e2c7b99582c3c111adaa1bfbf3
     name: meal-planner-a4.pdf
-  payload_sha256: 04ea5181ff420e4aba699cae9ffbbbc41c53ebb412a1ee35966e8302adf3e72e
+  payload_sha256: 3ebe587b466427322bf177d7cb905943652d744a8779785103c1e2b96b9a45b1
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[27].listing_id
     path: assets/digital/2026-10-23-release-2/meal-planner/meal-planner-how-to-print.pdf
-    file_sha256: c81a6bdf7004be2d83d52b4c356fbd98bb27dac309b5d07a97c1436df8247532
+    file_sha256: b23ecd02dfcfc473ca5a3df05cc0b46e3d740949b930db504c7440ad00af206c
     name: meal-planner-how-to-print.pdf
-  payload_sha256: 9aab5e16da2307c9acb981ab3d262ab22952ef2a903d3028564d06caecc71bfc
+  payload_sha256: b3451a4075f349a5e206d9759a5769914fc98477b1f3ff07e4d65115c88d619d
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -530,25 +530,25 @@ ops:
   payload:
     listing_id: $ref:ops[36].listing_id
     path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-letter.pdf
-    file_sha256: 7be427c922e714f578e65e1b82e0b4de4c010991e783d09bcbc600c0ad309dbd
+    file_sha256: 34c93fc6deb28493e904d2e6f9035bcb28c077770c6150c4d9cffd769ce187e7
     name: cleaning-planner-letter.pdf
-  payload_sha256: 712c9108678e527871f8f906c33785e2528213c10483b35c35250a405410b745
+  payload_sha256: 95bddc6b93d8f7b2c5edeaf577c41be4251fba95a041bd49d104002fb4b52231
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[36].listing_id
     path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-a4.pdf
-    file_sha256: 085e6445a9468afd7ca309022bba64f63adc106eaab995a2ffcaf8b43cec22d9
+    file_sha256: 0dd77805f7c4c5ebd3bc196f9bbf8e4a087a8c83feaae91ca191482daa877a5f
     name: cleaning-planner-a4.pdf
-  payload_sha256: f025d080b38367ddd630ef164959ab5f1a85f06a78145296a7d5f46af89f4144
+  payload_sha256: 6a409c6956178e2f5abbfa52f6a8cf85d6ab6756d6bc8d29a358c9802af17425
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[36].listing_id
     path: assets/digital/2026-10-23-release-2/cleaning-planner/cleaning-planner-how-to-print.pdf
-    file_sha256: f64ec523ea2feb75b914fdb656c636b9b9889a8e369445ccac769e1e8785bce8
+    file_sha256: 8a68f4a6c12067deeb2a4b47c9e3627b901abf1bcc56ed74a807a069d989864e
     name: cleaning-planner-how-to-print.pdf
-  payload_sha256: dbc0079741485fd98349ef3ea42fc8433fa48cc54cdee0ac331d864a5a8b58a0
+  payload_sha256: aa90e21e312633077bd93d93178f9f5986790e90bf1a6f05b734dc7ed022f4df
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -648,25 +648,25 @@ ops:
   payload:
     listing_id: $ref:ops[45].listing_id
     path: assets/digital/2026-10-23-release-2/reading-log/reading-log-letter.pdf
-    file_sha256: 90816ff42763d77330ceea4df75e988e48fe7b83b783a835b6940838a75158f6
+    file_sha256: 553b03d052e6f210ea7420dece5d18b4c2d2e202835e6e0d8219c5d7a00119b2
     name: reading-log-letter.pdf
-  payload_sha256: cc97b274dc82a6b4387d7480a91aff8093751f418fabe5231167e9de2376c868
+  payload_sha256: b40a7776ea849ad03b2e2ad1ed0b665b11077a342d08d4e07ce663e35d1fbbf6
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[45].listing_id
     path: assets/digital/2026-10-23-release-2/reading-log/reading-log-a4.pdf
-    file_sha256: 405d9d0918d217d4a0f5f68445560a00154071d111f691f893bc20a8850312db
+    file_sha256: adb1379a8ee81a3b3c69346300d677f2bdd630eed214401b83381c20a34c788e
     name: reading-log-a4.pdf
-  payload_sha256: 617b683797ffb062fcede5b96a356cbfdfb472fd760c18bbf3f6c212221f1abe
+  payload_sha256: b6c2b0a5fbf6ae582f6f9502c97a51775171de5af5411afe37d7990d1474a292
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[45].listing_id
     path: assets/digital/2026-10-23-release-2/reading-log/reading-log-how-to-print.pdf
-    file_sha256: d3c1dcd1fca72f8fdd2b4ab22c583a4e60f63f6836fd3b119ad36c2e4a9de7d6
+    file_sha256: 544609b7e1f0ca6f591db66774c3c74ac43c161f94b350a9c8d7708efe2fddb7
     name: reading-log-how-to-print.pdf
-  payload_sha256: f6027abe892267dca4875ef89d8235538b5d0bc10a8927b57594470b397b3627
+  payload_sha256: 0ec0239b178c0bdc1b29cd9feafd41d5b189cbda09bddd3b0e963fa2845f3c07
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -766,25 +766,25 @@ ops:
   payload:
     listing_id: $ref:ops[54].listing_id
     path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-letter.pdf
-    file_sha256: a83390d26513f6795e1fbdc3ce133f727dbf3478526ce96559e77cd206f364ba
+    file_sha256: 93f46c8fc68350e56374e568152fb65b0b47b39114d66416e5f1ec08ee234947
     name: fitness-log-letter.pdf
-  payload_sha256: 1d465021f2ffd61a4b87c226d9fc7e9a770da068ee2bd8394b7b3c456fe3ee92
+  payload_sha256: fae65e35b968fb65b68f2bcad473c42932aa8b777f6cb549615dec886a466b3a
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[54].listing_id
     path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-a4.pdf
-    file_sha256: 944369865c1e9d9aa6cabc70f2eda807bacff46505fdd265a8e0f09dcbaa252d
+    file_sha256: 349d92073a70cf52c96b26767386681a0c68346c04e4881d903822bd71f348b1
     name: fitness-log-a4.pdf
-  payload_sha256: 6b5c4f9c946b63338c2d6b465e7d766ef0ce805798129d0f0f83f1e883ab1601
+  payload_sha256: 3abdc3a3fd342ce3654067211d2c4d6da7d3edbbc47d73f79d9526a8a10524dc
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[54].listing_id
     path: assets/digital/2026-10-23-release-2/fitness-log/fitness-log-how-to-print.pdf
-    file_sha256: 4d33dcb1b46486c2ab3d99c687a2ad536eb1e44a3ebcd80d434c677dfbd17ae0
+    file_sha256: 78cf32ddeaefdff5f8a151b7fb7e61ced0d61068364696d3793ef88fd624a945
     name: fitness-log-how-to-print.pdf
-  payload_sha256: 2e2edb407dde2ce3c150b7dfd10c0aaa682b9e91d4b734817bd458cf9a9d4bdd
+  payload_sha256: 2cb01fb0c73ab7e3ad1ac1d5797bfe24c0ad74d2c044db9e8d084a9d06ec0b61
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -883,25 +883,25 @@ ops:
   payload:
     listing_id: $ref:ops[63].listing_id
     path: assets/digital/2026-10-23-release-2/todo-project/todo-project-letter.pdf
-    file_sha256: 2930b6b59e7b501c01c49402857e49e8f6c23eb1524db32ff1d762edba3edabf
+    file_sha256: d7b5ad2ab5889c7cb2e41daaae0119e4280e2cb09687a993ee4bd74bffc485db
     name: todo-project-letter.pdf
-  payload_sha256: 2217786c01e4e307c8f8f3cfd338f06e0957cb2fa1295b8aaccf5389f4d7ab5c
+  payload_sha256: 1dd79e742e604063838ecf7c6c9349eed30e0e66009c88a08d47ad184e3c3b33
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[63].listing_id
     path: assets/digital/2026-10-23-release-2/todo-project/todo-project-a4.pdf
-    file_sha256: d64e68b591b6c832b3d4bd2d0086b08bc12da8bccd7e55f91e84d6163fca7052
+    file_sha256: 9574bc3f9685ace723281b47480e02e4bd051a9464adbfd90f4a634dd6f72c9d
     name: todo-project-a4.pdf
-  payload_sha256: ff51620410f08491729db8f8a3e682abf0afb0d196c9f0e9dc0140d8a1de5977
+  payload_sha256: bb3d8946955add9e1598f0c2c9882fcaaf82d22af4226c9a2d720878e77b4f63
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[63].listing_id
     path: assets/digital/2026-10-23-release-2/todo-project/todo-project-how-to-print.pdf
-    file_sha256: 4a22494c9a6930b6961b0dfba6ab34edb677806f630e35ede237743e310a0cc2
+    file_sha256: c4e88737b0b237c32a1aebcf38bc3e26121c8cf350614f14533df5051555ba72
     name: todo-project-how-to-print.pdf
-  payload_sha256: ae03cb0ba01717c7c0de1bc8d529a33b6904abb87fee706553be968d318345db
+  payload_sha256: c6615fdeea2d1e6b4e18a3d79ba596fee41fd03058f8995b2dd3cbd7a146e487
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -1001,25 +1001,25 @@ ops:
   payload:
     listing_id: $ref:ops[72].listing_id
     path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-letter.pdf
-    file_sha256: cb25874c79467d9d6fb57adbdd468894b3370bd51902726a32ad098df857cbb9
+    file_sha256: cf8c878b1ff4c5616a1dc894f1e43964be5acb7795a740321ce13f26454dfc4b
     name: gratitude-journal-letter.pdf
-  payload_sha256: 756e2e8a89910c92c49b9f8a6e8853db7257259d2a67584181a0e0c7cdbf9918
+  payload_sha256: 27d1d9364173881bbc6bfe51bc34e91e7ed697c71e9010f21f1759f8a4d2fbfc
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[72].listing_id
     path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-a4.pdf
-    file_sha256: 9cb262611ae11beb23e7907f7168abd86160687d0b3b7b6457cc8077bcf0b651
+    file_sha256: f39fe16d0653ea1336e893f2cf15596ee1f685e311784a713048d82583d6f80a
     name: gratitude-journal-a4.pdf
-  payload_sha256: 428b044a87d347ec5f49369fd6f13d7ae90a564cf0e70c1414afadc87468b498
+  payload_sha256: 15395b4ab81cb013b85518fd0c3958511fd2061b6e813c9e98e4c958354bbd56
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[72].listing_id
     path: assets/digital/2026-10-23-release-2/gratitude-journal/gratitude-journal-how-to-print.pdf
-    file_sha256: 7db97d397e8b1b2009a75c7ee672bee070b4eb57e5e33ce6ebd426a87409eff0
+    file_sha256: 3b0cfcc56cf7265b53752d9b591f7e4764c28aa2f3fbba860af9a083e5a32e2e
     name: gratitude-journal-how-to-print.pdf
-  payload_sha256: e600b8ae8924125b90aff4258d7e2ff17336708516be7308a6c1296e13495c73
+  payload_sha256: 8629fa4772504cf8598ffec2576d41984f8b6d46e198b95b471741d73fc77a07
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -1119,25 +1119,25 @@ ops:
   payload:
     listing_id: $ref:ops[81].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-letter.pdf
-    file_sha256: e38c5c60a1bf3902a3ac39432b19c6a8d965cdaa73a443d556fce8a017d78e3d
+    file_sha256: 63076e303f736d469e7c21b6e58393a80f3cbf22d8304ca7cf9b7c7f9c70346f
     name: holiday-planner-letter.pdf
-  payload_sha256: 7e1f8f6bb4bc0aa2fe7cadee0c904f449ae3eda10a4291a5ec60e09f8f143b41
+  payload_sha256: 3a71eabbeea48c5e2209ad9504f8fac0348ce7481eef04991b30dc251490ac4d
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[81].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-a4.pdf
-    file_sha256: 316347f84ade169dd24676e9367901d177773b3a67e4d1e709bb57cfa3485dbc
+    file_sha256: 9e0cc0cedc098f69abec11caa6f65649cdebfe306e77b8fb3105ff203d492f17
     name: holiday-planner-a4.pdf
-  payload_sha256: 54698bb2604088370fd318e98918b2c9cb9e335ec0e93f0fefcf8377f24c1fe9
+  payload_sha256: 10a012543f7d4087c604111951f1a25c37300e43cf76bfdf3adea6ae4c3c87df
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[81].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-planner/holiday-planner-how-to-print.pdf
-    file_sha256: 030b2b339ad8b07fe8de985c9ad33ccfecd8dd1d937d3721e89bf3ea3f81023c
+    file_sha256: cf21eaa9884825c998b3a15adb24eb01f74dc1fd74bb6585ca2de5fe56b01a93
     name: holiday-planner-how-to-print.pdf
-  payload_sha256: 8db9b091929497998f8a198e83a9ff013162681cd9dc3abe415cd2573e8389ad
+  payload_sha256: 19a35215f2b14a385fda21415a1da4d7fd483e3ab88cbfa5c7b1189f87f9845d
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1236,25 +1236,25 @@ ops:
   payload:
     listing_id: $ref:ops[90].listing_id
     path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-letter.pdf
-    file_sha256: 671dd8e22125ecdaaa72032566b01e4503466107fc486ca2744ef0ed3c66d572
+    file_sha256: 3b194c7f4d660d5cfffb24620774559793c8015b57deddbf677ad6b210d36a34
     name: gift-tracker-letter.pdf
-  payload_sha256: f5ff736afb6b3aede3c9ae4d7c7139be7539c00a25cf4d1476e539d352f7203b
+  payload_sha256: e887c786ec56d14c550528ac4ae25f0809dec6dfd3b7fecf5293f039c1cf187f
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[90].listing_id
     path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-a4.pdf
-    file_sha256: fc57d455b27a8863fea2b896ce424ae7d662cb80cd97987110dc3138c94a73fc
+    file_sha256: 28e78568156845905b7867f974b533acd8c0c6238d47399564a629d269758095
     name: gift-tracker-a4.pdf
-  payload_sha256: 07ec94460081eb5ca8519c5a2c766f72540231fa94a237b74771ee4787d47e91
+  payload_sha256: 7d95a4dd1b5ab088706bb584085dae6f441786edc32f68c710232f729ee93522
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[90].listing_id
     path: assets/digital/2026-10-23-release-2/gift-tracker/gift-tracker-how-to-print.pdf
-    file_sha256: e6861ff2f31ee8381143faef7d69257e2b30b9d9a06db3ff94404dd557fa7c33
+    file_sha256: ac301c3f053e287796bae63e9e4938136deaa60809684c7c07311a33ba2371e3
     name: gift-tracker-how-to-print.pdf
-  payload_sha256: de20afeb6be9b88652ad1b6283b2c2148f162e9b080cc4a5db77a8f1776de985
+  payload_sha256: 077aa4f3e35e15cf8e2ad44b7ac8f6fa52430a3f985de9299401a35244122aac
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1353,25 +1353,25 @@ ops:
   payload:
     listing_id: $ref:ops[99].listing_id
     path: assets/digital/2026-10-23-release-2/card-list/card-list-letter.pdf
-    file_sha256: eca9cc0b504c3f946502007512133a5c686f382407ca97693642d06a8881ad6e
+    file_sha256: 630f4c6a231adbe47481617294c94ce06172506587f5bec946a21f823dcc01b9
     name: card-list-letter.pdf
-  payload_sha256: d9ef4203360f29ae87f4dde7ef529dafdf1634bc25e481ddc9e34270f8015d92
+  payload_sha256: 48d275d8d306db8906f611f8a1ba7010c8e6566d08317efd9a22df2429ffbafb
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[99].listing_id
     path: assets/digital/2026-10-23-release-2/card-list/card-list-a4.pdf
-    file_sha256: 556bad457b95b5b201d4d6a4da70e2f9fd4249732f4b1c5f824007a9496e2fe3
+    file_sha256: eb87679b665354ddbf28918373e78677771f9011af51e67a6aca181e9ea3da9e
     name: card-list-a4.pdf
-  payload_sha256: 56a6e68a64c68a5f349896561ea979e8bde1f8c855d0877b9e72da4be1726ab0
+  payload_sha256: eccc4de404f043ade67ff85869b661050cd9567e0464a5764f977ab8fe779ae6
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[99].listing_id
     path: assets/digital/2026-10-23-release-2/card-list/card-list-how-to-print.pdf
-    file_sha256: a5febe9b50061d338b74b5ffaef6cff7fb0549f1721283af2d4d3014b572326c
+    file_sha256: bce0d2c9de7dc8ecd4f3e5c5c070809793c6abef24cb19a7601bc3e3c5da3fac
     name: card-list-how-to-print.pdf
-  payload_sha256: 165cd1fb7ea90048a1059df4f9f5d16cc8da5e8689716f9a8745a9c87470bd52
+  payload_sha256: 64d8751910c65d6fbf7652059bb245441ab044b35910b273bb868ba922bb262b
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1470,25 +1470,25 @@ ops:
   payload:
     listing_id: $ref:ops[108].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-letter.pdf
-    file_sha256: 757de3214877be16f4f500ec2f1d028ddfa262604fbad6f63c9bbe7508a26083
+    file_sha256: 37685b3ed49942b3847543271afd0590c6595bf1b3c33a818e51edf557f77e8d
     name: holiday-meal-letter.pdf
-  payload_sha256: ef109acfa8b26959637b36d17220be774ffff906fb0d3a5c5bc802a8d4e4888f
+  payload_sha256: c0cfcdeba18e776154e7284da3a33f01d6a361e30aa493075fbc23aea6721757
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[108].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-a4.pdf
-    file_sha256: 4afd22c2fcaa624ebd0b59bb1483af8d04b7d77798ea64feb0cb967f73667dfe
+    file_sha256: 99d36bdc9676c5b1673f8d09ae6d9bf6a11ca97b76be08ecf47a2ede9eb4d0bc
     name: holiday-meal-a4.pdf
-  payload_sha256: 74e972237d7a959aa73a6eaa1376f211abb7c5d8790a489efbe15ccc5a1e57c4
+  payload_sha256: 31feb7f4a6068309af039f649137f0f94fdf1a6409aa775e0413f549d2ada721
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[108].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-meal/holiday-meal-how-to-print.pdf
-    file_sha256: 545410395c8266b5261bd2b8e602c3c3af39ca1c0d06f9b41e678eb11ddc3712
+    file_sha256: 717fe603a8c2b5ef088f1f153445e06c908d0c62bdad7a4e50e89deaf0e6173f
     name: holiday-meal-how-to-print.pdf
-  payload_sha256: 61e7852d56d742fbb181914332441870c754e0e0bcddd493af695f355dca6a14
+  payload_sha256: 12daf3969b0931ffc021b08c721e372d6c18f77cb3445b7ac6e063cbdf19dd47
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1588,25 +1588,25 @@ ops:
   payload:
     listing_id: $ref:ops[117].listing_id
     path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-letter.pdf
-    file_sha256: 33d84dcc7158055ed8d96a2c7332a015374ff43b76757299d91c665977492f97
+    file_sha256: 16deff5aafc711f37a02b075e4a6f0b88550afaa254e80c89074e8df06645000
     name: december-countdown-letter.pdf
-  payload_sha256: 8500c7f293da389c08618adf9fc77b4320cd763bb123dd03f9cafa1a72438eb3
+  payload_sha256: 4896ca58764674bf2783ff9844f0f679190a04be1f1d63b03abf61ba5c70c123
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[117].listing_id
     path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-a4.pdf
-    file_sha256: 9b9af04eb145a7c6d836466bd59e3dec45682161b071e75cee8b5d5858dfef35
+    file_sha256: b93edda8e06c22f1308eab6b2610047c4b27ae66a3dbc1a543ab293c509a1ac6
     name: december-countdown-a4.pdf
-  payload_sha256: baad5e3dfe1201f2406fdadc83c560243303b71248223bfab3c6f95ce613238f
+  payload_sha256: 0313385b6f58b472869b155e70864f97acf219cba96cd3b4b95be9be894ca02f
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[117].listing_id
     path: assets/digital/2026-10-23-release-2/december-countdown/december-countdown-how-to-print.pdf
-    file_sha256: a3db08847fc9d24bc5b78db29e3ba2f3887d7e80823823c2ec29542fc76167c2
+    file_sha256: cd8cbb6a88f7b1cfe0bb0c264a5bd56fb161001d06728857f4073ddadada5280
     name: december-countdown-how-to-print.pdf
-  payload_sha256: 6fbdc48e997fa41ad6fccea871ff231d89b0919438c8c600e087da5cc7f872eb
+  payload_sha256: 1a923199c30fb96361af21f21c81832c49d09e5fddc15d00c2f51b9cc9f19589
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1704,34 +1704,34 @@ ops:
   payload:
     listing_id: $ref:ops[126].listing_id
     path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-letter.zip
-    file_sha256: 0c12894706d8fc77784574ad36996389916beab483a0dd4ed28abf47c027c748
+    file_sha256: 678ce8379a9579196c8d4490e47c29a7596250fa79c4b8cfb1719ed14e365ec9
     name: planner-bundle-2027-letter.zip
-  payload_sha256: f9d2d419fba780dfc708d1fda5be1abc317f18293cbfb7cebe6de2a9b01cd882
+  payload_sha256: 53d7994ac1fcbbe151c87ea82ed6039dfe073bf91da8a38cd7baf51e261ab219
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[126].listing_id
     path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-a4.zip
-    file_sha256: 5b26bc604b63f306b2e3882f73f2b19a84858ced240f6881df37c24d15828429
+    file_sha256: 0e779138a77bb8b03c48135c90655a05247980313efe2ffd41688509f7942453
     name: planner-bundle-2027-a4.zip
-  payload_sha256: 2cac95f8083fd125f0f0180396ef673495837354f9b2e825dff1bb006c09a2cb
+  payload_sha256: 358858fd938c1a850911c71f96f6fbb7c04a2e4d32d89c37f59bab29f12edf97
 - op: etsy_upload_file
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[126].listing_id
     path: assets/digital/2026-10-23-release-2/planner-bundle-2027/planner-bundle-2027-how-to-print.pdf
-    file_sha256: 42cc719736915b7421f5c4f03a2670c7d01c94a6297a41d570b466b96d5ac028
+    file_sha256: a3b2a6105a39a6ed23f1a88f88685f31a6c4c84d007906a8f29de64f1b122a11
     name: planner-bundle-2027-how-to-print.pdf
-  payload_sha256: 9408609766731500cf4a6eb73647a7234b2d5d01581cc810371b183e445cc9ff
+  payload_sha256: c4cdc09b82a67c3287f5cb2b0948c3aa9abf54993fce1ef76ec87148166754a7
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
     listing_id: $ref:ops[126].listing_id
     path: assets/digital/2026-10-23-release-2/planner-bundle-2027/images/planner-bundle-2027-1-cover.png
-    file_sha256: 158b8600383cb6ad700a121f1acb60a5ccefaabeb0bfd62675ebfb34ebcf5b4d
+    file_sha256: 73076c2a5ce1352a45c5dfd3080ce80be7a5ac0dded10f0c4a298a94272693dd
     rank: 1
     alt_text: Planner bundle preview showing six planner pages
-  payload_sha256: 53b5691a73d3cf4196884b3530f6abf01ebbbc3d5ca66d6f6f3ad44900c337f2
+  payload_sha256: 8bb1fc804cc3027b26d33594a6110ccbf94cdf649138c0e60318ac0690615046
 - op: etsy_upload_image
   niche: new-year-planners
   payload:
@@ -1820,25 +1820,25 @@ ops:
   payload:
     listing_id: $ref:ops[135].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-letter.zip
-    file_sha256: c374640b77b0b398e300777d90791af282f46d4288b66ad508a450070e6891e6
+    file_sha256: 206755154ca1afb72e57144a780a9ca913673e4b755aeac3aa5d01c80ef644aa
     name: holiday-bundle-2026-letter.zip
-  payload_sha256: 49f3a0f0ddd544188f1b20eb04b4c5e97e5f152a9a65c5d90e66506570fd0ca0
+  payload_sha256: 894e2e852c618bf8a899612dc0c7e14a93fb4e3afc0ed6d0c224febff0c30bd6
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[135].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-a4.zip
-    file_sha256: 4f031edf1a0bce71d80530eab9ac428b307b44c00cce1f51f7518d024e2ec261
+    file_sha256: 5837a0fc5565834a1ee0148e88ec9e17c76963e6ace6ca388c214c6799862188
     name: holiday-bundle-2026-a4.zip
-  payload_sha256: da51f9b27eb8c909e561e549d5bfa98c3687a3728f80a8f6e7148ff54a12abd0
+  payload_sha256: c1cd5a1b111565a3ebec99204d788f4edabe262f0f3f651ba1420f7d96eddb91
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[135].listing_id
     path: assets/digital/2026-10-23-release-2/holiday-bundle-2026/holiday-bundle-2026-how-to-print.pdf
-    file_sha256: 751256c4b73b456f4344c8da1e0b0dcbdd833fe8b0bdfedb5b9e46015c22457a
+    file_sha256: fef0d8fb1c7817bc3e664da24bccd56d1981725d1fc2c6815ead2b12793b7bc6
     name: holiday-bundle-2026-how-to-print.pdf
-  payload_sha256: c2a2dd291556f26260cc8f09da008c0c5e5e59b4864c98a3423f89a192366c94
+  payload_sha256: e6c68faf6f0565c52b3340e6041b79dc1c3d70bdc2590f3768a646597c412a76
 - op: etsy_upload_image
   niche: holiday-planners
   payload:

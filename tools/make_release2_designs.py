@@ -415,7 +415,7 @@ PRODUCTS = {
 
 BUNDLES = {
     "planner-bundle-2027": dict(
-        title="Planner Bundle Printable", year=str(YEAR), tagline="Ten printable planners in one download.",
+        title="Planner Bundle Printable", year=str(YEAR), tagline="Eleven printable planners in one download.",
         members=["monthly-planner", "daily-planner", "budget-planner", "meal-planner", "cleaning-planner", "reading-log", "fitness-log", "todo-project"],
         extra_existing=["weekly-planner", "goal-planner", "habit-tracker"], preview=["monthly-planner", "daily-planner", "budget-planner", "meal-planner", "cleaning-planner", "reading-log"]),
     "holiday-bundle-2026": dict(
