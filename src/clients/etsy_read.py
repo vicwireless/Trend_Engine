@@ -49,7 +49,7 @@ class EtsyRead:
             "num_favorers": r.get("num_favorers"),
             "shop_id": r.get("shop_id"),
             "tags": r.get("tags", []),
-            "type": r.get("type"),
+            "listing_type": r.get("listing_type"),
             "created_timestamp": r.get("created_timestamp"),
         } for r in data.get("results", [])]
         return {"count": data.get("count", 0), "results": rows, "source": "etsy_open_api"}

@@ -25,6 +25,7 @@ def test_find_active_listings_returns_price_and_favorites():
     assert out["source"] == "etsy_open_api"
     assert out["results"][0] == {**out["results"][0], "price_usd": 12.99, "num_favorers": 412}
     assert out["results"][2]["price_usd"] is None  # non-USD prices are not mixed in
+    assert out["results"][0]["listing_type"] == "download"  # Etsy's field is listing_type, not type
 
 
 @responses.activate
