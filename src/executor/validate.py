@@ -117,12 +117,15 @@ def _check_text(name: str, p: dict, config: dict, blocklist: Blocklist, where: s
         if len(title.split()) > MAX_TITLE_WORDS:
             errs.append(f"{where}: title has {len(title.split())} words (max {MAX_TITLE_WORDS})")
         if p.get("ai_assisted"):
-            sentence = " ".join(config["compliance"]["ai_disclosure_sentence"].split())
-            if sentence not in " ".join(p["description"].split()):
+            comp = config["compliance"]
+            sentences = [comp["ai_disclosure_sentence"], *comp.get("ai_disclosure_sentences_extra", [])]
+            desc = " ".join(p["description"].split())
+            if not any(" ".join(s.split()) in desc for s in sentences):
                 errs.append(f"{where}: ai_assisted listing is missing the AI disclosure sentence")
             etsy = config.get("etsy") or {}
             if (name == "etsy_create_digital_listing" and etsy.get("require_ai_disclosure_attribute", True)
-                    and not (etsy.get("ai_disclosure_property") or {}).get("property_id")):
+                    and not (etsy.get("ai_disclosure_property") or {}).get("property_id")
+                    and not etsy.get("ai_disclosure_owner_ticks")):
                 errs.append(f"{where}: AI disclosure attribute is required but etsy.ai_disclosure_property "
                             "is not configured")
         if name == "printify_create_product":

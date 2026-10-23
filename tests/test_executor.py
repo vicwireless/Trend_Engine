@@ -473,10 +473,32 @@ def test_unverified_fee_snapshot_blocks_pricing(repo):
 
 @responses.activate
 def test_ai_disclosure_attribute_unconfigured_blocks(repo):
-    _set_config(repo, **{"etsy.ai_disclosure_property": {"property_id": None, "value_ids": [], "values": []}})
+    _set_config(repo, **{"etsy.ai_disclosure_property": {"property_id": None, "value_ids": [], "values": []},
+                         "etsy.ai_disclosure_owner_ticks": False})
     path = write_manifest(repo, [("etsy_create_digital_listing", "n", create_payload())])
     with pytest.raises(runner.PreflightFailed, match="AI disclosure attribute"):
         execute(repo, path)
+
+
+@responses.activate
+def test_owner_ticks_waives_attribute_but_not_sentence(repo):
+    _set_config(repo, **{"etsy.ai_disclosure_property": {"property_id": None, "value_ids": [], "values": []},
+                         "etsy.ai_disclosure_owner_ticks": True})
+    path = write_manifest(repo, [("etsy_create_digital_listing", "n",
+                                  create_payload(description="No disclosure"))])
+    with pytest.raises(runner.PreflightFailed, match="AI disclosure sentence") as exc:
+        execute(repo, path)
+    assert "attribute is required" not in str(exc.value)
+
+
+def test_extra_disclosure_sentence_is_accepted(repo):
+    from src.executor import validate
+    config = yaml.safe_load((repo / "config" / "engine.yaml").read_text())
+    extra = config["compliance"]["ai_disclosure_sentences_extra"][0]
+    payload = create_payload(description=f"A calendar. {extra}")
+    errs = validate._check_text("etsy_create_digital_listing", payload, config,
+                                validate.Blocklist.load(repo / "config" / "blocklist.yaml"), "op")
+    assert errs == []
 
 
 @responses.activate
