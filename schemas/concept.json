@@ -71,6 +71,52 @@
         "reviewed_at": {
           "type": "string",
           "format": "date-time"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check": {
+                "enum": [
+                  "blocklist",
+                  "origin",
+                  "trademark",
+                  "etsy_marketplace",
+                  "text_copyright",
+                  "image_provenance"
+                ]
+              },
+              "result": {
+                "enum": [
+                  "pass",
+                  "hit",
+                  "unknown"
+                ]
+              },
+              "evidence": {
+                "type": "string"
+              },
+              "checked_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9]{3}$"
+                }
+              }
+            },
+            "required": [
+              "check",
+              "result",
+              "evidence",
+              "checked_at"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

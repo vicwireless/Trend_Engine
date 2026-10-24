@@ -1,0 +1,8 @@
+{"search_metadata": {"status": "Success"},
+ "trending_searches": [
+  {"query": "friendsmas ideas", "start_timestamp": 1792800000, "active": true, "search_volume": 20000,
+   "increase_percentage": 500, "categories": [{"id": 3, "name": "Shopping"}],
+   "trend_breakdown": ["friendsmas gifts", "friendsmas party"], "serpapi_google_trends_link": "x"},
+  {"query": "nfl scores", "start_timestamp": 1792790000, "active": false, "search_volume": 500000,
+   "increase_percentage": 1000, "categories": [{"id": 17, "name": "Sports"}], "trend_breakdown": []}
+ ]}
