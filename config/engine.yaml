@@ -44,7 +44,7 @@ price_change_cooldown_days: 28        # one change per SKU per 4 weeks
 pins_per_day_max: 8
 etsy_ads_max_listings: 10
 etsy_ads_min_roas_14d: 3
-serpapi_max_queries_per_day: 8        # free tier, 250/month
+serpapi_max_queries_per_day: 33       # Starter plan, 1,000/month (owner approved 2026-10-24); was 8 on the free tier
 image_api_budget_usd_per_month: 15    # Lean stack line item
 everbee:
   max_qps: 10                         # EverBee Research API guide

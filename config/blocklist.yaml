@@ -73,11 +73,30 @@ categories:
     - nps arrowhead
     - national park service
     - find your park
+  # Memes tied to an identifiable creator, photo subject or rights holder (docs/ip-screen.md).
+  # Rule: ride a trend's sentiment, occasion or look; never sell the meme itself.
+  meme_owned:
+    - grumpy cat
+    - nyan cat
+    - keyboard cat
+    - doge
+    - pepe the frog
+    - distracted boyfriend
+    - hide the pain harold
+    - success kid
+    - bad luck brian
+    - disaster girl
+    - overly attached girlfriend
+    - this is fine
+    - skibidi toilet
+    - let's go brandon
 
 regex:
   # Lookalike / workaround spellings and generic risk patterns.
   - name: trademark_symbols
     pattern: '[™®©]'
+  - name: meme_template
+    pattern: '\b(meme template|reaction (image|gif)|as seen on tiktok|viral (sound|audio))\b'
   - name: inspired_by_hedge
     pattern: '\b(inspired by|in the style of|dupe|lookalike|knock[- ]?off|parody of)\b'
   - name: disney_lookalike

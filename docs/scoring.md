@@ -47,7 +47,7 @@ as cohorts come in.
 | `unit_cost_usd` | Dated cost snapshot in `data/costs/` (0 for most digital) | snapshot |
 | `owner_minutes_per_listing` | Owner estimate for review + fixes per listing | owner |
 | `sources` | Count of independent sources behind the inputs | — |
-| `ip_veto` | Blocklist hit or IP review veto | — |
+| `ip_veto` | `is_veto(concept.ip_review)` from the IP screen (`docs/ip-screen.md`); blocklist runs inside it | — |
 
 ## Score
 

@@ -12,6 +12,10 @@ weekly close applies. **Any rule change is a PR to this file**, so the rulebook 
    is dropped and a two-week fast-track to add one with strong momentum.
 3. **Promotion ladder:** digital single → digital bundle → POD sibling → personalized POD sibling.
    Each step requires evidence from the step before.
+   **Exception (owner decision 2026-10-24):** phrase-led POD (tees, mugs, stickers whose design is
+   mainly an original phrase) may launch as a first test without a selling digital twin. It still
+   needs a passed IP screen (`docs/ip-screen.md`), a Printify blueprint check, the 30% POD margin
+   floor, and `partner_checked: true`, and counts toward `max_pod_candidates_per_week`.
 4. **Pricing moves in ±10% steps** with a four-week cool-down per SKU
    (`price_change_max_pct`, `price_change_cooldown_days`; the executor enforces both).
 5. The style line in `CLAUDE.md` is revised monthly from what sold, not from what was predicted.

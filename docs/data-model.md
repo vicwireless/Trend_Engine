@@ -16,7 +16,7 @@ One observation of demand or competition. Stored in `data/signals/YYYY-MM-DD/*.j
 | Field | Type | Notes |
 |---|---|---|
 | `signal_id` | string | `sig-YYYYMMDD-<slug>` |
-| `source` | enum | `etsy_open_api`, `etsy_marketplace_insights`, `everbee`, `erank`, `serpapi_google_trends`, `pinterest_trends`, `manual` |
+| `source` | enum | `etsy_open_api`, `etsy_marketplace_insights`, `everbee`, `erank`, `serpapi_google_trends`, `serpapi_google_autocomplete`, `serpapi_google_trends_trending_now`, `pinterest_trends`, `manual` |
 | `is_estimate` | boolean | Must be `true` for anything not from Etsy Marketplace Insights or the Etsy Open API (rule 5) |
 | `keyword` | string | Search phrase observed |
 | `niche` | string | Niche slug |
@@ -45,7 +45,7 @@ An original offer idea derived from signals. `data/scores/YYYY-MM-DD/*.json`.
 | `signal_ids` | string[] | At least one |
 | `score` | number 0–100 | From `src/scoring/score.py` |
 | `score_version` | string | Scoring doc version |
-| `ip_review` | object | `status` (`pass`/`veto`), `reasons[]`, `reviewed_at` |
+| `ip_review` | object | `status` (`pass`/`veto`), `reasons[]`, `reviewed_at`, `checks[]` (one per IP-screen check: `check`, `result`, `evidence`, `checked_at`, `classes` for trademark). Built by `src/compliance/ip_review.py`; see `docs/ip-screen.md` |
 | `status` | enum | `proposed`, `approved`, `vetoed`, `built`, `parked` |
 | `ai_assisted` | boolean | |
 | `created_at` | datetime | |
