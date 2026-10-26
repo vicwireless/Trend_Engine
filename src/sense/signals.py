@@ -80,6 +80,8 @@ GROWTH_COLS = {  # header alias -> (metric, window days)
     "yearly change": ("growth_yoy", 365), "yoy": ("growth_yoy", 365), "year over year": ("growth_yoy", 365),
 }
 VOLUME_COLS = ("searches", "avg searches", "search volume", "volume", "etsy searches")
+COMPETITION_COLS = ("etsy competition", "competition")  # eRank's listing-count estimate
+ARROW_COLS = ("change",)  # eRank Trend Buzz "↑ 78" / "↓ 2"; eRank does not document the unit
 
 
 def _rows(text: str) -> tuple[list[str], list[list[str]]]:
@@ -93,6 +95,10 @@ def _rows(text: str) -> tuple[list[str], list[list[str]]]:
 
 def _number(cell: str) -> float | None:
     cell = cell.strip().replace(",", "").replace("+", "")
+    if cell[:1] in ("↑", "↓"):
+        sign = -1 if cell[0] == "↓" else 1
+        v = _number(cell[1:])
+        return None if v is None else sign * v
     m = re.fullmatch(r"(-?\d+(?:\.\d+)?)\s*(%?)", cell)
     if not m:
         return None
@@ -105,7 +111,9 @@ def parse_inbox_csv(text: str, *, source: str, day: dt.date, fetched_at: str, ra
     """Parse an owner-pasted table (CSV or tab-separated, first row = header).
 
     Needs a keyword column (any of KEYWORD_COLS). Row order becomes `trend_rank`; growth columns
-    (weekly/monthly/yearly change, "+120%" -> 1.2) and a search-volume column are added when present.
+    (weekly/monthly/yearly change, "+120%" -> 1.2), search volume, competing listings and eRank's
+    arrow "Change" ("↓ 2" -> -2, unit undocumented) are added when present. Cells such as
+    "Unknown" or "< 20" are skipped, not guessed.
     Fails closed: a table without a keyword column raises ValueError.
     """
     header, rows = _rows(text)
@@ -114,6 +122,8 @@ def parse_inbox_csv(text: str, *, source: str, day: dt.date, fetched_at: str, ra
         raise ValueError(f"{raw_ref}: no keyword column; expected one of {KEYWORD_COLS}, got {header}")
     growth = [(i, *GROWTH_COLS[h]) for i, h in enumerate(header) if h in GROWTH_COLS]
     vcol = next((i for i, h in enumerate(header) if h in VOLUME_COLS), None)
+    ccol = next((i for i, h in enumerate(header) if h in COMPETITION_COLS), None)
+    acol = next((i for i, h in enumerate(header) if h in ARROW_COLS), None)
     out: list[dict] = []
     kw = dict(source=source, fetched_at=fetched_at, raw_ref=raw_ref, blocklist=blocklist,
               license="owner export, internal use")
@@ -133,6 +143,16 @@ def parse_inbox_csv(text: str, *, source: str, day: dt.date, fetched_at: str, ra
             if v is not None:
                 out.append(make_signal(keyword=keyword, metric="search_volume", value=v, unit="count",
                                        window_start=day - dt.timedelta(days=30), window_end=day, n=n, **kw))
+        if ccol is not None and ccol < len(row):
+            v = _number(row[ccol])
+            if v is not None:
+                out.append(make_signal(keyword=keyword, metric="competing_listings", value=v, unit="count",
+                                       window_start=day, window_end=day, n=n, **kw))
+        if acol is not None and acol < len(row):
+            v = _number(row[acol])
+            if v is not None:
+                out.append(make_signal(keyword=keyword, metric="trend_change", value=v, unit="source_index",
+                                       window_start=day - dt.timedelta(days=1), window_end=day, n=n, **kw))
     return out
 
 

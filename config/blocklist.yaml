@@ -14,6 +14,11 @@ categories:
     - barbie
     - hello kitty
     - stanley cup
+    - rolex
+    - ayn thor
+    - scat pack
+    - mamiya
+    - rb67
   sports_leagues:
     - nfl
     - nba
@@ -26,6 +31,7 @@ categories:
     - premier league
     - super bowl
     - march madness
+    - chicago bears
   entertainment_franchises:
     - star wars
     - marvel
@@ -40,6 +46,26 @@ categories:
     - bluey
     - sanrio
     - minecraft
+    - valorant
+    - overwatch
+    - gundam
+    - hunter x hunter
+    - neferpitou
+    - grinch
+    - dr. seuss
+    - glamdring
+    - fuecoco
+    - green lantern
+    - green lanterns
+    - spiderman
+    - spider-man
+    - cyberpunk 2077
+    - edgerunners
+    - minion
+    - minions
+    - top gun
+    - ghostface
+    - ghost face
   celebrities:
     - taylor swift
     - beyonce
@@ -47,6 +73,9 @@ categories:
     - harry styles
     - travis kelce
     - oprah
+    - bts
+    - nathan fielder
+    - john anderson
   song_lyrics:
     - shake it off
     - all too well
@@ -103,6 +132,8 @@ regex:
     pattern: '\bd[i1!]sn[e3]y\b'
   - name: swiftie
     pattern: '\bswift(ie|ies)\b'
+  - name: team_city_football
+    pattern: '\b((chicago|detroit|green bay|kansas city|dallas|philadelphia) football|bears football)\b'
   - name: team_mascot_city
     pattern: '\b(chiefs|eagles|cowboys|lakers|yankees|dodgers|packers|49ers)\b'
   - name: lyric_marker

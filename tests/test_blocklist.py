@@ -62,3 +62,10 @@ def test_clean_text_passes(bl, text):
 
 def test_checks_lists_of_tags(bl):
     assert bl.check(["fine", ["nested", "pokemon"]])
+
+
+def test_team_city_football_regex():
+    from src.compliance.blocklist import Blocklist
+    bl = Blocklist.load()
+    assert bl.check("chicago football svg") and bl.check("bears football svg football shirt design")
+    assert not bl.check("teddy bear svg")
