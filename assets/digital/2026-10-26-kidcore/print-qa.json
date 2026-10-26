@@ -1,0 +1,902 @@
+[
+ {
+  "path": "assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "3.12 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.43 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.88 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.10 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.20 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.85 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.17 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.68 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.92 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.98 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.93 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.25 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.78 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.00 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.07 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.54 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.90 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.47 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.78 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.72 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.85 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.14 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.68 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.92 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.96 MB (max 20.0 MB)"
+   }
+  ]
+ }
+]

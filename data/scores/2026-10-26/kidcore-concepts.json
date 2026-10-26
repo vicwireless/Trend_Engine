@@ -1,0 +1,404 @@
+[
+ {
+  "concept_id": "con-20261026-recess-forever",
+  "niche": "kidcore-wall-art",
+  "working_title": "Recess Forever Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": "teacher gift",
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "web search 2026-10-26: no single source; used by many sellers as a teacher-retirement line. Not the 1997 Disney series title",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"recess forever\": 109 results, generic teacher-retirement shirts and mugs from many shops; none licensed",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ },
+ {
+  "concept_id": "con-20261026-you-did-it",
+  "niche": "kidcore-wall-art",
+  "working_title": "You Did It Gold Star Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "common phrase, no single source. Replaced 'Gold Star Day', which is also the name of Gold Star Mother's and Family's Day (families of fallen service members)",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"you did it\" is a stock encouragement phrase; results are generic graduation and congrats items",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ },
+ {
+  "concept_id": "con-20261026-make-something-messy",
+  "niche": "kidcore-wall-art",
+  "working_title": "Make Something Messy Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "web search 2026-10-26: no brand or campaign uses the phrase",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"make something messy\": 0 results",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ },
+ {
+  "concept_id": "con-20261026-happy-shapes",
+  "niche": "kidcore-wall-art",
+  "working_title": "Happy Shapes Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn composition, no text",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "no design text; toy-block shapes are generic",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ },
+ {
+  "concept_id": "con-20261026-rainbow-daisy-check",
+  "niche": "kidcore-wall-art",
+  "working_title": "Rainbow Daisy Checkerboard Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn composition, no text",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "no design text; rainbow, daisy and checkerboard are generic motifs",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ },
+ {
+  "concept_id": "con-20261026-kidcore-set-of-5",
+  "niche": "kidcore-wall-art",
+  "working_title": "Kidcore Wall Art Set of 5 Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, classroom, dorm or nostalgic kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art with puffed bubble lettering and crayon grain; five ratios per design; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "sig-20261026-erank-search-volume-088-kidcore",
+   "sig-20261026-erank-competing-listin-088-kidcore"
+  ],
+  "score": 51.5,
+  "score_version": "scoring-v0.2",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-10-26T13:40:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "set of the five designs above",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
+     "checked_at": "2026-10-26T13:40:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "set of the five designs above",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "short original phrase or no text; no lyrics or quotes",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_kidcore_designs.py; no images from third parties, no characters or faces",
+     "checked_at": "2026-10-26T13:40:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-10-26T13:40:00+00:00"
+ }
+]

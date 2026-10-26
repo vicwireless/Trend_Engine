@@ -1,0 +1,5 @@
+# Copy to 2026-10-26-kidcore-trademark.yaml once the USPTO search is done (tmsearch.uspto.gov).
+# One entry per listing key in tools/make_kidcore_release.py. result: pass | hit | unknown.
+# A live or pending mark in a searched class is a hit (docs/ip-screen.md).
+results:
+  recess-forever: {result: unknown, evidence: "tmsearch 'RECESS FOREVER' live+pending, classes 009 016: ...", checked_at: "2026-10-26T00:00:00+00:00", classes: ["009", "016"]}
