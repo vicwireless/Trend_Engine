@@ -72,3 +72,18 @@ def test_erank_csv_and_missing_keyword_column_fails_closed(tmp_path):
         assert "no keyword column" in str(e)
     else:
         raise AssertionError("expected ValueError")
+
+
+def test_erank_trend_buzz_real_header():
+    text = ("Rank\tKeywords\tSearch Interest\tSearch Trend\tChange\tAvg Searches\tAvg Clicks\tAvg CTR\tEtsy Competition\tKD\n"
+            "1\tspace invitation a002\t\t\t-\tUnknown\tUnknown\tUnknown\t1\t\n"
+            "2\tthanksgiving\t\tSep 2026 19,790\t↑ 78\t8,518\t12,169\t143%\t1,214,542\t100\n"
+            "3\tchristmas\t\tSep 2026 59,860\t↓ 2\t< 20\t59,308\t142%\t12,791,009\t100\n")
+    sigs = parse_inbox_csv(text, source="erank", day=DAY, fetched_at=NOW,
+                           raw_ref="data/inbox/2026-10-24/erank_trendbuzz.csv", blocklist=BL)
+    assert_valid(sigs)
+    by = {(s["keyword"], s["metric"]): s["value"] for s in sigs}
+    assert by[("thanksgiving", "trend_change")] == 78 and by[("christmas", "trend_change")] == -2
+    assert by[("thanksgiving", "search_volume")] == 8518 and ("christmas", "search_volume") not in by
+    assert by[("christmas", "competing_listings")] == 12791009
+    assert ("space invitation a002", "search_volume") not in by
