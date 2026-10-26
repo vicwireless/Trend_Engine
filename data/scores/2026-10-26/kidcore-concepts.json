@@ -16,11 +16,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -37,10 +34,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -62,7 +62,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  },
@@ -83,11 +83,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -104,10 +101,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -129,7 +129,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  },
@@ -150,11 +150,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -171,10 +168,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -196,7 +196,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  },
@@ -217,11 +217,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -238,10 +235,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -263,7 +263,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  },
@@ -284,11 +284,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -305,10 +302,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -330,7 +330,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  },
@@ -351,11 +351,8 @@
   "score": 51.5,
   "score_version": "scoring-v0.2",
   "ip_review": {
-   "status": "veto",
-   "reasons": [
-    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment))",
-    "trademark: classes ['009', '016'] not searched"
-   ],
+   "status": "pass",
+   "reasons": [],
    "reviewed_at": "2026-10-26T13:40:00+00:00",
    "checks": [
     {
@@ -372,10 +369,13 @@
     },
     {
      "check": "trademark",
-     "result": "unknown",
-     "evidence": "USPTO search not run yet (tmsearch.uspto.gov blocked from the cloud environment)",
-     "checked_at": "2026-10-26T13:40:00+00:00",
-     "classes": []
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov 2026-10-26 (reported 14:53Z as \"all clear\"): RECESS FOREVER, YOU DID IT, MAKE SOMETHING MESSY and KIDCORE; no live or pending marks in classes 009 or 016",
+     "checked_at": "2026-10-26T14:53:54+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
     },
     {
      "check": "etsy_marketplace",
@@ -397,7 +397,7 @@
     }
    ]
   },
-  "status": "vetoed",
+  "status": "proposed",
   "ai_assisted": true,
   "created_at": "2026-10-26T13:40:00+00:00"
  }

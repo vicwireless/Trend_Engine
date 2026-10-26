@@ -1,0 +1,803 @@
+manifest_id: 2026-10-26-kidcore
+created_at: '2026-10-26T14:00:00Z'
+created_by: claude
+summary: 'Release 3: kidcore wall art test (scan 2026-10-26, score 51.5, band test). 5 printable singles at $4.99 and a set
+  of 5 at $13.99, drafts only; owner ticks the AI field and publishes each.'
+owner_minutes_estimate: 40
+ops:
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Recess Forever Kidcore Wall Art Printable, Retro Playroom Poster, Teacher Gift Digital Download
+    description: 'Chunky bubble letters, a red and blue checkerboard and a sky full of stars. A bright, nostalgic print for
+      a playroom, a classroom or a teacher who is finally retiring.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - kidcore poster
+    - playroom decor
+    - retro kids art
+    - recess forever
+    - teacher gift
+    - classroom decor
+    - bubble letter art
+    - kids room print
+    - teacher retirement
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 5bf03558e3b0cd7d7da5317ca72f754f06361a65deb5d521671b7fd7591008e2
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-2x3.jpg
+    file_sha256: 400eaa523eac6ca787b1aeb52a6d4cdcee9d281828fb499e70cb22b106971981
+    name: recess-forever-2x3.jpg
+  payload_sha256: c68c56153fda55c05904333f85944a5fcc755cfc4769e027bcda329fe3f1b44a
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-3x4.jpg
+    file_sha256: 7f8a9ec3298c316733ccb533f10011e036b394fd8f526e4309bbaba452d0a7e9
+    name: recess-forever-3x4.jpg
+  payload_sha256: 2aca9ce50f6647fb9f1406aa7cd1fe63abeb283158e0cf425dceaf284eea0cf1
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-4x5.jpg
+    file_sha256: 5c30f4997926e11d6e93585992f847c17bf6594f6cbdf7c78559ce72dc5b97c1
+    name: recess-forever-4x5.jpg
+  payload_sha256: 177027e08ec087a2b4d1275b8f1c422e4fcdef9ed69c3d0bbd0b3eb9aa52a85f
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-11x14.jpg
+    file_sha256: e683b7da8fed08ca62979d9852d2561094a0125761bc7a272d2b9dc20869c77f
+    name: recess-forever-11x14.jpg
+  payload_sha256: 2c014c73123862d6e9b99c6793747e6663e910f92f6def1453068371ffa5dbe2
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/recess-forever-iso.jpg
+    file_sha256: 27338466364f6518db9dc60446df140c1f7d8b8b01763f4b2324f06b19eb0869
+    name: recess-forever-iso.jpg
+  payload_sha256: 01e1074235a98e029a102251ccf55abec66cd1413c2dec996fa98e03e99257ce
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/images/recess-forever-1-cover.jpg
+    file_sha256: c30bb01c22f342e2b2e26a2d467b1954ac5d7ce69e2d6672d69d79ddcfc13fb3
+    rank: 1
+    alt_text: Kidcore print with puffy red Recess Forever lettering on yellow with checkerboard bands
+  payload_sha256: 82203aa2143edb009e318f58b50bfc0eaf903226393ebf215a9d5c7c96cab1d5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/images/recess-forever-2-detail.jpg
+    file_sha256: ae93436f164634f70d2aa243806b24fbe7c8ac7ca2b5dad4d7bfe4b902316e5a
+    rank: 2
+    alt_text: 'Recess Forever Kidcore Wall Art Printable: detail image'
+  payload_sha256: a716e4fe24232baf86b5dbd76024f74d8fe0da1f81be580f8205d981ba25bc94
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/images/recess-forever-3-print.jpg
+    file_sha256: dae48876815ca6e34ec45e2907532ae337ae35b0b2db2797328ba252ad4de93f
+    rank: 3
+    alt_text: 'Recess Forever Kidcore Wall Art Printable: print image'
+  payload_sha256: d2a9722a576e1531d8487c6bbac7391f5bce43f4ca1abb83230d69c2dc71671b
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/images/recess-forever-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Recess Forever Kidcore Wall Art Printable: sizes image'
+  payload_sha256: 41fad0813cf289146df59998870c141646293b5625f585231a5c5e46bae99bac
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-10-26-kidcore/recess-forever/images/recess-forever-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Recess Forever Kidcore Wall Art Printable: how image'
+  payload_sha256: 95f0d4186b866e2dec0a144dac4584c8599f2898726af5eba39827bdaca8cdbc
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: You Did It Gold Star Print, Kidcore Wall Art Printable, Encouraging Playroom Poster Download
+    description: 'A big hand-drawn gold star on a sunburst with a cheerful You Did It! An encouraging print for a kid''s room,
+      a classroom or a friend''s big win.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - gold star print
+    - encouragement art
+    - playroom decor
+    - kids room print
+    - kidcore poster
+    - classroom decor
+    - star wall art
+    - positive kids art
+    - graduation gift
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 017c4a30c71cfd91b3b9894302c3fb44e043c46400374d425f7e70d04d02bf5f
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-2x3.jpg
+    file_sha256: 9d2c260a7a44abe5c04351cd624c0c42665eb733e8400b5a66d7b892f8f79111
+    name: you-did-it-2x3.jpg
+  payload_sha256: b0860968618a4f7ff1335fc82ee2afaf56d0effe3b73b127c03609a609ef1bd6
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-3x4.jpg
+    file_sha256: 6cb2d3fa26e13be59ffa88cc5877b8918a0a0d4e12a6358d26ae464c49ece271
+    name: you-did-it-3x4.jpg
+  payload_sha256: 99255da01b279572f0c4ca970281a708be0a796209477349ec35df64fa1960b7
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-4x5.jpg
+    file_sha256: 3cd8651f8a4f1dc392af9e2e9a10c5056b080b547c18b04492beaa3a26200b27
+    name: you-did-it-4x5.jpg
+  payload_sha256: 7956878e07dc0a8a49a209853e8cb9fbbc123aa98c69527ee717891cd54f75fb
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-11x14.jpg
+    file_sha256: 5d7b2516b7d418013b7cf51111735b56b7e8ba0117dfc7bffbc35d48d4a30fb7
+    name: you-did-it-11x14.jpg
+  payload_sha256: 9498376fa61bcf4a843ebb862b29a90963e9f5c790ff2d6c89e31170813a9b71
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/you-did-it-iso.jpg
+    file_sha256: 3a33322ae9380f1815d9edb62440a57594c948933225f58fd55e9ab96406d7ad
+    name: you-did-it-iso.jpg
+  payload_sha256: 99f9e64f20482b26e7f99f5517355feb0b528ecb3a95686840fdeb65119d5b96
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/images/you-did-it-1-cover.jpg
+    file_sha256: bf885ebd19a7763493cfd88a3ceca1e0ac2e1d883be31e5ea802d69b7ab13efc
+    rank: 1
+    alt_text: Kidcore print with a large gold star on a blue sunburst and puffy You Did It lettering
+  payload_sha256: 462b60c8060720762dc7bf50adb4a66a043d87669e418b73e29c4d45c0ff2715
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/images/you-did-it-2-detail.jpg
+    file_sha256: 0c1a2ac32d02b9431c6246496f13d8c4bc22738161189209629bfee4974d1661
+    rank: 2
+    alt_text: 'You Did It Gold Star Print: 2-detail image'
+  payload_sha256: e4a46533373d94f63dadec7b6354acf4d3bad9a609d874b0685dbb98a72bc26e
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/images/you-did-it-3-print.jpg
+    file_sha256: fa6f337fd94e3bb06d722f1ace213fb11e87d828a712bfcc03e02a1ff0e63edc
+    rank: 3
+    alt_text: 'You Did It Gold Star Print: 3-print image'
+  payload_sha256: 9563f01c3657028f29f0d4c58d00e595aa2d205c734ef10315bb9fc13b3c75a2
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/images/you-did-it-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'You Did It Gold Star Print: 4-sizes image'
+  payload_sha256: 742cb90e4c1d59d77d29de21493017453a6eb2287279808bc1ae1a096ae11885
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-10-26-kidcore/you-did-it/images/you-did-it-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'You Did It Gold Star Print: 5-how image'
+  payload_sha256: e8f5f4393d4555be370d3d6d88af2c89b7098fa1540a70c8fbdde49eed3db8c0
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Make Something Messy Print, Kidcore Art Studio Poster, Craft Room Wall Art Printable
+    description: 'Paint splats, squiggles and puffy purple letters. A playful print for a craft room, an art class or anyone
+      who needs permission to make a mess.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - craft room decor
+    - art studio print
+    - kidcore poster
+    - playroom decor
+    - art teacher gift
+    - classroom decor
+    - kids art room
+    - paint splatter art
+    - creative wall art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 608ed0f4680e445ddc9c892ec966c3f1073db8293f6777b22a0deff58f1c0e9b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-2x3.jpg
+    file_sha256: 03a1f06b4931ddb31e93ea06f881776411a985e161a56f180df2d9b4fbb88e62
+    name: make-something-messy-2x3.jpg
+  payload_sha256: e090bae39c7d522b3c54d03862d03fe808b78893495ba01494462943b31d67a3
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-3x4.jpg
+    file_sha256: 6ee98c4fd8cfb71804e050b36a23a2ee37cdf478f0b5246bfe5641b589701dde
+    name: make-something-messy-3x4.jpg
+  payload_sha256: 4360ce79062b3acd4679d54f8cf3ba6e462a7152f8a2f7fa7508bd75be99d61b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-4x5.jpg
+    file_sha256: 50cc2855d5159bfb048fafca34ca9c62f559a0b276acb037ec01109ec7e596d8
+    name: make-something-messy-4x5.jpg
+  payload_sha256: b00c40092b7171d4bf41b1e5e373b2c6132c44663bede1e4314ad8074b5b88e3
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-11x14.jpg
+    file_sha256: 3d1fa108a3d9132f2ec8010e61e984ee9af152fdf41098b456c04c7e99f9c8f1
+    name: make-something-messy-11x14.jpg
+  payload_sha256: e0012bdbd688ae13b8d9c6119e2cd31b17322f7fefac9a15d02aa1b1df5a6693
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/make-something-messy-iso.jpg
+    file_sha256: 5e53566c666639714b4ffa85ac328f478f3f08b5e01c336ac538c64b3721d46e
+    name: make-something-messy-iso.jpg
+  payload_sha256: 2d5ec4550c08a5b3f42a83a61a4eb11cdd72a8d0c69270aed127efa9f76e373b
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/images/make-something-messy-1-cover.jpg
+    file_sha256: 3d5eaf07c91ed2cd601f87df79031dd3cf966234b27c5fa73822cfea633f1cfa
+    rank: 1
+    alt_text: Kidcore print with puffy purple Make Something Messy lettering and colorful paint splats
+  payload_sha256: 5c7471135fe20e452500e52ed45022cd199a268e2be670f87ab258c10cc60231
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/images/make-something-messy-2-detail.jpg
+    file_sha256: cc04dd93ca6362a2fe1e304fadccd02a99ca4537e64800f397caa841c959a203
+    rank: 2
+    alt_text: 'Make Something Messy Print: 2-detail image'
+  payload_sha256: 008909c955a1e5c601f3d90e4fafc7cedbd8360ff08e6415e34a9e28e882e012
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/images/make-something-messy-3-print.jpg
+    file_sha256: d3818656836df865cb59b5fb74456177e036fabc4ce061f8911569abfd9526f4
+    rank: 3
+    alt_text: 'Make Something Messy Print: 3-print image'
+  payload_sha256: a0e4935136165be5f6e9cdf3aa06eccfbff8afdbb16836a768e13d18e6a2ca13
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/images/make-something-messy-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Make Something Messy Print: 4-sizes image'
+  payload_sha256: 83f6d7cefdc4c1c02baac91a4530eeb398acceaa80712b375bb80a7b6bf27323
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-10-26-kidcore/make-something-messy/images/make-something-messy-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Make Something Messy Print: 5-how image'
+  payload_sha256: 1b552b2051d5d81543423d8dbe751759359ea040c8e1a47481e768b3d5168065
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Happy Shapes Kidcore Wall Art Printable, Primary Color Toy Blocks Poster, Playroom Print
+    description: 'A wobbly tower of toy-block shapes in primary colors on a pink polka-dot ground. A simple, happy print for
+      a nursery or playroom.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - primary colors art
+    - toy blocks print
+    - playroom decor
+    - kids room print
+    - kidcore poster
+    - geometric kids art
+    - nursery wall art
+    - shapes poster
+    - pink nursery art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 07be987d0785ec325e4629563d3be656a345f22f727b3d5725e84043b3431b4c
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-2x3.jpg
+    file_sha256: 1ead225ea7b18e7462907ba620dfac66e17b81478a039018020e218bf033ef4d
+    name: happy-shapes-2x3.jpg
+  payload_sha256: 2a488c9aa94948967759335ecb9de7b0c268299cd2ac88b4b1997fe4d03615a1
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-3x4.jpg
+    file_sha256: 195348f181dcdaa44e7dae000b56dc9cbc08806891b5eed90d80f3a6a08b6cce
+    name: happy-shapes-3x4.jpg
+  payload_sha256: 3f8bc6df9a5dc553f48a746e460de52f56fbf274a291f40034e70547c196428e
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-4x5.jpg
+    file_sha256: 0d3eb8cab1d8387f1fd28d587fd91e2a1b9447ac2c9659caacf2ce887d15dd87
+    name: happy-shapes-4x5.jpg
+  payload_sha256: 64f6f57c817d79c756ab9566af25fef02ec9c7f13636c57374f3b8713936b2a5
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-11x14.jpg
+    file_sha256: 0dbc2aca4d0cd5e8d44cdc6a7da6f3c4275d15c4cd89e6b540a468299416bad8
+    name: happy-shapes-11x14.jpg
+  payload_sha256: 6e569f7dedccc3005234c1e72d942dc7d6a8135e8d7ecc1a6e5db42b80b59a95
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/happy-shapes-iso.jpg
+    file_sha256: 14c69511e09e10f05d4c4dca62a3e3a50fadb4b943a995fb3239b0864a01d79c
+    name: happy-shapes-iso.jpg
+  payload_sha256: be35e559b67ff8857cbc571456b396e84fb940e7916e5ea9d008c5b8ad138512
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/images/happy-shapes-1-cover.jpg
+    file_sha256: 76982357656b1cd153215c47fa300298c7e1f83c2d8d1f66678872b91e6f39a6
+    rank: 1
+    alt_text: Kidcore print of stacked toy-block shapes in red, yellow, blue, green and orange on pink
+  payload_sha256: c7e317306935608a7d57efe4dcbea43c7f976f3ac33fa503a97743101ef16eb4
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/images/happy-shapes-2-detail.jpg
+    file_sha256: c33bcae0a8a1336b5ed585bdf632bc4c0210ce88b1bbe93f6993954efb0fb176
+    rank: 2
+    alt_text: 'Happy Shapes Kidcore Wall Art Printable: detail image'
+  payload_sha256: 11eb6171f72dd074a1679439eb47d708c5eb337576c3e32396479423eff10db9
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/images/happy-shapes-3-print.jpg
+    file_sha256: 51656fb711a21f4317a199bfba6ffba383a0c87ee8c96a4a491d7b93635c4ab1
+    rank: 3
+    alt_text: 'Happy Shapes Kidcore Wall Art Printable: print image'
+  payload_sha256: 001e52ac552efdf3cbdb823bd658342d819e36977a766ea35fbc63d3524bbe03
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/images/happy-shapes-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Happy Shapes Kidcore Wall Art Printable: sizes image'
+  payload_sha256: cef046804cdad9681161fb987d00ab74f49775124b96b993386e67557aa68bf9
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-10-26-kidcore/happy-shapes/images/happy-shapes-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Happy Shapes Kidcore Wall Art Printable: how image'
+  payload_sha256: 88c55afe3e27627f1d9d37f1732e877a721c89e56b78471b5ad39b4e2f70f0c8
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Rainbow Daisy Checkerboard Print, Kidcore Wall Art Printable, Retro Green Checkered Poster
+    description: 'A six-color rainbow over a wavy green checkerboard, scattered with white daisies. A retro, sunny print for
+      a bedroom, dorm or playroom.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - checkerboard print
+    - rainbow wall art
+    - daisy print
+    - retro wall art
+    - kidcore poster
+    - playroom decor
+    - groovy wall art
+    - y2k room decor
+    - kids room print
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: b44d392542527ed8566277428f1870314893bbc86eea69c6d93941ad5e44db38
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-2x3.jpg
+    file_sha256: 6f28ee55fc7fb6c6ec20ca665a69051687c1078c7863a71a62fc5a98c8625849
+    name: rainbow-daisy-check-2x3.jpg
+  payload_sha256: 765f1d9837207cfa4117d1de90c5a64f015b39bc0dcc6c9289a5142cd1109ea6
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-3x4.jpg
+    file_sha256: f5dccc7ce3242d1ada56777017ee360a24e5dc840673b62941d759d2b676311c
+    name: rainbow-daisy-check-3x4.jpg
+  payload_sha256: 7eb410b326103343777c7fd8f37f21c8a55a2441fa1d17662a4f0ae33bc31ce5
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-4x5.jpg
+    file_sha256: f31f026d40dea61f7ae8c6af497b03f6843caa23ecb0a4a7292cbd07770b6b92
+    name: rainbow-daisy-check-4x5.jpg
+  payload_sha256: 2c15034c2bfb8320657a8327006ae5579ee584a28c5c273eb7a9022747540b66
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-11x14.jpg
+    file_sha256: 350ea7bee4d05546720409056eb1ecc526b5b8d1fccaf1e684d55c2da8dbe1ea
+    name: rainbow-daisy-check-11x14.jpg
+  payload_sha256: 01851dffbbd27105efbb9ef6516cae076e7ccc5fec9619a6e94ee42f42b97137
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/rainbow-daisy-check-iso.jpg
+    file_sha256: 7c923a7eb5e58447dc2e5a8cb3976266f0d6e254adebf2b50f5f959c839f107f
+    name: rainbow-daisy-check-iso.jpg
+  payload_sha256: 8c55e3e931d9973b05f735507cc40cdd0cd9c715d03ce1ca4d6783bf82663ca3
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/images/rainbow-daisy-check-1-cover.jpg
+    file_sha256: dc992a517e81ede65300413e2a521efd4f550de0eae804e5153883582211f69f
+    rank: 1
+    alt_text: Kidcore print of a rainbow over a wavy green and cream checkerboard with white daisies
+  payload_sha256: 1a9eb489a5336b676967ce6ae0b655d736ffa135fa6c2d4ae6bc513e92394b49
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/images/rainbow-daisy-check-2-detail.jpg
+    file_sha256: 9dc0dfc30192188ff389274a0c3a147d6cf8c2832a660cb6e3c868317caaad9f
+    rank: 2
+    alt_text: 'Rainbow Daisy Checkerboard Print: 2-detail image'
+  payload_sha256: 004bc63d9ad2d0637e15e2b2d2c49d45d563c095068bac589840c4e771640385
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/images/rainbow-daisy-check-3-print.jpg
+    file_sha256: af123a44054f715fd15acf97b744116b4df4c55d7028a7c33b24688557e5a735
+    rank: 3
+    alt_text: 'Rainbow Daisy Checkerboard Print: 3-print image'
+  payload_sha256: 902729d3bf266ec5aeada5d4326c49f41e81ba9059a90ac4a9138010a045f2b3
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/images/rainbow-daisy-check-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Rainbow Daisy Checkerboard Print: 4-sizes image'
+  payload_sha256: c8b8f59aae6f033c9f850df7fc8fa4eb2a6c2419871d19c251d9f93800c1f3ed
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-10-26-kidcore/rainbow-daisy-check/images/rainbow-daisy-check-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Rainbow Daisy Checkerboard Print: 5-how image'
+  payload_sha256: ffc726c8bff54f69081603ca606914b4cfd46da0264e271eb0d0b91e64870f6a
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Kidcore Wall Art Set of 5 Printable, Colorful Playroom Gallery Wall, Retro Kids Posters
+    description: 'All five kidcore prints in one download for a ready-made gallery wall: Recess Forever, You Did It!, Make
+      Something Messy, Happy Shapes and Rainbow Daisy Checkerboard.
+
+
+      WHAT YOU GET
+
+      • 5 zip files, one per size ratio, each with all five prints (2:3 ratio, 3:4 ratio, 4:5 ratio, 11x14 in, ISO A size)
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - dopamine decor
+    - wall art set of 5
+    - gallery wall set
+    - kidcore decor
+    - playroom decor
+    - kids room print
+    - classroom decor
+    - retro kids art
+    - kidcore poster
+    - bubble letter art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 13.99
+    cost_snapshot: data/costs/2026-10-23-products.json
+    cost_key: digital
+  payload_sha256: 285a983aa3c717ad826d8e98a263c40dca1644bf5104decd75ea40fa6c772154
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/kidcore-set-of-5-2x3.zip
+    file_sha256: 16a3092bf9ef0dd7d5dde5112fb531f3da162a5bb23e95d86fe531c4b716b2b0
+    name: kidcore-set-of-5-2x3.zip
+  payload_sha256: 587baac3e6ff95fc18a3ff5e89d6f272297de58890d6c39fa876277bb3df62f5
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/kidcore-set-of-5-3x4.zip
+    file_sha256: 916b743ab53d36688b13f3fffd0a5723d34d0f75b09b8189501bf5d38a9bea73
+    name: kidcore-set-of-5-3x4.zip
+  payload_sha256: b66439e1ddd3921101939c3e856fc89150a470570a20cc27c8fd51c14c242c16
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/kidcore-set-of-5-4x5.zip
+    file_sha256: f34b605ce62010701bcf36606c064c73bae5207c446788783f80e4529e702aee
+    name: kidcore-set-of-5-4x5.zip
+  payload_sha256: a1af8ab178573d4b02b9344bd855f149565d79e3e02be45344936f7f252b9e25
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/kidcore-set-of-5-11x14.zip
+    file_sha256: 9f9d6bc03de8c4795537f595b49e969119e4d02414ef0bf05cec0f39462e02d3
+    name: kidcore-set-of-5-11x14.zip
+  payload_sha256: 7b89c42609fec1560ec2ec56edd386f5adc655f045077717b759507feb2de5f4
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/kidcore-set-of-5-iso.zip
+    file_sha256: 467b9afe3d2c93ef608745a466cfca5fd5ed9dd5534e8bb9c75eaa4c65d24ed0
+    name: kidcore-set-of-5-iso.zip
+  payload_sha256: ceab6e5e893487d5c8450e2d289f56aa451076b07cc751cc039b6be8fe76b8a2
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/images/kidcore-set-of-5-1-cover.jpg
+    file_sha256: f48760c911d2a0edbf8c2e4bae44b961f7774489138e3d70f533c7f42472cfe3
+    rank: 1
+    alt_text: Five framed kidcore prints arranged as a gallery wall
+  payload_sha256: 24e541dbeae7bfe75275b215b7ad146f0f84bb386871fd8e555716cf0f5af9db
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/images/kidcore-set-of-5-2-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 2
+    alt_text: 'Kidcore Wall Art Set of 5 Printable: 5-2-sizes image'
+  payload_sha256: 9c935d3e6f8e7cddee7b63dd2e722246486e64070bba022273f90168675fd90d
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-10-26-kidcore/kidcore-set-of-5/images/kidcore-set-of-5-3-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 3
+    alt_text: 'Kidcore Wall Art Set of 5 Printable: 5-3-how image'
+  payload_sha256: 8bd512add4bbea5ba0f67d8d0fa7b09e54a716271e62dc16068e19fde22b8a38
