@@ -1,0 +1,506 @@
+{
+ "meta": {
+  "scanned_at": "2026-10-26T13:10Z",
+  "score_version": "scoring-v0.2",
+  "seed": "data/signals/2026-10-26 (eRank Trend Buzz shortlist)",
+  "labels": {
+   "momentum, interest, rising": "estimate: SerpApi Google Trends, US, today 12-m, 2026-10-26",
+   "active_listings, median_*, gift_share, digital_share": "Etsy data: Open API findAllListingsActive top 25, 2026-10-26"
+  },
+  "caveats": [
+   "ip_veto=false here is a pre-screen; every design still needs the full IP screen (docs/ip-screen.md). USPTO hosts are not reachable from the cloud env, so the trademark check is pending.",
+   "gift_intent counts the niche's own occasion word: wedding and christmas niches score 1.0 by construction (inflates them ~8.5 points).",
+   "12-vs-12-week momentum penalises off-season niches (christmas planner, poppy); scoring v0.3 YoY candidate."
+  ]
+ },
+ "candidates": [
+  {
+   "niche": "wedding_seating_chart",
+   "trends_query": "wedding seating chart",
+   "etsy_keywords": "wedding seating chart template",
+   "rising": [
+    {
+     "query": "weddingwire seating chart",
+     "value": 180
+    },
+    {
+     "query": "free seating chart maker",
+     "value": 140
+    },
+    {
+     "query": "welcome sign wedding",
+     "value": 50
+    },
+    {
+     "query": "welcome sign",
+     "value": 50
+    }
+   ],
+   "peak_point": {
+    "date": "May 3\u2009\u2013\u20099, 2026",
+    "timestamp": "1777766400",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Editable Wedding Seating Chart Template | Sage Green Floral Seating Plan | Printable Elegant Wedding Sign | Instant Download, Template Canva",
+    "Alphabetical Wedding Seating Chart Template, Minimalist Seating Plan (Digital File)",
+    "Wedding Seating Chart Template, Table Arrangement Sign, DIY Wedding Seating Sign, Navy Blooms, Find Your Seat, Hydrangea, Floral, Anemone",
+    "Eucalyptus Wedding Seating Chart Template: Printable Find Your Seat Sign (Digital Download)",
+    "Minimalist Wedding Seating Chart Template: Alphabetical Name Poster (Digital Download)"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": -0.1,
+    "interest": 76.5,
+    "active_listings": 27543,
+    "median_favorites": 4,
+    "median_price_usd": 8.7,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 1.0,
+    "digital_share": 1.0,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": 33.142857142857146,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 48.2,
+    "band": "park",
+    "components": {
+     "demand_momentum": 0.3917,
+     "competition_gap": 0.2156,
+     "gift_intent": 1.0,
+     "digital_fit": 1.0,
+     "pod_fit": 0.8443,
+     "seasonality": 0.3,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8533,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  },
+  {
+   "niche": "funeral_program",
+   "trends_query": "funeral program template",
+   "etsy_keywords": "funeral program template",
+   "rising": [
+    {
+     "query": "canva",
+     "value": 50
+    }
+   ],
+   "peak_point": {
+    "date": "Apr 5\u2009\u2013\u200911, 2026",
+    "timestamp": "1775347200",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Funeral Program Template, Editable Canva Memorial Service Program, Obituary Template, Celebration of Life Program, Printable Funeral Program",
+    "Funeral Program Template 17x11, 8 Page Memorial Booklet, Editable Canva Template",
+    "Blue Rose Funeral Program Template, Editable Canva Memorial Booklet, Celebration of Life Obituary, 8.5x11 Funeral Program",
+    "Editable Funeral Program Template Canva , 8 Page Memorial Booklet , Celebration of Life Obituary Program 17x11 ,  Funeral Program",
+    "Purple funeral program template, celebration of life,memoral booklet,in loving Memory, Editable church Program,Digital Download"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": -0.3339,
+    "interest": 30.8,
+    "active_listings": 26900,
+    "median_favorites": 0,
+    "median_price_usd": 6.4,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 0.0,
+    "digital_share": 1.0,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": null,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 30.9,
+    "band": "park",
+    "components": {
+     "demand_momentum": 0.1232,
+     "competition_gap": 0.114,
+     "gift_intent": 0.0,
+     "digital_fit": 1.0,
+     "pod_fit": 0.7823,
+     "seasonality": 0.5,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8347,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  },
+  {
+   "niche": "kidcore_wall_art",
+   "trends_query": "kidcore",
+   "etsy_keywords": "kidcore wall art",
+   "rising": [
+    {
+     "query": "frutiger aero",
+     "value": 450
+    },
+    {
+     "query": "cutecore",
+     "value": 130
+    },
+    {
+     "query": "kidcore room",
+     "value": 130
+    },
+    {
+     "query": "cottagecore",
+     "value": 100
+    },
+    {
+     "query": "dream core",
+     "value": 80
+    },
+    {
+     "query": "fairycore",
+     "value": 60
+    },
+    {
+     "query": "backrooms",
+     "value": 60
+    },
+    {
+     "query": "y2k",
+     "value": 50
+    }
+   ],
+   "peak_point": {
+    "date": "May 10\u2009\u2013\u200916, 2026",
+    "timestamp": "1778371200",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Kidcore Wall Art Printable Poster Whimsical Storybook Illustration Animal Prints for Nursery Decor Playrooms Children&#39;s Gallery Wall Pet Art",
+    "Play More Poster, Bright Kidcore Wall Art, Therapy Office Decor, Inner Child Gift, Colourful Kids Room Print",
+    "Playful Kidcore Wall Art, Lion Driving a Car Print, Cute Nursery Animal Decor, Boys Room Vintage Poster",
+    "Pink Sheep Rainbow Print \u2013 Dreamcore Kidcore Wall Art (8x8)",
+    "Beautiful Girl You Were Born To Do Great Things Sign, FARMHOUSE HOME DECOR, Grandkids Sign Decor, Nursery Decor Girl, Kidcore Wall Art"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": 0.1543,
+    "interest": 74.2,
+    "active_listings": 1138,
+    "median_favorites": 5,
+    "median_price_usd": 14.0,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 0.08,
+    "digital_share": 0.48,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": null,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 51.5,
+    "band": "test",
+    "components": {
+     "demand_momentum": 0.6005,
+     "competition_gap": 0.5041,
+     "gift_intent": 0.16,
+     "digital_fit": 0.8,
+     "pod_fit": 0.9095,
+     "seasonality": 0.5,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8729,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  },
+  {
+   "niche": "california_poppy_print",
+   "trends_query": "california poppy",
+   "etsy_keywords": "california poppy print",
+   "rising": [
+    {
+     "query": "poppy playtime chapter 5",
+     "value": 101400
+    },
+    {
+     "query": "poppy playtime chapter 6",
+     "value": 20350
+    },
+    {
+     "query": "poppy playtime chapter 5 release date",
+     "value": 16900
+    },
+    {
+     "query": "carrizo plain national monument",
+     "value": 11600
+    },
+    {
+     "query": "poppy playtime",
+     "value": 450
+    },
+    {
+     "query": "theo lawrence california poppy",
+     "value": 190
+    },
+    {
+     "query": "antelope valley california poppy reserve state natural reserve",
+     "value": 190
+    },
+    {
+     "query": "antelope valley california poppy reserve",
+     "value": 70
+    }
+   ],
+   "peak_point": {
+    "date": "Mar 22\u2009\u2013\u200928, 2026",
+    "timestamp": "1774137600",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Blue Anemone Wall Art, California Poppy Print, Floral Digital Download, Modern Flower Poster, Pastel Art for Bedroom Decor",
+    "California Poppy Print; california state flower original herbarium specimen pressed botanical art pressed wildflower print orange art",
+    "California Poppy Print, Colorful Floral Wall Art, Botanical Folk Decor",
+    "California Poppy Print: Mid-Century Botanical Flower Wall Art",
+    "California Poppies Print, Vintage Botanical Photo Art, Orange Flower Wall Art, Floral Decor, Framed Wildflower Print"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": -0.3977,
+    "interest": 34.3,
+    "active_listings": 3190,
+    "median_favorites": 74,
+    "median_price_usd": 21.0,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 0.08,
+    "digital_share": 0.32,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": null,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 39.0,
+    "band": "park",
+    "components": {
+     "demand_momentum": 0.1372,
+     "competition_gap": 0.577,
+     "gift_intent": 0.16,
+     "digital_fit": 0.5333,
+     "pod_fit": 0.9452,
+     "seasonality": 0.5,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8836,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  },
+  {
+   "niche": "jellyfish_art_print",
+   "trends_query": "jellyfish art",
+   "etsy_keywords": "jellyfish art print",
+   "rising": [
+    {
+     "query": "art auctions jellyfish cart stream feedback enlightenauctioniilca",
+     "value": 250
+    },
+    {
+     "query": "space jellyfish",
+     "value": 200
+    },
+    {
+     "query": "box jellyfish",
+     "value": 190
+    },
+    {
+     "query": "immortal jellyfish",
+     "value": 80
+    },
+    {
+     "query": "jellyfish glass art",
+     "value": 70
+    },
+    {
+     "query": "jellyfish cloud",
+     "value": 60
+    }
+   ],
+   "peak_point": {
+    "date": "Apr 5\u2009\u2013\u200911, 2026",
+    "timestamp": "1775347200",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Jellyfish Art Print, Gold and Navy Blue Ocean Decor, Art Nouveau Sea Life Poster, Dark Marine Wall Art",
+    "Green Jellyfish  art print: Bathroom Decor Sea",
+    "Sunrise Jellyfish Art Print - Abstract Ocean and Nature Scene",
+    "Glowing Jellyfish Art Print: Ocean Watercolor Wall Art, Deep Sea Fantasy Decor (Digital Download)",
+    "Mystical Jellyfish Art Print \u2013 Deep Blue Ocean,Ocean-Inspired Wall Decor for Living Room,Office, or Meditation Space, Underwater Fantasy Art"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": -0.3299,
+    "interest": 26.9,
+    "active_listings": 11077,
+    "median_favorites": 1,
+    "median_price_usd": 20.0,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 0.08,
+    "digital_share": 0.16,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": null,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 28.8,
+    "band": "park",
+    "components": {
+     "demand_momentum": 0.1076,
+     "competition_gap": 0.2357,
+     "gift_intent": 0.16,
+     "digital_fit": 0.2667,
+     "pod_fit": 0.9417,
+     "seasonality": 0.5,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8825,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  },
+  {
+   "niche": "christmas_planner",
+   "trends_query": "christmas planner",
+   "etsy_keywords": "christmas planner printable",
+   "rising": [
+    {
+     "query": "planner 2026",
+     "value": 1400
+    },
+    {
+     "query": "2027 planner",
+     "value": 350
+    },
+    {
+     "query": "erin condren planner",
+     "value": 140
+    },
+    {
+     "query": "christmas gift planner",
+     "value": 140
+    },
+    {
+     "query": "christmas budget planner",
+     "value": 80
+    },
+    {
+     "query": "monthly planner",
+     "value": 80
+    },
+    {
+     "query": "the happy planner",
+     "value": 70
+    },
+    {
+     "query": "christmas planner stickers",
+     "value": 70
+    }
+   ],
+   "peak_point": {
+    "date": "Dec 21\u2009\u2013\u200927, 2025",
+    "timestamp": "1766275200",
+    "value": 100
+   },
+   "etsy_top_titles": [
+    "Christmas Planner Printable PDF, Holiday Budget & Gift Tracker, Digital Christmas Organizer, Hyperlinked Instant Download",
+    "Christmas Planner Printable | Holiday Organiser for Gifts Budget Meals & Memories | 82 Pages | Instant Download PDF",
+    "Ultimate Christmas Planner | 24-Page Digital Christmas Planner Printable | Organize Your Christmas with Checklists, Budget Tracker & More",
+    "Christmas Planner Printable, Holiday Organizer PDF, Gift List, Budget Tracker, Meal Planner, Christmas Checklist, Instant Download",
+    "Christmas Planner Printable 2026 | 44 Page Holiday Organizer | Budget, Gift Lists, Menus, Calendar & Baking | Christmas Binder"
+   ],
+   "blocklist_hits_in_top25": [],
+   "inputs": {
+    "momentum": -0.1589,
+    "interest": 7.5,
+    "active_listings": 42690,
+    "median_favorites": 0,
+    "median_price_usd": 4.99,
+    "unit_cost_usd": 0.0,
+    "owner_minutes_per_listing": 15,
+    "gift_share": 1.0,
+    "digital_share": 1.0,
+    "sources": 3,
+    "price_floor_margin": 0.6,
+    "offer_type": "digital",
+    "everbee_delta": null,
+    "pod_blueprints": null,
+    "weeks_to_peak": 8.571428571428571,
+    "cohort_orders": 0,
+    "cohort_contribution_per_100_visits": 0.0,
+    "ip_veto": false
+   },
+   "result": {
+    "score": 42.9,
+    "band": "park",
+    "components": {
+     "demand_momentum": 0.0652,
+     "competition_gap": 0.0739,
+     "gift_intent": 1.0,
+     "digital_fit": 1.0,
+     "pod_fit": 0.7161,
+     "seasonality": 1.0,
+     "our_evidence": 0.0,
+     "production_fit": 0.5357
+    },
+    "confidence": 1.0,
+    "margin_at_median": 0.8148,
+    "zero_reason": null,
+    "version": "scoring-v0.2"
+   }
+  }
+ ]
+}
