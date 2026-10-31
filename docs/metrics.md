@@ -8,7 +8,8 @@ The owner merges it (weekly is enough); until then the job keeps adding days to 
 |---|---|
 | `data/metrics/<date>.csv` | one row per listing: lifetime views, favorites, orders, units, item revenue, plus `_1d` deltas vs the previous snapshot |
 | `data/metrics/<date>.shop.json` | shop totals, disclosure-sentence count, API quota left |
-| `reports/weekly/<monday>-metrics.md` | week deltas, per-listing table, Day-7 gate status, limits below. Also the PR body |
+| `data/spend/etsy_ledger.csv` | Etsy fee and credit entries from the payment ledger (docs/spend-and-time.md) |
+| `reports/weekly/<monday>-metrics.md` | week deltas, per-listing table, Day-7 gate status, verified spend, owner time, limits below. Also the PR body |
 
 Run locally: `python -m src.metrics.collect && python -m src.metrics.weekly`.
 
@@ -20,12 +21,12 @@ Run locally: `python -m src.metrics.collect && python -m src.metrics.weekly`.
 | Per-listing favorites | Lifetime total only | `num_favorers` |
 | Orders, units, revenue | Yes | `shops/{id}/receipts` (+ transactions). Needs `transactions_r`, which the READ token has and the write token does not |
 | Shop totals | Yes | `shops/{id}`: active/digital listing count, sold count, favorers, reviews |
-| Fees and payouts | Shop level | `shops/{id}/payment-account/ledger-entries` works (200); not used yet |
+| Fees and payouts | Shop level | `shops/{id}/payment-account/ledger-entries`: fee and credit entries go to `data/spend/etsy_ledger.csv` daily (docs/spend-and-time.md) |
 | Stats endpoints | No | `shops/{id}/stats`, `listings/{id}/stats` return 404 |
 | Visits, traffic sources, search terms, conversion | No | Shop Stats only; export CSV to `data/stats_exports/` |
 | Etsy Ads spend/clicks/ROAS | No | no Ads API |
 | AI-generator field ticked in the editor | No | the job checks the disclosure SENTENCE in each description instead |
-| Pins posted / pin clicks | No | no Pinterest token; Pinterest hosts are blocked in the cloud env. Optional owner log `data/marketing/pins_posted.csv` (`date,pin,url`) turns the gate check from UNVERIFIED into MET/NOT MET |
+| Pins posted / pin clicks | No | no Pinterest token; Pinterest hosts are blocked in the cloud env. Pins are scheduled in Postiz (owner, 2026-10-31) or Bulk Create. Log each posted pin in `data/marketing/pins_posted.csv` (`date,pin,url`); it turns the gate check from UNVERIFIED into MET/NOT MET. A Postiz export or API read could fill it later (not built) |
 
 Quota: 10 req/s and 10,000 req/day; a daily run uses about 5 requests.
 

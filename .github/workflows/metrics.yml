@@ -44,7 +44,7 @@ jobs:
         # their baseline whether or not last week's PR was merged.
         run: |
           if git fetch origin "$BRANCH" 2>/dev/null; then
-            for f in $(git diff --name-only --diff-filter=AM origin/main...FETCH_HEAD -- data/metrics 'reports/weekly/*-metrics.md'); do
+            for f in $(git diff --name-only --diff-filter=AM origin/main...FETCH_HEAD -- data/metrics data/spend/etsy_ledger.csv 'reports/weekly/*-metrics.md'); do
               mkdir -p "$(dirname "$f")"; git show "FETCH_HEAD:$f" > "$f"
             done
           fi
@@ -60,6 +60,7 @@ jobs:
             echo "::error::Actions secret ETSY_REFRESH_TOKEN (Etsy READ refresh token) is not set. Fail closed."; exit 1
           fi
           python -m src.metrics.collect
+          python -m src.metrics.spend   # Etsy fee/credit entries from the payment ledger (GET only)
 
       - name: Weekly summary and gate status
         env:
@@ -75,13 +76,13 @@ jobs:
           git config user.name "trend-engine-metrics"
           git config user.email "metrics@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add data/metrics reports/weekly
+          git add data/metrics data/spend/etsy_ledger.csv reports/weekly
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -q -m "metrics: $(date -u +%F)"
           git push --force origin "$BRANCH"
           report=$(cat /tmp/report_path)
           week=$(basename "$report" -metrics.md)
-          { echo "Data-only PR from the daily read-only metrics job. Touches data/metrics and reports/weekly/*-metrics.md only. Merge weekly; the job keeps adding days until you do."; echo; cat "$report"; } > /tmp/body.md
+          { echo "Data-only PR from the daily read-only metrics job. Touches data/metrics, data/spend/etsy_ledger.csv and reports/weekly/*-metrics.md only. Merge weekly; the job keeps adding days until you do."; echo; cat "$report"; } > /tmp/body.md
           head -c 60000 /tmp/body.md > /tmp/body_trim.md
           n=$(gh pr list --state open --head "$BRANCH" --json number --jq '.[0].number // empty')
           if [ -z "$n" ]; then

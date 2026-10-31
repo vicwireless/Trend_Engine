@@ -1,0 +1,7 @@
+vendor,plan,monthly_usd,status,started,source,notes
+Etsy Plus,Etsy Plus,10.00,active,2026-10-21,etsy_payment_ledger tier_2_subscription,"Includes 15 listing credits/month (ledger) and an ads credit (playbook 4.1, not seen in ledger)"
+Etsy Ads,Etsy Ads,,planned,,docs/ads-plan-2026-10-23.md,"Cap $3/day set by owner 2026-10-23; no spend until listings are 14 days live (5-9 Nov). Actual spend will appear in the Etsy ledger"
+Postiz,,,active (owner-reported 2026-10-31),,owner,"Pin scheduling. Plan and price not recorded yet"
+SerpApi,Starter,,approved 2026-10-24,,owner decision 2026-10-24,"Approved for one month. Purchase date and amount not recorded yet"
+Claude,,,active,,owner,"Engine runtime. Plan and price not recorded yet"
+eRank,,,active,,owner,"Trend Buzz pastes 2026-10-26. Plan (free or paid) not recorded yet"
