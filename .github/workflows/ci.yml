@@ -2,6 +2,7 @@ name: ci
 
 on:
   pull_request:
+  workflow_dispatch:   # the metrics job dispatches this on metrics/rolling (bot PRs get no pull_request run)
 
 permissions:
   contents: read
@@ -21,6 +22,7 @@ jobs:
       - name: Dry-run manifests changed in this PR (preflight only, no writes)
         env:
           BASE_REF: ${{ github.base_ref }}
+        if: github.event_name == 'pull_request'
         run: |
           files=$(git diff --name-only --diff-filter=AM "origin/$BASE_REF...HEAD" -- 'releases/*.yaml')
           if [ -n "$files" ]; then python -m src.executor.run --dry-run $files; fi
