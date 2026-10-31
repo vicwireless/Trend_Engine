@@ -13,10 +13,14 @@ import datetime as dt
 import json
 from pathlib import Path
 
+from src.metrics import spend as SP
+
 METRICS = Path("data/metrics")
 LEDGER = Path("data/ledger")
 PINS_LOG = Path("data/marketing/pins_posted.csv")
 REPORTS = Path("reports/weekly")
+TIME_LOG = Path("data/time_log.csv")
+OWNER_CAP_MIN_PER_WEEK = 90  # config/engine.yaml owner_hours_cap_per_week: 1.5
 
 DAY7 = {"deadline": "2026-10-30", "min_live": 20}
 
@@ -27,8 +31,26 @@ CANNOT = [
     "Whether the owner ticked the AI-generator field in the listing editor (not in the API; the "
     "description sentence is checked instead)",
     "Pins posted or pin clicks (no Pinterest token; Pinterest hosts are blocked in the cloud env)",
-    "Fees and net payout per listing (payment ledger is shop-level; not computed yet)",
+    "Fees and net payout per listing (the payment ledger is shop-level; shop fees are in the Spend section)",
 ]
+
+
+def time_lines(today: dt.date, log: Path = TIME_LOG) -> list[str]:
+    """Owner minutes from data/time_log.csv. Logged minutes only; a missing week shows as stale."""
+    rows = load_rows(log) if log.exists() else []
+    mins = [(r.get("date", ""), _num(r.get("minutes"), int)) for r in rows]
+    week_ago = (today - dt.timedelta(days=7)).isoformat()
+    last7 = sum(m for d, m in mins if d > week_ago)
+    last = max((d for d, _ in mins), default=None)
+    stale = last is None or last <= week_ago
+    return [
+        "## Owner time (logged only)",
+        "",
+        f"Source: `{log}`. Total logged {sum(m for _, m in mins):,} min in {len(mins)} entries; "
+        f"last 7 days {last7} min (cap {OWNER_CAP_MIN_PER_WEEK} min/week); last entry {last or 'never'}."
+        + (" **Stale: no entry in the last 7 days, so owner yield ($/hr) cannot be computed.** "
+           "Log with `python tools/log_entry.py time --minutes N --session \"...\"`." if stale else ""),
+    ]
 
 
 def load_rows(path: Path) -> list[dict]:
@@ -103,7 +125,8 @@ def day7_gate(snaps: list[Path], today: dt.date, ledger: Path = LEDGER, pins_log
 
 
 def summarize(day: dt.date, metrics: Path = METRICS, ledger: Path = LEDGER, pins_log: Path = PINS_LOG,
-              open_ledger_prs: int | None = None) -> str:
+              open_ledger_prs: int | None = None, spend_dir: Path = SP.SPEND_DIR,
+              time_log: Path = TIME_LOG) -> str:
     snaps = snapshots(metrics)
     if not snaps:
         raise SystemExit("no snapshots in data/metrics; run python -m src.metrics.collect first")
@@ -181,6 +204,8 @@ def summarize(day: dt.date, metrics: Path = METRICS, ledger: Path = LEDGER, pins
             f"{fmt(d['favorites_total'])} / {fmt(_num(r['favorites_total'], int))} | "
             f"{fmt(d['orders_total'])} / {fmt(_num(r['orders_total'], int))} | "
             f"{fmt(d['revenue_usd_total'], True)} / {fmt(_num(r['revenue_usd_total']), True)} |")
+    out += [""] + SP.report_lines(SP.summarize(day, spend_dir))
+    out += [""] + time_lines(day, time_log)
     out += ["", "## What the Etsy API cannot provide", ""] + [f"- {c}" for c in CANNOT]
     out += ["", "Use the weekly Shop Stats CSV export (`data/stats_exports/`) for visits, sources and ads.", ""]
     return "\n".join(out)
