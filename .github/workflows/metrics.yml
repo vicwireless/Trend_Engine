@@ -1,0 +1,94 @@
+name: metrics
+
+# Daily READ-ONLY Etsy metrics (playbook SP-08 'measure'). Reads the Etsy Open API with the read
+# token, writes data/metrics/<date>.csv and reports/weekly/<monday>-metrics.md, and keeps ONE rolling
+# data-only PR ("metrics: week of ...") open for the owner to merge, ideally weekly.
+# No marketplace writes: no write tokens are passed in, and src/metrics/collect.py refuses any
+# HTTP method but GET (CLAUDE.md rule 1). Repo writes go to the metrics/rolling branch only; main
+# changes only when the owner merges the PR.
+on:
+  schedule:
+    - cron: "7 7 * * *"   # 07:07 UTC daily (docs/weekly-session.md)
+  workflow_dispatch:
+
+concurrency:
+  group: metrics
+  cancel-in-progress: false
+
+permissions:
+  contents: write        # push the metrics/rolling branch (main stays protected)
+  pull-requests: write   # open/update the rolling metrics PR
+  actions: write         # dispatch ci.yml on the branch so the required 'test' check runs
+
+env:
+  BRANCH: metrics/rolling
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Carry forward unmerged snapshots from the rolling branch
+        # Union of main + any metrics files still waiting in the open PR, so daily deltas never lose
+        # their baseline whether or not last week's PR was merged.
+        run: |
+          if git fetch origin "$BRANCH" 2>/dev/null; then
+            for f in $(git diff --name-only --diff-filter=AM origin/main...FETCH_HEAD -- data/metrics 'reports/weekly/*-metrics.md'); do
+              mkdir -p "$(dirname "$f")"; git show "FETCH_HEAD:$f" > "$f"
+            done
+          fi
+
+      - name: Collect (read-only)
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}   # READ token (shops_r listings_r transactions_r)
+          ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+        run: |
+          if [ -z "$ETSY_REFRESH_TOKEN" ]; then
+            echo "::error::Actions secret ETSY_REFRESH_TOKEN (Etsy READ refresh token) is not set. Fail closed."; exit 1
+          fi
+          python -m src.metrics.collect
+
+      - name: Weekly summary and gate status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh pr list --state open --search "ledger: in:title" --json number --jq 'length')
+          python -m src.metrics.weekly --open-ledger-prs "$open" | tee /tmp/report_path
+
+      - name: Push branch and open or update the rolling PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "trend-engine-metrics"
+          git config user.email "metrics@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add data/metrics reports/weekly
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -q -m "metrics: $(date -u +%F)"
+          git push --force origin "$BRANCH"
+          report=$(cat /tmp/report_path)
+          week=$(basename "$report" -metrics.md)
+          { echo "Data-only PR from the daily read-only metrics job. Touches data/metrics and reports/weekly/*-metrics.md only. Merge weekly; the job keeps adding days until you do."; echo; cat "$report"; } > /tmp/body.md
+          head -c 60000 /tmp/body.md > /tmp/body_trim.md
+          n=$(gh pr list --state open --head "$BRANCH" --json number --jq '.[0].number // empty')
+          if [ -z "$n" ]; then
+            gh pr create --base main --head "$BRANCH" --title "metrics: week of $week" --body-file /tmp/body_trim.md
+          else
+            gh pr edit "$n" --title "metrics: week of $week" --body-file /tmp/body_trim.md
+          fi
+          # PRs and pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so run the
+          # required 'test' check explicitly on the branch head.
+          gh workflow run ci.yml --ref "$BRANCH" || echo "::warning::could not dispatch ci.yml"
