@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "captured_at": "2026-10-31T19:36:58+00:00",
+  "captured_at": "2026-10-31T20:22:17+00:00",
   "source": "etsy_open_api",
   "shop_id": 68737954,
   "listing_active_count": 26,
@@ -19,5 +19,5 @@
   "orders_total": 0,
   "gross_item_revenue_usd_total": 0.0,
   "baseline_date": null,
-  "api_remaining_today": 9983
+  "api_remaining_today": 9980
 }
