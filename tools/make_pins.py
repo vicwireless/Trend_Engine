@@ -9,7 +9,9 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
+from src.compliance.blocklist import Blocklist
 from tools.make_planner_family import PRODUCTS, YEAR, paste_shadow, pil_font, render_page, wrap
+from tools.pin_alt_text import alt_text_cover, alt_text_inside, check_alt_text
 
 IDS = {"weekly-planner": 4601751471, "goal-planner": 4601781508, "habit-tracker": 4601756001}
 PIN_TITLES = {
@@ -74,6 +76,14 @@ def pin_b(pdf: Path, key: str, p: dict, out: Path) -> None:
     img.save(out)
 
 
+def pin_alt(key: str, i: int, p: dict) -> str:
+    """Alt text matching what pin_a / pin_b draw."""
+    if i == 0:
+        head, sub = PIN_TITLES[key]
+        return alt_text_cover(YEAR, head.replace(f"{YEAR} ", ""), sub, p["title"].removesuffix(" Printable"))
+    return alt_text_inside(p["inside"][:4], p["title"].removesuffix(" Printable"))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--assets", required=True)
@@ -81,8 +91,10 @@ def main() -> None:
     a = ap.parse_args()
     assets, out = Path(a.assets), Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
+    blocklist = Blocklist.load()
     lines = ["# Pins to post by hand (2026-10-23)", "",
-             "For each pin: upload the image, paste the title and description, set the board, and use the listing's "
+             "For each pin: upload the image, paste the title, description and alt text (in Postiz, or Pinterest's "
+             "alt text field; for pins already posted, edit the pin and add it), set the board, and use the listing's "
              "**Share & Save link** as the destination (Shop Manager > Marketing > Share & Save), not the plain address. "
              "Post one or two a day. The 'AI-assisted' disclosure lives on the listing; Pinterest asks you to label "
              "AI-modified images, and these are code-drawn layouts with no photos.", ""]
@@ -94,8 +106,12 @@ def main() -> None:
             f = out / f"pin-{n}-{key}-{'ab'[i]}.png"
             (pin_a(pdf, key, f) if i == 0 else pin_b(pdf, key, p, f))
             assert len(title) <= 100 and len(desc) <= 500
+            alt = pin_alt(key, i, p)
+            errs = check_alt_text(alt, blocklist)
+            if errs:  # fail closed (CLAUDE.md rule 8)
+                raise SystemExit(f"pin {n} ({key}): " + "; ".join(errs))
             lines += [f"## Pin {n}: {key}", f"- Image: `{f.name}`", f"- Board: {BOARDS[key]}", f"- Title: {title}",
-                      f"- Description: {desc}", f"- Destination: https://www.etsy.com/listing/{IDS[key]} (swap in the Share & Save link)", ""]
+                      f"- Description: {desc}", f"- Alt text: {alt}", f"- Destination: https://www.etsy.com/listing/{IDS[key]} (swap in the Share & Save link)", ""]
     (out / "pins.md").write_text("\n".join(lines), encoding="utf-8")
     print(n, "pins")
 
