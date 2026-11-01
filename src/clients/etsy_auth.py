@@ -22,28 +22,62 @@ def api_key(keystring: str | None = None, shared_secret: str | None = None) -> s
     return f"{k}:{s}"
 
 
-def refresh_access_token(keystring: str, refresh_token: str, *, session: requests.Session | None = None,
-                         timeout: float = 30) -> str:
+def refresh_tokens(keystring: str, refresh_token: str, *, session: requests.Session | None = None,
+                   timeout: float = 30) -> tuple[str, str | None]:
+    """(access_token, new_refresh_token). Etsy rotates the refresh token on every refresh and revokes
+    a reused old one (observed 2026-11-01), so callers that run again later must keep the new one."""
     resp = (session or requests).post(TOKEN_URL, data={
         "grant_type": "refresh_token", "client_id": keystring, "refresh_token": refresh_token}, timeout=timeout)
     if resp.status_code in (400, 401, 403):
-        raise AuthError(f"Etsy token refresh -> {resp.status_code}; re-run tools/etsy_oauth.py")
+        try:  # Etsy's reason, e.g. "invalid_grant: refresh_token is revoked". Never echoes the token.
+            body = resp.json()
+            reason = f" ({body.get('error')}: {body.get('error_description')})"
+        except ValueError:
+            reason = ""
+        raise AuthError(f"Etsy token refresh -> {resp.status_code}{reason}; re-run tools/etsy_oauth.py")
     if not resp.ok:
         raise ClientError(f"Etsy token refresh -> {resp.status_code}")
-    token = resp.json().get("access_token")
+    body = resp.json()
+    token = body.get("access_token")
     if not token:
         raise AuthError("Etsy token refresh returned no access_token")
-    return token
+    return token, body.get("refresh_token")
+
+
+def refresh_access_token(keystring: str, refresh_token: str, *, session: requests.Session | None = None,
+                         timeout: float = 30) -> str:
+    return refresh_tokens(keystring, refresh_token, session=session, timeout=timeout)[0]
+
+
+ROTATED_FILE_VAR = "ETSY_ROTATED_REFRESH_FILE"
 
 
 def access_token(token_var: str, refresh_var: str) -> str | None:
-    """An access token from `token_var`, else one refreshed from `refresh_var`, else None."""
+    """An access token from `token_var`, else one refreshed from `refresh_var`, else None.
+
+    If ETSY_ROTATED_REFRESH_FILE is set (the metrics workflow sets it), the refresh token is read from
+    that file when it exists and the rotated one Etsy returns is written back to it (mode 0600), so a
+    second process in the same run uses the new token and the workflow can save it to the secret.
+    The rotated token also replaces `refresh_var` in this process's environment.
+    """
     if os.environ.get(token_var):
         return os.environ[token_var]
-    refresh = os.environ.get(refresh_var)
+    rotated = os.environ.get(ROTATED_FILE_VAR)
+    refresh = None
+    if rotated and os.path.exists(rotated):
+        with open(rotated, encoding="utf-8") as f:
+            refresh = f.read().strip() or None
+    refresh = refresh or (os.environ.get(refresh_var) or "").strip() or None
     if not refresh:
         return None
-    return refresh_access_token(require(os.environ.get("ETSY_KEYSTRING"), "ETSY_KEYSTRING"), refresh)
+    token, new_refresh = refresh_tokens(require(os.environ.get("ETSY_KEYSTRING"), "ETSY_KEYSTRING"), refresh)
+    if new_refresh and new_refresh != refresh:
+        os.environ[refresh_var] = new_refresh
+        if rotated:
+            fd = os.open(rotated, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(new_refresh)
+    return token
 
 
 # --- One-time sign-in (tools/etsy_oauth.py). Authorization code flow with PKCE (S256). ---

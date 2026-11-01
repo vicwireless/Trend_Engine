@@ -146,3 +146,46 @@ def test_metrics_workflow_has_no_write_secrets():
         assert s not in wf
     on = yaml.safe_load(wf)[True]  # PyYAML parses the bare key `on` as True
     assert set(on) == {"schedule", "workflow_dispatch"}
+
+
+# --- Refresh-token rotation (2026-11-01: Etsy revoked a reused refresh token) ---
+from src.clients import etsy_auth as A
+
+
+@responses.activate
+def test_access_token_persists_rotated_refresh_token(tmp_path, monkeypatch):
+    f = tmp_path / "rot"
+    monkeypatch.setenv("ETSY_KEYSTRING", "key")
+    monkeypatch.setenv("ETSY_REFRESH_TOKEN", "r0")
+    monkeypatch.delenv("ETSY_READ_TOKEN", raising=False)
+    monkeypatch.setenv(A.ROTATED_FILE_VAR, str(f))
+    responses.post(A.TOKEN_URL, json={"access_token": "a1", "refresh_token": "r1"})
+    responses.post(A.TOKEN_URL, json={"access_token": "a2", "refresh_token": "r2"})
+    assert A.access_token("ETSY_READ_TOKEN", "ETSY_REFRESH_TOKEN") == "a1"
+    assert f.read_text() == "r1" and (f.stat().st_mode & 0o777) == 0o600
+    # A second process in the same run starts from the original env value but must use the file.
+    monkeypatch.setenv("ETSY_REFRESH_TOKEN", "r0")
+    assert A.access_token("ETSY_READ_TOKEN", "ETSY_REFRESH_TOKEN") == "a2"
+    assert "refresh_token=r1" in responses.calls[1].request.body
+    assert f.read_text() == "r2"
+
+
+@responses.activate
+def test_refresh_error_reports_etsy_reason_without_token(monkeypatch):
+    monkeypatch.setenv("ETSY_KEYSTRING", "key")
+    monkeypatch.setenv("ETSY_REFRESH_TOKEN", "secret-refresh")
+    monkeypatch.delenv("ETSY_READ_TOKEN", raising=False)
+    monkeypatch.delenv(A.ROTATED_FILE_VAR, raising=False)
+    responses.post(A.TOKEN_URL, status=400, json={"error": "invalid_grant", "error_description": "refresh_token is revoked"})
+    with pytest.raises(A.AuthError) as e:
+        A.access_token("ETSY_READ_TOKEN", "ETSY_REFRESH_TOKEN")
+    assert "refresh_token is revoked" in str(e.value) and "secret-refresh" not in str(e.value)
+
+
+def test_metrics_workflow_saves_rotated_token():
+    wf = yaml.safe_load(Path(".github/workflows/metrics.yml").read_text())
+    steps = wf["jobs"]["measure"]["steps"]
+    last = steps[-1]
+    assert last["if"] == "always()" and "gh secret set ETSY_REFRESH_TOKEN" in last["run"]
+    collect = next(s for s in steps if s.get("name", "").startswith("Collect"))
+    assert "ETSY_ROTATED_REFRESH_FILE" in collect["env"]
