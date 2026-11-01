@@ -55,6 +55,9 @@ jobs:
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}   # READ token (shops_r listings_r transactions_r)
           ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+          # Etsy rotates the refresh token on each refresh and revokes the reused old one. The client
+          # keeps the newest one here; the last step saves it back to the secret.
+          ETSY_ROTATED_REFRESH_FILE: ${{ runner.temp }}/etsy_refresh
         run: |
           if [ -z "$ETSY_REFRESH_TOKEN" ]; then
             echo "::error::Actions secret ETSY_REFRESH_TOKEN (Etsy READ refresh token) is not set. Fail closed."; exit 1
@@ -93,3 +96,20 @@ jobs:
           # PRs and pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so run the
           # required 'test' check explicitly on the branch head.
           gh workflow run ci.yml --ref "$BRANCH" || echo "::warning::could not dispatch ci.yml"
+
+      - name: Save the rotated Etsy refresh token to the secret
+        # Runs even if a later step failed: once Etsy has rotated the token, the old one stops working.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_SECRETS_PAT }}   # fine-grained PAT, this repo only, Secrets: read and write
+        run: |
+          f="$RUNNER_TEMP/etsy_refresh"
+          if [ ! -s "$f" ]; then echo "No rotated token to save."; exit 0; fi
+          echo "::add-mask::$(cat "$f")"
+          if [ -z "$GH_TOKEN" ]; then
+            rm -f "$f"
+            echo "::error::METRICS_SECRETS_PAT is not set, so the rotated Etsy token was not saved. The next run will likely fail with 'refresh_token is revoked'."; exit 1
+          fi
+          gh secret set ETSY_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+          rm -f "$f"
+          echo "Rotated Etsy refresh token saved to ETSY_REFRESH_TOKEN."

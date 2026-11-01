@@ -40,7 +40,20 @@ Quota: 10 req/s and 10,000 req/day; a daily run uses about 5 requests.
 
 ## Owner setup (once)
 
-Add the Actions secret `ETSY_REFRESH_TOKEN` = the Etsy READ refresh token (same value as the cloud
-env). `ETSY_KEYSTRING`, `ETSY_SHARED_SECRET`, `ETSY_SHOP_ID` are already Actions secrets for the
-executor. Refresh tokens last 90 days: re-run `tools/etsy_oauth.py --mode read` before about
-20 Jan 2027 and update both copies.
+Etsy rotates the refresh token on every refresh and revokes a reused old one (both copies of the
+read token were found revoked on 2026-11-01, about 18 hours after the job and cloud sessions had
+each refreshed the same original). So every consumer needs its OWN token and must keep the newest one.
+
+1. Run `python tools/etsy_oauth.py --mode read` once for GitHub and once more for the cloud env, so the
+   two places hold different tokens (separate grants).
+2. Actions secret `ETSY_REFRESH_TOKEN` = the GitHub token. Cloud env var `ETSY_REFRESH_TOKEN` = the other.
+3. Actions secret `METRICS_SECRETS_PAT` = a fine-grained personal access token, repository
+   `vicwireless/Trend_Engine` only, permission **Secrets: Read and write**, nothing else. The
+   workflow's last step uses it to save the rotated token back to `ETSY_REFRESH_TOKEN` after each
+   run. Without it the run fails loudly and the next run is revoked.
+
+`ETSY_KEYSTRING`, `ETSY_SHARED_SECRET`, `ETSY_SHOP_ID` are already Actions secrets for the executor.
+Each rotated token should carry a fresh 90-day life (unverified), so the GitHub copy should not
+need re-minting. The cloud env copy cannot be saved back automatically; when a cloud session sees
+`refresh_token is revoked`, re-mint it (step 1) or read the committed `data/metrics/` files instead.
+The executor's `ETSY_WRITE_REFRESH_TOKEN` has the same rotation behavior and is not saved back yet.
