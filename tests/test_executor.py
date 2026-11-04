@@ -573,6 +573,19 @@ def test_executor_workflow_triggers_only_on_release_manifests():
     assert on["push"] == {"branches": ["main"], "paths": ["releases/*.yaml"]}
 
 
+def test_executor_saves_rotated_write_token():
+    wf = yaml.safe_load((REPO / ".github/workflows/executor.yml").read_text())
+    steps = wf["jobs"]["execute"]["steps"]
+    names = [s.get("name") for s in steps]
+    execute = steps[names.index("Execute")]
+    assert execute["env"]["ETSY_ROTATED_REFRESH_FILE"].endswith("/etsy_write_refresh")
+    save = steps[names.index("Save the rotated Etsy write token to the secret")]
+    assert save["if"].startswith("always()")
+    assert names.index("Save the rotated Etsy write token to the secret") > names.index("Execute")
+    assert "gh secret set ETSY_WRITE_REFRESH_TOKEN" in save["run"]
+    assert "METRICS_SECRETS_PAT" in save["env"]["GH_TOKEN"]
+
+
 def test_only_allowlisted_ops_exist():
     from src.executor.ops import OPS
     schema = json.loads((REPO / "schemas/release_manifest.json").read_text())

@@ -73,12 +73,33 @@ jobs:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_WRITE_REFRESH_TOKEN: ${{ secrets.ETSY_WRITE_REFRESH_TOKEN }}
+          # Etsy rotates the refresh token on each refresh and revokes the reused old one. The client
+          # keeps the newest one here; the 'Save the rotated Etsy write token' step saves it back.
+          ETSY_ROTATED_REFRESH_FILE: ${{ runner.temp }}/etsy_write_refresh
           ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
           PRINTIFY_WRITE_TOKEN: ${{ secrets.PRINTIFY_WRITE_TOKEN }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
         run: python -m src.executor.run ${{ steps.changed.outputs.files }}
+
+      - name: Save the rotated Etsy write token to the secret
+        # Runs even if Execute failed: once Etsy has rotated the token, the old one stops working.
+        # Same pattern as metrics.yml. Writes only the ETSY_WRITE_REFRESH_TOKEN secret.
+        if: always() && steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_SECRETS_PAT }}   # fine-grained PAT, this repo only, Secrets: read and write
+        run: |
+          f="$RUNNER_TEMP/etsy_write_refresh"
+          if [ ! -s "$f" ]; then echo "No rotated token to save."; exit 0; fi
+          echo "::add-mask::$(cat "$f")"
+          if [ -z "$GH_TOKEN" ]; then
+            rm -f "$f"
+            echo "::error::METRICS_SECRETS_PAT is not set, so the rotated Etsy write token was not saved. The next release will likely fail with 'refresh_token is revoked'."; exit 1
+          fi
+          gh secret set ETSY_WRITE_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+          rm -f "$f"
+          echo "Rotated Etsy write token saved to ETSY_WRITE_REFRESH_TOKEN."
 
       - name: Open ledger PR (data only)
         if: always() && steps.changed.outputs.files != ''

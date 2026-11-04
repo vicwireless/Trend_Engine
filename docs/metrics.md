@@ -56,4 +56,7 @@ each refreshed the same original). So every consumer needs its OWN token and mus
 Each rotated token should carry a fresh 90-day life (unverified), so the GitHub copy should not
 need re-minting. The cloud env copy cannot be saved back automatically; when a cloud session sees
 `refresh_token is revoked`, re-mint it (step 1) or read the committed `data/metrics/` files instead.
-The executor's `ETSY_WRITE_REFRESH_TOKEN` has the same rotation behavior and is not saved back yet.
+The executor's `ETSY_WRITE_REFRESH_TOKEN` has the same rotation behavior. Since 2026-11-04 the executor
+workflow saves the rotated write token back to `ETSY_WRITE_REFRESH_TOKEN` with the same
+`METRICS_SECRETS_PAT`. A write token used before this fix is probably revoked: re-mint it once with
+`python tools/etsy_oauth.py --mode write` and paste it into that secret before the next release merge.
