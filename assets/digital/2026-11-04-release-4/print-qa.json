@@ -1,0 +1,1802 @@
+[
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.57 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.92 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.47 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.79 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.74 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.42 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.83 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.42 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.77 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.66 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/flower-burst/flower-burst-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "3.31 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/flower-burst/flower-burst-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.60 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/flower-burst/flower-burst-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.09 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/flower-burst/flower-burst-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.21 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/flower-burst/flower-burst-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.36 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "3.06 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.41 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.92 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.09 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.18 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/sunny-day/sunny-day-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.98 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/sunny-day/sunny-day-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.27 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/sunny-day/sunny-day-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.78 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/sunny-day/sunny-day-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.99 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/sunny-day/sunny-day-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.07 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.72 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.06 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.58 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.88 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.88 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.91 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.23 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.75 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.02 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.03 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "3.32 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.52 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.97 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.13 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.33 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.53 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.88 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.44 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.78 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.72 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-2x3.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "6000x9000px, need >= 6000x9000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.75 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-3x4.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "5400x7200px, need >= 5400x7200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "2.05 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-4x5.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4800x6000px, need >= 4800x6000px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.55 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-11x14.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "3300x4200px, need >= 3300x4200px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "0.89 MB (max 20.0 MB)"
+   }
+  ]
+ },
+ {
+  "path": "assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-iso.jpg",
+  "passed": true,
+  "checks": [
+   {
+    "name": "dimensions",
+    "passed": true,
+    "detail": "4961x7016px, need >= 4961x7016px at 300 ppi (effective 300 ppi)"
+   },
+   {
+    "name": "bleed",
+    "passed": true,
+    "detail": "no bleed required"
+   },
+   {
+    "name": "safe_zone",
+    "passed": true,
+    "detail": "no text layers declared"
+   },
+   {
+    "name": "srgb",
+    "passed": true,
+    "detail": "profile: sRGB built-in"
+   },
+   {
+    "name": "transparency",
+    "passed": true,
+    "detail": "not required"
+   },
+   {
+    "name": "file_size",
+    "passed": true,
+    "detail": "1.87 MB (max 20.0 MB)"
+   }
+  ]
+ }
+]

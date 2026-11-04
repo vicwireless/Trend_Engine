@@ -1,0 +1,269 @@
+{
+ "fetched_at": "2026-11-04T01:23:59+00:00",
+ "trends": [
+  {
+   "query": "christmas wish list printable",
+   "group": "christmas wish list printable",
+   "last4_mean": 0.75,
+   "prev4_mean": 0.0,
+   "peak": 5,
+   "peak_date": "Nov 30\u2009\u2013\u2009Dec 6, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "christmas bingo printable",
+   "group": "christmas wish list printable",
+   "last4_mean": 0.5,
+   "prev4_mean": 0.0,
+   "peak": 32,
+   "peak_date": "Dec 14\u2009\u2013\u200920, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "christmas coloring pages printable",
+   "group": "christmas wish list printable",
+   "last4_mean": 4.25,
+   "prev4_mean": 0.0,
+   "peak": 100,
+   "peak_date": "Nov 30\u2009\u2013\u2009Dec 6, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "advent calendar printable",
+   "group": "christmas wish list printable",
+   "last4_mean": 0.75,
+   "prev4_mean": 0.0,
+   "peak": 14,
+   "peak_date": "Nov 30\u2009\u2013\u2009Dec 6, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "hanukkah printable",
+   "group": "christmas wish list printable",
+   "last4_mean": 0.0,
+   "prev4_mean": 0.0,
+   "peak": 10,
+   "peak_date": "Dec 14\u2009\u2013\u200920, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "kidcore",
+   "group": "kidcore",
+   "last4_mean": 9.0,
+   "prev4_mean": 10.5,
+   "peak": 16,
+   "peak_date": "May 10\u2009\u2013\u200916, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "playroom wall art",
+   "group": "kidcore",
+   "last4_mean": 0.75,
+   "prev4_mean": 0.0,
+   "peak": 8,
+   "peak_date": "Apr 5\u2009\u2013\u200911, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "classroom posters",
+   "group": "kidcore",
+   "last4_mean": 9.75,
+   "prev4_mean": 12.0,
+   "peak": 41,
+   "peak_date": "Aug 2\u2009\u2013\u20098, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "nursery wall art",
+   "group": "kidcore",
+   "last4_mean": 7.0,
+   "prev4_mean": 9.0,
+   "peak": 85,
+   "peak_date": "Apr 12\u2009\u2013\u200918, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "kids room decor",
+   "group": "kidcore",
+   "last4_mean": 14.25,
+   "prev4_mean": 14.75,
+   "peak": 100,
+   "peak_date": "Apr 12\u2009\u2013\u200918, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "chore chart printable",
+   "group": "chore chart printable",
+   "last4_mean": 7.25,
+   "prev4_mean": 4.75,
+   "peak": 27,
+   "peak_date": "May 24\u2009\u2013\u200930, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "reward chart",
+   "group": "chore chart printable",
+   "last4_mean": 44.75,
+   "prev4_mean": 60.75,
+   "peak": 100,
+   "peak_date": "Jan 25\u2009\u2013\u200931, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "christmas wall art printable",
+   "group": "chore chart printable",
+   "last4_mean": 0.25,
+   "prev4_mean": 0.0,
+   "peak": 12,
+   "peak_date": "Feb 15\u2009\u2013\u200921, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "new year resolutions printable",
+   "group": "chore chart printable",
+   "last4_mean": 0.0,
+   "prev4_mean": 0.0,
+   "peak": 8,
+   "peak_date": "Jun 7\u2009\u2013\u200913, 2026",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  },
+  {
+   "query": "secret santa printable",
+   "group": "chore chart printable",
+   "last4_mean": 7.25,
+   "prev4_mean": 0.0,
+   "peak": 91,
+   "peak_date": "Nov 30\u2009\u2013\u2009Dec 6, 2025",
+   "source": "serpapi_google_trends",
+   "is_estimate": true
+  }
+ ],
+ "etsy": [
+  {
+   "keywords": "christmas wish list printable kids",
+   "count": 8531,
+   "top25_fav_median": 0,
+   "top25_price_median": 2.99,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "christmas bingo printable",
+   "count": 15701,
+   "top25_fav_median": 0,
+   "top25_price_median": 4.49,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "kidcore wall art",
+   "count": 1166,
+   "top25_fav_median": 5,
+   "top25_price_median": 11.7,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "kidcore printable",
+   "count": 232,
+   "top25_fav_median": 1,
+   "top25_price_median": 4.99,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "playroom wall art printable",
+   "count": 67907,
+   "top25_fav_median": 1,
+   "top25_price_median": 5.98,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "classroom posters printable",
+   "count": 74816,
+   "top25_fav_median": 1,
+   "top25_price_median": 4.0,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "chore chart printable kids",
+   "count": 30526,
+   "top25_fav_median": 0,
+   "top25_price_median": 3.49,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "reward chart printable",
+   "count": 28783,
+   "top25_fav_median": 0,
+   "top25_price_median": 3.0,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "christmas wall art printable",
+   "count": 327990,
+   "top25_fav_median": 0,
+   "top25_price_median": 4.99,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "hanukkah printable",
+   "count": 6781,
+   "top25_fav_median": 0,
+   "top25_price_median": 4.99,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "new year resolutions printable",
+   "count": 4504,
+   "top25_fav_median": 2,
+   "top25_price_median": 3.97,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "secret santa printable",
+   "count": 14524,
+   "top25_fav_median": 0,
+   "top25_price_median": 4.99,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "christmas coloring pages",
+   "count": 56995,
+   "top25_fav_median": 0,
+   "top25_price_median": 9.96,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "kids christmas printable",
+   "count": 363727,
+   "top25_fav_median": 2,
+   "top25_price_median": 3.5,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "retro christmas printable",
+   "count": 37716,
+   "top25_fav_median": 1,
+   "top25_price_median": 5.0,
+   "source": "etsy_open_api"
+  },
+  {
+   "keywords": "advent calendar printable",
+   "count": 19834,
+   "top25_fav_median": 0,
+   "top25_price_median": 5.99,
+   "source": "etsy_open_api"
+  }
+ ]
+}

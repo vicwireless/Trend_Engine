@@ -1,0 +1,1062 @@
+[
+ {
+  "concept_id": "con-20261104-checker-hearts",
+  "niche": "kidcore-wall-art",
+  "working_title": "Checker Hearts Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-retro-rocket",
+  "niche": "kidcore-wall-art",
+  "working_title": "Retro Rocket Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-flower-burst",
+  "niche": "kidcore-wall-art",
+  "working_title": "Flower Burst Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-rainbow-stack",
+  "niche": "kidcore-wall-art",
+  "working_title": "Rainbow Stack Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-sunny-day",
+  "niche": "kidcore-wall-art",
+  "working_title": "Sunny Day Kidcore Wall Art Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-kidcore-vol-2-set-of-5",
+  "niche": "kidcore-wall-art",
+  "working_title": "Kidcore Wall Art Set of 5 Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "adults decorating a playroom, nursery, classroom or kidcore room",
+  "gift_occasion": null,
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "sig-20261026-erank-trend-rank-088-kidcore",
+   "release4-scan:etsy:kidcore wall art"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-checker-christmas-tree",
+  "niche": "kidcore-wall-art",
+  "working_title": "Checker Christmas Tree Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"kidcore christmas\": 1599 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-ornament-parade",
+  "niche": "kidcore-wall-art",
+  "working_title": "Ornament Parade Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"kidcore christmas\": 1599 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-candy-stripe-stars",
+  "niche": "kidcore-wall-art",
+  "working_title": "Candy Stripe Stars Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"kidcore christmas\": 1599 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-gingerbread-house",
+  "niche": "kidcore-wall-art",
+  "working_title": "Gingerbread House Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"kidcore christmas\": 1599 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-kidcore-christmas-set-of-4",
+  "niche": "kidcore-wall-art",
+  "working_title": "Kidcore Christmas Wall Art Set of 4 Printable",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"kidcore christmas\": 1599 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-hanukkah-lights",
+  "niche": "kidcore-wall-art",
+  "working_title": "Hanukkah Lights Print",
+  "offer_type": "digital",
+  "product_format": "printable_wall_art",
+  "target_buyer": "families decorating for the holidays with a bright, retro look",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:etsy:retro christmas printable",
+   "release4-scan:trends:christmas wall art printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"hanukkah wall art printable\": 1897 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-christmas-coloring-pages",
+  "niche": "holiday-planners",
+  "working_title": "Christmas Coloring Pages for Kids",
+  "offer_type": "digital",
+  "product_format": "printable",
+  "target_buyer": "parents, teachers and office organizers planning December activities",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:trends:christmas coloring pages printable",
+   "release4-scan:trends:secret santa printable",
+   "release4-scan:etsy:christmas bingo printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "original code-drawn art with no design text",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "No design text. Title and tags use only generic descriptive words; the one distinctive term, KIDCORE, was owner-searched on tmsearch.uspto.gov 2026-10-26 (reported all clear, no live or pending marks in classes 009 or 016; data/ip/2026-10-26-kidcore-trademark.yaml)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"christmas coloring pages kids\": 40002 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-christmas-bingo",
+  "niche": "holiday-planners",
+  "working_title": "Christmas Picture Bingo Printable for Kids",
+  "offer_type": "digital",
+  "product_format": "printable",
+  "target_buyer": "parents, teachers and office organizers planning December activities",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:trends:christmas coloring pages printable",
+   "release4-scan:trends:secret santa printable",
+   "release4-scan:etsy:christmas bingo printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"christmas picture bingo\": 1728 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-secret-santa-kit",
+  "niche": "holiday-planners",
+  "working_title": "Secret Santa Kit Printable",
+  "offer_type": "digital",
+  "product_format": "printable",
+  "target_buyer": "parents, teachers and office organizers planning December activities",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:trends:christmas coloring pages printable",
+   "release4-scan:trends:secret santa printable",
+   "release4-scan:etsy:christmas bingo printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"secret santa questionnaire\": 3828 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-kids-christmas-activity-pack",
+  "niche": "holiday-planners",
+  "working_title": "Kids Christmas Activity Pack Printable",
+  "offer_type": "digital",
+  "product_format": "printable",
+  "target_buyer": "parents, teachers and office organizers planning December activities",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:trends:christmas coloring pages printable",
+   "release4-scan:trends:secret santa printable",
+   "release4-scan:etsy:christmas bingo printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "veto",
+   "reasons": [
+    "trademark: unknown (USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment))",
+    "trademark: classes ['009', '016'] not searched"
+   ],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "unknown",
+     "evidence": "USPTO search not run yet (tmsearch.uspto.gov is blocked from the cloud environment)",
+     "checked_at": "2026-11-04T02:00:00+00:00",
+     "classes": []
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"christmas wish list printable\": 11462 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "vetoed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ }
+]
