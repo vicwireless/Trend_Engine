@@ -1,0 +1,2034 @@
+manifest_id: 2026-11-04-release-4
+created_at: '2026-11-04T02:00:00Z'
+created_by: claude
+summary: 'Release 4: 16 digital listings, drafts only. Kidcore vol. 2 (5 prints + set of 5), kidcore Christmas (4 prints +
+  set of 4) and a Hanukkah print, Christmas coloring pages, picture bingo, Secret Santa kit and a kids activity pack. Evidence:
+  2026-11-04 SerpApi + Etsy scan. Owner ticks the AI field and publishes each.'
+owner_minutes_estimate: 100
+ops:
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Checker Hearts Kidcore Wall Art Printable, Pink Checkerboard Heart Poster, Playroom Print
+    description: 'A big puffy red heart on a wavy pink checkerboard, with little hearts all around. A sweet, bright print
+      for a kid''s room, a nursery or a playful grown-up space.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - heart wall art
+    - pink checkerboard
+    - playroom decor
+    - kids room print
+    - dopamine decor
+    - girls room decor
+    - retro kids art
+    - valentine wall art
+    - nursery wall art
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: a41736b82d5023839a67e1f0f0fc73049ec2f9c700124447ff944f9d6f87099e
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-2x3.jpg
+    file_sha256: 7ee11adf835d2b62058defb1fb3567d6387e0e9c6568f1cd92fa8edf4e31b385
+    name: checker-hearts-2x3.jpg
+  payload_sha256: 1248a69dcd0bdb23dc5ba22c8d360c90812274586e91414a8561de3d8e1f45f4
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-3x4.jpg
+    file_sha256: 0b01a096bec3925129d39ba39f38aff3cc5baa5282c4165ded99fd1b88a3a063
+    name: checker-hearts-3x4.jpg
+  payload_sha256: 72cd7f016f2f9b0c397ee3af73416d8134f6dba5637b06922e369bab3f545393
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-4x5.jpg
+    file_sha256: 7e41475d9621546942d60bf976555c93830ee46a7b0a7efba38a73b93fe709ca
+    name: checker-hearts-4x5.jpg
+  payload_sha256: a2cc14fbb4a8f6b56c9fff5877e4b63b4870ded7bba001b23405177711ce5133
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-11x14.jpg
+    file_sha256: 85eddb8670fdd9a8ad7e0fb1ece36e146bca66060e57869c6aa725dc41e6209a
+    name: checker-hearts-11x14.jpg
+  payload_sha256: 756591916a4bda73f3f3fc09390811deb8979bd5204bde7e1b064d24432f42ad
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/checker-hearts-iso.jpg
+    file_sha256: 40bcba0b55637232912ed4584f87e4254de65d0c086f22bf072f1a9b383fe5e3
+    name: checker-hearts-iso.jpg
+  payload_sha256: 58a9134cca99e130072447cb3a8bda89596675596b4ccb2cc600540c28cccd90
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/images/checker-hearts-1-cover.jpg
+    file_sha256: 0733e73a4d4f291629de4de77efcd55de571b70362273c252724a570dddb051c
+    rank: 1
+    alt_text: Kidcore print of a large red heart on a wavy pink checkerboard with small colorful hearts
+  payload_sha256: 6c6d9a5024d47baa07678233ed6123c98065ef17b0c1037e4ef9b053cc8d693d
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/images/checker-hearts-2-detail.jpg
+    file_sha256: ca162f0c7835355a8f152ada51136123515267030fda76546eb25a89e75319b2
+    rank: 2
+    alt_text: 'Checker Hearts Kidcore Wall Art Printable: detail image'
+  payload_sha256: 3e4acae836de01fa8353b4a81353aef5fcaaedd5085beae22cdba79d113ff6fe
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/images/checker-hearts-3-print.jpg
+    file_sha256: f5a21b84b04735a967e6f65304143f1ef52fdd22397c1a505c332b19b9c7c3c9
+    rank: 3
+    alt_text: 'Checker Hearts Kidcore Wall Art Printable: print image'
+  payload_sha256: d07eac4c21b02bb8b6411cce203f19939eadcde53b7ac0cada4b19ef94c6e55b
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/images/checker-hearts-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Checker Hearts Kidcore Wall Art Printable: sizes image'
+  payload_sha256: 42f07a56838f09e37f6299738b79851527564fe9b6748c8f9e334e37af3a684a
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[0].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-hearts/images/checker-hearts-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Checker Hearts Kidcore Wall Art Printable: how image'
+  payload_sha256: 6d9a5244fb62579fa3bc5def6ee7e7d2c7ce468adecf17875bed17e4458f2bb8
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Retro Rocket Kidcore Wall Art Printable, Space Playroom Poster, Kids Room Rocket Print
+    description: 'A chunky red and cream rocket blasting past planets and stars on a deep purple sky. A bold space print for
+      a playroom, a nursery or a little astronaut''s room.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - rocket print
+    - space wall art
+    - outer space decor
+    - playroom decor
+    - kids room print
+    - boys room decor
+    - planet wall art
+    - retro kids art
+    - nursery wall art
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: f4aa28f103a1e1fe00df13380ff459f4c76d546b492306fea194517e7ad46741
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-2x3.jpg
+    file_sha256: b9b4c495e2b2e7d9ef11e16e1f19029658702621bade608d16af6505450409bd
+    name: retro-rocket-2x3.jpg
+  payload_sha256: d854fafc952a503fdf69ca11924a7b8406a4a27898a75f36d73258ff59073000
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-3x4.jpg
+    file_sha256: 71fc98440fab66e8674bdbf705ecaee6b1f1ddf0a6fe7b89d1e1e71035135b55
+    name: retro-rocket-3x4.jpg
+  payload_sha256: 9678aae5fc07376d82a6ba93547dcecdc75bcb46b300421c4edc7739481a631b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-4x5.jpg
+    file_sha256: a08ad3bd8fcf99c12a7bd14f001079013bb5d797d029b863120189421ae395fb
+    name: retro-rocket-4x5.jpg
+  payload_sha256: 77d6083a3701cd88f8e0bb8f81b567d1fade82588c06906f273e54783d193990
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-11x14.jpg
+    file_sha256: d4cdf1b4f40c52398d587becb0ba1127e6a6d0816c449c46e6985a1d97060bab
+    name: retro-rocket-11x14.jpg
+  payload_sha256: cb2db4236bf91ff32a2fa2df7ba58cd5305735561449706c0f0e2a393a2e994b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/retro-rocket-iso.jpg
+    file_sha256: 58ba3418ff85eafa27d1f8cee9f5ad723efaad826676ebca87fe52219bb43c98
+    name: retro-rocket-iso.jpg
+  payload_sha256: 775f83a4cced1429080da7967b70990ded3122284315cb7d1bf1921eeb6c3f54
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/images/retro-rocket-1-cover.jpg
+    file_sha256: 9fb3db9409dd6f1e8791f93a4ea2b1f8192f01c092b48b1a29783992b9da5243
+    rank: 1
+    alt_text: Kidcore print of a red and cream rocket with an orange flame among planets on a purple starry sky
+  payload_sha256: b270707e2dde7a520a8a598aa9c6966ec7a2ce1ca50406298c0907624f8b5ddf
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/images/retro-rocket-2-detail.jpg
+    file_sha256: f2f83777130013de68bfa1e68fc0f8d7f5ba31d81adafcc1c716c2ac566588b3
+    rank: 2
+    alt_text: 'Retro Rocket Kidcore Wall Art Printable: detail image'
+  payload_sha256: aaf5fb131d852a9a10d9ea43d61a1e895e602dd51e5600ea2756ff6c789aeb0b
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/images/retro-rocket-3-print.jpg
+    file_sha256: 4e948d3d56c766c50526191e3155974d9f6f1fd5c5699842a0a9ead790191065
+    rank: 3
+    alt_text: 'Retro Rocket Kidcore Wall Art Printable: print image'
+  payload_sha256: 8355197d515d030e40059ecb817b33f8773207d0058ceb86f9fc5d6d7ce3305f
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/images/retro-rocket-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Retro Rocket Kidcore Wall Art Printable: sizes image'
+  payload_sha256: 952fd35401cdb1991bb48f2224d6a4795cb7df04cf3a944d2530ae115d628048
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[11].listing_id
+    path: assets/digital/2026-11-04-release-4/retro-rocket/images/retro-rocket-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Retro Rocket Kidcore Wall Art Printable: how image'
+  payload_sha256: 121ed71d139e0152b724ce7bad03bab568d44f6c73f325fc243cb158386ac98e
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Flower Burst Kidcore Wall Art Printable, Retro Flower Poster, Colorful Playroom Print
+    description: 'Nine chunky six-petal flowers in every color of the crayon box on a warm cream ground. A cheerful, retro
+      print for a bedroom, dorm, nursery or playroom.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - retro flower print
+    - flower wall art
+    - groovy wall art
+    - playroom decor
+    - kids room print
+    - dopamine decor
+    - y2k room decor
+    - nursery wall art
+    - 70s flower art
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 75ada7552f50c5576f42d281ab84acfcf53d1b474c4b8d7994b2213c7f383813
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/flower-burst-2x3.jpg
+    file_sha256: 36f55e37262559ec8b921c5f3ed9720324edd4b71a6d4e1c44ecbc25c34a7f8c
+    name: flower-burst-2x3.jpg
+  payload_sha256: 3cbb7dc8349b4c3b2f4104cfa8a3c53aa771a9a29897b2287f3e23af3f216a98
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/flower-burst-3x4.jpg
+    file_sha256: 5f3da979f911462f50da3a20e78be3e7192b15402cd3e9245bb644a6cd68a202
+    name: flower-burst-3x4.jpg
+  payload_sha256: 39c8fdc7b3b5aaa30121cffc68a832ed212f853ca00cf238cbbccabdd79065d0
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/flower-burst-4x5.jpg
+    file_sha256: f91c8c26bb72ac09faadfe132aa851e8d8a70161820f3a2ed3137c7413986ef6
+    name: flower-burst-4x5.jpg
+  payload_sha256: 389ca6017ec6cc25223a95acd94158b028cc22b7c717ea45f489978e4487068e
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/flower-burst-11x14.jpg
+    file_sha256: 2bd1b986e4ccd94bb5494977158b8c84b1728a5e21f201ba9f55eeb9dd643c7a
+    name: flower-burst-11x14.jpg
+  payload_sha256: 52f730abcad0c092949575eae0ff8da22d100b49c2911677bb4f3c1c7e60b1b3
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/flower-burst-iso.jpg
+    file_sha256: 07b0e31510fd6615fa9de847c2c67bf2c6b55cb70d7c4769d7f42526db24d6e6
+    name: flower-burst-iso.jpg
+  payload_sha256: ebc3338d19b038637ae462e3b2fe0dc48fe3c0c0890d245d0a8db6245f53663d
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/images/flower-burst-1-cover.jpg
+    file_sha256: 644eb996224c1aa06e19ebcbe30b6199f645fae35137dbab4cfb7f46bafa5961
+    rank: 1
+    alt_text: Kidcore print of colorful six-petal retro flowers scattered on a cream background
+  payload_sha256: 741b301e49a2d7bad98e17f25af9bc5593670c4696751106149b16774910167f
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/images/flower-burst-2-detail.jpg
+    file_sha256: e6910129932d912657bf0d0c56a356ea00b4108a6a6b792145866b6e7ef52aee
+    rank: 2
+    alt_text: 'Flower Burst Kidcore Wall Art Printable: detail image'
+  payload_sha256: a546724670168208bd797b728ea02ed420ab561fbf52beaccffe0387c9be37af
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/images/flower-burst-3-print.jpg
+    file_sha256: 416fe7e10a2c3cbceaf2599c595ac5add0a6cfe4a7386098b7269af12b5cdb5a
+    rank: 3
+    alt_text: 'Flower Burst Kidcore Wall Art Printable: print image'
+  payload_sha256: edcf55e8e12f90fbc78dcd791d4e25d8b90e6943612b6bd681c803ae45b95ac2
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/images/flower-burst-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Flower Burst Kidcore Wall Art Printable: sizes image'
+  payload_sha256: 060e6fa35d4755cbc2c0fed2d9ed16aa88e5e46caa2686866299ec142ed21a08
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[22].listing_id
+    path: assets/digital/2026-11-04-release-4/flower-burst/images/flower-burst-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Flower Burst Kidcore Wall Art Printable: how image'
+  payload_sha256: 2d7230ba9359451b5fb09557cc98ba182af3a23db8535742db062b788e55d8cb
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Rainbow Stack Kidcore Wall Art Printable, Eight Rainbows Poster, Bright Playroom Print
+    description: 'Eight little rainbows, each with two puffy clouds, lined up on a sky-blue ground. A happy pattern print
+      for a playroom, classroom or nursery.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - rainbow wall art
+    - rainbow print
+    - playroom decor
+    - kids room print
+    - dopamine decor
+    - nursery wall art
+    - retro kids art
+    - classroom decor
+    - cloud wall art
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 643f81130dc0e4d50bf735b6f1c3db1c9ce8c989c42eee356846632bda3b3a4f
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-2x3.jpg
+    file_sha256: f62bcea55a4cd3447b17b779bd75f03219e8d722b45bcca7aafbe97a0cad96e0
+    name: rainbow-stack-2x3.jpg
+  payload_sha256: 16cb9a3cb83850b67254367e3c995fd3ebc459f365356a8c3a12cf44a3cf457e
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-3x4.jpg
+    file_sha256: e313b47c04e0e95d31f79a41ca3b7f919a7084c17f6657b4ac72db3482ae5d06
+    name: rainbow-stack-3x4.jpg
+  payload_sha256: f0445edb12b9b1fa366e9e0160a630fd01ace8245b24d1683b5a417707e93b54
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-4x5.jpg
+    file_sha256: b68e8591e0854185c1daca3c1c0b9cdf655bec21cc44751b874dd0fcbfffd5c1
+    name: rainbow-stack-4x5.jpg
+  payload_sha256: a7257ff2bed63e9449e5a522961a8a845e6cf609cce50de3c690678538c33744
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-11x14.jpg
+    file_sha256: 1a9a240b80717b4434d2293c2e32e41d8e42317178ae653a88693ee5b5d69e85
+    name: rainbow-stack-11x14.jpg
+  payload_sha256: 36b4406bdef8af21b11bef46abe1d957c0c8a3ae1b1f8ed7f64ba8d002b9857f
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/rainbow-stack-iso.jpg
+    file_sha256: e1ed6ce0f8fd82d6d3261f22016b2ea456847144212db7710671de06d732b69d
+    name: rainbow-stack-iso.jpg
+  payload_sha256: dd1ae47b40e058c6974e939fd7a9be8812411ef23f8ec90f8c4907ebc15a8f8b
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/images/rainbow-stack-1-cover.jpg
+    file_sha256: e2c470ef744eaf6c7dca6389fd3b31ff626ac2d42ffeca4cb544cd13b6442213
+    rank: 1
+    alt_text: Kidcore print of eight small rainbows with white clouds in a grid on light blue
+  payload_sha256: d74e10da636c6a1dfa40532c7b050a8430a01da2bd5fbe165af58ec5673e0a5a
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/images/rainbow-stack-2-detail.jpg
+    file_sha256: d2561d8f684ec531fa53271262bdefbb4f91fce12d9b51097d79bdfef4277b90
+    rank: 2
+    alt_text: 'Rainbow Stack Kidcore Wall Art Printable: detail image'
+  payload_sha256: e6ab8d73b6651575d1deaeb1aee3488bd82a245b13a94e7473338e20ee1488a5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/images/rainbow-stack-3-print.jpg
+    file_sha256: f976bf08571fb3b3b18d6f7977caf78fdb45af7420b5a0a11bf1fa63a8014df0
+    rank: 3
+    alt_text: 'Rainbow Stack Kidcore Wall Art Printable: print image'
+  payload_sha256: 9ac0c4b18a8b8117404bcc6b2cb6b2c7a5516928af858129a3ecca69d6d385da
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/images/rainbow-stack-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Rainbow Stack Kidcore Wall Art Printable: sizes image'
+  payload_sha256: b7e50a779da8063ea5565882329b3dc8619c250b296f0d91f729bf95e94ae7f5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[33].listing_id
+    path: assets/digital/2026-11-04-release-4/rainbow-stack/images/rainbow-stack-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Rainbow Stack Kidcore Wall Art Printable: how image'
+  payload_sha256: db3f99da6ab30dc90ea5738fd660b1ffe87bd80895fb5da3554c5742a3856b01
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Sunny Day Kidcore Wall Art Printable, Retro Sun and Clouds Poster, Playroom Print
+    description: 'A big yellow sun with wiggly red and orange rays over three puffy clouds. A warm, sunny print for a nursery,
+      playroom or any room that needs a lift.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - sun wall art
+    - sunshine print
+    - playroom decor
+    - kids room print
+    - dopamine decor
+    - nursery wall art
+    - retro kids art
+    - cloud wall art
+    - sunshine decor
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 9a3ca6fb749d8bebdfc45f63656bfad21fe7416204a8b028d46261c09c99a63d
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/sunny-day-2x3.jpg
+    file_sha256: 5a4944da9063b0e4867d89dcbd38a150dda8950339aaa28a193f229e33302ae0
+    name: sunny-day-2x3.jpg
+  payload_sha256: 23406251501340a51a8b454d4860c6aea244b7ffa59b822b9d11f4b8265fa66a
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/sunny-day-3x4.jpg
+    file_sha256: e0edf8aa5b3f4b094745fd57042f0d19345d931cf6b7c413f51bd937f28e6dce
+    name: sunny-day-3x4.jpg
+  payload_sha256: d3d74ddf367f4cee079b5acff0e483172ba1e5c521c84238e486c737c25b87dd
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/sunny-day-4x5.jpg
+    file_sha256: b4fae895330fd7195e0163d211289b33546c6db91a3f5f6e84f8cd182f5ea5e6
+    name: sunny-day-4x5.jpg
+  payload_sha256: 1c65ae4a4141f2dec06d232746d30275f1c46f3d10e53ea22f78c3e2ffcb81a7
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/sunny-day-11x14.jpg
+    file_sha256: 7c24b5c61423671445d6f02dc09b8451ccc4e3ab0e45d2e13d6413e6d2d2d386
+    name: sunny-day-11x14.jpg
+  payload_sha256: 6a96e407e7674f6872b16b3dbc6a308c2ad1ab039866a9c4c11961852c11da7c
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/sunny-day-iso.jpg
+    file_sha256: 65746213ff3389fb8cad47586f00a71502c13cbdc1a002618583c957182300ba
+    name: sunny-day-iso.jpg
+  payload_sha256: bb6ba995034a562f784428019091d20a8c9fd47785c37fb547e3ce2e24244cfb
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/images/sunny-day-1-cover.jpg
+    file_sha256: 22038433971e02667b1cb1ab6c0749bf2dd76d6bf7664fe32c12e88c01ad5738
+    rank: 1
+    alt_text: Kidcore print of a yellow sun with wavy red and orange rays above white clouds on pale yellow
+  payload_sha256: 693b9aacc046c5c2f080bae198c99de18fc1842f6e5c82ae75f97b936f32c75a
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/images/sunny-day-2-detail.jpg
+    file_sha256: 14272f69f0072ed497a3fb10775509349c597e6359bb30038cfddb3ff6bc8733
+    rank: 2
+    alt_text: 'Sunny Day Kidcore Wall Art Printable: detail image'
+  payload_sha256: b6347b727f9de71fd645b4bee093a3d5698997702ab0a9299b960edaf3b6f259
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/images/sunny-day-3-print.jpg
+    file_sha256: 532b8d10b1e9fd4d0da7e35cbc7ae2bcfd078534525bc90b0955f126f86d49e1
+    rank: 3
+    alt_text: 'Sunny Day Kidcore Wall Art Printable: print image'
+  payload_sha256: 36bb0a84c170e98c819abdbe77e180da686341c81f04e225baa767d89e0f5f33
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/images/sunny-day-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Sunny Day Kidcore Wall Art Printable: sizes image'
+  payload_sha256: 68ec1eec3315a540c9d5e3a633909394f99dab532eda83ebbe119a422f7c666c
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[44].listing_id
+    path: assets/digital/2026-11-04-release-4/sunny-day/images/sunny-day-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Sunny Day Kidcore Wall Art Printable: how image'
+  payload_sha256: 7e65d09b2b7e9b4b3e20f583fd15cec56a95f1946855545192c92c17a6d7aae9
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Kidcore Wall Art Set of 5 Printable, Hearts Rocket Flowers Rainbows Sun, Playroom Gallery
+    description: 'Five kidcore prints in one download for a ready-made gallery wall: Checker Hearts, Retro Rocket, Flower
+      Burst, Rainbow Stack and Sunny Day.
+
+
+      WHAT YOU GET
+
+      • 5 zip files, one per size ratio, each with all 5 prints (2:3 ratio, 3:4 ratio, 4:5 ratio, 11x14 in, ISO A size)
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore wall art
+    - printable wall art
+    - colorful wall art
+    - wall art set of 5
+    - gallery wall set
+    - kidcore decor
+    - playroom decor
+    - kids room print
+    - nursery wall art
+    - retro kids art
+    - dopamine decor
+    - rainbow wall art
+    - kidcore poster
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 14.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 039c311e7c41831db3c47c78dc8951912ec8cf7c161bd6c7b72c6543a5c36f1e
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/kidcore-vol-2-set-of-5-2x3.zip
+    file_sha256: 16491f715dd08af6fb010a528ebfb2832631f765d91677d968ac4758d9e54a1d
+    name: kidcore-vol-2-set-of-5-2x3.zip
+  payload_sha256: 21f90d7861fe803ffdd1ebe7d384d9dab948c07f0836e75810cc51ca6f30a119
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/kidcore-vol-2-set-of-5-3x4.zip
+    file_sha256: 848542b776896d253d4f518328aaa2cf2b41af4c02e083586e20cbdbde2ebac7
+    name: kidcore-vol-2-set-of-5-3x4.zip
+  payload_sha256: 7c867336f64d3d3f8b6d7d80b2fc0845de5a39307b5e8cfbe9633dde5c91e9db
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/kidcore-vol-2-set-of-5-4x5.zip
+    file_sha256: 1db3e4180aea3119dd2206e577dfc5179faa5d33403a48f2b72042eeefcdd1c8
+    name: kidcore-vol-2-set-of-5-4x5.zip
+  payload_sha256: c433eabae94a70f8da51e5fe277a8ae2ce57a531099125d60c300daad8b67e59
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/kidcore-vol-2-set-of-5-11x14.zip
+    file_sha256: 09bb27e8b3c754539141ee70c2fea51d07b821c789ca2a48b2ca3f5624181018
+    name: kidcore-vol-2-set-of-5-11x14.zip
+  payload_sha256: 8b9ec38c590c4b276dfd82cb3e86bbb9195542eb26a2a7030d8617911a39d550
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/kidcore-vol-2-set-of-5-iso.zip
+    file_sha256: 8626713325ae79445bad0618dc37a15063888162dd95e25ca6ac008df569d234
+    name: kidcore-vol-2-set-of-5-iso.zip
+  payload_sha256: c39c932304f41d453e45ea2f2eb098af95a15f4b219df0cfb67dec7d92f4e4d2
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/images/kidcore-vol-2-set-of-5-1-cover.jpg
+    file_sha256: 229fa296aa774b23258f47a965cfe3aed7a1c62328289ee2008d87d9d88c1497
+    rank: 1
+    alt_text: Five framed kidcore prints arranged as a gallery wall
+  payload_sha256: 5897cfab4a35ffe611c31d1d71d344c4b4f77ba696986177526b6180865f635a
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/images/kidcore-vol-2-set-of-5-2-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 2
+    alt_text: 'Kidcore Wall Art Set of 5 Printable: sizes image'
+  payload_sha256: 34bee81564c936b81cc36cf6e5c7e289bde56762ee7374fafe1ebc3d37b8aff1
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[55].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-vol-2-set-of-5/images/kidcore-vol-2-set-of-5-3-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 3
+    alt_text: 'Kidcore Wall Art Set of 5 Printable: how image'
+  payload_sha256: c01c19d2b1ee80f3029c0d9698f12af5e6ad3394b5c08a37a40942c913dd2e86
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Checker Christmas Tree Print, Kidcore Christmas Wall Art Printable, Retro Holiday Poster
+    description: 'A three-tier tree covered in candy-colored ornaments, topped with a gold star, over a red checkerboard.
+      A bright, nostalgic print to swap in for the holidays.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore christmas
+    - christmas wall art
+    - retro christmas
+    - christmas tree print
+    - holiday wall art
+    - christmas printable
+    - kids christmas decor
+    - playroom decor
+    - checkerboard print
+    - colorful christmas
+    - holiday decor
+    - kidcore wall art
+    - xmas wall art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 8cb7b150a3468cb9d3697eea8178e872c8ef257451ec69f6c95f740227dd5a4b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-2x3.jpg
+    file_sha256: a9cd3e5ed5696041e93dc5a5b7a50a3679fec1016a02b6bf4bb549d2f93a5fa3
+    name: checker-christmas-tree-2x3.jpg
+  payload_sha256: 969c7fb40517ee71f3012bfd7967f9366808d21f60e8ce63fa208807b0cd8c88
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-3x4.jpg
+    file_sha256: 2a139ccd6529dc733231ef02ab6346820c6710beeca0934a156daa21181e4b49
+    name: checker-christmas-tree-3x4.jpg
+  payload_sha256: 60a27de790c4dbf589c64515b5d6a4b88471ba1e31e5576fb8b3c37c0b250ea9
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-4x5.jpg
+    file_sha256: 370bec8d3d8e70d4ddc526e83aa5032bc641414c4a93611f484151302fe6f371
+    name: checker-christmas-tree-4x5.jpg
+  payload_sha256: 6c4da0b53f6e66c7724f57dbbe30043c6a262e801fafed1037f2328b2717b007
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-11x14.jpg
+    file_sha256: 063901d67fb1ea7a9dc540083b147aa54b84ebc2077297fa193325c1c9227118
+    name: checker-christmas-tree-11x14.jpg
+  payload_sha256: 4de2ae08ea8f65bc9fbe809513ff806ce104035f01a7029f816a71e4af20a153
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/checker-christmas-tree-iso.jpg
+    file_sha256: 271748e0bdc1e4c84c783c323667f4de0badcdc534e1d557584b71805afcc73b
+    name: checker-christmas-tree-iso.jpg
+  payload_sha256: 835f6340a756a68c34e7a78d845316237dea1582c937877dea68ff331f845efe
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/images/checker-christmas-tree-1-cover.jpg
+    file_sha256: 6ca2a1d82c3c7a265f8653d49ae55ff85a686a42ce0767de77e1a7cb1f7be614
+    rank: 1
+    alt_text: Kidcore print of a green Christmas tree with colorful ornaments and a gold star over a red checkerboard
+  payload_sha256: ad86e6e67dedaa7d95b22e4ba14fca1ce70283b5d57f6ca44db2cca096bf9a79
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/images/checker-christmas-tree-2-detail.jpg
+    file_sha256: 18815850d0045a94d8c76a7994a075ae82813c57d32d24b500cb921f0c7fb8e7
+    rank: 2
+    alt_text: 'Checker Christmas Tree Print: detail image'
+  payload_sha256: 3e1e4899089da5fdeed4d65b33c6bdf1e6bd17a21e09fb6b81680afa5245f2db
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/images/checker-christmas-tree-3-print.jpg
+    file_sha256: 40c4163ad53775682ed4988bd008a89b9f15a52f4d5086370c37bec03ba84fa0
+    rank: 3
+    alt_text: 'Checker Christmas Tree Print: print image'
+  payload_sha256: d776f59834a92ddd0d5851deb475b700dbc6c02de79181b3bf4b398ea6b392dd
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/images/checker-christmas-tree-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Checker Christmas Tree Print: sizes image'
+  payload_sha256: 7b391d24d86de892bb69536d11c4ea8c8ce02d948a01389b0593ea69425e4e97
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[64].listing_id
+    path: assets/digital/2026-11-04-release-4/checker-christmas-tree/images/checker-christmas-tree-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Checker Christmas Tree Print: how image'
+  payload_sha256: 04ea6c959fa4df141964d59e5b94d7732ebe152aa302c3d73d560debb619b306
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Ornament Parade Print, Kidcore Christmas Wall Art Printable, Colorful Holiday Poster
+    description: 'Twelve round ornaments in red, yellow, blue, pink and purple hanging on a deep green ground. A cheerful
+      holiday print for a hallway, kitchen or kid''s room.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore christmas
+    - christmas wall art
+    - retro christmas
+    - ornament print
+    - holiday wall art
+    - christmas printable
+    - kids christmas decor
+    - playroom decor
+    - colorful christmas
+    - holiday decor
+    - kidcore wall art
+    - xmas wall art
+    - christmas baubles
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: c9b6dc49b99ed62520c300cd911c1aa160f5149fa267054d326c5537c0066906
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-2x3.jpg
+    file_sha256: d65f74899e36a8d22f6322b9d5bb4f99bde175ce288c7bdac3dfb51f8cc2e7eb
+    name: ornament-parade-2x3.jpg
+  payload_sha256: fb05e3f56592a72f5d265cef4a114d3eae415d27e5a9d5818fcb334cb30aebad
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-3x4.jpg
+    file_sha256: a729dcab60434a2c21db9d9e4080b6e9defef28516934e0d64b4b97f1dde0a8a
+    name: ornament-parade-3x4.jpg
+  payload_sha256: 5d6660e6496181a74df107dbe12154810504c67b7dfd444af7d3114549b16d0b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-4x5.jpg
+    file_sha256: 61305c0594e8ccb072072a8d8b866aea36fe39871c4458b3d5dc3865e83c26e1
+    name: ornament-parade-4x5.jpg
+  payload_sha256: c4ed0c1fbd3ad0f4abc405c1a24d7aa90f1412fbf34d3c8f04d3b71746404071
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-11x14.jpg
+    file_sha256: 16a1c30262e03689bdcf525bf246094e8e2b122cb1e7a64d7698fd03e43a2431
+    name: ornament-parade-11x14.jpg
+  payload_sha256: 7a8a98d5bd1df9e5267d206613405e6d09dafd4ba364ff9cd5de9ee9d9cc9726
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/ornament-parade-iso.jpg
+    file_sha256: 220397f1c3c867e8cf2cf0175ec2617a8d4ee0a6a0f3a64885b2e37ff9ea8a5d
+    name: ornament-parade-iso.jpg
+  payload_sha256: 22ae103b43a84b21cfbeb2f8afe820cc4ee49f68522f8f39848950ca48fd8cba
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/images/ornament-parade-1-cover.jpg
+    file_sha256: 48faa3051b6be6b77243a4f49a10d7e8033bbf684b85a464be3a788f0dc5a889
+    rank: 1
+    alt_text: Kidcore print of twelve colorful round Christmas ornaments hanging on green
+  payload_sha256: da69897430a59a47904f8b635509fce90b0c3b97fd5c47937dfd418c680c46f5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/images/ornament-parade-2-detail.jpg
+    file_sha256: f7764b8159d9158a672084c88b98a7015d6837d259b9d86a428ed13b4bfdda8e
+    rank: 2
+    alt_text: 'Ornament Parade Print: detail image'
+  payload_sha256: a4f199b1442c53be5762692fe9a235bcdc7f21d6b322eba229f25ca97a271882
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/images/ornament-parade-3-print.jpg
+    file_sha256: 46b2dabd9995de27530b47a17c832ebd0d9219e54df57f7343e3e1eef474271b
+    rank: 3
+    alt_text: 'Ornament Parade Print: print image'
+  payload_sha256: 4ca56ad3fdac90f41d0a9c6881f2427752a74eb165104dc73fef3cd5bf1c0740
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/images/ornament-parade-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Ornament Parade Print: sizes image'
+  payload_sha256: 50c90021cc6b4336cbc4f72e15dc8fcccd8a7226069f4b6a3d6533fa64fd7c42
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[75].listing_id
+    path: assets/digital/2026-11-04-release-4/ornament-parade/images/ornament-parade-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Ornament Parade Print: how image'
+  payload_sha256: ca48fc74a338520ce603025608ffa8d12a2a4a4f664c5b923ad9ea3270e0de10
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Candy Stripe Stars Print, Kidcore Christmas Wall Art Printable, Red Stripe Holiday Poster
+    description: 'A big gold star and a handful of little ones on bold red and pink candy stripes. A festive, graphic print
+      that brightens any wall for the season.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore christmas
+    - christmas wall art
+    - retro christmas
+    - candy stripe print
+    - holiday wall art
+    - christmas printable
+    - kids christmas decor
+    - star wall art
+    - colorful christmas
+    - holiday decor
+    - kidcore wall art
+    - xmas wall art
+    - red stripe art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: b26c5e3b3cb6fa02ec74ce8eef8393269daf188887e2d35b21ab8b354b1bd645
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-2x3.jpg
+    file_sha256: 0aec437a104f7b9d2866ef3f3e009e6da176273a4b3d160ae8655199bd238db1
+    name: candy-stripe-stars-2x3.jpg
+  payload_sha256: c625a3c43ff842b7e12159edab008ed93ea36b6b0d10f3357e802190ced7357d
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-3x4.jpg
+    file_sha256: 83b9120980fa9a16ea6293a553aafd81d8816a605960067659dd561719e37c72
+    name: candy-stripe-stars-3x4.jpg
+  payload_sha256: f1f6937a3c76de8eb13f5cf8387dfa90f941beb367bf742c1cbab911176de714
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-4x5.jpg
+    file_sha256: 7e7301f75c077d5bacd73fd4203bd67eea91bd76d19713b6cace2804d67f3916
+    name: candy-stripe-stars-4x5.jpg
+  payload_sha256: 5d27a9ba756e22f5804b63e699d34e5b100f4037ed333af2a2ef549d0725d4c3
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-11x14.jpg
+    file_sha256: 37353a813f493b18dbdfdb23d49ab54c301e94e03cca77a5dc4ef5fbb13e9d0b
+    name: candy-stripe-stars-11x14.jpg
+  payload_sha256: 3296d5e595ca0b66913a52c8eb8da77a26e789a936520ddfa2d7beafa1d71021
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/candy-stripe-stars-iso.jpg
+    file_sha256: 9f3eda00bf0ea7eed76b863e7d092e83e8282866bbef38674ebea4f612f502c3
+    name: candy-stripe-stars-iso.jpg
+  payload_sha256: 62608d70f08b03164ca5c7f16112b83d5fe245aa23922c6fcdcdf8a48c504835
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/images/candy-stripe-stars-1-cover.jpg
+    file_sha256: 7be4c7269f0719d4d2b255a39c530e8786cd5f17477fb9d92822a2c98bfe7359
+    rank: 1
+    alt_text: Kidcore print of a large gold star and small stars on diagonal red and pink candy stripes
+  payload_sha256: e2869da44e5568a864f3d935fe572e5219df45a307944361a6ed77fe80b3bc2c
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/images/candy-stripe-stars-2-detail.jpg
+    file_sha256: 21a1f7123d3cae0427d19b7d7f76a67031ec01591dd817a334cdb1146407bf23
+    rank: 2
+    alt_text: 'Candy Stripe Stars Print: detail image'
+  payload_sha256: 4e58e1e0e541e73f5001d928c3bbfb6f275b597a916ce0d674eaf0b9330934d5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/images/candy-stripe-stars-3-print.jpg
+    file_sha256: 8f709fe66b2ec7a8c0dd2ae60b8f26ddadd62b94bd8f7a5f6174370cb14cd076
+    rank: 3
+    alt_text: 'Candy Stripe Stars Print: print image'
+  payload_sha256: 038c9150e3a8b8b1b24254a057071efa8db22dddabe3a5eb1c0ab851644a1b0c
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/images/candy-stripe-stars-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Candy Stripe Stars Print: sizes image'
+  payload_sha256: 32a03259fbd5f35cd974656788e0bd3c501dd5869acbee9f7178518978c9da58
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[86].listing_id
+    path: assets/digital/2026-11-04-release-4/candy-stripe-stars/images/candy-stripe-stars-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Candy Stripe Stars Print: how image'
+  payload_sha256: 5cbb9e4517175776d94cefb02a28ccbc0392269f92d49489158cf59f8f8c40c9
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Gingerbread House Print, Kidcore Christmas Wall Art Printable, Snowy Holiday Poster
+    description: 'A little gingerbread house with icing trim and a row of candy lights, in falling snow. A cozy, sweet print
+      for a kitchen, playroom or holiday corner.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore christmas
+    - christmas wall art
+    - retro christmas
+    - gingerbread print
+    - holiday wall art
+    - christmas printable
+    - kids christmas decor
+    - kitchen christmas
+    - colorful christmas
+    - holiday decor
+    - kidcore wall art
+    - xmas wall art
+    - snowy house print
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 66ed9cc2473ce88e2777128dfc2a45bafbee58a337482e1790610dce363a56b8
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-2x3.jpg
+    file_sha256: 6a8027e7dfe1146b1e24a63ce8f5ad742be3e66e94991e50b7ca1ff0c4bd2e77
+    name: gingerbread-house-2x3.jpg
+  payload_sha256: caeee5cb12d9d0b140b7342fb4142cca722ce7d6ca0a86f5f9184b7a849c62c9
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-3x4.jpg
+    file_sha256: 3ef841a55a7a07b230c103391c5da62e1f8e9e379bc98b1716c5d670de2302c8
+    name: gingerbread-house-3x4.jpg
+  payload_sha256: 7972a944deeba4bee4e59bf47059770e747c1e10510796a812205322e9c6f8e5
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-4x5.jpg
+    file_sha256: 756989bce31fa8d0655bc8610037478012c0db5911baa62bf27a69152b0c6c70
+    name: gingerbread-house-4x5.jpg
+  payload_sha256: bae474475b6982b90c592cc345fdada7ea503d5243f7255cfc6bc0d998270fbc
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-11x14.jpg
+    file_sha256: 55a8a9da21885f9eb7c15d2b38d8dd9e63fbb590ca0c937af517a5d8722ffcc7
+    name: gingerbread-house-11x14.jpg
+  payload_sha256: d4e946351da6c8a4ecbf1ac4bc574bc49182e8bed5f195d7360a9ca3c938962b
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/gingerbread-house-iso.jpg
+    file_sha256: 17928c6460e9279f77acab67d0c379d28cd6a171af223fcaa507e505110ca307
+    name: gingerbread-house-iso.jpg
+  payload_sha256: d66867ed2d360e6b74cfa75186691824fb6274d133f69d1f61d6516c78b71576
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/images/gingerbread-house-1-cover.jpg
+    file_sha256: 2f19b2f4219c98ee33870d172d0355fd09969afb691bcca1b7ce93c2a7136db7
+    rank: 1
+    alt_text: Kidcore print of a gingerbread house with white icing and candy lights in falling snow
+  payload_sha256: 7922c700da2fbcfe78d0d15bbff992323a9a34dcbd81604fa10e4775bf632ada
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/images/gingerbread-house-2-detail.jpg
+    file_sha256: cf7a21f70beb7ff8e3d7b66b419dcbfe6c4ff3776770841d6702ddb9f9c1388c
+    rank: 2
+    alt_text: 'Gingerbread House Print: detail image'
+  payload_sha256: 183627f922f556203e86950b5229e9704c1bd9e024fcf3d1d41d893e0fbb01a7
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/images/gingerbread-house-3-print.jpg
+    file_sha256: 5160430111cba37c720a334aea941a29da59754cc0c24b75fc07edddc679b87a
+    rank: 3
+    alt_text: 'Gingerbread House Print: print image'
+  payload_sha256: a0f49e93ca525f2f7049144044b793b22e4d7a6e33e0e91146034fdff1cd94d5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/images/gingerbread-house-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Gingerbread House Print: sizes image'
+  payload_sha256: bbcbf6a696288870ec00f9546f6f8f3f75217c1b4e44cd78303bcc2223d0fbcb
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[97].listing_id
+    path: assets/digital/2026-11-04-release-4/gingerbread-house/images/gingerbread-house-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Gingerbread House Print: how image'
+  payload_sha256: 6e7427607f7c55d1431a52259443afb50b9fd5cff9abb0797f9adf282a21dfe6
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Kidcore Christmas Wall Art Set of 4 Printable, Retro Holiday Gallery Wall Prints
+    description: 'All four kidcore Christmas prints in one download: Checker Christmas Tree, Ornament Parade, Candy Stripe
+      Stars and Gingerbread House.
+
+
+      WHAT YOU GET
+
+      • 5 zip files, one per size ratio, each with all 4 prints (2:3 ratio, 3:4 ratio, 4:5 ratio, 11x14 in, ISO A size)
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kidcore christmas
+    - christmas wall art
+    - retro christmas
+    - christmas print set
+    - gallery wall set
+    - holiday wall art
+    - christmas printable
+    - kids christmas decor
+    - playroom decor
+    - colorful christmas
+    - holiday decor
+    - kidcore wall art
+    - xmas wall art
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 14.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 95073eb88de8b72b62aa01c8e4b86b17f23b1c7a17d24b278d764ddffe16b1ed
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/kidcore-christmas-set-of-4-2x3.zip
+    file_sha256: e8c7d1e66a4f6ac19d10ac30e52f2ce34fb5c103386928120012efc9f5f3d248
+    name: kidcore-christmas-set-of-4-2x3.zip
+  payload_sha256: 845cdb8fcb289522299c9655cf1ae10752198ed3479cf541df289df163d55fac
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/kidcore-christmas-set-of-4-3x4.zip
+    file_sha256: 76c04e849b45284b0bed846e9a843bc5f74e99fa6371ff426674c27aebe05d96
+    name: kidcore-christmas-set-of-4-3x4.zip
+  payload_sha256: 43880cb613b6a14c1438a52a634a474695ce8dc7c249fdc5220af6d79d7a3225
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/kidcore-christmas-set-of-4-4x5.zip
+    file_sha256: fe994a1cc499e281dbdcef8f0884f6fbdd7d8407cc15b883d10e77db5eecb79f
+    name: kidcore-christmas-set-of-4-4x5.zip
+  payload_sha256: 35c381f705e5b783c30194f9250009a9b0183dee3b7e22303cda9461de789fa8
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/kidcore-christmas-set-of-4-11x14.zip
+    file_sha256: 31ee1b9f100a0f87113fb9d8cd517198f6570f2d8aa3193e3825acdd27f5526c
+    name: kidcore-christmas-set-of-4-11x14.zip
+  payload_sha256: f5af2b133d396ee7578d8459d0a2a12a255f44c8a60731ee13f7ccd6b778e86c
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/kidcore-christmas-set-of-4-iso.zip
+    file_sha256: 83f0df1650bfeed8b41bab52d9af3e393a410c43ae2f1693996f36235caecfc1
+    name: kidcore-christmas-set-of-4-iso.zip
+  payload_sha256: 9ffe535f8c4b1b7ffe341b2235c1db69e63f362bd89f37c27a4aff17d9c4a118
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/images/kidcore-christmas-set-of-4-1-cover.jpg
+    file_sha256: ff2737076a02ec5188c086a4c75fda2f218de5eb7fcf804e51c4f3d74ea0fec4
+    rank: 1
+    alt_text: Four framed kidcore Christmas prints in a row on a wall
+  payload_sha256: 67e218261b83e67023a6e03aac82de5f85186e1a765eebf1ac2ccfea7829d8f5
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/images/kidcore-christmas-set-of-4-2-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 2
+    alt_text: 'Kidcore Christmas Wall Art Set of 4 Printable: sizes image'
+  payload_sha256: cb5e3e42594161ed38c0988c13d948535e0f81c29d665651bfbd4ec1a69b1e96
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[108].listing_id
+    path: assets/digital/2026-11-04-release-4/kidcore-christmas-set-of-4/images/kidcore-christmas-set-of-4-3-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 3
+    alt_text: 'Kidcore Christmas Wall Art Set of 4 Printable: how image'
+  payload_sha256: 1fd369f465b44ea957ff1da8b24b8d2a285677d3e37758d553d5915ffa09cd20
+- op: etsy_create_digital_listing
+  niche: kidcore-wall-art
+  payload:
+    title: Hanukkah Lights Print, Colorful Menorah Wall Art Printable, Kids Hanukkah Decor
+    description: 'A nine-branch Hanukkah lamp with eight colorful candles and the helper candle raised in the middle, glowing
+      on a deep blue sky over a light blue checkerboard. A bright print for the festival of lights.
+
+
+      WHAT YOU GET
+
+      • 2:3 ratio: 4x6, 8x12, 12x18, 16x24, 20x30 in
+
+      • 3:4 ratio: 6x8, 9x12, 12x16, 18x24 in
+
+      • 4:5 ratio: 4x5, 8x10, 16x20 in
+
+      • 11x14 in: 11x14 in
+
+      • ISO A size: A5, A4, A3, A2
+
+      • 300 ppi JPG files, sRGB
+
+
+      Print at home, at a local print shop or with an online printer. Frame not included.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - hanukkah wall art
+    - hanukkah print
+    - menorah print
+    - hanukkah decor
+    - chanukah decor
+    - kids hanukkah
+    - festival of lights
+    - holiday wall art
+    - colorful menorah
+    - kidcore wall art
+    - printable wall art
+    - jewish holiday art
+    - hanukkah printable
+    taxonomy_id: 2078
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 1df286843fcb4eff3d43f8a742e9649dfddda90577af06621f768d3e6cef0501
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-2x3.jpg
+    file_sha256: eafb87b9b62d9a9957e5bd6d4207bc7b56617dcf1ef284f15aed019948978a46
+    name: hanukkah-lights-2x3.jpg
+  payload_sha256: 0625db5d3dbf515fec4ac5109d4b3be6c3abbc3963df0ed2570bdcc688f60f03
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-3x4.jpg
+    file_sha256: 8145ae068cdc5e455cc082a2bb9ebdc0cf7a2f92714367d3decf3696c840a2c4
+    name: hanukkah-lights-3x4.jpg
+  payload_sha256: 02a29c85ca25cf99ed9820e16962aa7ea86d6d1642c29862161ac8cde17df9c9
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-4x5.jpg
+    file_sha256: 4ca3a9e69f73277756586b8182776f61b8cf0e6a0f3999f37db22498538cf59e
+    name: hanukkah-lights-4x5.jpg
+  payload_sha256: 70650b296a8127ee2bb8dd05712346203756d26409e1eda24209a260c47fa1f9
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-11x14.jpg
+    file_sha256: ea0a812efaefc6bc81c9c225f26593a3b0c14fc67b96b88a740482f21d32b23b
+    name: hanukkah-lights-11x14.jpg
+  payload_sha256: 6cfb2477b8be7487248a1685384ac62661eb0ef38d618ed86d1858dbf5a041cc
+- op: etsy_upload_file
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/hanukkah-lights-iso.jpg
+    file_sha256: 68ad9e4e4436cb1ff2979bb0a8932acbcf25316af41e5326098d9c8d7f6231ae
+    name: hanukkah-lights-iso.jpg
+  payload_sha256: 48404ddd3a4255f3a78ed65da768011bf37c412bc94b5349217ca9f8141697cc
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/images/hanukkah-lights-1-cover.jpg
+    file_sha256: 9f0256730e15b5d7c63e115bf0ab9ca6ca8fcfbb1b872053c83a4ab0c25596c4
+    rank: 1
+    alt_text: Kidcore print of a gold nine-branch menorah with colorful lit candles on deep blue
+  payload_sha256: 81a6b730b287f89491d2fd9b133d877da107cfafc9ed3a85367762c003fecc9c
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/images/hanukkah-lights-2-detail.jpg
+    file_sha256: 387bcea0d54f96607f428f6718d42f86b02cfc587a421ae6a47702da96362321
+    rank: 2
+    alt_text: 'Hanukkah Lights Print: detail image'
+  payload_sha256: 0161483f37ae06420c283a42df7f2ca69f6b4385da90c7e92ed78efa59f42be6
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/images/hanukkah-lights-3-print.jpg
+    file_sha256: abe2b7c4e41a89d5037a09af8448f25ffc6b9477803793d8e3d7a4715ba51900
+    rank: 3
+    alt_text: 'Hanukkah Lights Print: print image'
+  payload_sha256: 35210b27d7696c961ed8e1adbce58c6bf926edef994bcd1ccda87e0d05d07aa1
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/images/hanukkah-lights-4-sizes.jpg
+    file_sha256: ac54a6f33bea3646e170d152d48c83dc1bb3136ce3dfd8d5634a6fea2c2892cd
+    rank: 4
+    alt_text: 'Hanukkah Lights Print: sizes image'
+  payload_sha256: ff262925a5d6d1f230750fbc08c6699b877dda4c33bb96c410c7c741a0233f61
+- op: etsy_upload_image
+  niche: kidcore-wall-art
+  payload:
+    listing_id: $ref:ops[117].listing_id
+    path: assets/digital/2026-11-04-release-4/hanukkah-lights/images/hanukkah-lights-5-how.jpg
+    file_sha256: dbcc09a59aa66b63a8a40cccb632e4c28b72f65590b351f37eac4416a466c20f
+    rank: 5
+    alt_text: 'Hanukkah Lights Print: how image'
+  payload_sha256: ea47f8defe126a002b8292cd88bdfd0ba8c57a8d8737e2b4ecaa4b2a1b11b85b
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Christmas Coloring Pages for Kids, 12 Printable Pages, Toddler and Preschool Coloring PDF
+    description: 'Twelve big, simple Christmas pictures with thick lines that little hands can color: a tree, ornament, gingerbread
+      house, stocking, present, snowman, wreath, candy cane, mitten, cocoa, sled and snowflake.
+
+
+      WHAT YOU GET
+
+      • 12 coloring pages
+
+      • US Letter PDF (8.5 x 11 in)
+
+      • A4 PDF (210 x 297 mm)
+
+
+      Print at home on plain paper or card stock, as many copies as you need for your family or class.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas coloring
+    - coloring pages
+    - kids coloring pages
+    - christmas printable
+    - toddler coloring
+    - preschool activity
+    - holiday activity
+    - kids christmas
+    - classroom activity
+    - printable for kids
+    - christmas craft
+    - easy coloring pages
+    - christmas party
+    taxonomy_id: 339
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: eb36e076fde7587d641e3c6570444f8ef5b866a2a0899ce9d6d5a49999fb6eac
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/christmas-coloring-pages-letter.pdf
+    file_sha256: e970cf05c35ff2350e3403cae9d635cc070d9def36306aae1a61c2a97756c1b9
+    name: christmas-coloring-pages-letter.pdf
+  payload_sha256: e1102ced8e7b69ef8efca87a7e617307253624c91a00ea90af6fc95c00ab0008
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/christmas-coloring-pages-a4.pdf
+    file_sha256: c86baf79a73384c744b23c34bef3fe28c50cf2095c5dd5f14fec3eb7c473f0ae
+    name: christmas-coloring-pages-a4.pdf
+  payload_sha256: 56c8d8b5e2fba3db6bff9e07dd31a07c93c0bcb515f6fb263bc422ce572a9acd
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/images/christmas-coloring-pages-1-cover.jpg
+    file_sha256: 0366e583076a07668395de15c38466bb86021af1193158300a19e634c17b3497
+    rank: 1
+    alt_text: Three Christmas coloring pages with simple outlines of a tree, ornament and gingerbread house
+  payload_sha256: 46b4bba3efab73f81127e3a48be9782d007b20669071d8aba50ed45e741c3740
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/images/christmas-coloring-pages-2-pages.jpg
+    file_sha256: a20e5c8684cee06dc47154dd0e1f81067f015bdf14107f27eaaa92aa821cc08e
+    rank: 2
+    alt_text: 'Christmas Coloring Pages for Kids: pages image'
+  payload_sha256: 09c8e353a753d32ebbe6e446c40ad8c6f5ba0e3c1ad24657dbac90d6a487ac36
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/images/christmas-coloring-pages-3-detail.jpg
+    file_sha256: 7350a81521c340556634247ed3907fa464dde6438215e54ea956e24199c23f8b
+    rank: 3
+    alt_text: 'Christmas Coloring Pages for Kids: detail image'
+  payload_sha256: d4d552ea1d11e78aa4fa1f6f25ffe008aeb999b35953592c18e65f96c738a67c
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/images/christmas-coloring-pages-4-included.jpg
+    file_sha256: 660c31e45d28eaaeb04349ab7e8fb86d159ee1f0a1aed7bf3099394ae7526652
+    rank: 4
+    alt_text: 'Christmas Coloring Pages for Kids: included image'
+  payload_sha256: 62df7885fe013606f897c678e42903bd937928a83dc739ce38750d03c02115c9
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[128].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/images/christmas-coloring-pages-5-how.jpg
+    file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
+    rank: 5
+    alt_text: 'Christmas Coloring Pages for Kids: how image'
+  payload_sha256: ac0a6e87f609060b477ab176ac3ea246cc4c97b5c8c120f92c9db6a4884a8986
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Christmas Picture Bingo Printable for Kids, 10 Cards, Classroom Holiday Party Game
+    description: 'Picture bingo for kids who can''t read yet: ten different 4 x 4 cards with colorful Christmas pictures and
+      a word under each, plus a sheet of 20 calling cards to cut out.
+
+
+      WHAT YOU GET
+
+      • 10 different bingo cards
+
+      • 20 calling cards to cut out
+
+      • US Letter PDF (8.5 x 11 in)
+
+      • A4 PDF (210 x 297 mm)
+
+
+      Print at home on plain paper or card stock, as many copies as you need for your family or class.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - christmas bingo
+    - picture bingo
+    - kids bingo game
+    - christmas party game
+    - classroom party
+    - holiday game
+    - christmas printable
+    - family game night
+    - preschool game
+    - kids christmas
+    - printable game
+    - school party game
+    - holiday activity
+    taxonomy_id: 1350
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: cfc4b6fc6c5219ed352b7325388e2a5b33ca8e0368bc089799a6a8366bf58545
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/christmas-bingo-letter.pdf
+    file_sha256: c8c561bd7fa288e2f5f43c9106b790985647367a1389725a5fa7fdfdf0321de2
+    name: christmas-bingo-letter.pdf
+  payload_sha256: 4058f9127618daf56bc710d13357bdd6ad27e229d53dfeafcad4fcc1cfd363db
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/christmas-bingo-a4.pdf
+    file_sha256: 2da542b9050ad32d63f2a665a4b81db6303c22d32434f6c09ba2524591019e32
+    name: christmas-bingo-a4.pdf
+  payload_sha256: 0c3527d9323ad7e4c2b844f72bde041a0ce9e391b310a10cd7c34c6f60641613
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/images/christmas-bingo-1-cover.jpg
+    file_sha256: 23022799a2687aaa65b04e7fac70eae9fce83bf43a984f2fb218ab7a7c8b46ca
+    rank: 1
+    alt_text: Christmas picture bingo card with a 4 by 4 grid of colorful holiday pictures
+  payload_sha256: 36660e5eba8836342fc669bde4fa40eced77cfaf98c034a61a0105fd8d96f863
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/images/christmas-bingo-2-pages.jpg
+    file_sha256: 7ccf5a79ec494604a6942442504bb893483dd75a4c88d220ef07f74f9740dc73
+    rank: 2
+    alt_text: 'Christmas Picture Bingo Printable for Kids: pages image'
+  payload_sha256: 5a816e263e349813ced3904b26e082b73cec1dc7ebb4039d977ee9b7734e8d52
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/images/christmas-bingo-3-detail.jpg
+    file_sha256: f1a01f73c887a24cd97aa126d8a515493e162c6e727636b64f44959cc5f0954c
+    rank: 3
+    alt_text: 'Christmas Picture Bingo Printable for Kids: detail image'
+  payload_sha256: e47a14e4e99c65a5649510e66cf8feb0d54f4c9c07219dff8bdae80c7f474a73
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/images/christmas-bingo-4-included.jpg
+    file_sha256: 3006f0aa2870a96a553ba0f4c6f77bd8a044307699b0ed70de857937dc0d1ae1
+    rank: 4
+    alt_text: 'Christmas Picture Bingo Printable for Kids: included image'
+  payload_sha256: c1d27ddd10ecee088c5472ed8860a6f57d6a979d36e3cd043fbe577a1ced8bd2
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[136].listing_id
+    path: assets/digital/2026-11-04-release-4/christmas-bingo/images/christmas-bingo-5-how.jpg
+    file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
+    rank: 5
+    alt_text: 'Christmas Picture Bingo Printable for Kids: how image'
+  payload_sha256: 097ca411036783df8d5fb22bcb52c91e855ed403bc5ce2b5bfccfd23820e0c2b
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Secret Santa Kit Printable, Gift Exchange Questionnaire, Name Slips and Gift Tags
+    description: 'Everything for an easy gift exchange at work, school or home: an All About Me questionnaire, an exchange
+      details sheet with 15 name slips, and 12 matching gift tags.
+
+
+      WHAT YOU GET
+
+      • All About Me questionnaire
+
+      • Exchange details + 15 name slips
+
+      • 12 gift tags
+
+      • US Letter PDF (8.5 x 11 in)
+
+      • A4 PDF (210 x 297 mm)
+
+
+      Print at home on plain paper or card stock, as many copies as you need for your family or class.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - secret santa
+    - gift exchange
+    - secret santa form
+    - office christmas
+    - christmas printable
+    - holiday party game
+    - gift tags
+    - name slips
+    - work party
+    - santa questionnaire
+    - white elephant
+    - family gift swap
+    - holiday printable
+    taxonomy_id: 1350
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 6ac63498311909f78f6a64ed37c28fba1b6965b62292492cbaa8a1f1d4583840
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/secret-santa-kit-letter.pdf
+    file_sha256: 581c3fd9afd876fc0f4756f495cef10df6de3a066a1ce4bf15c874ee14a321c5
+    name: secret-santa-kit-letter.pdf
+  payload_sha256: def6683718f84cae81b73f68933e41c8c8bbb31a9bd9f7c1f6c3789a75deacfb
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/secret-santa-kit-a4.pdf
+    file_sha256: 610bbfb1f2df8db539004b1126d526a980b20e3cacedb6c85a24e6818d4b36b2
+    name: secret-santa-kit-a4.pdf
+  payload_sha256: f6e42d22457a0c25281f9103b65c470631773c1767b3bc14da3df5b8be4fde06
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/images/secret-santa-kit-1-cover.jpg
+    file_sha256: 4943b267fbb1ce43be348d44e85f30f0f0b07d1a437e2b8229023e8d52ed968a
+    rank: 1
+    alt_text: Secret Santa questionnaire, name slips and gift tags printable pages
+  payload_sha256: 534c9b9becaa8e18512222933ec8c9f5a910cc5e65b1607f2e384cefb02f3706
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/images/secret-santa-kit-2-pages.jpg
+    file_sha256: ff16052e3eea7cdde7cde5cd8f69be27eff90122875a3eb325ca2ccac11a13dd
+    rank: 2
+    alt_text: 'Secret Santa Kit Printable: pages image'
+  payload_sha256: f4bbdab878cb3a7990e75c50b12886cc935d453e5e42ef41246cbf09281386ab
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/images/secret-santa-kit-3-detail.jpg
+    file_sha256: 4e46734f25eb29870f128492bf2173ab54c2c4412d4074bc0891b60c623bff67
+    rank: 3
+    alt_text: 'Secret Santa Kit Printable: detail image'
+  payload_sha256: 2cdc5ce6b6e4effe00c051bd2f83546e2dc9cd0c49efe524a45465ee5dd68082
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/images/secret-santa-kit-4-included.jpg
+    file_sha256: 233c56e1c15ab7603e9b4cf8768236c6a75fa33657d4562e6338569c6f58f569
+    rank: 4
+    alt_text: 'Secret Santa Kit Printable: included image'
+  payload_sha256: a5f06c3e0c7f0f29b3c724ec97dc2d03b1dae2a56a24927df39e377897f64a80
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[144].listing_id
+    path: assets/digital/2026-11-04-release-4/secret-santa-kit/images/secret-santa-kit-5-how.jpg
+    file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
+    rank: 5
+    alt_text: 'Secret Santa Kit Printable: how image'
+  payload_sha256: 6efb6ff01218fc5d18770f430c4c36cf75cdc088bcc3704bedcedbe8697c2509
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
+    title: Kids Christmas Activity Pack Printable, Coloring Pages, Bingo, Wish List, Countdown
+    description: 'A whole stack of Christmas fun for kids in one download: 12 coloring pages, picture bingo with 10 cards
+      and calling cards, a Christmas wish list and a color-in countdown from December 1.
+
+
+      WHAT YOU GET
+
+      • 12 coloring pages
+
+      • Picture bingo: 10 cards + 20 calling cards
+
+      • Christmas wish list page
+
+      • Countdown to Christmas chart
+
+      • One zip per paper size: US Letter and A4 PDFs
+
+
+      Print at home on plain paper or card stock, as many copies as you need for your family or class.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - kids christmas
+    - christmas activity
+    - christmas printable
+    - coloring pages
+    - christmas bingo
+    - wish list printable
+    - christmas worksheet
+    - advent countdown
+    - classroom activity
+    - holiday activity
+    - busy book pages
+    - preschool activity
+    - family activities
+    taxonomy_id: 1350
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 11.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 0e180358c1a10ca32bae13fd93daa07d8dbfa2c71d95c9af037ba6eef1529c24
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/kids-christmas-activity-pack-letter.zip
+    file_sha256: 3bb823fe314a621743c3b86ca71431c9aa59abb7c694c98d04cc4bec8b1a914f
+    name: kids-christmas-activity-pack-letter.zip
+  payload_sha256: 7efa6b0693baf2acb8add1aeef465f21e7708f236c59c8a876c8aee1044816a6
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/kids-christmas-activity-pack-a4.zip
+    file_sha256: 5afe55c6d2bfae3376b29132feded88e212f10867072632cd4180cbbec5e1db6
+    name: kids-christmas-activity-pack-a4.zip
+  payload_sha256: a37bf1bb7cebbe54f8578101a832bea8389e96460b51a21dec99d288dddc2f29
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-1-cover.jpg
+    file_sha256: e8a6d65dfda61fd41dad54d605a3e81ad8a37ff1300cd3dea3fcf645ce6b64e6
+    rank: 1
+    alt_text: Kids Christmas wish list, countdown chart, coloring and bingo printable pages
+  payload_sha256: 8b5d75cd0b215b9f6ec7733aca06abbfba082041f34e30e1a129c7f5756198d1
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-2-pages.jpg
+    file_sha256: efc4b9cfc2adfa14e234fe4dbd3fdd5b6792c4d2b78c52fac5f30e95775d95e8
+    rank: 2
+    alt_text: 'Kids Christmas Activity Pack Printable: pages image'
+  payload_sha256: 1185f1475fd3d6bfd999e3b92c0008132eae59344853645e352942db9e1cc451
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-3-detail.jpg
+    file_sha256: 3c222c6bdfff6a85ecf5f188ba17c049d968b242622c8fad915fe10756666ca6
+    rank: 3
+    alt_text: 'Kids Christmas Activity Pack Printable: detail image'
+  payload_sha256: b3dd827ac46ec12cc3e8e842fdf34970eaf00f24147d33891fff5110ea9d0b19
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-4-included.jpg
+    file_sha256: a07114204f87a0c0438261c51d55b9ce9c957000b5ae059bc9165fcac07d99b2
+    rank: 4
+    alt_text: 'Kids Christmas Activity Pack Printable: included image'
+  payload_sha256: e52db02d5cb4b79b53dc837b7a9ec6d7d7ebd55a50619f87f2d31087e6092e7c
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-5-how.jpg
+    file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
+    rank: 5
+    alt_text: 'Kids Christmas Activity Pack Printable: how image'
+  payload_sha256: 487ed2028e67ac5b7c2dcd917e1861928c751df89063ca83181abe3d5999109d

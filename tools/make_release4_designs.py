@@ -674,7 +674,7 @@ def wish_list_page(size):
     return img
 
 
-def letter_page(size):
+def letter_page(size):  # NOT shipped: DEAR SANTA has a live/pending USPTO mark (owner search 2026-11-07)
     img, d, w, h = page(size)
     d.rounded_rectangle([40, 40, w - 40, h - 40], radius=40, outline=XRED, width=10)
     headline(d, w, 110, "Dear Santa,", 110, XGRN)
@@ -894,7 +894,7 @@ def build_printables(root):
             if size == "letter":
                 built[key] = pages
         print(key, "done", flush=True)
-    ap_members = {"wish-list": lambda s: [wish_list_page(s), letter_page(s)], "countdown": lambda s: [countdown_page(s)]}
+    ap_members = {"wish-list": lambda s: [wish_list_page(s)], "countdown": lambda s: [countdown_page(s)]}
     pack = root / "kids-christmas-activity-pack"
     for size in ("letter", "a4"):
         for m, b in ap_members.items():
@@ -909,7 +909,7 @@ def build_printables(root):
     for size in ("letter", "a4"):
         for m in ap_members:
             (pack / f"{m}-{size}.pdf").unlink()
-    pack_pages = [wish_list_page("letter"), letter_page("letter"), countdown_page("letter"),
+    pack_pages = [wish_list_page("letter"), countdown_page("letter"),
                   built["christmas-coloring-pages"][0], built["christmas-bingo"][0], built["christmas-bingo"][-1]]
     return built, pack_pages
 
@@ -942,7 +942,7 @@ def main():
                           "US Letter and A4 PDFs"])
         printable_images(root / "kids-christmas-activity-pack" / "images", "kids-christmas-activity-pack",
                          "Kids Christmas Activity Pack", "Coloring, bingo, wish list and countdown", pack_pages,
-                         ["12 coloring pages", "Picture bingo: 10 cards + calling cards", "Wish list and letter to Santa",
+                         ["12 coloring pages", "Picture bingo: 10 cards + calling cards", "Christmas wish list page",
                           "Countdown to Christmas chart"])
 
 

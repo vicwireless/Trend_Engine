@@ -183,17 +183,17 @@ LISTINGS = {
         alt="Secret Santa questionnaire, name slips and gift tags printable pages"),
     "kids-christmas-activity-pack": dict(
         niche="holiday-planners", kind="pdf", price=11.99,
-        phrase="My Christmas Wish List / Dear Santa / Countdown to Christmas", tax=TAX_PARTY_GAMES,
+        phrase="My Christmas Wish List / Countdown to Christmas", tax=TAX_PARTY_GAMES,
         files=["kids-christmas-activity-pack-letter.zip", "kids-christmas-activity-pack-a4.zip"],
         title="Kids Christmas Activity Pack Printable, Coloring Pages, Bingo, Wish List, Countdown",
         tags=["kids christmas", "christmas activity", "christmas printable", "coloring pages", "christmas bingo",
-              "wish list printable", "letter to santa", "advent countdown", "classroom activity", "holiday activity",
+              "wish list printable", "christmas worksheet", "advent countdown", "classroom activity", "holiday activity",
               "busy book pages", "preschool activity", "family activities"],
         intro="A whole stack of Christmas fun for kids in one download: 12 coloring pages, picture bingo with 10 "
-              "cards and calling cards, a wish list, a letter to Santa and a color-in countdown from December 1.",
-        get=["12 coloring pages", "Picture bingo: 10 cards + 20 calling cards", "Wish list and letter to Santa",
+              "cards and calling cards, a Christmas wish list and a color-in countdown from December 1.",
+        get=["12 coloring pages", "Picture bingo: 10 cards + 20 calling cards", "Christmas wish list page",
              "Countdown to Christmas chart", "One zip per paper size: US Letter and A4 PDFs"],
-        alt="Kids Christmas wish list, letter to Santa and countdown chart printable pages"),
+        alt="Kids Christmas wish list, countdown chart, coloring and bingo printable pages"),
 }
 XMAS_ART = {"checker-christmas-tree", "ornament-parade", "candy-stripe-stars", "gingerbread-house",
             "kidcore-christmas-set-of-4", "hanukkah-lights"}
@@ -248,7 +248,7 @@ def concepts(bl: Blocklist, tm: dict) -> list[dict]:
                      if t else CheckResult("unknown", "USPTO search not run yet (tmsearch.uspto.gov is blocked from "
                                            "the cloud environment)", CHECKED, ()))
         origin = ("original code-drawn art with no design text" if not p["phrase"] else
-                  "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); "
+                  "plain descriptive holiday wording (bingo, wish list, countdown, Secret Santa); "
                   "folk tradition and generic game names, not tied to a person, show, brand or meme")
         checks = {
             "origin": CheckResult("pass", origin, CHECKED),
