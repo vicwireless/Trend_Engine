@@ -181,19 +181,31 @@ LISTINGS = {
         get=["All About Me questionnaire", "Exchange details + 15 name slips", "12 gift tags",
              "US Letter PDF (8.5 x 11 in)", "A4 PDF (210 x 297 mm)"],
         alt="Secret Santa questionnaire, name slips and gift tags printable pages"),
+    "dear-santa-notepad": dict(
+        niche="holiday-planners", kind="pdf", price=6.99, phrase="Dear Santa", tax=12476,
+        files=["dear-santa-notepad-letter.pdf", "dear-santa-notepad-a4.pdf"],
+        title="Dear Santa Notepad Printable, Christmas Wish List with Checkboxes, Kids Letter to Santa",
+        tags=["dear santa", "letter to santa", "christmas wish list", "santa notepad", "kids wish list",
+              "christmas printable", "wish list printable", "christmas to do list", "holiday notepad",
+              "kids christmas", "santa letter", "christmas checklist", "printable notepad"],
+        intro="A cheerful Dear Santa notepad with a band of little holiday pictures and checkbox lines, like a to-do "
+              "list for wishes. Three colors, in full-page and two-to-a-page sizes.",
+        get=["3 color designs: red, green and blue", "Full-page notes and 2-up half-page notes (cut line marked)",
+             "US Letter PDF (8.5 x 11 in)", "A4 PDF (210 x 297 mm)"],
+        alt="Dear Santa notepad printable with holiday pictures and checkbox lines in red"),
     "kids-christmas-activity-pack": dict(
         niche="holiday-planners", kind="pdf", price=11.99,
-        phrase="My Christmas Wish List / Countdown to Christmas", tax=TAX_PARTY_GAMES,
+        phrase="My Christmas Wish List / Dear Santa / Countdown to Christmas", tax=TAX_PARTY_GAMES,
         files=["kids-christmas-activity-pack-letter.zip", "kids-christmas-activity-pack-a4.zip"],
         title="Kids Christmas Activity Pack Printable, Coloring Pages, Bingo, Wish List, Countdown",
         tags=["kids christmas", "christmas activity", "christmas printable", "coloring pages", "christmas bingo",
-              "wish list printable", "christmas worksheet", "advent countdown", "classroom activity", "holiday activity",
+              "wish list printable", "letter to santa", "advent countdown", "classroom activity", "holiday activity",
               "busy book pages", "preschool activity", "family activities"],
         intro="A whole stack of Christmas fun for kids in one download: 12 coloring pages, picture bingo with 10 "
-              "cards and calling cards, a Christmas wish list and a color-in countdown from December 1.",
-        get=["12 coloring pages", "Picture bingo: 10 cards + 20 calling cards", "Christmas wish list page",
+              "cards and calling cards, a wish list, a letter to Santa and a color-in countdown from December 1.",
+        get=["12 coloring pages", "Picture bingo: 10 cards + 20 calling cards", "Wish list and letter to Santa",
              "Countdown to Christmas chart", "One zip per paper size: US Letter and A4 PDFs"],
-        alt="Kids Christmas wish list, countdown chart, coloring and bingo printable pages"),
+        alt="Kids Christmas wish list, letter to Santa and countdown chart printable pages"),
 }
 XMAS_ART = {"checker-christmas-tree", "ornament-parade", "candy-stripe-stars", "gingerbread-house",
             "kidcore-christmas-set-of-4", "hanukkah-lights"}
@@ -224,7 +236,8 @@ def etsy_evidence(key):
     scan = json.loads((ROOT / IPSCAN).read_text(encoding="utf-8"))
     q = {"christmas-bingo": "christmas picture bingo", "secret-santa-kit": "secret santa questionnaire",
          "kids-christmas-activity-pack": "christmas wish list printable",
-         "christmas-coloring-pages": "christmas coloring pages kids", "hanukkah-lights": "hanukkah wall art printable"}
+         "christmas-coloring-pages": "christmas coloring pages kids", "hanukkah-lights": "hanukkah wall art printable",
+         "dear-santa-notepad": "dear santa letter printable"}
     k = q.get(key, "kidcore christmas" if group(key) == "kidcore-christmas" else None)
     if not k:
         return "kidcore printable: 232 results, many shops, none licensed (Etsy data, 2026-11-04 scan)"
@@ -248,7 +261,7 @@ def concepts(bl: Blocklist, tm: dict) -> list[dict]:
                      if t else CheckResult("unknown", "USPTO search not run yet (tmsearch.uspto.gov is blocked from "
                                            "the cloud environment)", CHECKED, ()))
         origin = ("original code-drawn art with no design text" if not p["phrase"] else
-                  "plain descriptive holiday wording (bingo, wish list, countdown, Secret Santa); "
+                  "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); "
                   "folk tradition and generic game names, not tied to a person, show, brand or meme")
         checks = {
             "origin": CheckResult("pass", origin, CHECKED),
@@ -326,11 +339,11 @@ def manifest() -> dict:
                 "alt_text": p["alt"] if rank == 1 else
                 f"{p['title'].split(',')[0]}: {path.stem.split('-')[-1]} image"}))
     return {"manifest_id": MANIFEST_ID, "created_at": "2026-11-04T02:00:00Z", "created_by": "claude",
-            "summary": "Release 4: 16 digital listings, drafts only. Kidcore vol. 2 (5 prints + set of 5), kidcore "
+            "summary": "Release 4: 17 digital listings, drafts only. Kidcore vol. 2 (5 prints + set of 5), kidcore "
                        "Christmas (4 prints + set of 4) and a Hanukkah print, Christmas coloring pages, picture bingo, "
-                       "Secret Santa kit and a kids activity pack. Evidence: 2026-11-04 SerpApi + Etsy scan. Owner "
+                       "Secret Santa kit, a Dear Santa notepad and a kids activity pack. Evidence: 2026-11-04 SerpApi + Etsy scan. Owner "
                        "ticks the AI field and publishes each.",
-            "owner_minutes_estimate": 100, "ops": ops}
+            "owner_minutes_estimate": 105, "ops": ops}
 
 
 def main() -> int:

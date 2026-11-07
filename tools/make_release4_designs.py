@@ -674,7 +674,7 @@ def wish_list_page(size):
     return img
 
 
-def letter_page(size):  # NOT shipped: DEAR SANTA has a live/pending USPTO mark (owner search 2026-11-07)
+def letter_page(size):
     img, d, w, h = page(size)
     d.rounded_rectangle([40, 40, w - 40, h - 40], radius=40, outline=XRED, width=10)
     headline(d, w, 110, "Dear Santa,", 110, XGRN)
@@ -689,6 +689,58 @@ def letter_page(size):  # NOT shipped: DEAR SANTA has a live/pending USPTO mark 
         fn(d, w * (0.25 + 0.25 * i), h - 190, 60, 4, [BLUE, RED, GOLD][i])
     page_footer(d, w, h)
     return img
+
+
+NOTE_THEMES = [("red", XRED, "#FFE9E6", [m_ornament, m_candy_cane, m_present, m_star]),
+               ("green", XGRN, "#E6F5EC", [m_tree, m_holly, m_wreath, m_bell]),
+               ("blue", "#1E4FA8", "#E6EFFC", [m_snowflake, m_mitten, m_snowman, m_mug])]
+
+
+def notepad_sheet(d, x0, y0, x1, y1, color, tint, motifs, scale=1.0):
+    """One Dear Santa notepad: motif band, title, checkbox lines (to-do style), a 'from' line."""
+    w = x1 - x0
+    d.rounded_rectangle([x0, y0, x1, y1], radius=int(36 * scale), fill="#FFFFFF", outline=color, width=int(8 * scale))
+    band = int(150 * scale)
+    d.rounded_rectangle([x0 + 8 * scale, y0 + 8 * scale, x1 - 8 * scale, y0 + band], radius=int(30 * scale), fill=tint)
+    n = 7
+    for i in range(n):
+        motifs[i % len(motifs)](d, x0 + w * (i + 0.5) / n, y0 + band * 0.52, 48 * scale, max(2, int(4 * scale)),
+                                [RED, GRN, BLUE, GOLD, PINK][i % 5])
+    f = font(int(92 * scale))
+    t = "Dear Santa,"
+    d.text((x0 + (w - d.textlength(t, font=f)) / 2, y0 + band + 30 * scale), t, font=f, fill=color)
+    y = y0 + band + 170 * scale
+    gap = 92 * max(scale, 0.85)
+    bottom = y1 - 150 * scale
+    while y + gap < bottom:
+        y += gap
+        bx = x0 + 70 * scale
+        d.rounded_rectangle([bx, y - 46 * scale, bx + 40 * scale, y - 6 * scale], radius=int(8 * scale),
+                            outline=color, width=max(2, int(4 * scale)))
+        d.line([(bx + 64 * scale, y), (x1 - 70 * scale, y)], fill="#B8B3C6", width=max(2, int(3 * scale)))
+    ff = font(int(36 * scale), False)
+    d.text((x0 + 70 * scale, y1 - 110 * scale), "Love,", font=ff, fill=INK)
+    d.line([(x0 + 180 * scale, y1 - 76 * scale), (x1 - 70 * scale, y1 - 76 * scale)], fill="#B8B3C6",
+           width=max(2, int(3 * scale)))
+
+
+def notepad_pages(size):
+    pages = []
+    for _, color, tint, motifs in NOTE_THEMES:
+        img, d, w, h = page(size)
+        notepad_sheet(d, 60, 60, w - 60, h - 120, color, tint, motifs)
+        page_footer(d, w, h, "Original design. For personal use.")
+        pages.append(img)
+    for _, color, tint, motifs in NOTE_THEMES:  # two half-size notes per sheet, cut on the dashed line
+        img, d, w, h = page(size)
+        for k in range(2):
+            y0 = 40 + k * (h - 80) / 2
+            notepad_sheet(d, 50 + w * 0.0, y0 + 10, w - 50, y0 + (h - 80) / 2 - 30, color, tint, motifs, scale=0.6)
+        for x in range(40, w - 40, 30):
+            d.line([(x, h / 2 - 10), (x + 14, h / 2 - 10)], fill="#9C97AA", width=3)
+        page_footer(d, w, h, "Original design. For personal use. Cut on the dashed line.")
+        pages.append(img)
+    return pages
 
 
 def countdown_page(size):
@@ -775,6 +827,7 @@ PRINTABLES = {
     "christmas-coloring-pages": ("Christmas Coloring Pages", lambda s: [coloring_page(k, s) for k in COLORING]),
     "christmas-bingo": ("Christmas Picture Bingo", lambda s: [bingo_card(n, s) for n in range(1, 11)] + [calling_cards(s)]),
     "secret-santa-kit": ("Secret Santa Kit", santa_kit_pages),
+    "dear-santa-notepad": ("Dear Santa Notepad", lambda s: notepad_pages(s)),
     # activity-pack members built separately below
 }
 
@@ -894,7 +947,7 @@ def build_printables(root):
             if size == "letter":
                 built[key] = pages
         print(key, "done", flush=True)
-    ap_members = {"wish-list": lambda s: [wish_list_page(s)], "countdown": lambda s: [countdown_page(s)]}
+    ap_members = {"wish-list": lambda s: [wish_list_page(s), letter_page(s)], "countdown": lambda s: [countdown_page(s)]}
     pack = root / "kids-christmas-activity-pack"
     for size in ("letter", "a4"):
         for m, b in ap_members.items():
@@ -909,7 +962,7 @@ def build_printables(root):
     for size in ("letter", "a4"):
         for m in ap_members:
             (pack / f"{m}-{size}.pdf").unlink()
-    pack_pages = [wish_list_page("letter"), countdown_page("letter"),
+    pack_pages = [wish_list_page("letter"), letter_page("letter"), countdown_page("letter"),
                   built["christmas-coloring-pages"][0], built["christmas-bingo"][0], built["christmas-bingo"][-1]]
     return built, pack_pages
 
@@ -940,9 +993,13 @@ def main():
                          "Questionnaire, name slips and gift tags", built["secret-santa-kit"],
                          ["All About Me questionnaire", "Exchange details and 15 name slips", "12 gift tags",
                           "US Letter and A4 PDFs"])
+        printable_images(root / "dear-santa-notepad" / "images", "dear-santa-notepad", "Dear Santa Notepad",
+                         "Wish list notes with checkboxes, 3 colors", built["dear-santa-notepad"],
+                         ["3 color designs: red, green and blue", "Full-page notes and 2-up half-page notes",
+                          "Checkbox lines, like a to-do list", "US Letter and A4 PDFs"])
         printable_images(root / "kids-christmas-activity-pack" / "images", "kids-christmas-activity-pack",
                          "Kids Christmas Activity Pack", "Coloring, bingo, wish list and countdown", pack_pages,
-                         ["12 coloring pages", "Picture bingo: 10 cards + calling cards", "Christmas wish list page",
+                         ["12 coloring pages", "Picture bingo: 10 cards + calling cards", "Wish list and letter to Santa",
                           "Countdown to Christmas chart"])
 
 

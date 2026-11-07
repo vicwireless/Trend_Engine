@@ -1,10 +1,10 @@
 manifest_id: 2026-11-04-release-4
 created_at: '2026-11-04T02:00:00Z'
 created_by: claude
-summary: 'Release 4: 16 digital listings, drafts only. Kidcore vol. 2 (5 prints + set of 5), kidcore Christmas (4 prints +
-  set of 4) and a Hanukkah print, Christmas coloring pages, picture bingo, Secret Santa kit and a kids activity pack. Evidence:
-  2026-11-04 SerpApi + Etsy scan. Owner ticks the AI field and publishes each.'
-owner_minutes_estimate: 100
+summary: 'Release 4: 17 digital listings, drafts only. Kidcore vol. 2 (5 prints + set of 5), kidcore Christmas (4 prints +
+  set of 4) and a Hanukkah print, Christmas coloring pages, picture bingo, Secret Santa kit, a Dear Santa notepad and a kids
+  activity pack. Evidence: 2026-11-04 SerpApi + Etsy scan. Owner ticks the AI field and publishes each.'
+owner_minutes_estimate: 105
 ops:
 - op: etsy_create_digital_listing
   niche: kidcore-wall-art
@@ -1645,17 +1645,17 @@ ops:
   payload:
     listing_id: $ref:ops[128].listing_id
     path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/christmas-coloring-pages-letter.pdf
-    file_sha256: e970cf05c35ff2350e3403cae9d635cc070d9def36306aae1a61c2a97756c1b9
+    file_sha256: cf3f94dc3e386f2b56727926dde771afacb9fd28d703888957f0208ceaa91190
     name: christmas-coloring-pages-letter.pdf
-  payload_sha256: e1102ced8e7b69ef8efca87a7e617307253624c91a00ea90af6fc95c00ab0008
+  payload_sha256: 5bffbef8d6a849ff8305a10201d07cdea7dc5f0e164e71decd9477f3b1a314be
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[128].listing_id
     path: assets/digital/2026-11-04-release-4/christmas-coloring-pages/christmas-coloring-pages-a4.pdf
-    file_sha256: c86baf79a73384c744b23c34bef3fe28c50cf2095c5dd5f14fec3eb7c473f0ae
+    file_sha256: bc5ed99147087f1188b02de5b780be14f1daa7f578bdc9be9ccc8b89de734955
     name: christmas-coloring-pages-a4.pdf
-  payload_sha256: 56c8d8b5e2fba3db6bff9e07dd31a07c93c0bcb515f6fb263bc422ce572a9acd
+  payload_sha256: 54076f80f9b3504c48444eb81724812ea6542b29f9a9eceba45b437c0452b98a
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1754,17 +1754,17 @@ ops:
   payload:
     listing_id: $ref:ops[136].listing_id
     path: assets/digital/2026-11-04-release-4/christmas-bingo/christmas-bingo-letter.pdf
-    file_sha256: c8c561bd7fa288e2f5f43c9106b790985647367a1389725a5fa7fdfdf0321de2
+    file_sha256: b6b8dfdd14e9ad9d440ab9d2f612216b4f32b585f3e6ff7ea196493430551faf
     name: christmas-bingo-letter.pdf
-  payload_sha256: 4058f9127618daf56bc710d13357bdd6ad27e229d53dfeafcad4fcc1cfd363db
+  payload_sha256: ae83ed7e7152e20ecc3a33dca97ee45d03908881777015cd7b5973d8fd4e10b1
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[136].listing_id
     path: assets/digital/2026-11-04-release-4/christmas-bingo/christmas-bingo-a4.pdf
-    file_sha256: 2da542b9050ad32d63f2a665a4b81db6303c22d32434f6c09ba2524591019e32
+    file_sha256: f9f6415d529e52f6dec5c899003f00c055b6d316997df8249a12b4e94099c486
     name: christmas-bingo-a4.pdf
-  payload_sha256: 0c3527d9323ad7e4c2b844f72bde041a0ce9e391b310a10cd7c34c6f60641613
+  payload_sha256: e9a0c95761817faa7683d025091894bd06be68b41c609040d88681b63737c4b1
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1865,17 +1865,17 @@ ops:
   payload:
     listing_id: $ref:ops[144].listing_id
     path: assets/digital/2026-11-04-release-4/secret-santa-kit/secret-santa-kit-letter.pdf
-    file_sha256: 581c3fd9afd876fc0f4756f495cef10df6de3a066a1ce4bf15c874ee14a321c5
+    file_sha256: d699cdad2ac7e60876dd974928c34225df228d697111c81f09f18d247a797077
     name: secret-santa-kit-letter.pdf
-  payload_sha256: def6683718f84cae81b73f68933e41c8c8bbb31a9bd9f7c1f6c3789a75deacfb
+  payload_sha256: da3d8863983bc80c593b71c1cdd081e1741cf3562d5d65856f16d97afcf65c57
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
     listing_id: $ref:ops[144].listing_id
     path: assets/digital/2026-11-04-release-4/secret-santa-kit/secret-santa-kit-a4.pdf
-    file_sha256: 610bbfb1f2df8db539004b1126d526a980b20e3cacedb6c85a24e6818d4b36b2
+    file_sha256: f91a2bab4ddd643ad2b745f1180e3c37853e58c8806f75737c162621399fc069
     name: secret-santa-kit-a4.pdf
-  payload_sha256: f6e42d22457a0c25281f9103b65c470631773c1767b3bc14da3df5b8be4fde06
+  payload_sha256: 699fc8466c4f69acea44091c04bfb95cbf48a9796510a9f2c0cfab059c68acda
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
@@ -1924,9 +1924,118 @@ ops:
 - op: etsy_create_digital_listing
   niche: holiday-planners
   payload:
+    title: Dear Santa Notepad Printable, Christmas Wish List with Checkboxes, Kids Letter to Santa
+    description: 'A cheerful Dear Santa notepad with a band of little holiday pictures and checkbox lines, like a to-do list
+      for wishes. Three colors, in full-page and two-to-a-page sizes.
+
+
+      WHAT YOU GET
+
+      • 3 color designs: red, green and blue
+
+      • Full-page notes and 2-up half-page notes (cut line marked)
+
+      • US Letter PDF (8.5 x 11 in)
+
+      • A4 PDF (210 x 297 mm)
+
+
+      Print at home on plain paper or card stock, as many copies as you need for your family or class.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal use only; please
+      don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.'
+    tags:
+    - dear santa
+    - letter to santa
+    - christmas wish list
+    - santa notepad
+    - kids wish list
+    - christmas printable
+    - wish list printable
+    - christmas to do list
+    - holiday notepad
+    - kids christmas
+    - santa letter
+    - christmas checklist
+    - printable notepad
+    taxonomy_id: 12476
+    who_made: i_did
+    when_made: '2020_2026'
+    ai_assisted: true
+    price_usd: 6.99
+    cost_snapshot: data/costs/2026-11-04-products.json
+    cost_key: digital
+  payload_sha256: 6f3597bf3a08dbf4d6edbfff64fa336bf654a3ede5cdc17e24ff18aafaba09b6
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/dear-santa-notepad-letter.pdf
+    file_sha256: dc2acc4192d49d8f64c12eccf8936274523fa3b599300fcfee36bcb81e67457e
+    name: dear-santa-notepad-letter.pdf
+  payload_sha256: 90fbe010436b4f5b0bb45c7b4bd705f89bc46cd71a72db9f7cf898cda81ff278
+- op: etsy_upload_file
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/dear-santa-notepad-a4.pdf
+    file_sha256: 1a8827506629abcc71631b443d18d1d11a005acc6b02bba7a99b2b192266a502
+    name: dear-santa-notepad-a4.pdf
+  payload_sha256: 32c800217370e7b2323aaa550b38d90d47e294b5d679ab0dacced8cfed5a3dc2
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/images/dear-santa-notepad-1-cover.jpg
+    file_sha256: b65fec2ee9bd9c4b38a56b4c778e68d3e3aa63222237729aa471a6b283664f6a
+    rank: 1
+    alt_text: Dear Santa notepad printable with holiday pictures and checkbox lines in red
+  payload_sha256: c7d0a1ffa3331b7611e2ff9a65bde7d5fc02fee7621171d39282c3e9010627d4
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/images/dear-santa-notepad-2-pages.jpg
+    file_sha256: b002ee14a902593fdc28e303fcba905a1ae68e4ca03a63b48539189122bbce81
+    rank: 2
+    alt_text: 'Dear Santa Notepad Printable: pages image'
+  payload_sha256: 79b65bd4ae366204aa3a4355e471c1c5f36de5983dc540b4ffa8184c76f1379f
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/images/dear-santa-notepad-3-detail.jpg
+    file_sha256: 482a7c12cef75512cb075885eb3ec42763b98004a06b07a6c365d6cf31deec2d
+    rank: 3
+    alt_text: 'Dear Santa Notepad Printable: detail image'
+  payload_sha256: 7be75dd5c8a855d9b2acbe0b1b0f24d9733838c31a59dcc3e5fa1ff7e50598da
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/images/dear-santa-notepad-4-included.jpg
+    file_sha256: eb1f580e42cc29dc279bb0d8c2aeac41f1a7bd87d4589c69cd182aec692a4196
+    rank: 4
+    alt_text: 'Dear Santa Notepad Printable: included image'
+  payload_sha256: 32d3839bdca77392940fb16eec9d8c947c66d1fbc7305d837ea739a14c0f5eb5
+- op: etsy_upload_image
+  niche: holiday-planners
+  payload:
+    listing_id: $ref:ops[152].listing_id
+    path: assets/digital/2026-11-04-release-4/dear-santa-notepad/images/dear-santa-notepad-5-how.jpg
+    file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
+    rank: 5
+    alt_text: 'Dear Santa Notepad Printable: how image'
+  payload_sha256: d9b14f07e205c194b4bbd3d242203ad8963a4ddf7ed882eeb702d0b597e2e797
+- op: etsy_create_digital_listing
+  niche: holiday-planners
+  payload:
     title: Kids Christmas Activity Pack Printable, Coloring Pages, Bingo, Wish List, Countdown
     description: 'A whole stack of Christmas fun for kids in one download: 12 coloring pages, picture bingo with 10 cards
-      and calling cards, a Christmas wish list and a color-in countdown from December 1.
+      and calling cards, a wish list, a letter to Santa and a color-in countdown from December 1.
 
 
       WHAT YOU GET
@@ -1935,7 +2044,7 @@ ops:
 
       • Picture bingo: 10 cards + 20 calling cards
 
-      • Christmas wish list page
+      • Wish list and letter to Santa
 
       • Countdown to Christmas chart
 
@@ -1956,7 +2065,7 @@ ops:
     - coloring pages
     - christmas bingo
     - wish list printable
-    - christmas worksheet
+    - letter to santa
     - advent countdown
     - classroom activity
     - holiday activity
@@ -1970,65 +2079,65 @@ ops:
     price_usd: 11.99
     cost_snapshot: data/costs/2026-11-04-products.json
     cost_key: digital
-  payload_sha256: 0e180358c1a10ca32bae13fd93daa07d8dbfa2c71d95c9af037ba6eef1529c24
+  payload_sha256: 3aef4deac1f8d5f425b871294ae321cd30d01b3cf49c62244d770a9bfd2b26e0
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/kids-christmas-activity-pack-letter.zip
-    file_sha256: 3bb823fe314a621743c3b86ca71431c9aa59abb7c694c98d04cc4bec8b1a914f
+    file_sha256: 923ed9304694017b5bca5e9984bdb2b64078dc36f5cce4df2f9f60adebf54c5d
     name: kids-christmas-activity-pack-letter.zip
-  payload_sha256: 7efa6b0693baf2acb8add1aeef465f21e7708f236c59c8a876c8aee1044816a6
+  payload_sha256: e4ac9bdfae64b83174cf01ebf4fcab3a226428fbe46167882d7aa0ab29cd9971
 - op: etsy_upload_file
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/kids-christmas-activity-pack-a4.zip
-    file_sha256: 5afe55c6d2bfae3376b29132feded88e212f10867072632cd4180cbbec5e1db6
+    file_sha256: be8a8944b7762dd4f5d846531810faf71a9d8b388a6b2db9ceb6de95b0606f67
     name: kids-christmas-activity-pack-a4.zip
-  payload_sha256: a37bf1bb7cebbe54f8578101a832bea8389e96460b51a21dec99d288dddc2f29
+  payload_sha256: 849ebf21e7f36fa2111b833a95133a0a201817077f212afa7ed5303badb92002
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-1-cover.jpg
-    file_sha256: e8a6d65dfda61fd41dad54d605a3e81ad8a37ff1300cd3dea3fcf645ce6b64e6
+    file_sha256: cd4dff4dc3fa98ab3bb327ea2fcde41ff2abe1047c5f288ecd7d2111bf27f7fa
     rank: 1
-    alt_text: Kids Christmas wish list, countdown chart, coloring and bingo printable pages
-  payload_sha256: 8b5d75cd0b215b9f6ec7733aca06abbfba082041f34e30e1a129c7f5756198d1
+    alt_text: Kids Christmas wish list, letter to Santa and countdown chart printable pages
+  payload_sha256: db6b4f1b9d96793f288a9953a53d54f1ce3585e9fe593d653c0fd0c991ee1652
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-2-pages.jpg
-    file_sha256: efc4b9cfc2adfa14e234fe4dbd3fdd5b6792c4d2b78c52fac5f30e95775d95e8
+    file_sha256: 79fa3722e58327b3dc1d13eb6fd63ebeda65b076ded444600257e475d93ebca5
     rank: 2
     alt_text: 'Kids Christmas Activity Pack Printable: pages image'
-  payload_sha256: 1185f1475fd3d6bfd999e3b92c0008132eae59344853645e352942db9e1cc451
+  payload_sha256: a6195203debbc6a53c8ac8cb86fe64e4e279818a9b922e3355e5405a2b67de14
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-3-detail.jpg
     file_sha256: 3c222c6bdfff6a85ecf5f188ba17c049d968b242622c8fad915fe10756666ca6
     rank: 3
     alt_text: 'Kids Christmas Activity Pack Printable: detail image'
-  payload_sha256: b3dd827ac46ec12cc3e8e842fdf34970eaf00f24147d33891fff5110ea9d0b19
+  payload_sha256: ca8bc012d115472f3608d3469cca6300804e565a72c165acb27c938d12a5dbce
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-4-included.jpg
-    file_sha256: a07114204f87a0c0438261c51d55b9ce9c957000b5ae059bc9165fcac07d99b2
+    file_sha256: 24c2c7de98d41dc2221e56b17d58ff241b92578587c4e25a51198da52650d77d
     rank: 4
     alt_text: 'Kids Christmas Activity Pack Printable: included image'
-  payload_sha256: e52db02d5cb4b79b53dc837b7a9ec6d7d7ebd55a50619f87f2d31087e6092e7c
+  payload_sha256: 64c41c8ca99c4a068e045fb9eccd1c9ce9c72114698f0a68d1d6fade2ff0224d
 - op: etsy_upload_image
   niche: holiday-planners
   payload:
-    listing_id: $ref:ops[152].listing_id
+    listing_id: $ref:ops[160].listing_id
     path: assets/digital/2026-11-04-release-4/kids-christmas-activity-pack/images/kids-christmas-activity-pack-5-how.jpg
     file_sha256: 986655996a1bba274eda5fcb597f10ba0180ebb3c9e812c2a573c4041639c7f2
     rank: 5
     alt_text: 'Kids Christmas Activity Pack Printable: how image'
-  payload_sha256: 487ed2028e67ac5b7c2dcd917e1861928c751df89063ca83181abe3d5999109d
+  payload_sha256: b94bdc984b04e841acb5f09cf6e137bda4a5a37bb753ad5ef01e5a2d5a3f696f

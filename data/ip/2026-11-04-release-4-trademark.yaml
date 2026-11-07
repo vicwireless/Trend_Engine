@@ -18,7 +18,8 @@ owner_to_search:
     CHRISTMAS BINGO: 0 live/pending, 0 dead
     SECRET SANTA: 0 live/pending, 3 dead
     MY CHRISTMAS WISH LIST: 0/0
-    DEAR SANTA: 1 live/pending, 6 dead -> VETO, page removed
+    DEAR SANTA: 1 live/pending (longer phrase with personal names, per owner 2026-11-07T00:09Z), 6 dead -> pass for DEAR SANTA
+      alone, owner decision
     COUNTDOWN TO CHRISTMAS: 0 live/pending, 1 dead
 results:
   checker-hearts:
@@ -147,9 +148,23 @@ results:
     result: pass
     evidence: 'Owner search on tmsearch.uspto.gov, reported in the project thread 2026-11-07T00:04Z (classes 009 and 016 as
       requested): CHRISTMAS BINGO 0 live/pending, 0 dead; SECRET SANTA 0 live/pending, 3 dead; MY CHRISTMAS WISH LIST 0/0;
-      COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA had 1 live/pending
-      mark, so the letter-to-Santa page was removed from the pack and "Dear Santa" appears nowhere in the listing or files.'
-    checked_at: '2026-11-07T00:04:14+00:00'
+      COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA: 1 live/pending
+      record, which the owner clarified in the project chat 2026-11-07T00:09Z is a longer phrase that starts with DEAR SANTA
+      and includes personal names, not DEAR SANTA alone; 6 dead records. Owner decision: proceed with DEAR SANTA as a plain
+      descriptive phrase (the traditional opening of a letter to Santa).'
+    checked_at: '2026-11-07T00:09:50+00:00'
+    classes:
+    - 009
+    - '016'
+  dear-santa-notepad:
+    result: pass
+    evidence: 'Owner search on tmsearch.uspto.gov, reported in the project thread 2026-11-07T00:04Z (classes 009 and 016 as
+      requested): CHRISTMAS BINGO 0 live/pending, 0 dead; SECRET SANTA 0 live/pending, 3 dead; MY CHRISTMAS WISH LIST 0/0;
+      COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA: 1 live/pending
+      record, which the owner clarified in the project chat 2026-11-07T00:09Z is a longer phrase that starts with DEAR SANTA
+      and includes personal names, not DEAR SANTA alone; 6 dead records. Owner decision: proceed with DEAR SANTA as a plain
+      descriptive phrase (the traditional opening of a letter to Santa).'
+    checked_at: '2026-11-07T00:09:50+00:00'
     classes:
     - 009
     - '016'

@@ -888,7 +888,7 @@
     {
      "check": "origin",
      "result": "pass",
-     "evidence": "plain descriptive holiday wording (bingo, wish list, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
      "checked_at": "2026-11-04T02:00:00+00:00"
     },
     {
@@ -955,7 +955,7 @@
     {
      "check": "origin",
      "result": "pass",
-     "evidence": "plain descriptive holiday wording (bingo, wish list, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
      "checked_at": "2026-11-04T02:00:00+00:00"
     },
     {
@@ -972,6 +972,73 @@
      "check": "etsy_marketplace",
      "result": "pass",
      "evidence": "\"secret santa questionnaire\": 3828 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "text_copyright",
+     "result": "pass",
+     "evidence": "no text or short original labels; no lyrics, poems or quotes",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "image_provenance",
+     "result": "pass",
+     "evidence": "code-drawn by tools/make_release4_designs.py; no third-party images, no characters, no faces",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    }
+   ]
+  },
+  "status": "proposed",
+  "ai_assisted": true,
+  "created_at": "2026-11-04T02:00:00+00:00"
+ },
+ {
+  "concept_id": "con-20261104-dear-santa-notepad",
+  "niche": "holiday-planners",
+  "working_title": "Dear Santa Notepad Printable",
+  "offer_type": "digital",
+  "product_format": "printable",
+  "target_buyer": "parents, teachers and office organizers planning December activities",
+  "gift_occasion": "christmas",
+  "differentiation": "Original code-drawn kidcore art and crayon grain; no characters or lookalikes",
+  "signal_ids": [
+   "release4-scan:trends:christmas coloring pages printable",
+   "release4-scan:trends:secret santa printable",
+   "release4-scan:etsy:christmas bingo printable"
+  ],
+  "score": null,
+  "score_version": "scan-2026-11-04 (owner-approved scope)",
+  "ip_review": {
+   "status": "pass",
+   "reasons": [],
+   "reviewed_at": "2026-11-04T02:00:00+00:00",
+   "checks": [
+    {
+     "check": "blocklist",
+     "result": "pass",
+     "evidence": "no hits",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "origin",
+     "result": "pass",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "checked_at": "2026-11-04T02:00:00+00:00"
+    },
+    {
+     "check": "trademark",
+     "result": "pass",
+     "evidence": "Owner search on tmsearch.uspto.gov, reported in the project thread 2026-11-07T00:04Z (classes 009 and 016 as requested): CHRISTMAS BINGO 0 live/pending, 0 dead; SECRET SANTA 0 live/pending, 3 dead; MY CHRISTMAS WISH LIST 0/0; COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA: 1 live/pending record, which the owner clarified in the project chat 2026-11-07T00:09Z is a longer phrase that starts with DEAR SANTA and includes personal names, not DEAR SANTA alone; 6 dead records. Owner decision: proceed with DEAR SANTA as a plain descriptive phrase (the traditional opening of a letter to Santa).",
+     "checked_at": "2026-11-07T00:09:50+00:00",
+     "classes": [
+      "009",
+      "016"
+     ]
+    },
+    {
+     "check": "etsy_marketplace",
+     "result": "pass",
+     "evidence": "\"dear santa letter printable\": 5597 results; top 25 from 25 different shops; no \"licensed\" or \"official\" titles (Etsy data, data/signals/2026-11-04/release4-etsy-ip-check.json)",
      "checked_at": "2026-11-04T02:00:00+00:00"
     },
     {
@@ -1022,14 +1089,14 @@
     {
      "check": "origin",
      "result": "pass",
-     "evidence": "plain descriptive holiday wording (bingo, wish list, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
+     "evidence": "plain descriptive holiday wording (bingo, wish list, letter to Santa, countdown, Secret Santa); folk tradition and generic game names, not tied to a person, show, brand or meme",
      "checked_at": "2026-11-04T02:00:00+00:00"
     },
     {
      "check": "trademark",
      "result": "pass",
-     "evidence": "Owner search on tmsearch.uspto.gov, reported in the project thread 2026-11-07T00:04Z (classes 009 and 016 as requested): CHRISTMAS BINGO 0 live/pending, 0 dead; SECRET SANTA 0 live/pending, 3 dead; MY CHRISTMAS WISH LIST 0/0; COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA had 1 live/pending mark, so the letter-to-Santa page was removed from the pack and \"Dear Santa\" appears nowhere in the listing or files.",
-     "checked_at": "2026-11-07T00:04:14+00:00",
+     "evidence": "Owner search on tmsearch.uspto.gov, reported in the project thread 2026-11-07T00:04Z (classes 009 and 016 as requested): CHRISTMAS BINGO 0 live/pending, 0 dead; SECRET SANTA 0 live/pending, 3 dead; MY CHRISTMAS WISH LIST 0/0; COUNTDOWN TO CHRISTMAS 0 live/pending, 1 dead. Dead records do not block (docs/ip-screen.md). DEAR SANTA: 1 live/pending record, which the owner clarified in the project chat 2026-11-07T00:09Z is a longer phrase that starts with DEAR SANTA and includes personal names, not DEAR SANTA alone; 6 dead records. Owner decision: proceed with DEAR SANTA as a plain descriptive phrase (the traditional opening of a letter to Santa).",
+     "checked_at": "2026-11-07T00:09:50+00:00",
      "classes": [
       "009",
       "016"
