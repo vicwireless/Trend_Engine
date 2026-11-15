@@ -81,6 +81,11 @@
     "week": {
       "type": "string",
       "pattern": "^[0-9]{4}-W[0-9]{2}$"
+    },
+    "new_monthly_commitments_usd": {
+      "type": "number",
+      "minimum": 0,
+      "description": "New recurring monthly spend this release commits to beyond subscriptions.csv, ads and listing fees."
     }
   },
   "required": [

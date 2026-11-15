@@ -1,7 +1,8 @@
 name: executor
 
-# Runs ONLY when a merge to main adds or changes a release manifest. Merging the PR is the owner's
-# approval (CLAUDE.md). No schedule, no manual trigger, no other paths.
+# Runs ONLY when a merge to main adds or changes a release manifest. The PR merge is the approval
+# record (CLAUDE.md; autonomy mode since 2026-11-15, docs/autonomy.md). No schedule, no manual
+# trigger, no other paths.
 on:
   push:
     branches: [main]
@@ -15,6 +16,7 @@ concurrency:
 permissions:
   contents: write        # to push the ledger branch
   pull-requests: write   # to open the 'ledger:' PR (playbook SP-07); main stays protected
+  actions: write         # dispatch ci.yml on the ledger branch so the required 'test' check runs
 
 jobs:
   execute:
@@ -94,4 +96,21 @@ jobs:
           git commit -m "ledger: ${GITHUB_SHA::12}"
           git push origin "$branch"
           gh pr create --base main --head "$branch" --title "ledger: ${GITHUB_SHA::12}" \
-            --body "Executor ledger and incidents for merge ${GITHUB_SHA}. Touches data/ledger and reports/incidents only. The owner merges it."
+            --body "Executor ledger and incidents for merge ${GITHUB_SHA}. Touches data/ledger and reports/incidents only. Autonomy mode: this workflow merges it when the test check is green; otherwise an engine session does."
+          # Autonomy mode (docs/autonomy.md): PRs opened with GITHUB_TOKEN get no pull_request CI run, so
+          # dispatch the required 'test' check on the branch, wait for it, then merge. Any failure here
+          # leaves the PR open for an engine session; the next executor run refuses until it is merged.
+          gh workflow run ci.yml --ref "$branch" || { echo "::warning::could not dispatch ci.yml"; exit 0; }
+          sha=$(git rev-parse HEAD)
+          state=pending
+          for i in $(seq 1 36); do
+            sleep 10
+            state=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs" \
+              --jq '[.check_runs[] | select(.name=="test")][0].conclusion // "pending"' || echo pending)
+            if [ "$state" != "pending" ] && [ "$state" != "null" ]; then break; fi
+          done
+          if [ "$state" = "success" ]; then
+            gh pr merge "$branch" --squash || echo "::warning::ledger PR is green but could not be merged by the workflow; an engine session must merge it"
+          else
+            echo "::warning::ledger PR test check is '$state'; left open"
+          fi

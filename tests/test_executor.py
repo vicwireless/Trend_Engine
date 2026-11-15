@@ -444,7 +444,7 @@ CASES = {
     "offsite_ads": (lambda r: write_manifest(r, [("etsy_activate_listing", "n", {"listing_id": 1})],
                                              ads={"offsite_ads_opted_in": True}), None, "offsite"),
     "too_many_niches": (lambda r: write_manifest(r, [("etsy_activate_listing", f"n{i}", {"listing_id": i})
-                                                     for i in range(4)]), None, "active niches"),
+                                                     for i in range(5)]), None, "active niches"),
 }
 
 
@@ -578,3 +578,50 @@ def test_only_allowlisted_ops_exist():
     schema = json.loads((REPO / "schemas/release_manifest.json").read_text())
     enum = schema["properties"]["ops"]["items"]["properties"]["op"]["enum"]
     assert set(OPS) == set(enum) == {p.stem for p in (REPO / "schemas/ops").glob("*.json")}
+
+
+# ---------------------------------------------------------------- monthly spend commitment cap
+def _activate(root, **kw):
+    return write_manifest(root, [("etsy_activate_listing", "n", {"listing_id": 1})], **kw)
+
+
+def test_spend_cap_counts_subscriptions_ads_and_listing_fees(repo):
+    from src.executor.validate import committed_monthly_spend
+    (repo / "data" / "spend").mkdir(parents=True)
+    (repo / "data" / "spend" / "subscriptions.csv").write_text(
+        "vendor,plan,monthly_usd,status,started,source,notes\n"
+        "Etsy Plus,Etsy Plus,10.00,active,2026-10-21,x,\n"
+        "Etsy Ads,Etsy Ads,,active 2026-11-15,,x,\n"
+        "Postiz,,,active (owner-reported),,x,\n"
+        "SerpApi,Starter,75,approved 2026-10-24,,x,\n")
+    manifest = yaml.safe_load(write_manifest(repo, [("etsy_create_digital_listing", "n", dict(
+        title=TITLE, description="d " + DISCLOSURE, tags=TAGS, taxonomy_id=1, who_made="i_did",
+        when_made="2020_2026", ai_assisted=True, price_usd=6.99,
+        cost_snapshot="data/costs/2026-10-20-products.json", cost_key="digital"))]).read_text())
+    lines = committed_monthly_spend(manifest, repo, runner.load_config(repo), ledger_for(repo), TODAY, set(),
+                                    {"etsy": {"listing_fee_usd": 0.2}})
+    # Etsy Plus counted; Etsy Ads row active -> 30 x the $3 cap; one new listing; unknown/approved-only rows ignored.
+    assert lines == {"subscription:Etsy Plus": 10.0, "etsy_ads": 90.0, "listing_fees_30d": 0.2}
+
+
+def test_spend_cap_refuses_manifest_over_cap(repo):
+    path = _activate(repo, new_monthly_commitments_usd=100.01)
+    with pytest.raises(runner.PreflightFailed) as e:
+        execute(repo, path)
+    assert "committed monthly spend would be $100.01" in str(e.value)
+    assert "Only the owner can approve" in str(e.value)
+    assert not (repo / "data" / "ledger").exists()  # nothing was written
+
+
+@responses.activate
+def test_spend_cap_allows_manifest_at_cap(repo):
+    path = _activate(repo, new_monthly_commitments_usd=100)
+    assert execute(repo, path, dry_run=True)["ops"][0]["status"] == "validated"
+
+
+def test_spend_cap_missing_from_config_fails_closed(repo):
+    cfg = yaml.safe_load((repo / "config" / "engine.yaml").read_text())
+    del cfg["monthly_spend_commitment_cap_usd"]
+    (repo / "config" / "engine.yaml").write_text(yaml.safe_dump(cfg))
+    with pytest.raises(runner.PreflightFailed, match="monthly_spend_commitment_cap_usd is not set"):
+        execute(repo, _activate(repo))

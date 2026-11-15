@@ -4,6 +4,10 @@ The executor runs only for a push to main that is the merge of a PR merged by th
 does not let the owner approve PRs opened under their own account, so the approval record is the
 merge itself: merge commit SHA + merged_by + manifest hash, written to every ledger line.
 
+Autonomy mode (owner directive 2026-11-15, docs/autonomy.md): engine sessions merge their own PRs
+under the owner's login once CI is green, so `approver` records the merging login, not a human
+review. The check itself is unchanged: PR merge into main by a listed login, never a direct push.
+
 Usage in the workflow:
     gh api repos/$REPO/commits/$SHA/pulls | python -m src.executor.approval $SHA
 prints `approver=<login>` and `pr=<number>` for $GITHUB_OUTPUT, or exits 1 (fail closed).

@@ -1,6 +1,7 @@
 """Preflight checks for a release manifest. Runs before any write; any error means zero writes."""
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import json
 import re
@@ -80,7 +81,65 @@ def preflight(manifest: dict, manifest_path: Path, root: Path, config: dict, led
                           "partner in Etsy and ticks the PR checklist)")
 
     errors += _check_ceilings(manifest, config, ledger, today, done)
+    errors += _check_spend_commitment(manifest, root, config, ledger, today, done, fees)
     return errors
+
+
+def committed_monthly_spend(manifest: dict, root: Path, config: dict, ledger: Ledger, today: dt.date,
+                            done: set[str], fees: dict | None) -> dict[str, float]:
+    """Monthly spend the engine is committed to if this manifest runs (owner directive 2026-11-15).
+
+    Lines: confirmed recurring subscriptions (data/spend/subscriptions.csv rows whose status starts
+    with 'active' and that carry a monthly_usd), Etsy Ads at 30 x the daily budget (the manifest's,
+    else the config cap once the Etsy Ads row is active), listing fees for new listings in the
+    trailing 30 days plus this manifest, and anything the manifest declares itself.
+    Subscriptions without a recorded amount are not counted; the status report names them.
+    """
+    lines: dict[str, float] = {}
+    ads_active = False
+    sub_path = root / "data" / "spend" / "subscriptions.csv"
+    if sub_path.exists():
+        with open(sub_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                active = (row.get("status") or "").strip().lower().startswith("active")
+                if (row.get("vendor") or "").strip().lower() == "etsy ads":
+                    ads_active = active
+                    continue
+                try:
+                    amount = float(row.get("monthly_usd") or "")
+                except ValueError:
+                    continue
+                if active and amount > 0:
+                    lines[f"subscription:{row['vendor']}"] = amount
+    ads = manifest.get("ads") or {}
+    daily = ads.get("daily_budget_usd", config.get("etsy_ads_daily_cap_usd", 0) if ads_active else 0)
+    if daily:
+        lines["etsy_ads"] = 30.0 * daily
+    listing_fee = float(((fees or {}).get("etsy") or {}).get("listing_fee_usd", 0.20))
+    since = today - dt.timedelta(days=30)
+    recent = sum(1 for e in ledger.entries() if e.get("status") == "ok" and e.get("op") in NEW_LISTING_OPS
+                 and dt.date.fromisoformat(e["ts"][:10]) > since)
+    mid = manifest["manifest_id"]
+    new = sum(1 for i, op in enumerate(manifest["ops"])
+              if op["op"] in NEW_LISTING_OPS and idempotency_key(mid, i) not in done)
+    if recent + new:
+        lines["listing_fees_30d"] = round(listing_fee * (recent + new), 2)
+    if manifest.get("new_monthly_commitments_usd"):
+        lines["manifest_declared"] = float(manifest["new_monthly_commitments_usd"])
+    return lines
+
+
+def _check_spend_commitment(manifest, root, config, ledger, today, done, fees) -> list[str]:
+    cap = config.get("monthly_spend_commitment_cap_usd")
+    if cap is None:
+        return ["monthly_spend_commitment_cap_usd is not set in config/engine.yaml (fail closed)"]
+    lines = committed_monthly_spend(manifest, root, config, ledger, today, done, fees)
+    total = round(sum(lines.values()), 2)
+    if total > cap:
+        detail = ", ".join(f"{k} ${v:.2f}" for k, v in sorted(lines.items()))
+        return [f"committed monthly spend would be ${total:.2f} (cap ${cap:.2f}; {detail}). "
+                "Only the owner can approve spend above the cap."]
+    return []
 
 
 _NON_ACTIVATING_OPS = {"etsy_deactivate_listing"}

@@ -2,7 +2,9 @@ name: metrics
 
 # Daily READ-ONLY Etsy metrics (playbook SP-08 'measure'). Reads the Etsy Open API with the read
 # token, writes data/metrics/<date>.csv and reports/weekly/<monday>-metrics.md, and keeps ONE rolling
-# data-only PR ("metrics: week of ...") open for the owner to merge, ideally weekly.
+# data-only PR ("metrics: week of ..."). Autonomy mode (2026-11-15, docs/autonomy.md): the job merges
+# that PR itself when the test check is green, so snapshots reach main daily. (From 7 to 15 Nov the
+# job ran every day but its snapshots sat in an unmerged PR, so main looked frozen at 6 Nov.)
 # No marketplace writes: no write tokens are passed in, and src/metrics/collect.py refuses any
 # HTTP method but GET (CLAUDE.md rule 1). Repo writes go to the metrics/rolling branch only; main
 # changes only when the owner merges the PR.
@@ -28,6 +30,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Merge a rolling PR left over from an earlier run (autonomy mode)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --head "$BRANCH" --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then
+            gh pr merge "$n" --repo "$GITHUB_REPOSITORY" --squash \
+              || echo "::warning::rolling metrics PR #$n could not be merged yet; its files are carried forward below"
+          fi
+
       - uses: actions/checkout@v4
         with:
           ref: main
@@ -95,7 +107,21 @@ jobs:
           fi
           # PRs and pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so run the
           # required 'test' check explicitly on the branch head.
-          gh workflow run ci.yml --ref "$BRANCH" || echo "::warning::could not dispatch ci.yml"
+          gh workflow run ci.yml --ref "$BRANCH" || { echo "::warning::could not dispatch ci.yml"; exit 0; }
+          # Autonomy mode: wait for that check, then merge so main gets today's snapshot.
+          sha=$(git rev-parse HEAD)
+          state=pending
+          for i in $(seq 1 36); do
+            sleep 10
+            state=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs" \
+              --jq '[.check_runs[] | select(.name=="test")][0].conclusion // "pending"' || echo pending)
+            if [ "$state" != "pending" ] && [ "$state" != "null" ]; then break; fi
+          done
+          if [ "$state" = "success" ]; then
+            gh pr merge "$BRANCH" --squash || echo "::warning::metrics PR is green but could not be merged by the workflow; the next run or an engine session merges it"
+          else
+            echo "::warning::metrics PR test check is '$state'; left open"
+          fi
 
       - name: Save the rotated Etsy refresh token to the secret
         # Runs even if a later step failed: once Etsy has rotated the token, the old one stops working.
