@@ -5,7 +5,7 @@ offers, produce compliant assets and listings, publish through an approval-gated
 cohorts, and redefine weekly. The operating charter is [CLAUDE.md](CLAUDE.md); the full operating
 playbook (v3.0, 21 Oct 2026) is archived at [docs/playbook-v3.0.md](docs/playbook-v3.0.md).
 
-**The model proposes, the owner approves by merging, the executor publishes.**
+**The model proposes and merges when CI is green (autonomy mode, owner directive 2026-11-15, `docs/autonomy.md`); the executor publishes. The owner approves only spend above $100/month.**
 
 ## Layout
 

@@ -1,5 +1,9 @@
 # Engine ceilings. The executor refuses any manifest that would exceed these.
-# Changing a ceiling is itself a PR the owner merges.
+# Autonomy mode (owner directive 2026-11-15, docs/autonomy.md): the engine merges its own PRs when
+# CI is green. The owner's approval is required only to raise total committed monthly spend above
+# monthly_spend_commitment_cap_usd; the engine never raises that cap itself.
+
+monthly_spend_commitment_cap_usd: 100   # owner directive 2026-11-15. Enforced in src/executor/validate.py
 
 owner_hours_cap_per_week: 15      # STARTUP PHASE (owner decision 2026-10-23: revenue speed over labor hours). Playbook value is 1.5; restore at the Day 21 gate review (about 13 Nov).
 max_new_listings_per_week: 60
@@ -9,10 +13,12 @@ price_floor_margin:
   digital: 0.60
   pod: 0.30        # before ads
 offsite_ads_opted_in: false
-niches_active_max: 3
+niches_active_max: 4              # was 3. Raised 2026-11-15 for the seasonal party-games niche while new-year-planners (being repurposed) ages out of the 28-day window; restore to 3 after 2026-12-13.
 
-# Approval rule (owner decision 2026-10-21): merge-only, no review count. The executor runs only
-# for the merge commit of a PR into main merged by one of these logins (src/executor/approval.py).
+# Approval rule (owner decision 2026-10-21, amended 2026-11-15): merge-only, no review count. The
+# executor runs only for the merge commit of a PR into main merged by one of these logins
+# (src/executor/approval.py). Under autonomy mode the engine's sessions merge under the owner's
+# GitHub login, so the merge records who merged, not a human review. Direct pushes still never run.
 approval:
   owner_logins: [vicwireless]
 

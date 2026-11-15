@@ -1,5 +1,9 @@
 # Weekly owner session (runbook)
 
+> **Superseded in part on 2026-11-15 by `docs/autonomy.md`.** The engine now merges its own release,
+> ledger and metrics PRs when CI is green. The session below is optional review, not a gate. The owner
+> is needed only for the items in the daily status report's "Only the owner can do this" list.
+
 Source: playbook v3.0 §9.1 (`docs/playbook-v3.0.md`). Target **60–90 minutes**; steady-state cap
 `owner_hours_cap_per_week: 1.5`. The engine prepares one release PR (`release/week-NN`) before the
 session. Merging it is the only approval and triggers the executor.

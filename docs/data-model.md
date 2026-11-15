@@ -165,6 +165,7 @@ the owner's approval; the executor runs it.
 | `created_by` | string | |
 | `summary` | string | One paragraph for the owner |
 | `owner_minutes_estimate` | integer | Checked against `owner_hours_cap_per_week` |
+| `new_monthly_commitments_usd` | number | Optional. New recurring monthly spend this release commits to, beyond `data/spend/subscriptions.csv`, Etsy Ads and listing fees. Counted against `monthly_spend_commitment_cap_usd` (docs/autonomy.md) |
 | `week` | string | Optional. ISO week `YYYY-Www`; the playbook names files `releases/week-YYYY-Www.yaml`, and either name works as long as it matches `manifest_id` |
 | `ads` | object | Optional declaration: `daily_budget_usd`, `offsite_ads_opted_in`. The executor never writes ads; it only checks the declaration against ceilings |
 | `ops` | object[] | See below |
