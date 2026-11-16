@@ -7,6 +7,7 @@ GitHub Actions secrets.
 """
 from __future__ import annotations
 
+import html
 import mimetypes
 import os
 from dataclasses import dataclass, field
@@ -201,6 +202,95 @@ def etsy_update_price(p: dict, ctx: Context) -> dict:
             "readback": {"prices_usd": sorted(x for x in prices if x is not None)}}
 
 
+MAX_ETSY_FILES = 5  # Etsy allows five digital files per listing
+
+
+def etsy_update_listing(p: dict, ctx: Context) -> dict:
+    """Replace an existing listing's files, images, title, description, tags and price in place.
+
+    The listing keeps its id, URL, state and editor-only fields (including the owner's "With an AI
+    generator" tick, which the API can neither read nor write). Order: files, images, text, price,
+    so the listing never shows new text over old files. A digital listing must never reach zero
+    files (Etsy would convert it to a physical listing), so old files are deleted only while at
+    least one other file is attached. Convergent: running it again on a half-updated listing ends
+    in the same final state.
+    """
+    lid, shop = p["listing_id"], ctx.etsy_shop
+    before = ctx.etsy.get_json(f"listings/{lid}")
+    want_state = p.get("expect_state", "active")
+    if before.get("state") != want_state:
+        raise PreconditionFailed(f"listing {lid} is {before.get('state')!r}, expected {want_state!r}")
+    if before.get("listing_type") != "download":
+        raise PreconditionFailed(f"listing {lid} is type {before.get('listing_type')!r}, not a digital download")
+
+    # 1. Digital files: add the new ones, removing old ones only as needed to stay within five.
+    old_files = [f["listing_file_id"] for f in
+                 ctx.etsy.get_json(f"shops/{shop}/listings/{lid}/files").get("results", [])]
+    attached, new_file_ids = len(old_files), []
+    for f in p["files"]:
+        if attached >= MAX_ETSY_FILES:
+            ctx.etsy.request("DELETE", f"shops/{shop}/listings/{lid}/files/{old_files.pop(0)}")
+            attached -= 1
+        path = ctx.file(f["path"])
+        with open(path, "rb") as fh:
+            created = ctx.etsy.request("POST", f"shops/{shop}/listings/{lid}/files", data={"name": f["name"]},
+                                       files={"file": (f["name"], fh, _content_type(path))}).json()
+        new_file_ids.append(created["listing_file_id"])
+        attached += 1
+    for fid in old_files:
+        ctx.etsy.request("DELETE", f"shops/{shop}/listings/{lid}/files/{fid}")
+
+    # 2. Images: overwrite rank by rank, then remove any old image that is still attached.
+    new_image_ids = []
+    for rank, im in enumerate(p["images"], start=1):
+        path = ctx.file(im["path"])
+        data = {"rank": rank, "overwrite": "true"}
+        if im.get("alt_text"):
+            data["alt_text"] = im["alt_text"]
+        with open(path, "rb") as fh:
+            created = ctx.etsy.request("POST", f"shops/{shop}/listings/{lid}/images", data=data,
+                                       files={"image": (path.name, fh, _content_type(path))}).json()
+        new_image_ids.append(created["listing_image_id"])
+    for im in ctx.etsy.get_json(f"listings/{lid}/images").get("results", []):
+        if im["listing_image_id"] not in new_image_ids:
+            ctx.etsy.request("DELETE", f"shops/{shop}/listings/{lid}/images/{im['listing_image_id']}")
+
+    # 3. Text.
+    ctx.etsy.request("PATCH", f"shops/{shop}/listings/{lid}",
+                     data={"title": p["title"], "description": p["description"], "tags": ",".join(p["tags"])})
+
+    # 4. Price (single-offering digital listings; every offering gets the new price).
+    inv = ctx.etsy.get_json(f"listings/{lid}/inventory")
+    ctx.etsy.request("PUT", f"listings/{lid}/inventory", json={
+        "products": [{
+            "sku": prod.get("sku", ""),
+            "property_values": [{k: pv.get(k) for k in ("property_id", "value_ids", "scale_id", "property_name", "values")}
+                                for pv in prod.get("property_values", [])],
+            "offerings": [{"price": p["price_usd"], "quantity": o["quantity"], "is_enabled": o["is_enabled"]}
+                          for o in prod.get("offerings", [])],
+        } for prod in inv.get("products", [])],
+        "price_on_property": inv.get("price_on_property", []),
+        "quantity_on_property": inv.get("quantity_on_property", []),
+        "sku_on_property": inv.get("sku_on_property", []),
+    })
+
+    # Read back everything that was replaced.
+    rb = ctx.etsy.get_json(f"listings/{lid}")
+    files = sorted(f.get("filename") for f in ctx.etsy.get_json(f"shops/{shop}/listings/{lid}/files").get("results", []))
+    images = [i["listing_image_id"] for i in ctx.etsy.get_json(f"listings/{lid}/images").get("results", [])]
+    title = html.unescape(rb.get("title") or "")
+    tags = sorted(html.unescape(t) for t in rb.get("tags") or [])
+    readback = {"title": title, "price_usd": _etsy_price(rb), "state": rb.get("state"),
+                "state_before": before.get("state"), "listing_type": rb.get("listing_type"),
+                "tags": len(tags), "files": files, "image_count": len(images), "url": rb.get("url")}
+    ok = (title == p["title"] and _etsy_price(rb) == round(p["price_usd"], 2) and rb.get("state") == want_state
+          and rb.get("listing_type") == "download" and tags == sorted(p["tags"])
+          and files == sorted(f["name"] for f in p["files"]) and sorted(images) == sorted(new_image_ids))
+    return {"result": {"listing_id": lid, "listing_file_ids": new_file_ids, "listing_image_ids": new_image_ids,
+                       "url": rb.get("url")},
+            "readback_ok": ok, "readback": readback}
+
+
 # ---------------------------------------------------------------- Printify
 
 def printify_create_product(p: dict, ctx: Context) -> dict:
@@ -279,6 +369,7 @@ OPS: dict[str, Callable[[dict, Context], dict]] = {
     "etsy_activate_listing": etsy_activate_listing,
     "etsy_update_price": etsy_update_price,
     "etsy_deactivate_listing": etsy_deactivate_listing,
+    "etsy_update_listing": etsy_update_listing,
     "printify_create_product": printify_create_product,
     "printify_publish": printify_publish,
     "pinterest_create_pin": pinterest_create_pin,
@@ -287,5 +378,8 @@ OPS: dict[str, Callable[[dict, Context], dict]] = {
 
 # Ops that put a new sellable listing in front of buyers (counted against max_new_listings_per_week).
 NEW_LISTING_OPS = {"etsy_create_digital_listing", "printify_publish", "payhip_create_product"}
+# Ops that put a different product on an existing listing. Counted against max_new_listings_per_week
+# like a new listing, but no listing fee is charged for an edit.
+REPLACE_LISTING_OPS = {"etsy_update_listing"}
 # Ops that create a POD candidate (counted against max_pod_candidates_per_week).
 POD_CANDIDATE_OPS = {"printify_create_product"}

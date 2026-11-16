@@ -16,11 +16,12 @@ from src.scoring.score import margin
 from . import costs
 from .hashing import file_sha256, payload_sha256
 from .ledger import Ledger, idempotency_key
-from .ops import NEW_LISTING_OPS, OPS, POD_CANDIDATE_OPS
+from .ops import NEW_LISTING_OPS, OPS, POD_CANDIDATE_OPS, REPLACE_LISTING_OPS
 
 SCHEMAS = Path(__file__).resolve().parents[2] / "schemas"
 REF_RE = re.compile(r"^\$ref:ops\[(\d+)\]\.([a-z_]+)$")
-LISTING_TEXT_OPS = {"etsy_create_digital_listing", "printify_create_product", "payhip_create_product"}
+LISTING_TEXT_OPS = {"etsy_create_digital_listing", "etsy_update_listing", "printify_create_product", "payhip_create_product"}
+METRICS_MAX_AGE_DAYS = 3   # etsy_update_listing needs a fresh read-only snapshot of the listing it replaces
 MAX_TITLE_WORDS = 15
 
 
@@ -76,6 +77,8 @@ def preflight(manifest: dict, manifest_path: Path, root: Path, config: dict, led
             errors += _check_price(name, p, root, today, max_age, floors, fees, where)
         if name == "etsy_update_price":
             errors += _check_price_cooldown(p, config, ledger, today, where)
+        if name == "etsy_update_listing":
+            errors += _check_replace(p, i, manifest, root, today, where)
         if name == "printify_publish" and p.get("partner_checked") is not True:
             errors.append(f"{where}: POD publish requires partner_checked: true (owner attaches the production "
                           "partner in Etsy and ticks the PR checklist)")
@@ -143,7 +146,7 @@ def _check_spend_commitment(manifest, root, config, ledger, today, done, fees) -
 
 
 _NON_ACTIVATING_OPS = {"etsy_deactivate_listing"}
-_PRICED_OPS = {"etsy_create_digital_listing", "etsy_update_price", "printify_create_product", "payhip_create_product"}
+_PRICED_OPS = {"etsy_create_digital_listing", "etsy_update_price", "etsy_update_listing", "printify_create_product", "payhip_create_product"}
 
 
 def _check_refs(p: dict, i: int, where: str) -> list[str]:
@@ -157,14 +160,53 @@ def _check_refs(p: dict, i: int, where: str) -> list[str]:
 
 
 def _check_files(p: dict, root: Path, where: str) -> list[str]:
-    if "path" not in p or "file_sha256" not in p:
-        return []
-    path = (root / p["path"]).resolve()
-    if not path.is_relative_to(root.resolve()) or not path.is_file():
-        return [f"{where}: file {p['path']} not found in repo"]
-    if file_sha256(path) != p["file_sha256"]:
-        return [f"{where}: file_sha256 mismatch for {p['path']}"]
-    return []
+    errs = []
+    nested = [x for key in ("files", "images") for x in (p.get(key) or []) if isinstance(x, dict)]
+    for item in [p, *nested]:
+        if "path" not in item or "file_sha256" not in item:
+            continue
+        path = (root / item["path"]).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            errs.append(f"{where}: file {item['path']} not found in repo")
+        elif file_sha256(path) != item["file_sha256"]:
+            errs.append(f"{where}: file_sha256 mismatch for {item['path']}")
+    return errs
+
+
+def _check_replace(p: dict, i: int, manifest: dict, root: Path, today: dt.date, where: str) -> list[str]:
+    """In-place replacement is only for listings with no orders, so a buyer's purchase or review
+    never ends up attached to a different product. Evidence: the newest read-only Etsy metrics
+    snapshot (data/metrics/), which must be recent. Missing evidence fails closed."""
+    lid = str(p["listing_id"])
+    if any(op["op"] == "etsy_update_listing" and str(op["payload"].get("listing_id")) == lid
+           for op in manifest["ops"][:i]):
+        return [f"{where}: listing {lid} is replaced twice in this manifest"]
+    names = [f["name"] for f in p["files"]]
+    if len(set(names)) != len(names):
+        return [f"{where}: duplicate file names {names}"]
+    snaps = sorted((root / "data" / "metrics").glob("????-??-??.csv"))
+    if not snaps:
+        return [f"{where}: no metrics snapshot in data/metrics/ to prove listing {lid} has no orders"]
+    snap = snaps[-1]
+    age = (today - dt.date.fromisoformat(snap.stem)).days
+    if age > METRICS_MAX_AGE_DAYS:
+        return [f"{where}: newest metrics snapshot {snap.name} is {age} days old (max {METRICS_MAX_AGE_DAYS})"]
+    with open(snap, newline="", encoding="utf-8") as f:
+        row = next((r for r in csv.DictReader(f) if r.get("listing_id") == lid), None)
+    if row is None:
+        return [f"{where}: listing {lid} is not in {snap.name}"]
+    errs = []
+    if row.get("state") != p.get("expect_state", "active"):
+        errs.append(f"{where}: listing {lid} was {row.get('state')!r} in {snap.name}")
+    if row.get("listing_type") != "download":
+        errs.append(f"{where}: listing {lid} is not a digital download in {snap.name}")
+    try:
+        sold = int(float(row.get("orders_total") or 0)) + int(float(row.get("units_total") or 0))
+    except ValueError:
+        sold = -1
+    if sold != 0:
+        errs.append(f"{where}: listing {lid} has orders in {snap.name}; a listing that has sold is never replaced in place")
+    return errs
 
 
 def _check_text(name: str, p: dict, config: dict, blocklist: Blocklist, where: str) -> list[str]:
@@ -254,12 +296,12 @@ def _check_ceilings(manifest: dict, config: dict, ledger: Ledger, today: dt.date
             continue
         d = dt.date.fromisoformat(e["ts"][:10])
         if iso_week(d) == week:
-            week_new += e["op"] in NEW_LISTING_OPS
+            week_new += e["op"] in NEW_LISTING_OPS | REPLACE_LISTING_OPS
             week_pod += e["op"] in POD_CANDIDATE_OPS
         if d >= window_start and e.get("niche") and e["op"] not in _NON_ACTIVATING_OPS:
             active_niches.add(e["niche"])
 
-    new = sum(op["op"] in NEW_LISTING_OPS for _, op in pending)
+    new = sum(op["op"] in NEW_LISTING_OPS | REPLACE_LISTING_OPS for _, op in pending)
     pod = sum(op["op"] in POD_CANDIDATE_OPS for _, op in pending)
     if week_new + new > config["max_new_listings_per_week"]:
         errs.append(f"new listings this week would be {week_new + new} (max {config['max_new_listings_per_week']})")

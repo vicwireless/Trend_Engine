@@ -1,0 +1,59 @@
+# IP screen for the 2026-11-15 seasonal release (docs/ip-screen.md). Written by the engine.
+#
+# METHOD LIMIT, stated plainly: checks 3 and 4 name tmsearch.uspto.gov and the Etsy Open API. Both hosts
+# are blocked from the engine's cloud session (connection refused by the environment's network policy,
+# 2026-11-15), and so are etsy.com and trademarks.justia.com. The trademark check below was therefore run
+# through web search over pages that mirror the USPTO register (trademarkdir.com, gleanmark.com,
+# markinton.com, trademarkregistration.app, Justia result snippets). That is weaker than a direct USPTO
+# query: a mirror can be stale and a search can miss a filing. To compensate, the engine applied a stricter
+# rule than the doc requires: any live or pending mark found in ANY class close to printed or game goods
+# (009, 016, 028), or any doubt, was a veto and the name was removed or replaced with plain descriptive
+# wording. An owner USPTO spot-check of the kept names (5 minutes) is listed in reports/daily/2026-11-15-status.md.
+checked_at: '2026-11-16T00:10:00+00:00'
+checked_by: claude
+method: web search over USPTO-register mirrors (secondary); blocklist (automatic); manual read of all text
+classes_considered: ['009', '016', '028']
+vetoed:
+  - term: WOULD YOU RATHER
+    result: veto
+    evidence: 'Mirrors list WOULD YOU RATHER...? serial 98343104 (Spin Master) as live with class 016 (paper goods); earlier Falls Media registration and litigation (Zobmondo v. Falls Media, 9th Cir. 2010). https://trademarkdir.com/trademark/would-you-rather-98343104 , https://gleanmark.com/trademark/uspto-98343104'
+    action: 'Removed from every title, tag, description and page. Cards renamed "Pick One!" / "Which Would You Choose?". Added to config/blocklist.yaml.'
+  - term: MOST LIKELY TO
+    result: veto
+    evidence: 'WHO''S MOST LIKELY TO... reg. 5002450, card games, class 028. https://trademarks.justia.com/868/32/who-s-most-likely-86832085.html (seen as a search result; page itself not reachable)'
+    action: 'Product renamed "Who at This Table?"; phrase removed from titles, tags, pages. Added to blocklist.'
+  - term: FRIENDSGIVING
+    result: veto
+    evidence: 'Word mark FRIENDSGIVING reg. 5291087 (serial 87365968) listed as registered with primary class 016; status date in the mirror is 2017, so current status is unknown. Unknown = veto. https://trademark.justia.com/873/65/friendsgiving-87365968.html'
+    action: 'Removed from every title, tag, description, pin and page ("dinner party", "with friends" used instead). Added to blocklist. If a direct USPTO check shows the class 016 registration is dead, the word can be restored for search reach.'
+  - term: WRIGHT FAMILY (left-right story device)
+    result: veto
+    evidence: 'check 2 (origin): a widely circulated left-right gift-passing story uses a family named Wright. The engine''s first draft, though newly written, reused that device.'
+    action: 'Story rewritten around the Baker family with the title "The Night Before the Party". Added to blocklist.'
+  - term: GIVING TUESDAY, GUESS WHO, POLAR EXPRESS-style wording, branded game-show formats
+    result: veto
+    evidence: 'Known registered marks or branded formats (Hasbro GUESS WHO?, GivingTuesday, film and game-show titles). Removed on sight during the text read; no search needed.'
+    action: 'One trivia question replaced; "guess who" wording replaced with "guess the giver"; stamp text changed to "North Pole Air Mail". Family Feud, Elf on the Shelf, Pictionary, Scattergories, Jeopardy and others added to the blocklist.'
+kept:
+  - term: LEFT RIGHT GAME
+    result: pass (secondary evidence)
+    evidence: 'No exact mark found. Related marks are for the LCR / LEFT! CENTER! RIGHT! dice game (George & Company; reg. 5091343 for electronic games, pending 99087550 for dice games), a different game and name; the Fourth Circuit held there are no federal rights in LEFT CENTER RIGHT. https://gleanmark.com/trademark/uspto-99087550 , https://courthousenews.com/game-maker-rolls-dice-loses-trademark-claim/'
+  - term: WHITE ELEPHANT / SECRET SANTA
+    result: pass (secondary evidence)
+    evidence: 'Search found no live mark in 016/028 for gift-exchange goods; WHITE ELEPHANT marks found are for restaurants and food (class 43). Both are common names of traditional gift exchanges. https://trademarkdir.com/owner/white-elephant-corporation'
+  - term: THIS OR THAT
+    result: pass (secondary evidence)
+    evidence: 'Search for the phrase with classes 016/028 returned no record for it; used only as an inside-page heading, not in any title.'
+  - term: NICE LIST / LETTER TO SANTA
+    result: pass (secondary evidence)
+    evidence: 'No exact mark found in class 016. Longer marks exist (MY HEARTFELT LETTERS TO SANTA THROUGH THE YEARS, HEARTFELT LETTERS FROM SANTA TO YOU); "Letter(s) to Santa" kits are sold under that descriptive name by many unrelated sellers (USPS, Hallmark, Target and others in the same result set), i.e. not one rights holder''s line.'
+  - term: TRIVIA, BINGO, CHARADES, GIFT CERTIFICATE, SCAVENGER HUNT, KIDS TABLE, CONVERSATION CARDS
+    result: pass
+    evidence: 'Generic names of traditional games and goods, used descriptively.'
+checks:
+  blocklist: {result: pass, evidence: 'config/blocklist.yaml (with the 2026-11-15 additions) run over all titles, tags, descriptions, pin copy and every line of game content in tools/seasonal/: 0 hits. The executor repeats it on each manifest.'}
+  origin: {result: pass, evidence: 'All questions, prompts, stories and rhymes were written for this release (tools/seasonal/content.py). Trivia covers history, food, nature and traditions; no film, song, show, character, team or brand is named. One origin problem found and fixed (see vetoed: WRIGHT FAMILY).'}
+  trademark: {result: pass_with_method_limit, evidence: 'See kept/vetoed above and the METHOD LIMIT note. 9 searches, 2026-11-15/16.'}
+  etsy_marketplace: {result: pass_with_method_limit, evidence: 'Etsy Open API search not reachable. Web search (2026-11-15) for printable Thanksgiving/Christmas party games on Etsy returned listings from many unrelated shops; no officially-licensed line or single rights holder. Not Etsy data.'}
+  text_copyright: {result: pass, evidence: 'No lyrics, poems, film or book lines, or attributed quotes. A carol title and an 1823 poem are referred to in trivia questions without quoting them.'}
+  image_provenance: {result: pass, evidence: 'All icons are drawn in code in tools/seasonal/icons.py; layouts are HTML/CSS in tools/seasonal/pages.py. Fonts: Fraunces, DM Sans, Caveat under the SIL Open Font License (assets/fonts/*-OFL.txt). No third-party images, no image API. ai_assisted: true on every listing.'}

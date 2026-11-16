@@ -1,6 +1,7 @@
 import copy
 import datetime as dt
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -625,3 +626,189 @@ def test_spend_cap_missing_from_config_fails_closed(repo):
     (repo / "config" / "engine.yaml").write_text(yaml.safe_dump(cfg))
     with pytest.raises(runner.PreflightFailed, match="monthly_spend_commitment_cap_usd is not set"):
         execute(repo, _activate(repo))
+
+
+# ---------------------------------------------------------------- etsy_update_listing (in-place replace)
+NEW_TITLE = "Christmas Trivia Game Printable, 40 Questions, Holiday Party Game"
+METRICS_HEAD = ("date,listing_id,title,state,listing_type,price_usd,published_date,views_total,favorites_total,"
+                "orders_total,units_total,revenue_usd_total\n")
+
+
+def write_metrics(root, rows, date="2026-10-20"):
+    d = root / "data" / "metrics"
+    d.mkdir(parents=True, exist_ok=True)
+    (d / f"{date}.csv").write_text(METRICS_HEAD + "".join(rows))
+
+
+def metrics_row(lid=2001, state="active", orders=0, date="2026-10-20"):
+    return f"{date},{lid},Old planner,{state},download,6.99,2026-10-01,0,0,{orders},{orders},0.0\n"
+
+
+def update_payload(root, **kw):
+    (root / "assets/digital/b.pdf").write_bytes(b"%PDF-1.4 b")
+    files = [{"path": "assets/digital/court.pdf", "name": "trivia-letter.pdf",
+              "file_sha256": file_sha256(root / "assets/digital/court.pdf")},
+             {"path": "assets/digital/b.pdf", "name": "trivia-a4.pdf",
+              "file_sha256": file_sha256(root / "assets/digital/b.pdf")}]
+    images = [{"path": "assets/digital/court.jpg", "alt_text": f"Image {i}",
+               "file_sha256": file_sha256(root / "assets/digital/court.jpg")} for i in range(1, 6)]
+    return {"listing_id": 2001, "title": NEW_TITLE, "description": f"Forty questions.\n\n{DISCLOSURE}", "tags": TAGS,
+            "ai_assisted": True, "price_usd": 4.99, "cost_snapshot": "data/costs/2026-10-20-products.json",
+            "cost_key": "digital", "files": files, "images": images, **kw}
+
+
+def mock_update_flow(old_files=(3001, 3002), old_images=(4001, 4002, 4003, 4004, 4005, 4006), state="active",
+                     readback_title=NEW_TITLE):
+    """A tiny in-memory Etsy listing so the test checks real end state, not just call order."""
+    st = {"files": {i: f"old-{i}.pdf" for i in old_files}, "images": list(old_images), "min_files": len(old_files),
+          "max_files": len(old_files), "next": 9000, "title": "Old planner", "price": 699, "tags": ["old"]}
+
+    def listing(req):
+        return 200, {}, json.dumps({"listing_id": 2001, "state": state, "listing_type": "download",
+                                    "title": st["title"], "tags": st["tags"], "url": "https://www.etsy.com/listing/2001/x",
+                                    "price": {"amount": st["price"], "divisor": 100, "currency_code": "USD"}})
+
+    def files_list(req):
+        return 200, {}, json.dumps({"count": len(st["files"]), "results": [
+            {"listing_file_id": k, "filename": v} for k, v in st["files"].items()]})
+
+    def file_post(req):
+        st["next"] += 1
+        body = req.body if isinstance(req.body, bytes) else req.body.read()
+        name = re.search(rb'name="name"\r\n\r\n([^\r]+)', body).group(1).decode()
+        st["files"][st["next"]] = name
+        st["max_files"] = max(st["max_files"], len(st["files"]))
+        return 201, {}, json.dumps({"listing_file_id": st["next"], "filename": name})
+
+    def file_delete(req):
+        st["files"].pop(int(req.url.rsplit("/", 1)[1]))
+        st["min_files"] = min(st["min_files"], len(st["files"]))
+        return 200, {}, "{}"
+
+    def images_list(req):
+        return 200, {}, json.dumps({"count": len(st["images"]), "results": [
+            {"listing_image_id": i, "rank": n + 1} for n, i in enumerate(st["images"])]})
+
+    def image_post(req):
+        st["next"] += 1
+        body = req.body if isinstance(req.body, bytes) else req.body.read()
+        rank = int(re.search(rb'name="rank"\r\n\r\n(\d+)', body).group(1))
+        assert b'name="overwrite"\r\n\r\ntrue' in body
+        if rank <= len(st["images"]):
+            st["images"][rank - 1] = st["next"]
+        else:
+            st["images"].append(st["next"])
+        return 201, {}, json.dumps({"listing_image_id": st["next"], "rank": rank})
+
+    def image_delete(req):
+        st["images"].remove(int(req.url.rsplit("/", 1)[1]))
+        return 200, {}, "{}"
+
+    def patch(req):
+        from urllib.parse import parse_qs
+        form = parse_qs(req.body)
+        st["title"] = readback_title.replace("&", "&amp;") if readback_title != NEW_TITLE else form["title"][0]
+        st["tags"] = form["tags"][0].split(",")
+        return 200, {}, "{}"
+
+    def inv_put(req):
+        st["price"] = int(round(json.loads(req.body)["products"][0]["offerings"][0]["price"] * 100))
+        return 200, {}, "{}"
+
+    base, shop = f"{ETSY_BASE}/listings/2001", f"{ETSY_BASE}/shops/{SHOP}/listings/2001"
+    responses.add_callback(responses.GET, base, callback=listing)
+    responses.add_callback(responses.GET, f"{shop}/files", callback=files_list)
+    responses.add_callback(responses.POST, f"{shop}/files", callback=file_post)
+    responses.add_callback(responses.DELETE, re.compile(re.escape(shop) + r"/files/\d+"), callback=file_delete)
+    responses.add_callback(responses.GET, f"{base}/images", callback=images_list)
+    responses.add_callback(responses.POST, f"{shop}/images", callback=image_post)
+    responses.add_callback(responses.DELETE, re.compile(re.escape(shop) + r"/images/\d+"), callback=image_delete)
+    responses.add_callback(responses.PATCH, shop, callback=patch)
+    responses.get(f"{base}/inventory", json=R["etsy_inventory_before"])
+    responses.add_callback(responses.PUT, f"{base}/inventory", callback=inv_put)
+    return st
+
+
+@responses.activate
+def test_update_listing_replaces_everything_in_place_and_stays_active(repo):
+    write_metrics(repo, [metrics_row()])
+    st = mock_update_flow()
+    out = execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", update_payload(repo))]))
+    entry = out["ops"][0]
+    assert entry["status"] == "ok"
+    assert entry["readback"] == {"title": NEW_TITLE, "price_usd": 4.99, "state": "active", "state_before": "active",
+                                 "listing_type": "download", "tags": 13, "image_count": 5,
+                                 "files": ["trivia-a4.pdf", "trivia-letter.pdf"],
+                                 "url": "https://www.etsy.com/listing/2001/x"}
+    assert sorted(st["files"].values()) == ["trivia-a4.pdf", "trivia-letter.pdf"]   # old files gone
+    assert len(st["images"]) == 5 and min(st["images"]) > 9000                      # old images gone
+    assert st["min_files"] >= 1            # never zero files: Etsy would convert the listing to physical
+    assert entry["result"]["listing_id"] == 2001 and len(entry["result"]["listing_image_ids"]) == 5
+    # No state change was ever sent, and the listing was not re-created.
+    assert not any(c.request.method == "POST" and c.request.url.endswith("/listings") for c in responses.calls)
+    assert all("state" not in (c.request.body or "") for c in responses.calls if c.request.method == "PATCH")
+
+
+@responses.activate
+def test_update_listing_never_exceeds_five_files_or_drops_to_zero(repo):
+    write_metrics(repo, [metrics_row()])
+    st = mock_update_flow(old_files=(3001, 3002, 3003, 3004, 3005))
+    out = execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", update_payload(repo))]))
+    assert out["ops"][0]["status"] == "ok"
+    assert st["max_files"] <= 5 and st["min_files"] >= 1
+    assert sorted(st["files"].values()) == ["trivia-a4.pdf", "trivia-letter.pdf"]
+
+
+@responses.activate
+def test_update_listing_refuses_inactive_listing_before_any_write(repo):
+    write_metrics(repo, [metrics_row()])
+    mock_update_flow(state="inactive")
+    with pytest.raises(runner.ExecutorError, match="expected 'active'"):
+        execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", update_payload(repo))]))
+    assert writes() == []
+    last = ledger_for(repo).entries()[-1]
+    assert last["status"] == "failed" and last["write_attempted"] is False
+
+
+@responses.activate
+def test_update_listing_readback_mismatch_is_not_ok(repo):
+    write_metrics(repo, [metrics_row()])
+    mock_update_flow(readback_title="Something else")
+    with pytest.raises(runner.UnknownState, match="read-back"):
+        execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", update_payload(repo))]))
+    assert ledger_for(repo).entries()[-1]["status"] == "readback_failed"
+
+
+@pytest.mark.parametrize("rows,date,kw,match", [
+    ([], None, {}, "no metrics snapshot"),
+    ([metrics_row(orders=1)], "2026-10-20", {}, "has orders"),
+    ([metrics_row(lid=5)], "2026-10-20", {}, "is not in 2026-10-20.csv"),
+    ([metrics_row(state="inactive")], "2026-10-20", {}, "was 'inactive'"),
+    ([metrics_row()], "2026-10-10", {}, "days old"),
+    ([metrics_row()], "2026-10-20", {"description": "No disclosure here."}, "AI disclosure sentence"),
+    ([metrics_row()], "2026-10-20", {"title": "Grinch Trivia Game Printable"}, "blocklist veto"),
+    ([metrics_row()], "2026-10-20", {"price_usd": 0.3}, "below floor"),
+    ([metrics_row()], "2026-10-20", {"images": "one"}, "images"),
+])
+@responses.activate
+def test_update_listing_preflight_rails(repo, rows, date, kw, match):
+    if date:
+        write_metrics(repo, rows, date)
+    payload = update_payload(repo, **{k: v for k, v in kw.items() if k != "images"})
+    if "images" in kw:
+        payload["images"] = payload["images"][:1]
+    with pytest.raises(runner.PreflightFailed, match=match):
+        execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", payload)]))
+    assert len(responses.calls) == 0
+
+
+@responses.activate
+def test_update_listing_file_hash_and_double_replace_are_refused(repo):
+    write_metrics(repo, [metrics_row()])
+    bad = update_payload(repo)
+    bad["images"][2]["file_sha256"] = "0" * 64
+    with pytest.raises(runner.PreflightFailed, match="file_sha256 mismatch"):
+        execute(repo, write_manifest(repo, [("etsy_update_listing", "party-games", bad)]))
+    twice = [("etsy_update_listing", "party-games", update_payload(repo))] * 2
+    with pytest.raises(runner.PreflightFailed, match="replaced twice"):
+        execute(repo, write_manifest(repo, twice))
