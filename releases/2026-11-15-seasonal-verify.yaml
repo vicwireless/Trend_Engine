@@ -1,0 +1,87 @@
+manifest_id: 2026-11-15-seasonal-verify
+created_at: '2026-11-16T19:26:04Z'
+created_by: claude
+summary: 'Verification run for etsy_update_listing: replace ONE zero-view planner listing (4601781885, 2027 Weekly Meal Planner,
+  0 views, 0 orders) in place with the Christmas Trivia printable and confirm it stays active.'
+owner_minutes_estimate: 0
+ops:
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601781885
+    expect_state: active
+    title: Christmas Trivia Game Printable, 40 Questions with Answers, Holiday Party Game, Family or Office
+    description: 'Forty Christmas trivia questions about traditions, food and holiday history around the world. Easy enough
+      for the family table, tricky enough for the office party.
+
+
+      WHAT YOU GET
+
+      • 4 question sheets (40 questions, 10 per sheet)
+
+      • Answer key
+
+      • The same 40 questions as cut-apart cards
+
+      • 11 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - christmas trivia
+    - christmas party game
+    - holiday trivia game
+    - printable xmas game
+    - office party game
+    - family xmas game
+    - christmas quiz
+    - trivia with answers
+    - holiday party games
+    - christmas games pdf
+    - adult christmas game
+    - classroom christmas
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-15-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-us-letter.pdf
+      name: christmas-trivia-us-letter.pdf
+      file_sha256: 317005ad41c665a49e365ed6d45d48966bcc977a62734c30f38b4e7ae342ff04
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-a4.pdf
+      name: christmas-trivia-a4.pdf
+      file_sha256: 09aa615b6534338ebee8741e2c888d6f12c85412d71bf89939ca55387a281661
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-01-hero.jpg
+      alt_text: Christmas Trivia printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 5e92d9ea5d7e7683edebe221aa1dff742301e9774f1437690b3a8c5c639e29ce
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Trivia printable: page previews and a checklist of contents'
+      file_sha256: 3131acf0a3d4895e974a031b0c8da7d328f5307ef637a35153a01ef124db8c3a
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Trivia printable
+      file_sha256: 78ab24dfda1f12f8893bb5299d0f99b03c509064b1cd89c38041bb34b71055cd
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-05-details.jpg
+      alt_text: 'Details for the Christmas Trivia printable: page count, two PDF sizes, instant download'
+      file_sha256: 5b6c34151d7963a7ec8cdeaac2197e542788489c5de0fd64567b334608a81834
+  payload_sha256: 09e08f130c0fa337b0846a8a13ae07cf09394c2756a8ddedcfcf3b4c7478c58d

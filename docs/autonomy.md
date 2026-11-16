@@ -58,3 +58,18 @@ login, add that login to `approval.owner_logins` in the same PR that needs it.
 Only what has no API: Etsy Ads on/off and budget, shop-wide sales, ticking the AI field on brand-new
 drafts, connecting Etsy inside Printify, creating secrets and tokens, and any spend above the cap.
 The daily status report (`reports/daily/`) lists these under "Only the owner can do this".
+
+## Replacing a listing in place (`etsy_update_listing`)
+
+Added 2026-11-15. Replaces an existing active digital listing's files, images, title, description,
+tags and price while keeping its id, URL, state and editor-only fields. The owner's "With an AI
+generator" tick is an editor-only field the API can neither read nor write, so it stays as set; the
+new content must therefore also be AI-assisted and carry the disclosure sentence (preflight checks it).
+
+Rails in preflight (`src/executor/validate.py`): blocklist, title length, disclosure sentence, margin
+floor from a fresh cost snapshot, file hashes, at least 5 images, and **zero orders** for that listing
+in a metrics snapshot no older than 3 days. A listing that has ever sold is never replaced in place, so
+a buyer's purchase or review cannot end up attached to a different product. At run time the op refuses
+a listing that is not active or not a download, never lets the listing reach zero files (Etsy would
+turn it into a physical listing), and reads back title, price, state, tags, file names and images.
+It counts against `max_new_listings_per_week`. No listing fee is charged for an edit.
