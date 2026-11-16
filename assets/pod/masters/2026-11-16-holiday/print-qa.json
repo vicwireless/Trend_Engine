@@ -1,0 +1,98 @@
+[
+  {
+    "design": "mug-christmas-icons",
+    "file": "assets/pod/masters/2026-11-16-holiday/mug-christmas-icons.png",
+    "px": [
+      2475,
+      1155
+    ],
+    "print_in": [
+      8.25,
+      3.85
+    ],
+    "product": "11 oz ceramic mug, full wrap",
+    "note": "Icon pattern, no text.",
+    "print_qa_passed": true,
+    "failed": []
+  },
+  {
+    "design": "mug-merry-christmas",
+    "file": "assets/pod/masters/2026-11-16-holiday/mug-merry-christmas.png",
+    "px": [
+      2475,
+      1155
+    ],
+    "print_in": [
+      8.25,
+      3.85
+    ],
+    "product": "11 oz ceramic mug, front and back",
+    "note": "Generic greeting, original lettering layout.",
+    "print_qa_passed": true,
+    "failed": []
+  },
+  {
+    "design": "ornament-tree-2026",
+    "file": "assets/pod/masters/2026-11-16-holiday/ornament-tree-2026.png",
+    "px": [
+      2000,
+      2000
+    ],
+    "print_in": [
+      2.75,
+      2.75
+    ],
+    "product": "Round ceramic ornament",
+    "note": "Year ornament.",
+    "print_qa_passed": true,
+    "failed": []
+  },
+  {
+    "design": "ornament-snowflake",
+    "file": "assets/pod/masters/2026-11-16-holiday/ornament-snowflake.png",
+    "px": [
+      2000,
+      2000
+    ],
+    "print_in": [
+      2.75,
+      2.75
+    ],
+    "product": "Round ceramic ornament",
+    "note": "Generic greeting.",
+    "print_qa_passed": true,
+    "failed": []
+  },
+  {
+    "design": "tee-christmas-bingo",
+    "file": "assets/pod/masters/2026-11-16-holiday/tee-christmas-bingo.png",
+    "px": [
+      4500,
+      5400
+    ],
+    "print_in": [
+      15,
+      18
+    ],
+    "product": "Unisex tee, front print",
+    "note": "Matches the Christmas Bingo printable.",
+    "print_qa_passed": true,
+    "failed": []
+  },
+  {
+    "design": "tee-happy-new-year-2027",
+    "file": "assets/pod/masters/2026-11-16-holiday/tee-happy-new-year-2027.png",
+    "px": [
+      4500,
+      5400
+    ],
+    "print_in": [
+      15,
+      18
+    ],
+    "product": "Unisex tee, front print",
+    "note": "Generic greeting with the year.",
+    "print_qa_passed": true,
+    "failed": []
+  }
+]
