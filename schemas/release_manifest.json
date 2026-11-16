@@ -51,6 +51,7 @@
               "etsy_activate_listing",
               "etsy_update_price",
               "etsy_deactivate_listing",
+              "etsy_update_listing",
               "printify_create_product",
               "printify_publish",
               "pinterest_create_pin",

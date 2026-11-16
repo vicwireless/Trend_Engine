@@ -69,6 +69,25 @@ categories:
     - top gun
     - ghostface
     - ghost face
+  game_and_show_formats:   # added 2026-11-15 (data/ip/2026-11-15-seasonal-ip-screen.yaml)
+    - family feud
+    - friendly feud
+    - survey says
+    - elf on the shelf
+    - pictionary
+    - scattergories
+    - guess who
+    - jeopardy
+    - wheel of fortune
+    - price is right
+    - polar express
+    - rudolph
+    - frosty the snowman
+    - would you rather      # live "WOULD YOU RATHER...?" filing covering class 016
+    - most likely to        # "WHO'S MOST LIKELY TO..." registered for card games (class 028)
+    - friendsgiving         # FRIENDSGIVING word mark registered in class 016; lift only after a USPTO check
+    - giving tuesday
+    - wright family         # device of a widely circulated left-right story
   celebrities:
     - taylor swift
     - beyonce
