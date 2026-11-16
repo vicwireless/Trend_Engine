@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from src.clients import etsy_auth
-from src.clients.base import HttpClient, require
+from src.clients.base import AuthError, HttpClient, require
 
 ETSY_BASE = "https://openapi.etsy.com/v3/application"
 PRINTIFY_BASE = "https://api.printify.com/v1"
@@ -44,11 +44,17 @@ class Context:
 
     @property
     def etsy(self) -> HttpClient:
-        return self._client("etsy", lambda: HttpClient(ETSY_BASE, {
-            "x-api-key": etsy_auth.api_key(),
-            "Authorization": "Bearer " + require(
-                etsy_auth.access_token("ETSY_WRITE_TOKEN", "ETSY_WRITE_REFRESH_TOKEN"), "ETSY_WRITE_TOKEN"),
-        }, **self.http_kwargs))
+        def make() -> HttpClient:
+            try:
+                token = etsy_auth.access_token("ETSY_WRITE_TOKEN", "ETSY_WRITE_REFRESH_TOKEN")
+            except AuthError as e:
+                # The token exchange happens before any marketplace call, so nothing was written and
+                # the op can be retried once the token is replaced (incident 2026-11-16).
+                raise PreconditionFailed(f"Etsy write token could not be refreshed, nothing was written: {e}") from e
+            return HttpClient(ETSY_BASE, {"x-api-key": etsy_auth.api_key(),
+                                          "Authorization": "Bearer " + require(token, "ETSY_WRITE_TOKEN")},
+                              **self.http_kwargs)
+        return self._client("etsy", make)
 
     @property
     def etsy_shop(self) -> str:

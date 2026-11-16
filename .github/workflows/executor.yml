@@ -16,7 +16,6 @@ concurrency:
 permissions:
   contents: write        # to push the ledger branch
   pull-requests: write   # to open the 'ledger:' PR (playbook SP-07); main stays protected
-  actions: write         # dispatch ci.yml on the ledger branch so the required 'test' check runs
 
 jobs:
   execute:
@@ -26,6 +25,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false   # pushes go through .github/scripts/data_pr.sh with an explicit token
 
       - uses: actions/setup-python@v5
         with:
@@ -57,15 +57,20 @@ jobs:
             gh api "repos/${GITHUB_REPOSITORY}/pulls/$n"
           done | jq -s . | python -m src.executor.approval "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
 
-      - name: Refuse to run while a ledger PR is unmerged
+      - name: Refuse to run while ledger data is unmerged
         # Ceilings, cool-downs and idempotency read the ledger on main. A run with an unmerged
-        # ledger PR would undercount, so fail closed (CLAUDE.md rule 8).
+        # ledger PR, or a ledger branch that never got a PR, would undercount, so fail closed
+        # (CLAUDE.md rule 8).
         if: steps.changed.outputs.files != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           open=$(gh pr list --state open --search "ledger: in:title" --json number --jq 'length')
           if [ "$open" != "0" ]; then echo "Unmerged ledger PR(s) exist; merge them, then re-run."; exit 1; fi
+          for b in $(git ls-remote --heads origin 'ledger/*' | sed 's#.*refs/heads/##'); do
+            prs=$(gh pr list --state all --head "$b" --json number --jq 'length')
+            if [ "$prs" = "0" ]; then echo "Ledger branch $b has no pull request yet; open and merge it, then re-run."; exit 1; fi
+          done
 
       - name: Execute
         if: steps.changed.outputs.files != ''
@@ -80,12 +85,33 @@ jobs:
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
           PAYHIP_API_KEY: ${{ secrets.PAYHIP_API_KEY }}
+          # Etsy rotates the refresh token on every refresh and revokes the old one. The client writes
+          # the newest one here; the next step saves it back to the secret. (Not doing this is what
+          # left a dead write token after the 2026-10-26 release; incident 2026-11-16.)
+          ETSY_ROTATED_REFRESH_FILE: ${{ runner.temp }}/etsy_write_refresh
         run: python -m src.executor.run ${{ steps.changed.outputs.files }}
 
-      - name: Open ledger PR (data only)
+      - name: Save the rotated Etsy write token to the secret
         if: always() && steps.changed.outputs.files != ''
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.METRICS_SECRETS_PAT }}   # fine-grained PAT, this repo only, Secrets: read and write
+        run: |
+          f="$RUNNER_TEMP/etsy_write_refresh"
+          if [ ! -s "$f" ]; then echo "No rotated token to save."; exit 0; fi
+          echo "::add-mask::$(cat "$f")"
+          if [ -z "$GH_TOKEN" ]; then
+            rm -f "$f"
+            echo "::error::METRICS_SECRETS_PAT is not set, so the rotated Etsy write token was not saved. The next release will fail with 'refresh_token is revoked'."; exit 1
+          fi
+          gh secret set ETSY_WRITE_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+          rm -f "$f"
+          echo "Rotated Etsy write token saved to ETSY_WRITE_REFRESH_TOKEN."
+
+      - name: Push the ledger branch and merge it if an owner token allows (data only)
+        if: always() && steps.changed.outputs.files != ''
+        env:
+          ACTIONS_TOKEN: ${{ github.token }}
+          ENGINE_PAT: ${{ secrets.METRICS_SECRETS_PAT }}
         run: |
           git config user.name "trend-engine-executor"
           git config user.email "executor@users.noreply.github.com"
@@ -94,23 +120,5 @@ jobs:
           branch="ledger/${GITHUB_SHA::12}"
           git checkout -b "$branch"
           git commit -m "ledger: ${GITHUB_SHA::12}"
-          git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "ledger: ${GITHUB_SHA::12}" \
-            --body "Executor ledger and incidents for merge ${GITHUB_SHA}. Touches data/ledger and reports/incidents only. Autonomy mode: this workflow merges it when the test check is green; otherwise an engine session does."
-          # Autonomy mode (docs/autonomy.md): PRs opened with GITHUB_TOKEN get no pull_request CI run, so
-          # dispatch the required 'test' check on the branch, wait for it, then merge. Any failure here
-          # leaves the PR open for an engine session; the next executor run refuses until it is merged.
-          gh workflow run ci.yml --ref "$branch" || { echo "::warning::could not dispatch ci.yml"; exit 0; }
-          sha=$(git rev-parse HEAD)
-          state=pending
-          for i in $(seq 1 36); do
-            sleep 10
-            state=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs" \
-              --jq '[.check_runs[] | select(.name=="test")][0].conclusion // "pending"' || echo pending)
-            if [ "$state" != "pending" ] && [ "$state" != "null" ]; then break; fi
-          done
-          if [ "$state" = "success" ]; then
-            gh pr merge "$branch" --squash || echo "::warning::ledger PR is green but could not be merged by the workflow; an engine session must merge it"
-          else
-            echo "::warning::ledger PR test check is '$state'; left open"
-          fi
+          echo "Executor ledger and incidents for merge ${GITHUB_SHA}. Touches data/ledger and reports/incidents only." > "$RUNNER_TEMP/ledger_body.md"
+          .github/scripts/data_pr.sh "$branch" "ledger: ${GITHUB_SHA::12}" "$RUNNER_TEMP/ledger_body.md"

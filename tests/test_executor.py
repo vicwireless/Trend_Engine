@@ -812,3 +812,29 @@ def test_update_listing_file_hash_and_double_replace_are_refused(repo):
     twice = [("etsy_update_listing", "party-games", update_payload(repo))] * 2
     with pytest.raises(runner.PreflightFailed, match="replaced twice"):
         execute(repo, write_manifest(repo, twice))
+
+
+@responses.activate
+def test_revoked_write_token_fails_before_any_write_and_can_be_retried(repo, monkeypatch):
+    """Incident 2026-11-16: a dead refresh token must not leave the op in an unknown state."""
+    from src.clients import etsy_auth
+    write_metrics(repo, [metrics_row()])
+    monkeypatch.delenv("ETSY_WRITE_TOKEN")
+    monkeypatch.setenv("ETSY_WRITE_REFRESH_TOKEN", "dead")
+    responses.post(etsy_auth.TOKEN_URL, status=400,
+                   json={"error": "invalid_grant", "error_description": "refresh_token is revoked"})
+    path = write_manifest(repo, [("etsy_update_listing", "party-games", update_payload(repo))])
+    with pytest.raises(runner.ExecutorError, match="nothing was written"):
+        execute(repo, path)
+    last = ledger_for(repo).entries()[-1]
+    assert last["status"] == "failed" and last["write_attempted"] is False
+    # With a working token the same manifest now runs; it is not blocked as an unknown state.
+    monkeypatch.setenv("ETSY_WRITE_TOKEN", "w")
+    mock_update_flow()
+    assert execute(repo, path)["ops"][0]["status"] == "ok"
+
+
+def test_executor_saves_rotated_write_token_and_guards_unmerged_ledger_branches():
+    wf = (REPO / ".github/workflows/executor.yml").read_text()
+    assert "ETSY_ROTATED_REFRESH_FILE" in wf and "gh secret set ETSY_WRITE_REFRESH_TOKEN" in wf
+    assert "has no pull request yet" in wf

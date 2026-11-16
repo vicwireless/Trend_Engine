@@ -1,0 +1,202 @@
+{
+  "ppi": 300,
+  "files": [
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-us-letter.pdf",
+      "pages": 11,
+      "pdf_mb": 0.52,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-a4.pdf",
+      "pages": 11,
+      "pdf_mb": 0.53,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-bingo/christmas-bingo-us-letter.pdf",
+      "pages": 18,
+      "pdf_mb": 0.84,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-bingo/christmas-bingo-a4.pdf",
+      "pages": 18,
+      "pdf_mb": 0.85,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/white-elephant-kit/white-elephant-kit-us-letter.pdf",
+      "pages": 8,
+      "pdf_mb": 0.49,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/white-elephant-kit/white-elephant-kit-a4.pdf",
+      "pages": 8,
+      "pdf_mb": 0.48,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/secret-santa-kit/secret-santa-kit-us-letter.pdf",
+      "pages": 7,
+      "pdf_mb": 0.38,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/secret-santa-kit/secret-santa-kit-a4.pdf",
+      "pages": 7,
+      "pdf_mb": 0.38,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/letter-to-santa-kit/letter-to-santa-kit-us-letter.pdf",
+      "pages": 7,
+      "pdf_mb": 0.39,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/letter-to-santa-kit/letter-to-santa-kit-a4.pdf",
+      "pages": 7,
+      "pdf_mb": 0.39,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-left-right-game/christmas-left-right-game-us-letter.pdf",
+      "pages": 5,
+      "pdf_mb": 0.26,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-left-right-game/christmas-left-right-game-a4.pdf",
+      "pages": 5,
+      "pdf_mb": 0.26,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-charades/christmas-charades-us-letter.pdf",
+      "pages": 11,
+      "pdf_mb": 0.52,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-charades/christmas-charades-a4.pdf",
+      "pages": 11,
+      "pdf_mb": 0.49,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-trivia/thanksgiving-trivia-us-letter.pdf",
+      "pages": 9,
+      "pdf_mb": 0.48,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-trivia/thanksgiving-trivia-a4.pdf",
+      "pages": 9,
+      "pdf_mb": 0.48,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-gift-certificates/christmas-gift-certificates-us-letter.pdf",
+      "pages": 9,
+      "pdf_mb": 0.38,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-gift-certificates/christmas-gift-certificates-a4.pdf",
+      "pages": 9,
+      "pdf_mb": 0.37,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-who-at-this-table/thanksgiving-who-at-this-table-us-letter.pdf",
+      "pages": 9,
+      "pdf_mb": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-who-at-this-table/thanksgiving-who-at-this-table-a4.pdf",
+      "pages": 9,
+      "pdf_mb": 0.44,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-kids-table/thanksgiving-kids-table-us-letter.pdf",
+      "pages": 9,
+      "pdf_mb": 0.46,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-kids-table/thanksgiving-kids-table-a4.pdf",
+      "pages": 9,
+      "pdf_mb": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/new-years-eve-games/new-years-eve-games-us-letter.pdf",
+      "pages": 9,
+      "pdf_mb": 0.52,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/new-years-eve-games/new-years-eve-games-a4.pdf",
+      "pages": 9,
+      "pdf_mb": 0.52,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-games-bundle/thanksgiving-games-bundle-us-letter.pdf",
+      "pages": 32,
+      "pdf_mb": 1.36,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/thanksgiving-games-bundle/thanksgiving-games-bundle-a4.pdf",
+      "pages": 32,
+      "pdf_mb": 1.34,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-games-bundle/christmas-games-bundle-us-letter.pdf",
+      "pages": 61,
+      "pdf_mb": 2.42,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-games-bundle/christmas-games-bundle-a4.pdf",
+      "pages": 61,
+      "pdf_mb": 2.39,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "passed": true
+}

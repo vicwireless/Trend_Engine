@@ -2,9 +2,11 @@ name: metrics
 
 # Daily READ-ONLY Etsy metrics (playbook SP-08 'measure'). Reads the Etsy Open API with the read
 # token, writes data/metrics/<date>.csv and reports/weekly/<monday>-metrics.md, and keeps ONE rolling
-# data-only PR ("metrics: week of ..."). Autonomy mode (2026-11-15, docs/autonomy.md): the job merges
-# that PR itself when the test check is green, so snapshots reach main daily. (From 7 to 15 Nov the
-# job ran every day but its snapshots sat in an unmerged PR, so main looked frozen at 6 Nov.)
+# data-only PR ("metrics: week of ..."). Autonomy mode (2026-11-15, docs/autonomy.md): with an owner
+# token that can push and open PRs the job merges that PR itself; without one it only pushes the
+# branch and an engine session opens and merges the PR (.github/scripts/data_pr.sh explains why).
+# (From 7 to 15 Nov the job ran every day but its snapshots sat in an unmerged PR, so main looked
+# frozen at 6 Nov.)
 # No marketplace writes: no write tokens are passed in, and src/metrics/collect.py refuses any
 # HTTP method but GET (CLAUDE.md rule 1). Repo writes go to the metrics/rolling branch only; main
 # changes only when the owner merges the PR.
@@ -20,7 +22,6 @@ concurrency:
 permissions:
   contents: write        # push the metrics/rolling branch (main stays protected)
   pull-requests: write   # open/update the rolling metrics PR
-  actions: write         # dispatch ci.yml on the branch so the required 'test' check runs
 
 env:
   BRANCH: metrics/rolling
@@ -30,20 +31,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Merge a rolling PR left over from an earlier run (autonomy mode)
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          n=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --head "$BRANCH" --json number --jq '.[0].number // empty')
-          if [ -n "$n" ]; then
-            gh pr merge "$n" --repo "$GITHUB_REPOSITORY" --squash \
-              || echo "::warning::rolling metrics PR #$n could not be merged yet; its files are carried forward below"
-          fi
-
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+          persist-credentials: false   # pushes go through .github/scripts/data_pr.sh with an explicit token
 
       - uses: actions/setup-python@v5
         with:
@@ -55,7 +47,7 @@ jobs:
         # Union of main + any metrics files still waiting in the open PR, so daily deltas never lose
         # their baseline whether or not last week's PR was merged.
         run: |
-          if git fetch origin "$BRANCH" 2>/dev/null; then
+          if git fetch "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" "$BRANCH" 2>/dev/null; then
             for f in $(git diff --name-only --diff-filter=AM origin/main...FETCH_HEAD -- data/metrics data/spend/etsy_ledger.csv 'reports/weekly/*-metrics.md'); do
               mkdir -p "$(dirname "$f")"; git show "FETCH_HEAD:$f" > "$f"
             done
@@ -84,8 +76,10 @@ jobs:
           open=$(gh pr list --state open --search "ledger: in:title" --json number --jq 'length')
           python -m src.metrics.weekly --open-ledger-prs "$open" | tee /tmp/report_path
 
-      - name: Push branch and open or update the rolling PR
+      - name: Push the rolling branch and merge it if an owner token allows
         env:
+          ACTIONS_TOKEN: ${{ github.token }}
+          ENGINE_PAT: ${{ secrets.METRICS_SECRETS_PAT }}
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "trend-engine-metrics"
@@ -94,34 +88,11 @@ jobs:
           git add data/metrics data/spend/etsy_ledger.csv reports/weekly
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -q -m "metrics: $(date -u +%F)"
-          git push --force origin "$BRANCH"
           report=$(cat /tmp/report_path)
           week=$(basename "$report" -metrics.md)
-          { echo "Data-only PR from the daily read-only metrics job. Touches data/metrics, data/spend/etsy_ledger.csv and reports/weekly/*-metrics.md only. Merge weekly; the job keeps adding days until you do."; echo; cat "$report"; } > /tmp/body.md
+          { echo "Data-only PR from the daily read-only metrics job. Touches data/metrics, data/spend/etsy_ledger.csv and reports/weekly/*-metrics.md only."; echo; cat "$report"; } > /tmp/body.md
           head -c 60000 /tmp/body.md > /tmp/body_trim.md
-          n=$(gh pr list --state open --head "$BRANCH" --json number --jq '.[0].number // empty')
-          if [ -z "$n" ]; then
-            gh pr create --base main --head "$BRANCH" --title "metrics: week of $week" --body-file /tmp/body_trim.md
-          else
-            gh pr edit "$n" --title "metrics: week of $week" --body-file /tmp/body_trim.md
-          fi
-          # PRs and pushes made with GITHUB_TOKEN do not trigger pull_request workflows, so run the
-          # required 'test' check explicitly on the branch head.
-          gh workflow run ci.yml --ref "$BRANCH" || { echo "::warning::could not dispatch ci.yml"; exit 0; }
-          # Autonomy mode: wait for that check, then merge so main gets today's snapshot.
-          sha=$(git rev-parse HEAD)
-          state=pending
-          for i in $(seq 1 36); do
-            sleep 10
-            state=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs" \
-              --jq '[.check_runs[] | select(.name=="test")][0].conclusion // "pending"' || echo pending)
-            if [ "$state" != "pending" ] && [ "$state" != "null" ]; then break; fi
-          done
-          if [ "$state" = "success" ]; then
-            gh pr merge "$BRANCH" --squash || echo "::warning::metrics PR is green but could not be merged by the workflow; the next run or an engine session merges it"
-          else
-            echo "::warning::metrics PR test check is '$state'; left open"
-          fi
+          .github/scripts/data_pr.sh "$BRANCH" "metrics: week of $week" /tmp/body_trim.md
 
       - name: Save the rotated Etsy refresh token to the secret
         # Runs even if a later step failed: once Etsy has rotated the token, the old one stops working.
