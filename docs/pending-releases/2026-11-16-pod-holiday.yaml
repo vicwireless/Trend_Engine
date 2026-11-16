@@ -1,0 +1,69 @@
+# PENDING, NOT EXECUTABLE. Kept outside releases/ on purpose: git's 'releases/*.yaml' pattern also matches
+# subfolders, so anything under releases/ is treated as a real manifest by CI and the executor.
+# The engine completes it and moves it to releases/ once the blockers below are cleared. See docs/pod-holiday-2026.md.
+#
+# Why it is not ready to merge, stated plainly (2026-11-16):
+#   1. api.printify.com and printify.com are blocked from the engine's cloud session, and there is no
+#      PRINTIFY_READ_TOKEN / PRINTIFY_WRITE_TOKEN. So blueprint ids, print provider ids, variant ids, base
+#      costs, shipping and 2026 holiday cutoff dates could not be fetched. They are null here on purpose:
+#      CLAUDE.md rule 6 allows prices only from dated cost snapshots, and guessing ids would fail closed anyway.
+#   2. printify_create_product needs Printify image ids in print_areas. The executor has no image-upload op
+#      yet; it will be added (POST /v1/uploads/images.json) when a token exists to test it against.
+#   3. printify_publish needs partner_checked: true, i.e. the owner has connected the Etsy shop inside
+#      Printify and Printify appears as production partner on the listing.
+#   4. Phrase check: only generic greetings and the game name "Christmas Bingo" are used. The tag lines
+#      "warm wishes, hot cocoa" and "free space is for snacks" still need the trademark check in class 021 / 025.
+status: pending
+manifest_id: 2026-11-16-pod-holiday
+niche: seasonal-party-games
+needs:
+  - PRINTIFY_WRITE_TOKEN and PRINTIFY_SHOP_ID secrets (owner)
+  - Etsy shop connected inside Printify (owner)
+  - cost snapshot data/costs/<date>-printify-holiday.json fetched from the Printify catalog (engine, once reachable)
+  - provider holiday cutoff confirmed inside the processing window (engine, once reachable)
+products:
+  - design: assets/pod/masters/2026-11-16-holiday/mug-christmas-icons.png
+    product_type: 11 oz ceramic mug, full wrap
+    title: Christmas Icons Mug, Holiday Pattern Coffee Mug, Hot Cocoa Mug Gift, 11 oz
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null   # landed_cost / (1 - 0.095) + 0.45 + contribution, must clear the 30% POD floor
+  - design: assets/pod/masters/2026-11-16-holiday/mug-merry-christmas.png
+    product_type: 11 oz ceramic mug, front and back
+    title: Merry Christmas Mug, Hot Cocoa Mug, Holiday Coffee Mug Gift, 11 oz
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null
+  - design: assets/pod/masters/2026-11-16-holiday/ornament-tree-2026.png
+    product_type: round ceramic ornament
+    title: 2026 Christmas Tree Ornament, Dated Ceramic Keepsake Ornament, Holiday Gift
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null
+  - design: assets/pod/masters/2026-11-16-holiday/ornament-snowflake.png
+    product_type: round ceramic ornament
+    title: Merry Christmas 2026 Snowflake Ornament, Ceramic Keepsake, Stocking Stuffer
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null
+  - design: assets/pod/masters/2026-11-16-holiday/tee-christmas-bingo.png
+    product_type: unisex tee, front print
+    title: Christmas Bingo Shirt, Funny Holiday Party Tee, Family Game Night Shirt
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null
+  - design: assets/pod/masters/2026-11-16-holiday/tee-happy-new-year-2027.png
+    product_type: unisex tee, front print
+    title: Happy New Year 2027 Shirt, New Years Eve Party Tee, NYE Celebration Shirt
+    blueprint_id: null
+    print_provider_id: null
+    variants: null
+    target_price_usd: null
+description_must_include:
+  - Designed by the seller with AI-assisted tools (code-generated layout); see shop policies.
+  - Produced by a production partner; see partner disclosure.

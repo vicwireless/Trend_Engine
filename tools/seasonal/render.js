@@ -17,7 +17,7 @@ const fs = require('fs');
     if (j.pdf) {
       await page.pdf({ path: j.pdf, width: j.width, height: j.height, printBackground: true, margin: { top: 0, right: 0, bottom: 0, left: 0 } });
     } else if (j.image.endsWith('.png')) {
-      await page.screenshot({ path: j.image, type: 'png' });
+      await page.screenshot({ path: j.image, type: 'png', omitBackground: !!j.transparent });
     } else {
       await page.screenshot({ path: j.image, type: 'jpeg', quality: j.quality || 90 });
     }
