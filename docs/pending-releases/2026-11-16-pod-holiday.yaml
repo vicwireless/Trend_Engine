@@ -1,6 +1,6 @@
-# PENDING, NOT EXECUTABLE. Lives in releases/pending/ so neither CI's dry-run nor the executor picks it up
-# (both match releases/*.yaml only). The engine completes it and moves it to releases/ once the blockers
-# below are cleared. See docs/pod-holiday-2026.md.
+# PENDING, NOT EXECUTABLE. Kept outside releases/ on purpose: git's 'releases/*.yaml' pattern also matches
+# subfolders, so anything under releases/ is treated as a real manifest by CI and the executor.
+# The engine completes it and moves it to releases/ once the blockers below are cleared. See docs/pod-holiday-2026.md.
 #
 # Why it is not ready to merge, stated plainly (2026-11-16):
 #   1. api.printify.com and printify.com are blocked from the engine's cloud session, and there is no

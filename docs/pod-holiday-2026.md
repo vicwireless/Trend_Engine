@@ -2,7 +2,7 @@
 
 Six print-ready designs are in `assets/pod/masters/2026-11-16-holiday/` (transparent PNG, 300 ppi, sRGB,
 all pass `src/qa/print_qa.py`; results in `print-qa.json` there). The release itself is **not** ready to
-merge. `releases/pending/2026-11-16-pod-holiday.yaml` lists what is missing.
+merge. `docs/pending-releases/2026-11-16-pod-holiday.yaml` lists what is missing.
 
 | Design | Product | Pixels |
 |---|---|---|
