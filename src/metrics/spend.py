@@ -87,19 +87,35 @@ def ledger_rows(entries: Iterable[dict]) -> list[dict]:
     return rows
 
 
+LEDGER_WINDOW = dt.timedelta(days=30)   # Etsy refuses a min_created..max_created span over 31 days
+
+
 def fetch_ledger(http, shop_id: str, since: dt.date, until: dt.datetime | None = None) -> list[dict]:
+    """All ledger entries from `since` to `until`, read in windows of at most 30 days.
+
+    Etsy answers 400 when the window is longer than 31 days (first seen 2026-11-18, when the span
+    since shop opening passed that limit and the daily job failed)."""
     until = until or dt.datetime.now(dt.timezone.utc)
-    start = int(dt.datetime(since.year, since.month, since.day, tzinfo=dt.timezone.utc).timestamp())
-    entries, offset = [], 0
-    while True:
-        data = http.get_json(f"shops/{shop_id}/payment-account/ledger-entries",
-                             params={"min_created": start, "max_created": int(until.timestamp()),
-                                     "limit": 100, "offset": offset})
-        page = data.get("results", [])
-        entries += page
-        if len(page) < 100:
-            return entries
-        offset += 100
+    lo = dt.datetime(since.year, since.month, since.day, tzinfo=dt.timezone.utc)
+    entries: list[dict] = []
+    seen: set = set()
+    while lo < until:
+        hi = min(lo + LEDGER_WINDOW, until)
+        offset = 0
+        while True:
+            data = http.get_json(f"shops/{shop_id}/payment-account/ledger-entries",
+                                 params={"min_created": int(lo.timestamp()), "max_created": int(hi.timestamp()),
+                                         "limit": 100, "offset": offset})
+            page = data.get("results", [])
+            for e in page:
+                if e.get("entry_id") not in seen:   # window edges are inclusive on both sides
+                    seen.add(e.get("entry_id"))
+                    entries.append(e)
+            if len(page) < 100:
+                break
+            offset += 100
+        lo = hi
+    return entries
 
 
 def write_ledger(rows: list[dict], out_dir: Path = SPEND_DIR) -> Path:
