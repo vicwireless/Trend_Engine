@@ -53,7 +53,7 @@ def test_fetch_ledger_is_get_only_and_paginates(monkeypatch):
     monkeypatch.setenv("ETSY_SHARED_SECRET", "sec")
     http = EtsyRead("key", "tok", session=C.ReadOnlySession()).http
     url = f"{BASE_URL}/shops/77/payment-account/ledger-entries"
-    responses.get(url, json={"results": [dict(ENTRIES[0], entry_id=i) for i in range(100)]})
+    responses.get(url, json={"results": [dict(ENTRIES[0], entry_id=1000 + i) for i in range(100)]})
     responses.get(url, json={"results": ENTRIES[:2]})
     got = S.fetch_ledger(http, "77", dt.date(2026, 10, 15), dt.datetime(2026, 11, 1, tzinfo=dt.timezone.utc))
     assert len(got) == 102
@@ -131,3 +131,21 @@ def test_log_entry_appends_and_validates(tmp_path):
     tl.write_text("wrong,header\n")
     with pytest.raises(SystemExit):
         L.main(["time", "--minutes", "5", "--session", "x"], tl, man)
+
+
+@responses.activate
+def test_fetch_ledger_splits_spans_over_31_days_into_windows(monkeypatch):
+    """Etsy rejects a ledger window longer than 31 days (daily job failed on 2026-11-18)."""
+    from urllib.parse import parse_qs, urlparse
+    monkeypatch.setenv("ETSY_SHARED_SECRET", "sec")
+    http = EtsyRead("key", "tok", session=C.ReadOnlySession()).http
+    url = f"{BASE_URL}/shops/77/payment-account/ledger-entries"
+    responses.get(url, json={"results": [dict(ENTRIES[0], entry_id=1), dict(ENTRIES[0], entry_id=2)]})
+    responses.get(url, json={"results": [dict(ENTRIES[0], entry_id=2), dict(ENTRIES[0], entry_id=3)]})
+    got = S.fetch_ledger(http, "77", dt.date(2026, 10, 15), dt.datetime(2026, 11, 18, 16, tzinfo=dt.timezone.utc))
+    assert [e["entry_id"] for e in got] == [1, 2, 3]          # edge duplicate dropped
+    spans = []
+    for c in responses.calls:
+        q = parse_qs(urlparse(c.request.url).query)
+        spans.append(int(q["max_created"][0]) - int(q["min_created"][0]))
+    assert len(spans) == 2 and all(0 < s <= 31 * 86400 for s in spans)
