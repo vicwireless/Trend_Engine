@@ -30,11 +30,14 @@ def main(argv=None) -> int:
     ap.add_argument("--assets", required=True)
     ap.add_argument("--work", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--only", nargs="*")
     args = ap.parse_args(argv)
     work = Path(args.work) / "qa"
     work.mkdir(parents=True, exist_ok=True)
     report, failed = {"ppi": 300, "files": []}, 0
     for key, c in CATALOG.items():
+        if args.only and key not in args.only:
+            continue
         pal = P.PALETTES[c["palette"]]
         for size, (w_in, h_in) in PAPER.items():
             pdf = ROOT / args.assets / key / f"{key}-{size}.pdf"

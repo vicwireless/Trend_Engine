@@ -34,6 +34,11 @@ SINGLES = {
     "christmas-bingo": ("christmas", P.bingo),
     "christmas-charades": ("christmas", P.charades),
     "new-years-eve-games": ("nye", P.nye_games),
+    # 2026-11-24 add-ons
+    "christmas-word-games": ("christmas", P.christmas_word_games),
+    "christmas-gift-tags": ("christmas", P.gift_tags),
+    "christmas-table-games": ("christmas", P.christmas_table_games),
+    "new-years-eve-kids-pack": ("nye", P.nye_kids),
 }
 BUNDLES = {
     "thanksgiving-games-bundle": {

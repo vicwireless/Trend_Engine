@@ -1,0 +1,51 @@
+{
+  "as_of": "2026-11-24",
+  "kind": "channel_fees",
+  "source": "Re-check 2026-11-24. Etsy rates now confirmed first-hand from the shop's own payment ledger (data/spend/etsy_ledger.csv): the 2026-11-19 sale of listing 4603509689 at $4.99 was charged $0.32 transaction (6.5%), $0.40 payment processing (3% + $0.25) and $0.20 renewal, matching this snapshot exactly. etsy.com is still not reachable from the engine's cloud session. Offsite Ads rates are unchanged from the 2026-10-22 snapshot and have no ledger evidence (opted out). Payhip rates carried forward unchanged (channel not in use).",
+  "verified": true,
+  "verify_urls": [
+    "https://www.etsy.com/legal/fees/",
+    "https://help.etsy.com/hc/en-us/articles/360000338367-How-Etsy-s-Offsite-Ads-Work",
+    "https://www.etsy.com/seller-handbook/article/1503753198977",
+    "https://payhip.com/pricing",
+    "https://stripe.com/pricing"
+  ],
+  "channels": {
+    "etsy": {
+      "verified": true,
+      "listing_fee_usd": 0.2,
+      "transaction_fee_rate": 0.065,
+      "payment_processing_rate": 0.03,
+      "payment_processing_fixed_usd": 0.25,
+      "notes": "Transaction fee applies to price + shipping + gift wrap, not US sales tax. Processing applies to the total incl. tax and shipping."
+    },
+    "payhip": {
+      "verified": true,
+      "listing_fee_usd": 0.0,
+      "transaction_fee_rate": 0.05,
+      "payment_processing_rate": 0.029,
+      "payment_processing_fixed_usd": 0.3,
+      "notes": "5% is the Free-plan platform fee. 2.9% + $0.30 is Stripe US standard processing, confirmed by the owner on 2026-10-22. PayPal checkout uses PayPal's own rate, not modeled here; re-snapshot if PayPal is enabled."
+    }
+  },
+  "etsy_modifiers": {
+    "offsite_ads_rate_under_10k": 0.15,
+    "offsite_ads_rate_10k_plus": 0.12,
+    "offsite_ads_cap_per_order_usd": 100,
+    "offsite_ads_mandatory_threshold_trailing_365d_usd": 10000,
+    "share_and_save_refund_rate": 0.04,
+    "share_and_save_refund_rate_first_two_weeks": 0.065,
+    "etsy_plus_monthly_usd": 10
+  },
+  "one_time": {
+    "etsy_shop_setup_fee_usd": 29.0,
+    "notes": "Paid once at Etsy shop opening (owner-reported 2026-10-22). Counts toward Day 0 cash, not per-sale fees."
+  },
+  "verification_level": "own_ledger_first_party",
+  "verify_urls_secondary": [
+    "https://checkoutpage.com/blog/etsy-fees",
+    "https://printify.com/blog/how-much-does-etsy-take-per-sale/",
+    "https://www.listadum.com/blog/how-much-does-etsy-take",
+    "https://app.craftybase.com/blog/the-complete-guide-to-etsy-fees"
+  ]
+}

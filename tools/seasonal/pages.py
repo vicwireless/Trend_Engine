@@ -571,3 +571,135 @@ def bundle_cover(kicker, title, tagline, icons, games, label):
                 f'<div class="big">{"".join(icon(i) for i in icons)}</div>'
                 f'<div class="box"><h2>Games in this bundle</h2><ol class="steps">{"".join(f"<li>{e(g)}</li>" for g in games)}</ol></div>'
                 '<div style="flex:1"></div><div class="sub">Each game starts with its own how-to-play page. Print only the pages you need.</div>', label, "cover")
+
+
+# ---------------------------------------------------------------- 2026-11-24 add-ons
+def ws_solved(words: list[str], size: int, seed: int):
+    """Like word_search, but also returns the set of cells that belong to a word (for the answer key)."""
+    rng = random.Random(seed)
+    grid = [[""] * size for _ in range(size)]
+    used = set()
+    for w in sorted(words, key=len, reverse=True):
+        for _ in range(800):
+            dx, dy = rng.choice([(1, 0), (0, 1), (1, 1)])
+            x, y = rng.randrange(size - dx * (len(w) - 1)), rng.randrange(size - dy * (len(w) - 1))
+            if all(grid[y + dy * i][x + dx * i] in ("", ch) for i, ch in enumerate(w)):
+                for i, ch in enumerate(w):
+                    grid[y + dy * i][x + dx * i] = ch
+                    used.add((x + dx * i, y + dy * i))
+                break
+        else:
+            raise RuntimeError(f"could not place {w}")
+    return [[c or rng.choice("ABCDEFGHIKLMNOPRSTUVWY") for c in row] for row in grid], used
+
+
+def ws_html(grid, used=None, cell="0.36in", fs="13pt") -> str:
+    cells = ""
+    for y, row in enumerate(grid):
+        for x, c in enumerate(row):
+            hit = used is not None and (x, y) in used
+            style = f"width:{cell};height:{cell};font-size:{fs};" + ("background:var(--c);border-radius:50%;" if hit else
+                                                                     ("opacity:0.45;" if used is not None else ""))
+            cells += f'<span style="{style}">{c}</span>'
+    return f'<div class="wsgrid" style="grid-template-columns:repeat({len(grid)},auto)">{cells}</div>'
+
+
+def wordlist(words) -> str:
+    return f'<div class="wordlist">{"".join(f"<div>{w}</div>" for w in sorted(words))}</div>'
+
+
+def christmas_word_games():
+    k, lab = "Christmas Word Games", "Christmas Word Games for Kids"
+    easy, eu = ws_solved(C.XMAS_WORDS_EASY, 11, 1224)
+    hard, hu = ws_solved(C.XMAS_WORDS_HARD, 15, 1225)
+    scr = "".join(f'<div class="field"><b style="letter-spacing:0.25em;min-width:1.9in">{scramble(w, 40 + i)}</b><span></span></div>'
+                  for i, w in enumerate(C.XMAS_SCRAMBLE))
+    az = "".join(f'<div class="field"><b style="color:var(--b);font-family:Fraunces;font-size:14pt;min-width:18pt">{ch}</b><span></span></div>'
+                 for ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    return [cover("Printable kids activities", "Christmas Word Games", "Puzzles for the class party or the car ride", ["tree", "snowman", "gift"],
+                  ["Print one set per child.", "Start with the easy word search, then try the big one.", "Unscramble the words and fill in the A to Z page.",
+                   "Check your work with the answer keys."],
+                  ["Easy word search (12 words)", "Big word search (18 words)", "Word scramble (12 words)", "Christmas A to Z",
+                   "Answer keys for all three puzzles", "Letter and A4 sizes"], lab),
+            page(head(k, "Christmas Word Search", "Easy: words go across, down and diagonally.", ["tree", "star", "bell"])
+                 + ws_html(easy, cell="0.5in", fs="18pt") + wordlist(C.XMAS_WORDS_EASY), lab),
+            page(head(k, "Big Christmas Word Search", "Find all 18 words.", ["snowflake", "wreath", "candle"])
+                 + ws_html(hard, cell="0.38in", fs="13.5pt") + wordlist(C.XMAS_WORDS_HARD), lab),
+            page(head(k, "Christmas Word Scramble", "Unscramble each Christmas word.", ["gift", "stocking", "cookie"]) + f'<div class="form">{scr}</div>', lab),
+            page(head(k, "Christmas A to Z", "Write something Christmassy that starts with each letter.")
+                 + f'<div class="form" style="grid-template-columns:1fr 1fr;column-gap:18pt">{az}</div>', lab),
+            page(head(k, "Answer Key: Easy Word Search") + ws_html(easy, eu, cell="0.5in", fs="18pt"), lab),
+            page(head(k, "Answer Key: Big Word Search") + ws_html(hard, hu, cell="0.38in", fs="13.5pt"), lab),
+            page(head(k, "Answer Key: Word Scramble") + '<div class="answers">'
+                 + "".join(f"<p><b>{i}.</b> {scramble(w, 39 + i)} = {w}</p>" for i, w in enumerate(C.XMAS_SCRAMBLE, 1)) + "</div>", lab)]
+
+
+def gift_tags():
+    k, lab = "Christmas Gift Tags", "Printable Christmas Gift Tags"
+    sets = [["tree", "star", "gift", "bell", "candy cane", "snowflake", "stocking", "mitten", "ornament", "wreath", "holly", "snowman"],
+            ["gingerbread", "santa hat", "cookie", "cocoa", "sled", "bow", "reindeer", "pinecone", "candle", "house", "heart", "snow globe"]]
+    greet = ["Merry Christmas", "Happy Holidays", "Just for you", "With love", "Open me first", "Do not open until Dec 25"]
+
+    def tags(icons, texts, cols=3, big=False):
+        out = ""
+        for i, ic in enumerate(icons):
+            out += (f'<div class="card" style="padding:6pt 10pt"><div class="ci" style="font-size:{46 if big else 34}pt">{icon(ic)}</div>'
+                    f'<div class="txt small" style="color:var(--a);font-size:{17 if big else 13}pt">{e(texts[i % len(texts)])}</div>'
+                    '<div class="field" style="width:86%;margin-top:6pt">To<span></span></div><div class="field" style="width:86%">From<span></span></div></div>')
+        return f'<div class="cards" style="grid-template-columns:repeat({cols},1fr)">{out}</div>'
+
+    return [cover("Printable gift wrap helper", "Christmas Gift Tags", "Print, cut, tie on", ["gift", "bow", "star"],
+                  ["Print on cardstock, or on sticker paper for stick-on labels.", "Cut along the dashed lines.",
+                   "Punch a hole and tie on with ribbon or string, or tape flat.", "Write the names. Done!"],
+                  ["48 small tags in 24 designs", "12 large tags", "8 blank write-your-own tags", "Letter and A4 sizes"], lab),
+            page(head(k, "Gift Tags") + '<div class="cutnote">Cut along the dashed lines.</div>' + tags(sets[0], greet[:1]), lab),
+            page(head(k, "Gift Tags") + '<div class="cutnote">Cut along the dashed lines.</div>' + tags(sets[1], greet[:1]), lab),
+            page(head(k, "Gift Tags") + '<div class="cutnote">Cut along the dashed lines.</div>' + tags(sets[0], greet[1:4]), lab),
+            page(head(k, "Gift Tags") + '<div class="cutnote">Cut along the dashed lines.</div>' + tags(sets[1], greet[1:4]), lab),
+            page(head(k, "Large Gift Tags") + '<div class="cutnote">For big boxes and gift bags.</div>' + tags(sets[0][:6], greet, cols=2, big=True), lab),
+            page(head(k, "Large Gift Tags") + '<div class="cutnote">For big boxes and gift bags.</div>' + tags(sets[1][:6], greet[::-1], cols=2, big=True), lab),
+            page(head(k, "Write Your Own") + '<div class="cutnote">Blank tags for your own message.</div>'
+                 + '<div class="cards">' + "".join(f'<div class="card"><div class="ci">{icon(ic)}</div>{lines(2)}'
+                                                     '<div class="field" style="width:86%;margin-top:6pt">To<span></span></div><div class="field" style="width:86%">From<span></span></div></div>'
+                                                     for ic in ["star", "tree", "gift", "bell", "holly", "bow", "snowflake", "heart"]) + "</div>", lab)]
+
+
+def christmas_table_games():
+    k, lab = "Christmas Table Games", "Christmas Dinner Table Games"
+    awards = "".join(f'<div class="field" style="font-size:12pt">{e(a)}<span></span></div>' for a in C.XMAS_AWARDS)
+    return [cover("Printable party games", "Christmas Table Games", "Three easy games for the dinner table", ["candle", "holly", "cocoa"],
+                  ["Put a This or That sheet and a pen at every place setting.", "Stack the conversation cards in the middle and take turns drawing.",
+                   "After dessert, everyone fills in an awards ballot in secret.", "Count the votes and announce the winners!"],
+                  ["This or That, Christmas edition (20 pairs)", "24 conversation cards", "Family awards ballot (12 awards)", "Tally sheet", "Letter and A4 sizes"], lab),
+            pairs_page(k, "This or That", "Circle one in each row, then compare with the table.", C.XMAS_THIS_OR_THAT, lab, ["tree", "gift", "cocoa"]),
+            *card_pages(k, "Conversation Cards", C.XMAS_TABLE_TALK, lab, lab="Take turns answering", icons=["candle", "holly", "star", "bell"], small=True),
+            page(head(k, "Family Awards Ballot", "Write one name on each line. No voting for yourself!", ["star", "bow", "star"])
+                 + '<div class="names"><span>Voter (optional):</span></div>' + f'<div class="form">{awards}</div>', lab),
+            page(head(k, "Awards Tally", "Count the ballots and write in each winner.")
+                 + '<div class="form">' + "".join(f'<div class="field" style="font-size:12pt">{e(a)}<span></span>Votes<span style="flex:0.3"></span></div>' for a in C.XMAS_AWARDS) + "</div>", lab)]
+
+
+def nye_kids():
+    k, lab = "New Year's Eve for Kids", "New Years Eve Kids Countdown Pack"
+    ic = ["balloon", "party hat", "clock", "confetti", "firework"]
+    grid, used = ws_solved(C.NYE_KIDS_WORDS, 13, 2027)
+    bags = "".join(f'<div class="card"><div class="ci">{icon(ic[i % 5])}</div><div class="lab">{e(t)}</div>'
+                   '<div class="field" style="width:80%;font-size:10pt">Open at<span></span>o\'clock</div>'
+                   f'<div class="txt small" style="margin-top:6pt">{e(a)}</div></div>' for i, (t, a) in enumerate(C.NYE_KIDS_HOURS))
+    blank = "".join(f'<div class="card"><div class="ci">{icon(ic[i % 5])}</div><div class="lab">Bag</div>'
+                    f'<div class="field" style="width:80%;font-size:10pt">Open at<span></span>o\'clock</div>{lines(2)}</div>' for i in range(8))
+    review = "".join(f'<div class="field" style="height:44pt">{e(p)}<span></span></div>' for p in C.NYE_KIDS_REVIEW)
+    goals = "".join(f'<div class="field" style="height:50pt">{e(p)}<span></span></div>' for p in C.NYE_KIDS_GOALS)
+    return [cover("Printable kids party pack", "New Year's Eve for Kids", "A countdown party, one bag at a time", ["balloon", "party hat", "clock"],
+                  ["Cut out the countdown tags and tape one to each paper bag or envelope.", "Write a time on every tag. Early bedtime? Count down to noon or 8 pm instead.",
+                   "Tuck in what the activity needs: paper for hats, a balloon, a snack.", "Open one bag each hour and finish with the big countdown!"],
+                  ["8 countdown bag tags with activities", "8 blank tags for your own ideas", "My Year in Review page", "Wishes for next year page",
+                   "Pick One game", "Word search with answer key", "Letter and A4 sizes"], lab),
+            page(head(k, "Countdown Bag Tags") + f'<div class="cutnote">Cut apart and tape one to each bag.</div><div class="cards">{bags}</div>', lab),
+            page(head(k, "Make Your Own Tags") + f'<div class="cutnote">Write your own activities.</div><div class="cards">{blank}</div>', lab),
+            page(head(k, "My Year in Review", "", ic[:3]) + '<div class="names"><span>Name:</span><span>Age:</span></div>' + f'<div class="form">{review}</div>', lab),
+            page(head(k, "My Wishes for Next Year", "", ["firework", "clock", "firework"]) + '<div class="names"><span>Name:</span></div>' + f'<div class="form">{goals}</div>', lab),
+            pairs_page(k, "Pick One!", "Circle the one you would pick in each row.", C.NYE_KIDS_PICK, lab, ic[:3]),
+            page(head(k, "New Year Word Search", "Words go across, down and diagonally.", ["balloon", "confetti", "party hat"])
+                 + ws_html(grid, cell="0.44in", fs="16pt") + wordlist(C.NYE_KIDS_WORDS), lab),
+            page(head(k, "Answer Key: Word Search") + ws_html(grid, used, cell="0.44in", fs="16pt"), lab)]

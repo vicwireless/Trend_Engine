@@ -1,0 +1,62 @@
+{
+  "ppi": 300,
+  "files": [
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-word-games/christmas-word-games-us-letter.pdf",
+      "pages": 8,
+      "pdf_mb": 0.51,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-word-games/christmas-word-games-a4.pdf",
+      "pages": 8,
+      "pdf_mb": 0.51,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-gift-tags/christmas-gift-tags-us-letter.pdf",
+      "pages": 8,
+      "pdf_mb": 0.53,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-gift-tags/christmas-gift-tags-a4.pdf",
+      "pages": 8,
+      "pdf_mb": 0.53,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-table-games/christmas-table-games-us-letter.pdf",
+      "pages": 7,
+      "pdf_mb": 0.42,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/christmas-table-games/christmas-table-games-a4.pdf",
+      "pages": 7,
+      "pdf_mb": 0.41,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/new-years-eve-kids-pack-us-letter.pdf",
+      "pages": 8,
+      "pdf_mb": 0.56,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "file": "assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/new-years-eve-kids-pack-a4.pdf",
+      "pages": 8,
+      "pdf_mb": 0.55,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "passed": true
+}

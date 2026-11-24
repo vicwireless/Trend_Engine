@@ -6,6 +6,7 @@ No brand, show, film, character or toy names (CLAUDE.md rule 3; see data/ip/2026
 """
 DISCLOSURE = "Designed by the seller with AI-assisted tools (code-generated layout); see shop policies."
 NICHE = "seasonal-party-games"
+ADDONS_2026_11_24 = ["christmas-word-games", "christmas-gift-tags", "christmas-table-games", "new-years-eve-kids-pack"]
 
 # key: listing_id (the planner listing it replaces), price, title, tags, hero (image headline), sub, intro,
 #      gets (WHAT YOU GET bullets), show (1-based page numbers: 3 for the hero fan, 2 for the close-up), board
@@ -80,16 +81,6 @@ CATALOG = {
         intro="Seventy-two holiday things to act out, sorted into easy, medium and tricky so kids and grown-ups can play in the same game.",
         gets=["72 charades cards (8 per page)", "3 levels: easy, medium, tricky", "Score sheet for two teams", "11 pages in each size"],
         show=[1, 2, 6], close=[2, 8]),
-    "thanksgiving-trivia": dict(
-        listing_id=4601807886, price=3.99, palette="thanksgiving", board="Thanksgiving Party Games",
-        title="Thanksgiving Trivia Game Printable, 30 Questions with Answers, Dinner Party Game, Family",
-        tags=["thanksgiving trivia", "thanksgiving game", "friends dinner game", "thanksgiving quiz", "turkey day game",
-              "family dinner game", "printable trivia", "thanksgiving party", "trivia with answers", "fall party game",
-              "office thanksgiving", "classroom game", "instant download"],
-        hero="Thanksgiving Trivia", sub="30 questions + answer key",
-        intro="Thirty Thanksgiving trivia questions on history, turkeys and the food on the table. Print it Thursday morning and play between dinner and pie, with family or friends.",
-        gets=["3 question sheets (30 questions, 10 per sheet)", "Answer key", "The same 30 questions as cut-apart cards", "9 pages in each size"],
-        show=[1, 2, 6], close=[2, 5]),
     "christmas-gift-certificates": dict(
         listing_id=4601035546, price=4.99, palette="christmas", board="Christmas Gift Ideas",
         title="Christmas Gift Certificate Printable, Fill In Gift Voucher, Last Minute Gift, Coupon Book",
@@ -100,26 +91,6 @@ CATALOG = {
         intro="The last-minute gift that doesn't look last minute. Fill in a dinner out, a weekend away, lessons or a favor, cut it out and tuck it in a card.",
         gets=["18 fill-in gift certificates in 6 styles (3 per page)", "12 ready-made 'good for' coupons", "12 blank coupons", "9 pages in each size"],
         show=[1, 2, 8], close=[2, 4]),
-    "thanksgiving-who-at-this-table": dict(
-        listing_id=4601751471, price=3.99, palette="thanksgiving", board="Thanksgiving Party Games",
-        title="Thanksgiving Party Game Printable, Who at This Table Cards, Dinner Icebreaker for Adults, 48 Cards",
-        tags=["thanksgiving game", "thanksgiving party", "adult party game", "thanksgiving cards", "icebreaker game",
-              "dinner party game", "friends dinner game", "fall party game", "printable card game", "table game adults",
-              "holiday icebreaker", "turkey day game", "instant download"],
-        hero="Who at This Table?", sub="Thanksgiving dinner game, 48 cards",
-        intro="Who at this table would bring a store-bought pie and say it's homemade? Forty-eight friendly, family-safe prompts that get everyone pointing and laughing, whether the table is family or friends.",
-        gets=["48 prompt cards (8 per page)", "8 blank cards for your own inside jokes", "Score sheet", "9 pages in each size"],
-        show=[1, 2, 3], close=[2, 4]),
-    "thanksgiving-kids-table": dict(
-        listing_id=4601756001, price=4.99, palette="thanksgiving", board="Thanksgiving Party Games",
-        title="Thanksgiving Kids Table Activities Printable, Word Search, Placemat, Pick One Cards, Games",
-        tags=["thanksgiving kids", "kids table activity", "kids placemat", "word search kids", "kids thanksgiving",
-              "kids table games", "thanksgiving games", "activity sheets", "thankful activity", "classroom activity",
-              "fall kids printable", "turkey day kids", "instant download"],
-        hero="Kids Table Activities", sub="Thanksgiving puzzles, placemat, games",
-        intro="Keep the kids' table busy while the turkey rests: a word search, a scramble, drawing prompts, a placemat and silly Pick One cards.",
-        gets=["Word search (18 words)", "Word scramble with answer key", "Thankful A to Z", "Draw-it page", "Placemat with tic-tac-toe", "10 Pick One cards plus blanks", "9 pages in each size"],
-        show=[1, 2, 6], close=[2, 5]),
     "new-years-eve-games": dict(
         listing_id=4601781508, price=4.99, palette="nye", board="New Year's Eve Party",
         title="New Years Eve Games Printable, NYE Party Game Pack, Trivia, This or That, Family",
@@ -130,17 +101,48 @@ CATALOG = {
         intro="Five easy games to fill the hours before midnight: trivia, a whose-resolution guessing game, year-in-review cards, This or That and a predictions time capsule to open next year.",
         gets=["New Year trivia (20 questions) with answer key", "Whose Resolution? slips", "16 year-in-review conversation cards", "This or That sheet", "Predictions time capsule page", "9 pages in each size"],
         show=[1, 2, 6], close=[5, 8]),
-    "thanksgiving-games-bundle": dict(
-        listing_id=4601781681, price=11.99, palette="thanksgiving", board="Thanksgiving Party Games", bundle=True,
-        title="Thanksgiving Games Bundle Printable, Dinner Party Games, Trivia, Kids Activities, 5 Games",
-        tags=["thanksgiving games", "friends dinner games", "thanksgiving bundle", "party game bundle", "thanksgiving trivia",
-              "kids table activity", "adult party game", "family dinner games", "this or that game", "conversation cards",
-              "turkey day games", "fall party games", "instant download"],
-        hero="Thanksgiving Games Bundle", sub="5 games for the whole table",
-        intro="Five Thanksgiving games in one download, with something for the grown-ups, something for the kids' table and two bonus games you can only get in the bundle.",
-        gets=["Thanksgiving Trivia: 30 questions, answer key and cards", "Who at This Table? dinner party game: 48 cards", "Thanksgiving Kids Table activity pack",
-              "Bundle bonus: This or That (20 pairs)", "Bundle bonus: 24 conversation cards", "32 pages in each size"],
-        show=[1, 3, 12], close=[29, 30]),
+    # ---- 2026-11-24 add-ons. They take the four listings the dropped Thanksgiving products would have used.
+    "christmas-word-games": dict(
+        listing_id=4601807886, price=3.99, palette="christmas", board="Christmas for Kids",
+        title="Christmas Word Search Printable, Kids Word Games, Word Scramble, Classroom Party Activity Sheets",
+        tags=["xmas word search", "kids christmas game", "word scramble", "classroom activity", "christmas puzzles",
+              "kids activity sheets", "christmas worksheet", "holiday word search", "school party game", "road trip activity",
+              "christmas printable", "puzzles with answers", "instant download"],
+        hero="Christmas Word Games", sub="2 word searches, scramble, answers",
+        intro="Quiet holiday fun for the class party, the kids' table or a long car ride: an easy word search, a big one, a word scramble and an A to Z challenge, with answer keys.",
+        gets=["Easy word search (12 words)", "Big word search (18 words)", "Word scramble (12 words)", "Christmas A to Z page", "Answer keys for all three puzzles", "8 pages in each size"],
+        show=[1, 2, 3], close=[3, 7]),
+    "christmas-gift-tags": dict(
+        listing_id=4601751471, price=3.99, palette="christmas", board="Christmas Gift Ideas",
+        title="Christmas Gift Tags Printable, To From Labels, Holiday Present Tags, 60 Tags to Print",
+        tags=["christmas gift tags", "printable gift tags", "to from tags", "holiday gift labels", "present tags",
+              "gift wrap printable", "christmas labels", "diy gift tags", "sticker paper tags", "last minute wrap",
+              "christmas printable", "gift tag sheet", "instant download"],
+        hero="Christmas Gift Tags", sub="60 tags, print and cut",
+        intro="Out of gift tags on wrapping night? Print these at home on cardstock or sticker paper: 60 To/From tags in 24 hand-drawn-style holiday designs, plus blanks for your own message.",
+        gets=["48 small tags in 24 designs", "12 large tags for big boxes and gift bags", "8 blank write-your-own tags", "8 pages in each size"],
+        show=[1, 2, 6], close=[2, 6]),
+    "christmas-table-games": dict(
+        listing_id=4601756001, price=3.99, palette="christmas", board="Christmas Party Games",
+        title="Christmas Dinner Games Printable, This or That, Conversation Cards, Family Awards, Table Games",
+        tags=["xmas dinner game", "xmas table game", "this or that game", "conversation cards", "family christmas",
+              "holiday dinner party", "christmas icebreaker", "family awards", "place setting game", "christmas eve games",
+              "adult christmas game", "christmas party game", "instant download"],
+        hero="Christmas Table Games", sub="3 games for the dinner table",
+        intro="Three easy games that work while everyone is still sitting down: a This or That sheet for every place setting, conversation cards for the middle of the table, and a secret-ballot family awards vote for after dessert.",
+        gets=["This or That, Christmas edition (20 pairs)", "24 conversation cards", "Family awards ballot (12 awards)", "Awards tally sheet", "7 pages in each size"],
+        show=[1, 2, 3], close=[2, 6]),
+    "new-years-eve-kids-pack": dict(
+        listing_id=4601781681, price=4.99, palette="nye", board="New Year's Eve Party",
+        title="New Years Eve Kids Activities Printable, Countdown Bags Tags, Year in Review, NYE Party Games",
+        tags=["new years eve kids", "nye countdown bags", "kids new year party", "countdown bag tags", "year in review kids",
+              "nye kids activities", "new years printable", "noon year eve", "family new years", "kids time capsule",
+              "nye word search", "nye party kids", "instant download"],
+        hero="New Year's Eve for Kids", sub="Countdown bags + activities",
+        intro="Turn New Year's Eve into a countdown party for kids: tape a tag to each bag, open one every hour, and finish with noise makers. Works for a real midnight or an early countdown at noon or 8 pm.",
+        gets=["8 countdown bag tags with ready-made activities", "8 blank tags for your own ideas", "My Year in Review page", "My Wishes for Next Year page",
+              "Pick One game (10 pairs)", "Word search (16 words) with answer key", "8 pages in each size"],
+        show=[1, 2, 4], close=[2, 5]),
     "christmas-games-bundle": dict(
         listing_id=4601808366, price=14.99, palette="christmas", board="Christmas Party Games", bundle=True,
         title="Christmas Party Games Bundle Printable, 7 Family Games, Trivia, Bingo, Charades, Left Right Game",

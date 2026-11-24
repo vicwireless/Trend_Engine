@@ -288,3 +288,53 @@ GIFT_CERT_TYPES = ["A gift for you", "Good for one experience", "A day out toget
 COUPONS = ["Breakfast in bed", "One movie night, your pick", "A homemade dinner", "One chore, done for you", "A long hug, any time",
            "Coffee date, my treat", "A day with no dishes", "One game night", "A walk together", "Sleep in, I've got the morning",
            "Dessert of your choice", "One free 'yes'"]
+
+
+# ---------------------------------------------------------------- 2026-11-24 add-ons (Christmas and New Year)
+XMAS_WORDS_EASY = ["TREE", "STAR", "GIFT", "BELL", "SNOW", "SLED", "ELF", "COCOA", "CANDY", "HOLLY", "JOLLY", "MERRY"]
+XMAS_WORDS_HARD = ["REINDEER", "SNOWFLAKE", "STOCKING", "ORNAMENT", "MISTLETOE", "GINGERBREAD", "CHIMNEY", "WREATH",
+                   "CAROLS", "TINSEL", "SLEIGH", "PRESENTS", "FIREPLACE", "CANDLE", "MITTENS", "NUTCRACKER", "WORKSHOP",
+                   "EVERGREEN"]
+XMAS_SCRAMBLE = ["SANTA", "SLEIGH", "COOKIE", "WREATH", "CANDLE", "TINSEL", "MITTEN", "CAROLS", "RIBBON", "SNOWMAN",
+                 "PRESENT", "STOCKING"]
+XMAS_THIS_OR_THAT = [
+    ("Real tree", "Artificial tree"), ("White lights", "Colored lights"), ("Open one gift on Christmas Eve", "Wait for morning"),
+    ("Hot cocoa", "Eggnog"), ("Give gifts", "Get gifts"), ("Wrapping paper", "Gift bags"), ("Stay home", "Travel"),
+    ("Sugar cookies", "Gingerbread"), ("Snowy Christmas", "Sunny Christmas"), ("Matching pajamas", "Ugly sweaters"),
+    ("Shop early", "Shop last minute"), ("Big dinner", "Big brunch"), ("Star on top", "Angel on top"),
+    ("Board games", "Holiday movie"), ("Carols all December", "Carols only on the day"), ("Ham", "Turkey"),
+    ("Homemade gifts", "Store-bought gifts"), ("Stockings first", "Tree gifts first"), ("Tree up in November", "Tree up in December"),
+    ("Stay up late", "Up at dawn"),
+]
+XMAS_TABLE_TALK = [
+    "What is the best gift you ever gave someone?", "What is a holiday food you could eat all year?",
+    "What is your earliest Christmas memory?", "Which holiday tradition would you never give up?",
+    "What is a gift you still use years later?", "What is the funniest thing that ever happened at a family holiday?",
+    "If you could spend Christmas anywhere, where would it be?", "What is a tradition you'd like to start next year?",
+    "Who at this table gives the best gifts?", "What smell means the holidays to you?",
+    "What was your favorite toy when you were little?", "What is the best thing that happened to you this year?",
+    "What is one kind thing someone did for you this month?", "Which holiday chore do you secretly enjoy?",
+    "What would you put in a time capsule from this year?", "What is the best holiday meal you remember?",
+    "What is a gift that cost nothing and meant a lot?", "What are you most looking forward to next year?",
+    "What is something new you tried this year?", "What song gets stuck in your head every December?",
+    "What is the longest you have ever kept a gift a secret?", "Snowed in for a day: what do you do?",
+    "What made you laugh the hardest this year?", "Who would you like to thank tonight, and for what?",
+]
+XMAS_AWARDS = ["Best gift giver", "Loudest laugh", "First asleep after dinner", "Best cook", "Most festive outfit",
+               "Champion present shaker", "Best storyteller", "Biggest cookie fan", "Best helper in the kitchen",
+               "Most competitive at games", "Best hugs", "Most holiday spirit"]
+NYE_KIDS_HOURS = [
+    ("Bag 1", "Make party hats or crowns from paper and tape."), ("Bag 2", "Dance party! Three songs, everybody dances."),
+    ("Bag 3", "Snack time: build your own snack plate."), ("Bag 4", "Play a board game or card game together."),
+    ("Bag 5", "Fill in your Year in Review page."), ("Bag 6", "Balloon keep-up: don't let it touch the floor!"),
+    ("Bag 7", "Write your wishes for next year."), ("Bag 8", "Noise makers out. Count down from ten!"),
+]
+NYE_KIDS_WORDS = ["MIDNIGHT", "COUNTDOWN", "CONFETTI", "BALLOON", "PARTY", "CLOCK", "CHEER", "JANUARY", "WISH", "SPARKLE",
+                  "DANCE", "FAMILY", "FRIENDS", "GOALS", "YEAR", "HAPPY"]
+NYE_KIDS_REVIEW = ["My favorite thing I did this year", "Something new I learned", "My favorite book or show", "A food I tried for the first time",
+                   "The best day of the year", "Something I got better at", "A friend I played with a lot", "What made me laugh"]
+NYE_KIDS_GOALS = ["Something I want to learn", "A place I want to go", "A book I want to read", "A way I can help at home",
+                  "Something kind I can do", "A new food I will try"]
+NYE_KIDS_PICK = [("Stay up until midnight", "Go to bed and party at breakfast"), ("Confetti", "Balloons"), ("Party hat", "Crown"),
+                 ("Dance party", "Game night"), ("Pizza", "Tacos"), ("Sparkling juice", "Hot cocoa"), ("Loud horn", "Quiet sparkler"),
+                 ("Pajama party", "Fancy clothes"), ("Count down from 10", "Count down from 100"), ("Fireworks", "Glow sticks")]
