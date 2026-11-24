@@ -50,3 +50,5 @@ date,entry_id,ledger_type,category,amount_usd,reference_type,reference_id,source
 2026-11-21,30866009347,prolist,etsy_ads,0.41,prolist,,etsy_payment_ledger
 2026-11-21,30866009385,etsy_plus_credit,etsy_listing_fees,-0.41,etsy,,etsy_payment_ledger
 2026-11-21,31272640660,tier_2_subscription,etsy_plus,10.00,shop,68737954,etsy_payment_ledger
+2026-11-24,31315679656,prolist,etsy_ads,0.24,prolist,,etsy_payment_ledger
+2026-11-24,31315679694,etsy_plus_credit,etsy_listing_fees,-0.24,etsy,,etsy_payment_ledger
