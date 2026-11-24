@@ -17,6 +17,7 @@ from .catalog import CATALOG, NICHE, description
 from .listing import COLOR, IMAGES
 
 ASSETS = "assets/digital/2026-11-15-seasonal"
+COST_SNAPSHOT = "data/costs/2026-11-24-products.json"
 
 
 def payload(key: str) -> dict:
@@ -28,7 +29,7 @@ def payload(key: str) -> dict:
         item["file_sha256"] = file_sha256(ROOT / item["path"])
     return {"listing_id": c["listing_id"], "expect_state": "active", "title": c["title"], "description": description(key),
             "tags": c["tags"], "ai_assisted": True, "offer_type": "digital", "price_usd": c["price"],
-            "cost_snapshot": "data/costs/2026-11-15-products.json", "cost_key": "digital", "files": files, "images": images}
+            "cost_snapshot": COST_SNAPSHOT, "cost_key": "digital", "files": files, "images": images}
 
 
 def main(argv=None) -> int:

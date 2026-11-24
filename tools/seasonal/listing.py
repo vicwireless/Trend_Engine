@@ -188,6 +188,8 @@ def main(argv=None) -> int:
     ap.add_argument("--assets", required=True)
     ap.add_argument("--pins", required=True)
     ap.add_argument("--work", required=True)
+    ap.add_argument("--only", nargs="*", help="render just these products and merge their pins into the existing files")
+    ap.add_argument("--queue", default="data/marketing/pin_queue.csv")
     args = ap.parse_args(argv)
     work = Path(args.work)
     jobs, rows, md = [], [], ["# Pins for the 2026-11-15 seasonal release\n",
@@ -195,6 +197,8 @@ def main(argv=None) -> int:
                               "from `data/marketing/pin_queue.csv`.\n"]
     (ROOT / args.pins).mkdir(parents=True, exist_ok=True)
     for key, c in CATALOG.items():
+        if args.only and key not in args.only:
+            continue
         pv = previews(work, key)
         d = ROOT / args.assets / key / "images"
         d.mkdir(parents=True, exist_ok=True)
@@ -213,10 +217,23 @@ def main(argv=None) -> int:
             md.append(f"## {key} pin {v + 1}\n- Image: `{Path(rel).name}`\n- Board: {c['board']}\n- Title: {copy['title']}\n- Description: {copy['description']}\n"
                       f"- Alt text: {copy['alt_text']}\n- Destination: {link}\n")
     render(jobs, work)
-    (ROOT / args.pins / "pins.md").write_text("\n".join(md), encoding="utf-8")
-    q = ROOT / "data" / "marketing" / "pin_queue.csv"
+    fields = ["listing_id", "image_path", "image_raw_url", "title", "description", "alt_text", "link", "board"]
+    md_path, q = ROOT / args.pins / "pins.md", ROOT / args.queue
+    if args.only:   # merge: keep rows whose image still exists and is not being re-rendered
+        new_paths = {r["image_path"] for r in rows}
+        old = []
+        if q.exists():
+            with open(q, newline="", encoding="utf-8") as f:
+                old = [r for r in csv.DictReader(f) if r["image_path"] not in new_paths and (ROOT / r["image_path"]).is_file()]
+        rows = old + rows
+        md = ["# Pins for the 2026 seasonal releases\n",
+              "Two pins per listing, 1000x1500. Not posted by the engine; the desktop session schedules them through Postiz.\n"]
+        for r in rows:
+            md.append(f"## {Path(r['image_path']).stem}\n- Image: `{Path(r['image_path']).name}`\n- Board: {r['board']}\n- Title: {r['title']}\n"
+                      f"- Description: {r['description']}\n- Alt text: {r['alt_text']}\n- Destination: {r['link']}\n")
+    md_path.write_text("\n".join(md), encoding="utf-8")
     with open(q, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["listing_id", "image_path", "image_raw_url", "title", "description", "alt_text", "link", "board"])
+        w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(rows)
     print(f"{len(jobs)} images rendered; {len(rows)} pins queued in {q.relative_to(ROOT)}")
