@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-26",
+  "captured_at": "2026-11-26T17:39:49+00:00",
+  "source": "etsy_open_api",
+  "shop_id": 68737954,
+  "listing_active_count": 26,
+  "digital_listing_count": 26,
+  "transaction_sold_count": 2,
+  "shop_favorers": 0,
+  "review_count": 0,
+  "review_average": 0,
+  "is_vacation": false,
+  "active_rows": 26,
+  "active_with_disclosure_sentence": 26,
+  "receipts_counted": 2,
+  "receipts_excluded": 0,
+  "views_total": 20,
+  "favorites_total": 0,
+  "orders_total": 2,
+  "gross_item_revenue_usd_total": 13.98,
+  "baseline_date": "2026-11-25",
+  "api_remaining_today": 9992
+}

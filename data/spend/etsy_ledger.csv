@@ -52,3 +52,10 @@ date,entry_id,ledger_type,category,amount_usd,reference_type,reference_id,source
 2026-11-21,31272640660,tier_2_subscription,etsy_plus,10.00,shop,68737954,etsy_payment_ledger
 2026-11-24,31315679656,prolist,etsy_ads,0.24,prolist,,etsy_payment_ledger
 2026-11-24,31315679694,etsy_plus_credit,etsy_listing_fees,-0.24,etsy,,etsy_payment_ledger
+2026-11-26,30938531775,prolist,etsy_ads,0.66,prolist,,etsy_payment_ledger
+2026-11-26,30938531825,etsy_plus_credit,etsy_listing_fees,-0.66,etsy,,etsy_payment_ledger
+2026-11-26,30938835689,etsy_plus_credit,etsy_listing_fees,-0.20,etsy,,etsy_payment_ledger
+2026-11-26,30938836033,PAYMENT_PROCESSING_FEE,etsy_other,0.55,processing_fee,,etsy_payment_ledger
+2026-11-26,30938836037,vat_tax_ep,etsy_other,0.90,receipt,,etsy_payment_ledger
+2026-11-26,30938836057,transaction,etsy_sales_fees,0.58,transaction,,etsy_payment_ledger
+2026-11-26,31344584648,renew_sold_auto,etsy_other,0.20,listing,4601751471,etsy_payment_ledger
