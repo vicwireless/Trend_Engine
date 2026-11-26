@@ -3,12 +3,12 @@
 # CI is green. The owner's approval is required only to raise total committed monthly spend above
 # monthly_spend_commitment_cap_usd; the engine never raises that cap itself.
 
-monthly_spend_commitment_cap_usd: 100   # owner directive 2026-11-15. Enforced in src/executor/validate.py
+monthly_spend_commitment_cap_usd: 310   # was 100 (owner directive 2026-11-15); raised to $10 Etsy Plus + 30 x $10/day Ads per owner instructions 2026-11-26, verbatim: "Expand budget for holiday season, run ads on all listing for 30 days and revisit performance day 31" and "$10/day". Enforced in src/executor/validate.py
 
 owner_hours_cap_per_week: 15      # STARTUP PHASE (owner decision 2026-10-23: revenue speed over labor hours). Playbook value is 1.5; restore at the Day 21 gate review (about 13 Nov).
 max_new_listings_per_week: 60
 max_pod_candidates_per_week: 10
-etsy_ads_daily_cap_usd: 3
+etsy_ads_daily_cap_usd: 10   # was 3; raised 2026-11-26 for the holiday test (see cap note above). Review 2026-12-27 (day 31)
 price_floor_margin:
   digital: 0.60
   pod: 0.30        # before ads
@@ -48,7 +48,7 @@ price_change_cooldown_days: 28        # one change per SKU per 4 weeks
 
 # Marketing and sensing budgets (playbook SP-02, SP-04, SP-06, §4.3)
 pins_per_day_max: 8
-etsy_ads_max_listings: 10
+etsy_ads_max_listings: 50   # was 10; owner 2026-11-26: ads on all active listings (26 today) for 30 days
 etsy_ads_min_roas_14d: 3
 serpapi_max_queries_per_day: 33       # Starter plan, 1,000/month (owner approved 2026-10-24); was 8 on the free tier
 image_api_budget_usd_per_month: 15    # Lean stack line item
