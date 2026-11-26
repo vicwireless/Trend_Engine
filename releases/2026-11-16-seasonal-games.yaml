@@ -1,0 +1,1089 @@
+manifest_id: 2026-11-16-seasonal-games
+created_at: '2026-11-26T19:18:09Z'
+created_by: claude
+summary: 'Seasonal release: replace 13 new-year planner listings (0 orders each) in place with 12 Christmas and New Year printables
+  and 1 Christmas bundle. Thanksgiving products dropped on the owner''s instruction of 2026-11-24. Listing 4601751471 (2027
+  Weekly Planner) sold on 2026-11-26 and is left as it is. Op 0 (Christmas Trivia on listing 4601781885) is the verification
+  op: the executor reads it back and stops the whole run if it does not match.'
+owner_minutes_estimate: 0
+ops:
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601781885
+    expect_state: active
+    title: Christmas Trivia Game Printable, 40 Questions with Answers, Holiday Party Game, Family or Office
+    description: 'Forty Christmas trivia questions about traditions, food and holiday history around the world. Easy enough
+      for the family table, tricky enough for the office party.
+
+
+      WHAT YOU GET
+
+      • 4 question sheets (40 questions, 10 per sheet)
+
+      • Answer key
+
+      • The same 40 questions as cut-apart cards
+
+      • 11 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - christmas trivia
+    - christmas party game
+    - holiday trivia game
+    - printable xmas game
+    - office party game
+    - family xmas game
+    - christmas quiz
+    - trivia with answers
+    - holiday party games
+    - christmas games pdf
+    - adult christmas game
+    - classroom christmas
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-us-letter.pdf
+      name: christmas-trivia-us-letter.pdf
+      file_sha256: 317005ad41c665a49e365ed6d45d48966bcc977a62734c30f38b4e7ae342ff04
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/christmas-trivia-a4.pdf
+      name: christmas-trivia-a4.pdf
+      file_sha256: 09aa615b6534338ebee8741e2c888d6f12c85412d71bf89939ca55387a281661
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-01-hero.jpg
+      alt_text: Christmas Trivia printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 5e92d9ea5d7e7683edebe221aa1dff742301e9774f1437690b3a8c5c639e29ce
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Trivia printable: page previews and a checklist of contents'
+      file_sha256: 3131acf0a3d4895e974a031b0c8da7d328f5307ef637a35153a01ef124db8c3a
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Trivia printable
+      file_sha256: 78ab24dfda1f12f8893bb5299d0f99b03c509064b1cd89c38041bb34b71055cd
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-trivia/images/christmas-trivia-05-details.jpg
+      alt_text: 'Details for the Christmas Trivia printable: page count, two PDF sizes, instant download'
+      file_sha256: 5b6c34151d7963a7ec8cdeaac2197e542788489c5de0fd64567b334608a81834
+  payload_sha256: b76c44f41d14f6d207cd20c3b848c19b9a8218614455b138cd788e623d2cf08c
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601782191
+    expect_state: active
+    title: Christmas Bingo Printable, 30 Picture Cards, Kids Classroom Party Game, Family Holiday Bingo
+    description: 'Thirty different picture bingo cards with bright, hand-drawn-style holiday icons. No reading needed, so
+      it works for preschoolers, classrooms and grandparents alike.
+
+
+      WHAT YOU GET
+
+      • 30 unique bingo cards (2 per page)
+
+      • 32 picture calling cards
+
+      • How-to-play page
+
+      • 18 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - christmas bingo
+    - bingo cards print
+    - kids christmas game
+    - classroom party game
+    - holiday bingo
+    - christmas party game
+    - picture bingo
+    - preschool christmas
+    - family game night
+    - 30 bingo cards
+    - school holiday party
+    - xmas bingo printable
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/christmas-bingo-us-letter.pdf
+      name: christmas-bingo-us-letter.pdf
+      file_sha256: c846ee3238eb81e073121d6bfdb28b154d1b2cfeb3ce91fbf4b981f8eb1fd3dd
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/christmas-bingo-a4.pdf
+      name: christmas-bingo-a4.pdf
+      file_sha256: b6698c76395250eb91b204f2b668fe25ecd54500297d3bb8cd2457fbf8b65ed0
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/images/christmas-bingo-01-hero.jpg
+      alt_text: Christmas Bingo printable, cover and sample pages fanned out on a deep green background
+      file_sha256: cef53311d431982be91f47ce1bf8b81a6c3f1413390b6100eb0f339117b770bf
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/images/christmas-bingo-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Bingo printable: page previews and a checklist of contents'
+      file_sha256: 7c1e5b5b909643a4036015c0eb5437194ceb9d6255e1e9b0da9ae511577e6244
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/images/christmas-bingo-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Bingo printable
+      file_sha256: 2e22ed608b195e0dcc4d474b42462c91c5fb6c0c8913d305ed746c7ab4d76e42
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/images/christmas-bingo-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-bingo/images/christmas-bingo-05-details.jpg
+      alt_text: 'Details for the Christmas Bingo printable: page count, two PDF sizes, instant download'
+      file_sha256: 05b887a152cc73c50923bd947658b60bc1a2455d716399e37f8288189f88d3ef
+  payload_sha256: 3bed17db5bb9ce8ac2c6b3efe74134a172ae59bdbb67d5ddf34d100f2d1887ad
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807284
+    expect_state: active
+    title: White Elephant Gift Exchange Game Printable, Rules Sign, Numbers 1-40, Twist Cards, Party Kit
+    description: 'Everything you need to run a white elephant gift swap without arguing about the rules: a clear rules sign,
+      draw numbers, optional twist cards and a steal tracker.
+
+
+      WHAT YOU GET
+
+      • House rules sign
+
+      • Number slips 1 to 40
+
+      • 12 twist cards plus 4 blanks
+
+      • Invitation notes with price limit
+
+      • Steal tracker
+
+      • 8 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - white elephant game
+    - gift exchange game
+    - white elephant rules
+    - gift swap printable
+    - office party game
+    - christmas party game
+    - gift swap numbers
+    - holiday party kit
+    - dirty santa game
+    - gift steal game
+    - work christmas party
+    - adult party game
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/white-elephant-kit-us-letter.pdf
+      name: white-elephant-kit-us-letter.pdf
+      file_sha256: c94c07d7f9f6d0b1be5c7c2bc3945e55ba44aba5b0b6e8e69a156dd2ecc46586
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/white-elephant-kit-a4.pdf
+      name: white-elephant-kit-a4.pdf
+      file_sha256: 274e41fad9688f61b411fde1e226981317304da8f0b98abcd689272ad01bc0d9
+    images:
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/images/white-elephant-kit-01-hero.jpg
+      alt_text: White Elephant Kit printable, cover and sample pages fanned out on a deep green background
+      file_sha256: d80d460e5ca510b7d6620981e7f720dd18582b53c7ab738ac17cfb960bafde21
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/images/white-elephant-kit-02-whats-inside.jpg
+      alt_text: 'What you get with the White Elephant Kit printable: page previews and a checklist of contents'
+      file_sha256: 4c6ba7d429b4dcd441d485c1caf06b0264de65d227d8eda1c846181fef81e6f6
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/images/white-elephant-kit-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the White Elephant Kit printable
+      file_sha256: 6745db7206894d634cd25c11ecc3ed77c4bc012fe26e92a73fc6768001c1ee6d
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/images/white-elephant-kit-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/white-elephant-kit/images/white-elephant-kit-05-details.jpg
+      alt_text: 'Details for the White Elephant Kit printable: page count, two PDF sizes, instant download'
+      file_sha256: f6f7e263bd861895ea2d44ab0cfd2b3ee911c96e95d3ab761b4f9d8dd2434b51
+  payload_sha256: c2e9d4c99098a2487c1a30c95e1fc399afd1339eb66430924ba823cfc3ca3b73
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807452
+    expect_state: active
+    title: Secret Santa Questionnaire Printable Kit, Wish List Form, Name Draw Slips, Gift Tags, Office Party
+    description: 'Run your office, classroom or family Secret Santa from sign-up to the big reveal. The wish-list questionnaire
+      means nobody has to guess what to buy.
+
+
+      WHAT YOU GET
+
+      • Sign-up sheet with price limit and date
+
+      • Wish-list questionnaire (14 prompts)
+
+      • Name draw slips
+
+      • 8 gift tags
+
+      • Guess-the-giver reveal sheet
+
+      • How-it-works sign
+
+      • 7 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - secret santa
+    - secret santa form
+    - santa questionnaire
+    - gift exchange form
+    - office secret santa
+    - wish list printable
+    - secret santa tags
+    - name draw slips
+    - coworker gift swap
+    - christmas party kit
+    - teacher secret santa
+    - holiday gift swap
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/secret-santa-kit-us-letter.pdf
+      name: secret-santa-kit-us-letter.pdf
+      file_sha256: 3bbbf1f6237c2c5be7cee52a845900c023d7e14dc979960c3143c19ef689d97e
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/secret-santa-kit-a4.pdf
+      name: secret-santa-kit-a4.pdf
+      file_sha256: 3808a3e0c9d0f7a3a7250f73a481e5e6bfa17941f08fd2b0eb494a5d67dd1e71
+    images:
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/images/secret-santa-kit-01-hero.jpg
+      alt_text: Secret Santa Kit printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 7227c98a43d8c5efef0726fad169e45674979add6f6218002bfcd8e910aab9e1
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/images/secret-santa-kit-02-whats-inside.jpg
+      alt_text: 'What you get with the Secret Santa Kit printable: page previews and a checklist of contents'
+      file_sha256: 286cbd2ebe3e12c743f23c7fe8f6048a29f1e060c4aa5ce9dc3540e63e199b1e
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/images/secret-santa-kit-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Secret Santa Kit printable
+      file_sha256: cc9b99d747b3ab8bc298bc05408c0e7e8ee78bdf893e3e5489003be562c668f1
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/images/secret-santa-kit-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/secret-santa-kit/images/secret-santa-kit-05-details.jpg
+      alt_text: 'Details for the Secret Santa Kit printable: page count, two PDF sizes, instant download'
+      file_sha256: 5ab60cc76620751f9b9e94acda990eae2f62ce06fcb5fe351947a0784fb10cea
+  payload_sha256: 6f7ac10cf2fe1ae48974bfbea0a730ffa19e5c9b26c3a83a78bce568c25fc95f
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807590
+    expect_state: active
+    title: Letter to Santa Printable Kit, Fill In Letter, Reply from Santa, Nice List Certificate, Envelope
+    description: 'A sweet Christmas tradition in one download: your child writes to Santa, and you leave a reply letter and
+      a Nice List certificate for them to find.
+
+
+      WHAT YOU GET
+
+      • Fill-in letter to Santa
+
+      • Blank lined letter
+
+      • Christmas wish list
+
+      • Envelope panel to cut and fold
+
+      • Reply letter from Santa with space for a name and a P.S.
+
+      • Nice List certificate
+
+      • 7 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - letter to santa
+    - santa letter kit
+    - letter from santa
+    - nice list award
+    - kids santa letter
+    - dear santa printable
+    - santa reply letter
+    - christmas wish list
+    - santa envelope
+    - christmas eve box
+    - kids christmas craft
+    - north pole mail
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/letter-to-santa-kit-us-letter.pdf
+      name: letter-to-santa-kit-us-letter.pdf
+      file_sha256: fce21083eb719c20f9365a2890b5ba09ea0ae1d42003653dc9371573c0d99b2d
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/letter-to-santa-kit-a4.pdf
+      name: letter-to-santa-kit-a4.pdf
+      file_sha256: a22d51328a72b33ff597a3cc897393e05a35ed750a5029a9095d9b70cba4c7c3
+    images:
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/images/letter-to-santa-kit-01-hero.jpg
+      alt_text: Letter to Santa Kit printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 05b020293c609da5938b549b281811fb7fd71fb74e73146e32a696f86048a7e3
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/images/letter-to-santa-kit-02-whats-inside.jpg
+      alt_text: 'What you get with the Letter to Santa Kit printable: page previews and a checklist of contents'
+      file_sha256: 0a03d3387b15ce6262de026871f340ccefbf26219540c03a84846d028fbfdc6d
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/images/letter-to-santa-kit-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Letter to Santa Kit printable
+      file_sha256: a6a17e7794af2032b5269c217ab1738fa21c461ba2f54a78a38983c39abaf7e2
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/images/letter-to-santa-kit-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/letter-to-santa-kit/images/letter-to-santa-kit-05-details.jpg
+      alt_text: 'Details for the Letter to Santa Kit printable: page count, two PDF sizes, instant download'
+      file_sha256: d2d73d6110b83c3e4cbd0aca8d7ad670ac238f264b3c810967d9617770350196
+  payload_sha256: 960e1d31339fe054a6cdfb6cb6f38638b9bf3af9bb9622df7d9e7048d52d9e28
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807662
+    expect_state: active
+    title: Left Right Christmas Game Printable, Gift Exchange Story, Pass the Present Party Game, Family
+    description: 'Sit in a circle, hold a gift and listen. Every LEFT and RIGHT in this original story sends the presents
+      around the room, and nobody knows where they will land.
+
+
+      WHAT YOU GET
+
+      • Original family story on 2 pages (about 40 passes)
+
+      • Short story for little kids
+
+      • How-to-play sign
+
+      • 5 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - left right game
+    - christmas left right
+    - gift exchange game
+    - pass the gift game
+    - left right story
+    - christmas party game
+    - family xmas game
+    - office party game
+    - gift passing game
+    - holiday party games
+    - printable xmas game
+    - kids christmas game
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/christmas-left-right-game-us-letter.pdf
+      name: christmas-left-right-game-us-letter.pdf
+      file_sha256: 68e9cffe634843580cde76d5670b5468dfeced475c8d1332fe0af3d37904ce1d
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/christmas-left-right-game-a4.pdf
+      name: christmas-left-right-game-a4.pdf
+      file_sha256: c68dbb7fd3ebb21b0620939060b4f81c23ea974f7659da516cfffe4e67eea721
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/images/christmas-left-right-game-01-hero.jpg
+      alt_text: Left Right Game printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 140273b0c86da451d54c8188b43a853ebb21159eed543c776268ac9bc063f2ed
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/images/christmas-left-right-game-02-whats-inside.jpg
+      alt_text: 'What you get with the Left Right Game printable: page previews and a checklist of contents'
+      file_sha256: 557c0505dba57bdb3f262e7b13339f4140b1bf9b8ae1028b739a72da7e528bd5
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/images/christmas-left-right-game-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Left Right Game printable
+      file_sha256: bddd0bc6ced1761672fb48b80c55995329dd43db4a7385371cc60e8e096ee89c
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/images/christmas-left-right-game-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-left-right-game/images/christmas-left-right-game-05-details.jpg
+      alt_text: 'Details for the Left Right Game printable: page count, two PDF sizes, instant download'
+      file_sha256: 0425af618dac617cd9ebb62054533b27be488b6e8f28604d2cd3d2b20d8628fb
+  payload_sha256: 3091a3ea46f918be9ac88a93674c42654f17f73a1fb49a35f81ee1eb2632ea43
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807752
+    expect_state: active
+    title: Christmas Charades Game Printable, 72 Cards, Family Holiday Party Game, Kids and Adults
+    description: 'Seventy-two holiday things to act out, sorted into easy, medium and tricky so kids and grown-ups can play
+      in the same game.
+
+
+      WHAT YOU GET
+
+      • 72 charades cards (8 per page)
+
+      • 3 levels: easy, medium, tricky
+
+      • Score sheet for two teams
+
+      • 11 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - christmas charades
+    - charades cards
+    - christmas party game
+    - family game night
+    - holiday charades
+    - kids christmas game
+    - printable xmas game
+    - act it out game
+    - christmas eve games
+    - classroom party game
+    - holiday party games
+    - youth group game
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/christmas-charades-us-letter.pdf
+      name: christmas-charades-us-letter.pdf
+      file_sha256: 41e11dfbaffa8acc9d3c1679bd0cfccd04b92704f4fcaf200e804fa4f1c79549
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/christmas-charades-a4.pdf
+      name: christmas-charades-a4.pdf
+      file_sha256: a0b406583c0a43219ecb068ecf2a19dc2c17df3d8adffcd4e423e0a8fa5708e7
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/images/christmas-charades-01-hero.jpg
+      alt_text: Christmas Charades printable, cover and sample pages fanned out on a deep green background
+      file_sha256: c35fda2c3ef0cd76411733d0b4218a2eafd24c809f59a8584e759dad1402e53d
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/images/christmas-charades-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Charades printable: page previews and a checklist of contents'
+      file_sha256: 708061f3502d7678ba780831e5f16e8fa9157d55120caf1165ba8a62171738d0
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/images/christmas-charades-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Charades printable
+      file_sha256: 554f854c136e532a6c9bb939ca67399eeb4975ea415a8906c4046a897785766e
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/images/christmas-charades-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-charades/images/christmas-charades-05-details.jpg
+      alt_text: 'Details for the Christmas Charades printable: page count, two PDF sizes, instant download'
+      file_sha256: 827ae54dd22a748ebe66c2eebea25b96c70a095465f1a6d84e04c49d394d284c
+  payload_sha256: 653cf86731730381c47195644936b9b306ef62ab6f7c0b47f560b66e78ec0ffc
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601035546
+    expect_state: active
+    title: Christmas Gift Certificate Printable, Fill In Gift Voucher, Last Minute Gift, Coupon Book
+    description: 'The last-minute gift that doesn''t look last minute. Fill in a dinner out, a weekend away, lessons or a
+      favor, cut it out and tuck it in a card.
+
+
+      WHAT YOU GET
+
+      • 18 fill-in gift certificates in 6 styles (3 per page)
+
+      • 12 ready-made ''good for'' coupons
+
+      • 12 blank coupons
+
+      • 9 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - gift certificate
+    - christmas voucher
+    - printable gift card
+    - last minute gift
+    - coupon book print
+    - experience gift
+    - blank gift voucher
+    - christmas coupon
+    - gift certificate diy
+    - stocking stuffer
+    - gift for him
+    - gift for her
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/christmas-gift-certificates-us-letter.pdf
+      name: christmas-gift-certificates-us-letter.pdf
+      file_sha256: 21fe1c995c8e0bb307ca37b6b6283d3b09cd51892acd99eb21a505ee0f1e5fc4
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/christmas-gift-certificates-a4.pdf
+      name: christmas-gift-certificates-a4.pdf
+      file_sha256: b0748c47a481d462287d3cf69dd9b958393c59da4d229066c0d1600e2a714111
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/images/christmas-gift-certificates-01-hero.jpg
+      alt_text: Gift Certificates printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 5d7fe691de7e3b6076c75f2668b5e8fa585c54d2d456067a7df0debfa5e1e795
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/images/christmas-gift-certificates-02-whats-inside.jpg
+      alt_text: 'What you get with the Gift Certificates printable: page previews and a checklist of contents'
+      file_sha256: f94d081ff43c44bf3b24b2b280d6bf517d3cad06e608922ddf2b41fbe46f409f
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/images/christmas-gift-certificates-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Gift Certificates printable
+      file_sha256: 5379bb34fc8e7e620d08bd332281e77a94adf6b13f7c86b03784b950635e3ccc
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/images/christmas-gift-certificates-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-gift-certificates/images/christmas-gift-certificates-05-details.jpg
+      alt_text: 'Details for the Gift Certificates printable: page count, two PDF sizes, instant download'
+      file_sha256: 56d2dd25b98d4c6d84c11cb0aea62e85b6f61a146698c4c1546d2e4aec5ab5b3
+  payload_sha256: 2770650b4065e8708457a60fd166ea9b985a38bc210827c081204829106ed05b
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601781508
+    expect_state: active
+    title: New Years Eve Games Printable, NYE Party Game Pack, Trivia, This or That, Family
+    description: 'Five easy games to fill the hours before midnight: trivia, a whose-resolution guessing game, year-in-review
+      cards, This or That and a predictions time capsule to open next year.
+
+
+      WHAT YOU GET
+
+      • New Year trivia (20 questions) with answer key
+
+      • Whose Resolution? slips
+
+      • 16 year-in-review conversation cards
+
+      • This or That sheet
+
+      • Predictions time capsule page
+
+      • 9 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - new years eve games
+    - nye party games
+    - new years trivia
+    - new year party game
+    - nye printable
+    - family new years
+    - resolution game
+    - this or that game
+    - year in review
+    - new years eve party
+    - nye activities
+    - time capsule
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/new-years-eve-games-us-letter.pdf
+      name: new-years-eve-games-us-letter.pdf
+      file_sha256: 614b9188ce194bbcda755d19090b064867c6330201dfaf098f1c30c6a69e68b3
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/new-years-eve-games-a4.pdf
+      name: new-years-eve-games-a4.pdf
+      file_sha256: 152c65ec4d925f9c4cbfd2fe94863490983d8875904314b59480b793cebf7a99
+    images:
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/images/new-years-eve-games-01-hero.jpg
+      alt_text: New Year's Eve Games printable, cover and sample pages fanned out on a navy background
+      file_sha256: b3d1cbd66d06b9341441c734bb383d49a933d2728359528903ade09910a74192
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/images/new-years-eve-games-02-whats-inside.jpg
+      alt_text: 'What you get with the New Year''s Eve Games printable: page previews and a checklist of contents'
+      file_sha256: 55ba060127eead21499193a92b72d16bffdf72a03f95a8b72fadf8bfbbdb7bb2
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/images/new-years-eve-games-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the New Year's Eve Games printable
+      file_sha256: 3430f2c6b41f8c72e51e080389917f7258213b76c71f5c4ff2ec104671bfe971
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/images/new-years-eve-games-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: b42ec642107cf568b77eb10a03f0132aa275e33f56e0c5dd61ae52ee4f23ac5d
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-games/images/new-years-eve-games-05-details.jpg
+      alt_text: 'Details for the New Year''s Eve Games printable: page count, two PDF sizes, instant download'
+      file_sha256: 38e8d6459a2b318733dfe2580d87af83807a5378c986f7a84dc896e1f7468a6a
+  payload_sha256: b4be5369c970d0e395fbdc54f649d73602e17e091dd8ef43c309d9f1e482b227
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601807886
+    expect_state: active
+    title: Christmas Word Search Printable, Kids Word Games, Word Scramble, Classroom Party Activity Sheets
+    description: 'Quiet holiday fun for the class party, the kids'' table or a long car ride: an easy word search, a big one,
+      a word scramble and an A to Z challenge, with answer keys.
+
+
+      WHAT YOU GET
+
+      • Easy word search (12 words)
+
+      • Big word search (18 words)
+
+      • Word scramble (12 words)
+
+      • Christmas A to Z page
+
+      • Answer keys for all three puzzles
+
+      • 8 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - xmas word search
+    - kids christmas game
+    - word scramble
+    - classroom activity
+    - christmas puzzles
+    - kids activity sheets
+    - christmas worksheet
+    - holiday word search
+    - school party game
+    - road trip activity
+    - christmas printable
+    - puzzles with answers
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/christmas-word-games-us-letter.pdf
+      name: christmas-word-games-us-letter.pdf
+      file_sha256: 1f4ffc4a985b7642fea1b5eb02663f4bfcc2d65b2c440e914de590a39d979048
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/christmas-word-games-a4.pdf
+      name: christmas-word-games-a4.pdf
+      file_sha256: 99c0548f83c3788a4f20941f941dd8974cbf6ff01534de7f181b1b61cecedcd8
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/images/christmas-word-games-01-hero.jpg
+      alt_text: Christmas Word Games printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 304c2035735e357a2e9cd7253b93e02298bc1503bf22173ef802e84b6c183f7a
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/images/christmas-word-games-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Word Games printable: page previews and a checklist of contents'
+      file_sha256: 957957d20278dd6a986070b9ace822a1dd28e4a7c747978d475b162a21a3de32
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/images/christmas-word-games-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Word Games printable
+      file_sha256: 9c09371f43462a0c38db73c14ed3b69ac428e51d8b9a5b9eae3fc67b302924df
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/images/christmas-word-games-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-word-games/images/christmas-word-games-05-details.jpg
+      alt_text: 'Details for the Christmas Word Games printable: page count, two PDF sizes, instant download'
+      file_sha256: ebe21f34c6c18649b483024f7534259d3f8c9107ddbbf22e36b99b023f5af18f
+  payload_sha256: 5c5415848ed8b93462d3e16d2b25ce8e07bc7ac33142a8fe8bf5a1747ab1fa5d
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601756001
+    expect_state: active
+    title: Christmas Dinner Games Printable, This or That, Conversation Cards, Family Awards, Table Games
+    description: 'Three easy games that work while everyone is still sitting down: a This or That sheet for every place setting,
+      conversation cards for the middle of the table, and a secret-ballot family awards vote for after dessert.
+
+
+      WHAT YOU GET
+
+      • This or That, Christmas edition (20 pairs)
+
+      • 24 conversation cards
+
+      • Family awards ballot (12 awards)
+
+      • Awards tally sheet
+
+      • 7 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - xmas dinner game
+    - xmas table game
+    - this or that game
+    - conversation cards
+    - family christmas
+    - holiday dinner party
+    - christmas icebreaker
+    - family awards
+    - place setting game
+    - christmas eve games
+    - adult christmas game
+    - christmas party game
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 3.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/christmas-table-games-us-letter.pdf
+      name: christmas-table-games-us-letter.pdf
+      file_sha256: 85ae0ed0e8b469da02ad3f3f648e77ed6a75600895116baca345cbbb205af08c
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/christmas-table-games-a4.pdf
+      name: christmas-table-games-a4.pdf
+      file_sha256: b116f8cc1e712ef7167baa268f33782fdb3c7bc6fc7d2e05df868aa63f6a6316
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/images/christmas-table-games-01-hero.jpg
+      alt_text: Christmas Table Games printable, cover and sample pages fanned out on a deep green background
+      file_sha256: af742ff04b22e41c914e436d5ee3d27714c074fb039c1491353d8a0434416d82
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/images/christmas-table-games-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Table Games printable: page previews and a checklist of contents'
+      file_sha256: 1cc8f033e6760269a0035c753bb84aae5c057a4ee7e937c5f6fd3f21430e6023
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/images/christmas-table-games-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Table Games printable
+      file_sha256: b190913009a7e0ada09d2ecee5716716b8d48e32a75b6d7c733a801383bffac3
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/images/christmas-table-games-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-table-games/images/christmas-table-games-05-details.jpg
+      alt_text: 'Details for the Christmas Table Games printable: page count, two PDF sizes, instant download'
+      file_sha256: b563d461b81a0c3494927fe88a54e0aabde3035abd12cb2e93772b24fd986185
+  payload_sha256: 46653fd2aa302d56db0b36ac7eb87e7be31362bbcc6484f67d2a040cea8eaa48
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601781681
+    expect_state: active
+    title: New Years Eve Kids Activities Printable, Countdown Bags Tags, Year in Review, NYE Party Games
+    description: 'Turn New Year''s Eve into a countdown party for kids: tape a tag to each bag, open one every hour, and finish
+      with noise makers. Works for a real midnight or an early countdown at noon or 8 pm.
+
+
+      WHAT YOU GET
+
+      • 8 countdown bag tags with ready-made activities
+
+      • 8 blank tags for your own ideas
+
+      • My Year in Review page
+
+      • My Wishes for Next Year page
+
+      • Pick One game (10 pairs)
+
+      • Word search (16 words) with answer key
+
+      • 8 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - new years eve kids
+    - nye countdown bags
+    - kids new year party
+    - countdown bag tags
+    - year in review kids
+    - nye kids activities
+    - new years printable
+    - noon year eve
+    - family new years
+    - kids time capsule
+    - nye word search
+    - nye party kids
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 4.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/new-years-eve-kids-pack-us-letter.pdf
+      name: new-years-eve-kids-pack-us-letter.pdf
+      file_sha256: f6055d567959dc59f13d34fe46f61105fba05eb618ccd5760c16ef49725611cc
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/new-years-eve-kids-pack-a4.pdf
+      name: new-years-eve-kids-pack-a4.pdf
+      file_sha256: 3522225b2cb3f73395ba6933f47fd5fd49181a34ee8145e53b3031b23d357bf7
+    images:
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/images/new-years-eve-kids-pack-01-hero.jpg
+      alt_text: New Year's Eve for Kids printable, cover and sample pages fanned out on a navy background
+      file_sha256: 4787def2b3dd0ec6d7d2fffcc9956684a9b32f1e42dcd44e73650cbb261c0ff9
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/images/new-years-eve-kids-pack-02-whats-inside.jpg
+      alt_text: 'What you get with the New Year''s Eve for Kids printable: page previews and a checklist of contents'
+      file_sha256: 61ae7976f729d17136f9f6f9743fb2f005064aed8f4b49cf100534b2284ba679
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/images/new-years-eve-kids-pack-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the New Year's Eve for Kids printable
+      file_sha256: 60af2cd5b4200665d877ca19830ab8d51a031475193b873703ec4d964603f1a5
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/images/new-years-eve-kids-pack-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: b42ec642107cf568b77eb10a03f0132aa275e33f56e0c5dd61ae52ee4f23ac5d
+    - path: assets/digital/2026-11-15-seasonal/new-years-eve-kids-pack/images/new-years-eve-kids-pack-05-details.jpg
+      alt_text: 'Details for the New Year''s Eve for Kids printable: page count, two PDF sizes, instant download'
+      file_sha256: 9ace06c7462c7ce2edd3cbcadfed09eb3ac4fecd8f0b7835013f5315c867996c
+  payload_sha256: d41660c40ac069e0ee39e20b8e74d76e4bcfa5b85561a746f8fed57fe0a825bc
+- op: etsy_update_listing
+  niche: seasonal-party-games
+  payload:
+    listing_id: 4601808366
+    expect_state: active
+    title: Christmas Party Games Bundle Printable, 7 Family Games, Trivia, Bingo, Charades, Left Right Game
+    description: 'Seven Christmas party games in one download: enough for the class party, the office lunch, Christmas Eve
+      and the long afternoon after dinner. Two bonus games are only in the bundle.
+
+
+      WHAT YOU GET
+
+      • Christmas Trivia: 40 questions, answer key and cards
+
+      • The Left Right gift-passing story game
+
+      • Christmas Bingo: 30 picture cards
+
+      • Christmas Charades: 72 cards
+
+      • White Elephant gift exchange kit
+
+      • Bundle bonus: Which Would You Choose? 32 cards
+
+      • Bundle bonus: indoor scavenger hunt with 12 rhyming clues
+
+      • 61 pages in each size
+
+      • 2 PDF files: US Letter (8.5 x 11 in) and A4
+
+
+      HOW IT WORKS
+
+      1. Buy and download the PDFs from your Etsy account (Purchases and reviews), or from the email Etsy sends you.
+
+      2. Print at home, at the library or at a copy shop. Regular paper works; cardstock is nicer for cards.
+
+      3. Cut where there are dashed lines and play. Print as many copies as your own party needs.
+
+
+      PLEASE NOTE
+
+      This is a digital download. Nothing will be shipped. Colors may vary slightly by printer. For personal, classroom and
+      single-office use; please don''t resell or share the files. Designed by the seller with AI-assisted tools (code-generated
+      layout); see shop policies.'
+    tags:
+    - christmas games
+    - xmas game bundle
+    - christmas party game
+    - family xmas game
+    - christmas bingo
+    - christmas trivia
+    - christmas charades
+    - left right game
+    - white elephant game
+    - family game night
+    - scavenger hunt clues
+    - office party games
+    - instant download
+    ai_assisted: true
+    offer_type: digital
+    price_usd: 14.99
+    cost_snapshot: data/costs/2026-11-24-products.json
+    cost_key: digital
+    files:
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/christmas-games-bundle-us-letter.pdf
+      name: christmas-games-bundle-us-letter.pdf
+      file_sha256: 2ca446fe28b9898a9e04c4888debd48b609d71e2be47e750adafe0f75c0dcd74
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/christmas-games-bundle-a4.pdf
+      name: christmas-games-bundle-a4.pdf
+      file_sha256: 094d583be0c2e00c04825e8aa5de3e2377a043206a206d21e7ac5d9c8c4f25a6
+    images:
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/images/christmas-games-bundle-01-hero.jpg
+      alt_text: Christmas Games Bundle printable, cover and sample pages fanned out on a deep green background
+      file_sha256: 12a65e386370985dcc5fb215c5ce1345b1368519f3d917c70c3ae54316c21720
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/images/christmas-games-bundle-02-whats-inside.jpg
+      alt_text: 'What you get with the Christmas Games Bundle printable: page previews and a checklist of contents'
+      file_sha256: 9b27f28770afbe7348309fcd5cb2fa41c02a0b6c96c55c873646491fab6acb34
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/images/christmas-games-bundle-03-close-up.jpg
+      alt_text: Close-up of two sample pages from the Christmas Games Bundle printable
+      file_sha256: 7877a4f594ccc375aae36a3115d63273621183a1a36203dbd3cef3e1e57b82cf
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/images/christmas-games-bundle-04-how-it-works.jpg
+      alt_text: 'How it works: download the PDFs, print on Letter or A4, then play'
+      file_sha256: 0be7c430370280644e27acfae7c1e3dddd3dc377f3f66e92babdbcdc4e1e6ea6
+    - path: assets/digital/2026-11-15-seasonal/christmas-games-bundle/images/christmas-games-bundle-05-details.jpg
+      alt_text: 'Details for the Christmas Games Bundle printable: page count, two PDF sizes, instant download'
+      file_sha256: c3d5b790e090bc516434071c74f9ac4a265227d33db7e8bef7e165a0db3231d2
+  payload_sha256: 3932fd0fcb2530b112a9060adc9a5c73ddffb07ee3a8672f5bf7c161d249a299
