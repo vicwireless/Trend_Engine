@@ -5,5 +5,5 @@ Postiz,,,active (owner-reported 2026-10-31),,owner,Pin scheduling. Plan and pric
 SerpApi,Starter,,approved 2026-10-24,,owner decision 2026-10-24,Approved for one month. Purchase date and amount not recorded yet
 Claude,,,active,,owner,Engine runtime. Plan and price not recorded yet
 eRank,,,active,,owner,Trend Buzz pastes 2026-10-26. Plan (free or paid) not recorded yet
-Share and Save,Share and Save,0.00,active (Aimee journal 2026-10-31; not rechecked since),,Aimee journal 2026-10-31,"No cost; earns a 6.5% bill credit on sales through the shop link until 2027-01-04, then 4%. Pins do not use the Share and Save link yet (owner decision 2026-10-31 to swap when links are swapped)"
+Share and Save,Share and Save,0.00,active (owner confirmed via listing Share link 2026-11-26),,Aimee journal 2026-10-31,"No cost; earns a 6.5% bill credit on sales through the shop link until 2027-01-04, then 4%. Pins do not use the Share and Save link yet (owner decision 2026-10-31 to swap when links are swapped)"
 Offsite Ads,,,not opted in (opted out 2026-10-21),,Aimee journal 2026-10-31; config/engine.yaml offsite_ads_opted_in: false,Becomes mandatory at $10K trailing sales (docs/gates.md)
