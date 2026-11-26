@@ -189,3 +189,63 @@ def test_metrics_workflow_saves_rotated_token():
     assert last["if"] == "always()" and "gh secret set ETSY_REFRESH_TOKEN" in last["run"]
     collect = next(s for s in steps if s.get("name", "").startswith("Collect"))
     assert "ETSY_ROTATED_REFRESH_FILE" in collect["env"]
+
+
+# --- Day-21 / Day-35 gate tables and ledger reconciliations (2026-11-26) ---
+
+def test_reconciled_pre_write_failure_counts_as_clean(tmp_path):
+    led = tmp_path / "ledger"
+    ledger(led, [{"idempotency_key": "a+0", "status": "ok"}, {"idempotency_key": "b+0", "status": "failed"}])
+    assert W.ledger_status(led, reconciled={})["clean"] is False
+    inc = tmp_path / "incident.md"
+    inc.write_text("nothing written")
+    rec = tmp_path / "rec.csv"
+    rec.write_text(f"idempotency_key,outcome,incident,reconciled_on,notes\nb+0,nothing_written,{inc},2026-11-26,x\n")
+    st = W.ledger_status(led, reconciled=W.reconciliations(rec))
+    assert st["clean"] is True and st["reconciled"] == ["b+0"] and st["not_ok"] == []
+
+
+def test_reconciliation_needs_incident_file_and_nothing_written(tmp_path):
+    rec = tmp_path / "rec.csv"
+    rec.write_text("idempotency_key,outcome,incident,reconciled_on,notes\n"
+                   f"b+0,nothing_written,{tmp_path / 'missing.md'},2026-11-26,x\n"
+                   f"c+0,partial,{rec},2026-11-26,x\n")
+    assert W.reconciliations(rec) == {}
+
+
+def test_day21_gate_checks(tmp_path):
+    pins = tmp_path / "pins.csv"
+    pins.write_text("date,pin,url\n" + "".join(f"2026-11-{d:02d},p{d},u\n" for d in range(1, 30)))
+    subs = tmp_path / "subs.csv"
+    subs.write_text("vendor,plan,monthly_usd,status,started,source,notes\n"
+                    "Etsy Ads,,,active,2026-11-06,x,\nShare and Save,,0.00,active,,x,\n")
+    stats = tmp_path / "stats"
+    stats.mkdir()
+    spend = tmp_path / "spend"
+    spend.mkdir()
+    (spend / "etsy_ledger.csv").write_text("date,amount_usd\n2026-11-29,1.00\n")
+    tl = tmp_path / "time.csv"
+    tl.write_text("date,session,minutes,notes\n2026-11-28,s,30,\n")
+    g = W.day21_gate(dt.date(2026, 11, 30), pins, subs, stats, spend, tl, {"etsy_ads_daily_cap_usd": 3})
+    c = g["checks"]
+    assert c["pins_logged"]["status"] == "MET"
+    assert c["etsy_ads"]["status"] == "MET"
+    assert c["shop_stats_export"]["status"] == "NOT MET"
+    assert c["share_save_offsite_recorded"]["status"] == "NOT MET"  # Offsite Ads row missing
+    assert c["spend_and_time_logs"]["status"] == "MET"
+    (stats / "2026-11-30-visits.csv").write_text("source,visits\n")
+    with subs.open("a") as f:
+        f.write("Offsite Ads,,,not opted in,,x,\n")
+    g = W.day21_gate(dt.date(2026, 11, 30), pins, subs, stats, spend, tl, {"etsy_ads_daily_cap_usd": 3})
+    assert g["overall"] == "MET"
+
+
+def test_day35_gate_checks(tmp_path):
+    costs, samples, led = tmp_path / "costs", tmp_path / "samples", tmp_path / "ledger"
+    costs.mkdir(), samples.mkdir()
+    ledger(led, [{"idempotency_key": "a+0", "op": "printify_publish", "status": "ok"}])
+    (costs / "2026-11-20-printify-catalog.json").write_text("{}")
+    for i in range(2):
+        (samples / f"s{i}.yaml").write_text("result: passed\n")
+    assert W.day35_gate(dt.date(2026, 11, 27), costs, samples, led)["overall"] == "MET"
+    assert W.day35_gate(dt.date(2026, 12, 10), costs, samples, led)["checks"]["printify_cost_snapshot"]["status"] == "NOT MET"

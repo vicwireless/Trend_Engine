@@ -1,0 +1,2 @@
+idempotency_key,outcome,incident,reconciled_on,notes
+2026-11-15-seasonal-verify+0,nothing_written,reports/incidents/2026-11-16-etsy-write-token-revoked.md,2026-11-26,"Failed at Etsy token exchange (invalid_grant: refresh_token is revoked) before any marketplace call. Ledger line left as is; listing re-released under manifest 2026-11-16-seasonal-games (PR #35), so this key is never re-run."
