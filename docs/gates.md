@@ -42,6 +42,12 @@ signal, and they do not address the binding constraint, which is traffic. The re
 criterion: the POD ones move to Day 35 and the personalized order is deferred, so nothing is silently skipped.
 Alternative the owner can choose instead: keep Day 21 as written and order 2 samples by 3 Nov.
 
+### Day 35 outcome (owner decision 2026-11-26)
+
+Owner instruction, verbatim: "hold POD". The Day-35 POD criteria were not met (no Printify snapshot, no
+samples, no POD listings). Per the "if missed" column: keep digital-only and re-test POD after the first 10
+digital orders. The weekly report keeps showing the Day-35 table as NOT MET until then.
+
 ### Ledger reconciliations (2026-11-26)
 
 "Executor ledger clean" means the last line for every idempotency key is `ok`. Ledger lines are never edited.
