@@ -195,10 +195,9 @@ def day21_gate(today: dt.date, pins_log: Path = PINS_LOG, subs: Path = SUBSCRIPT
     ads = sub.get("etsy ads", {})
     active = (ads.get("status") or "").lower().startswith("active")
     started = (ads.get("started") or "").strip()
-    cfg = config or {}
-    cap_ok = cfg.get("etsy_ads_daily_cap_usd", g["max_ads_daily_usd"]) <= g["max_ads_daily_usd"] and \
-        cfg.get("etsy_ads_max_listings", g["max_ads_listings"]) <= g["max_ads_listings"]
-    if active and started and started <= g["ads_window"][1] and cap_ok:
+    # Judged on the 5-9 Nov window only; later budget or listing-count changes (config) do not
+    # rewrite this historical check.
+    if active and started and started <= g["ads_window"][1]:
         st = "MET"
     elif not ads:
         st = "UNVERIFIED"

@@ -37,6 +37,9 @@ def repo(tmp_path, monkeypatch):
     config = yaml.safe_load((REPO / "config" / "engine.yaml").read_text())
     config["etsy"]["ai_disclosure_property"] = {"property_id": 900001, "value_ids": [1], "values": ["Yes"]}
     config["payhip"]["api_base_url"] = PAYHIP
+    # Pin the money ceilings the tests were written against, so owner changes to the live
+    # config (e.g. the 2026-11-26 holiday Ads budget) do not change test meaning.
+    config.update(etsy_ads_daily_cap_usd=3, monthly_spend_commitment_cap_usd=100, etsy_ads_max_listings=10)
     (root / "config" / "engine.yaml").write_text(yaml.safe_dump(config))
 
     costs = root / "data" / "costs"
