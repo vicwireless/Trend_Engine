@@ -20,9 +20,21 @@ LEDGER = Path("data/ledger")
 PINS_LOG = Path("data/marketing/pins_posted.csv")
 REPORTS = Path("reports/weekly")
 TIME_LOG = Path("data/time_log.csv")
+RECONCILED = Path("data/ledger_reconciliations.csv")
+SUBSCRIPTIONS = Path("data/spend/subscriptions.csv")
+STATS_EXPORTS = Path("data/stats_exports")
+SAMPLES = Path("data/samples")
+COSTS = Path("data/costs")
+SPEND_DIR = Path("data/spend")
 OWNER_CAP_MIN_PER_WEEK = 90  # config/engine.yaml owner_hours_cap_per_week: 1.5
 
 DAY7 = {"deadline": "2026-10-30", "min_live": 20}
+# docs/gates.md, re-scoped Day 21 (owner merge of PR #22) and Day 35 (POD, moved from Day 21).
+DAY21 = {"deadline": "2026-11-13", "min_pins": 28, "min_pins_7d": 3, "ads_window": ("2026-11-05", "2026-11-09"),
+         "max_ads_listings": 10, "max_ads_daily_usd": 3}
+DAY35 = {"deadline": "2026-11-27", "max_cost_age_days": 14, "min_samples_passed": 2}
+# A reconciliation may only excuse a failure whose true outcome is documented as "nothing written".
+RECONCILED_OUTCOMES = {"nothing_written"}
 
 CANNOT = [
     "Daily views or visits as Etsy reports them (only lifetime `views` per listing; daily = snapshot delta)",
@@ -74,17 +86,34 @@ def _num(v, cast=float):
         return 0
 
 
-def ledger_status(ledger: Path = LEDGER) -> dict:
-    """Clean = the last line for every idempotency key is ok. A failure that was reconciled has a
-    later ok line for the same key."""
+def reconciliations(path: Path = RECONCILED) -> dict[str, dict]:
+    """Documented reconciliations of failed ledger keys (the ledger itself is never edited).
+    Only rows whose outcome is in RECONCILED_OUTCOMES and whose incident file exists count."""
+    if not path.exists():
+        return {}
+    out = {}
+    for r in load_rows(path):
+        inc = (r.get("incident") or "").strip()
+        if r.get("outcome") in RECONCILED_OUTCOMES and inc and Path(inc).is_file():
+            out[r["idempotency_key"]] = r
+    return out
+
+
+def ledger_status(ledger: Path = LEDGER, reconciled: dict[str, dict] | None = None) -> dict:
+    """Clean = the last line for every idempotency key is ok, or the key has a documented
+    reconciliation (data/ledger_reconciliations.csv) showing nothing was written. A failure that
+    was retried successfully has a later ok line for the same key."""
+    reconciled = reconciliations() if reconciled is None else reconciled
     last: dict[str, dict] = {}
     for f in sorted(ledger.glob("*.jsonl")):
         for line in f.read_text().splitlines():
             if line.strip():
                 d = json.loads(line)
                 last[d["idempotency_key"]] = d
-    bad = [k for k, d in last.items() if d.get("status") != "ok"]
-    return {"ops": len(last), "not_ok": bad, "clean": not bad and bool(last)}
+    not_ok = [k for k, d in last.items() if d.get("status") != "ok"]
+    bad = [k for k in not_ok if k not in reconciled]
+    return {"ops": len(last), "not_ok": bad, "reconciled": [k for k in not_ok if k in reconciled],
+            "clean": not bad and bool(last)}
 
 
 def pins_status(log: Path = PINS_LOG, today: dt.date | None = None) -> dict:
@@ -114,8 +143,9 @@ def day7_gate(snaps: list[Path], today: dt.date, ledger: Path = LEDGER, pins_log
             "detail": f"{len(disclosed)}/{len(active)} active descriptions carry an accepted disclosure sentence; editor AI field not API-visible"},
         "ledger_clean": {
             "status": "MET" if led["clean"] and not open_ledger_prs else "NOT MET",
-            "detail": f"{led['ops']} ops, last status not ok: {led['not_ok'][:5] or 'none'}; open ledger PRs: "
-                      f"{'not checked' if open_ledger_prs is None else open_ledger_prs}"},
+            "detail": f"{led['ops']} ops, last status not ok: {led['not_ok'][:5] or 'none'}"
+                      + (f"; reconciled, nothing written: {led['reconciled'][:5]}" if led.get("reconciled") else "")
+                      + f"; open ledger PRs: {'not checked' if open_ledger_prs is None else open_ledger_prs}"},
         "pins_posting": pins,
     }
     states = {c["status"] for c in checks.values()}
@@ -124,9 +154,119 @@ def day7_gate(snaps: list[Path], today: dt.date, ledger: Path = LEDGER, pins_log
             "snapshot": snaps[-1].stem if snaps else None}
 
 
+def _overall(checks: dict) -> str:
+    states = {c["status"] for c in checks.values()}
+    return "NOT MET" if "NOT MET" in states else ("MET (pending owner confirmation)" if "UNVERIFIED" in states else "MET")
+
+
+def _subs(path: Path) -> dict[str, dict]:
+    return {(r.get("vendor") or "").strip().lower(): r for r in load_rows(path)} if path.exists() else {}
+
+
+def _files(d: Path, pattern: str = "*") -> list[Path]:
+    return sorted(p for p in d.glob(pattern) if p.is_file() and not p.name.startswith(".")) if d.exists() else []
+
+
+def _latest_date(paths: list[Path]) -> str | None:
+    dates = [r.get("date", "") for p in paths if p.exists() for r in load_rows(p) if r.get("date")]
+    return max(dates) if dates else None
+
+
+def day21_gate(today: dt.date, pins_log: Path = PINS_LOG, subs: Path = SUBSCRIPTIONS,
+               stats: Path = STATS_EXPORTS, spend_dir: Path = SPEND_DIR, time_log: Path = TIME_LOG,
+               config: dict | None = None) -> dict:
+    """Re-scoped Day-21 gate (docs/gates.md). Evaluated as of `today` from repo files only;
+    the deadline has passed, so each detail also says what was true at the deadline where the
+    repo can show it."""
+    g = DAY21
+    week_ago = (today - dt.timedelta(days=7)).isoformat()
+    rows = load_rows(pins_log) if pins_log.exists() else []
+    dates = sorted(r.get("date", "") for r in rows if r.get("date"))
+    recent = [d for d in dates if d >= week_ago]
+    by_deadline = [d for d in dates if d[:10] <= g["deadline"]]
+    pins_ok = len(rows) >= g["min_pins"] and len(recent) >= g["min_pins_7d"]
+    checks = {
+        "pins_logged": {"status": "MET" if pins_ok else "NOT MET",
+                        "detail": f"{len(rows)} logged (need {g['min_pins']}), {len(recent)} in the last 7 days "
+                                  f"(need {g['min_pins_7d']}), last {dates[-1] if dates else 'never'}; "
+                                  f"{len(by_deadline)} dated on or before {g['deadline']}"},
+    }
+    sub = _subs(subs)
+    ads = sub.get("etsy ads", {})
+    active = (ads.get("status") or "").lower().startswith("active")
+    started = (ads.get("started") or "").strip()
+    cfg = config or {}
+    cap_ok = cfg.get("etsy_ads_daily_cap_usd", g["max_ads_daily_usd"]) <= g["max_ads_daily_usd"] and \
+        cfg.get("etsy_ads_max_listings", g["max_ads_listings"]) <= g["max_ads_listings"]
+    if active and started and started <= g["ads_window"][1] and cap_ok:
+        st = "MET"
+    elif not ads:
+        st = "UNVERIFIED"
+    else:
+        st = "NOT MET"
+    checks["etsy_ads"] = {"status": st, "detail": f"subscriptions row: status '{ads.get('status') or 'missing'}', "
+                          f"started {started or 'blank'} (window {g['ads_window'][0]} to {g['ads_window'][1]}); "
+                          "live Ads dashboard is not API-visible"}
+    ex = _files(stats)
+    checks["shop_stats_export"] = {"status": "MET" if ex else "NOT MET",
+                                   "detail": f"{len(ex)} file(s) in `{stats}`" + (f", newest {ex[-1].name}" if ex else "")}
+    missing = [v for v in ("share and save", "offsite ads") if not (sub.get(v, {}).get("status") or "").strip()]
+    checks["share_save_offsite_recorded"] = {
+        "status": "MET" if not missing else "NOT MET",
+        "detail": "; ".join(f"{v}: {sub[v.lower()]['status']}" for v in ("Share and Save", "Offsite Ads")
+                            if v.lower() in sub) or "not recorded in subscriptions.csv"}
+    spend_last = _latest_date([spend_dir / "etsy_ledger.csv", spend_dir / "manual.csv"])
+    time_last = _latest_date([time_log])
+    fresh = lambda d: bool(d) and d > week_ago
+    checks["spend_and_time_logs"] = {
+        "status": "MET" if fresh(spend_last) and fresh(time_last) else "NOT MET",
+        "detail": f"spend last {spend_last or 'never'}, time last {time_last or 'never'} (need both after {week_ago})"}
+    return {"gate": "Day 21", "deadline": g["deadline"], "overall": _overall(checks), "checks": checks}
+
+
+def day35_gate(today: dt.date, costs: Path = COSTS, samples: Path = SAMPLES, ledger: Path = LEDGER) -> dict:
+    """Day-35 POD gate (docs/gates.md). A Printify snapshot is a data/costs/*printify*.json file; a
+    passed sample is a data/samples/ file containing `result: passed`; a live POD listing is an ok
+    `printify_publish` line in the ledger."""
+    g = DAY35
+    snaps = _files(costs, "*printify*.json")
+    age = (today - dt.date.fromisoformat(snaps[-1].name[:10])).days if snaps else None
+    passed = [p for p in _files(samples) if "result: passed" in p.read_text(errors="ignore")]
+    pod = 0
+    for f in sorted(ledger.glob("*.jsonl")):
+        for line in f.read_text().splitlines():
+            if line.strip():
+                d = json.loads(line)
+                pod += d.get("op") == "printify_publish" and d.get("status") == "ok"
+    checks = {
+        "printify_cost_snapshot": {"status": "MET" if age is not None and age <= g["max_cost_age_days"] else "NOT MET",
+                                   "detail": f"newest {snaps[-1].name}, {age} days old" if snaps
+                                   else f"no Printify snapshot in `{costs}` (channel-fee and product files are not a Printify catalog pull)"},
+        "samples_passed": {"status": "MET" if len(passed) >= g["min_samples_passed"] else "NOT MET",
+                           "detail": f"{len(passed)} passed in `{samples}` (need {g['min_samples_passed']})"},
+        "pod_listings_live": {"status": "MET" if pod else "NOT MET", "detail": f"{pod} ok printify_publish op(s) in the ledger"},
+    }
+    return {"gate": "Day 35", "deadline": g["deadline"], "overall": _overall(checks), "checks": checks}
+
+
+def gate_lines(gate: dict) -> list[str]:
+    out = [f"## Gate status: {gate['gate']} (deadline {gate['deadline']}): **{gate['overall']}**", "",
+           "| Check | Status | Detail |", "|---|---|---|"]
+    out += [f"| {n.replace('_', ' ')} | {c['status']} | {c['detail']} |" for n, c in gate["checks"].items()]
+    return out
+
+
+def _engine_config() -> dict:
+    p = Path("config/engine.yaml")
+    if not p.exists():
+        return {}
+    import yaml
+    return yaml.safe_load(p.read_text()) or {}
+
+
 def summarize(day: dt.date, metrics: Path = METRICS, ledger: Path = LEDGER, pins_log: Path = PINS_LOG,
               open_ledger_prs: int | None = None, spend_dir: Path = SP.SPEND_DIR,
-              time_log: Path = TIME_LOG) -> str:
+              time_log: Path = TIME_LOG, with_later_gates: bool = True) -> str:
     snaps = snapshots(metrics)
     if not snaps:
         raise SystemExit("no snapshots in data/metrics; run python -m src.metrics.collect first")
@@ -152,6 +292,9 @@ def summarize(day: dt.date, metrics: Path = METRICS, ledger: Path = LEDGER, pins
     shop_json = last.with_suffix(".shop.json")
     shop = json.loads(shop_json.read_text()) if shop_json.exists() else {}
     gate = day7_gate(snaps, day, ledger, pins_log, open_ledger_prs)
+    later = day.isoformat() > DAY7["deadline"] and with_later_gates
+    day21 = day21_gate(day, pins_log, spend_dir=spend_dir, time_log=time_log, config=_engine_config()) if later else None
+    day35 = day35_gate(day, ledger=ledger) if later else None
 
     def fmt(v, money=False):
         if v is None:
@@ -182,13 +325,12 @@ def summarize(day: dt.date, metrics: Path = METRICS, ledger: Path = LEDGER, pins
         "canceled and fully refunded receipts are excluded. Listings are never judged on views "
         "alone (CLAUDE.md rule 7, docs/redefine.md).",
         "",
-        f"## Gate status: {gate['gate']} (deadline {gate['deadline']}): **{gate['overall']}**",
-        "",
-        "| Check | Status | Detail |",
-        "|---|---|---|",
     ]
-    for name, c in gate["checks"].items():
-        out.append(f"| {name.replace('_', ' ')} | {c['status']} | {c['detail']} |")
+    out += gate_lines(gate)
+    if day21 is not None:
+        out += [""] + gate_lines(day21)
+    if day35 is not None:
+        out += [""] + gate_lines(day35)
     out += [
         "",
         "## Per listing",
