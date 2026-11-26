@@ -1,3 +1,4 @@
+# Retry 2026-11-26: first run (fe6b64e) stopped at the Etsy token refresh, nothing written; owner replaced ETSY_WRITE_REFRESH_TOKEN ("token redone").
 manifest_id: 2026-11-16-seasonal-games
 created_at: '2026-11-26T19:18:09Z'
 created_by: claude
