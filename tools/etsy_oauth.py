@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """One-time Etsy sign-in. Run on your own computer; nothing is sent anywhere but Etsy.
 
-    python tools/etsy_oauth.py --mode read     # engine: shops_r listings_r transactions_r
-    python tools/etsy_oauth.py --mode write    # executor: shops_r listings_r listings_w
+    python tools/etsy_oauth.py --mode read     # token for the metrics job (ETSY_REFRESH_TOKEN)
+    python tools/etsy_oauth.py --mode write    # token for the executor (ETSY_WRITE_REFRESH_TOKEN)
+
+Both modes ask Etsy for the same scopes (shops_r listings_r listings_w transactions_r). Etsy keeps one scope
+set per app and user, so a sign-in with fewer scopes would strip them from the other token too.
 
 Needs ETSY_KEYSTRING and ETSY_SHARED_SECRET in the environment (or a .env file) and a callback URL
 registered on your Etsy app that exactly matches --redirect-uri. The page the browser lands on after
