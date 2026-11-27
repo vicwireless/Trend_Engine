@@ -82,10 +82,13 @@ def access_token(token_var: str, refresh_var: str) -> str | None:
 
 # --- One-time sign-in (tools/etsy_oauth.py). Authorization code flow with PKCE (S256). ---
 AUTHORIZE_URL = "https://www.etsy.com/oauth/connect"
-SCOPES = {
-    "read": ["shops_r", "listings_r", "transactions_r"],
-    "write": ["shops_r", "listings_r", "listings_w"],
-}
+# Etsy keeps ONE set of scopes per app and user: a new sign-in replaces the scopes of every token already
+# issued for that pair. Seen 2026-11-26/27: after the owner signed in again in "write" mode (no
+# transactions_r), the existing READ token still refreshed but shops/{id}/receipts answered 403, and the
+# daily metrics job failed. So both modes ask for the same union, and it no longer matters which was
+# minted last. Read/write separation is kept in code: the metrics client refuses any method but GET.
+ALL_SCOPES = ["shops_r", "listings_r", "listings_w", "transactions_r"]
+SCOPES = {"read": ALL_SCOPES, "write": ALL_SCOPES}
 
 
 def new_pkce() -> tuple[str, str]:

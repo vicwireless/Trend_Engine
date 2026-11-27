@@ -107,9 +107,10 @@ def test_authorize_url_has_pkce_and_exact_scopes():
     verifier, challenge = ea.new_pkce()
     assert 43 <= len(verifier) <= 128 and "=" not in challenge
     q = parse_qs(urlparse(ea.authorize_url("key", "https://localhost/callback", ea.SCOPES["read"], "st", challenge)).query)
-    assert q["scope"] == ["shops_r listings_r transactions_r"] and q["code_challenge_method"] == ["S256"]
+    assert q["scope"] == ["shops_r listings_r listings_w transactions_r"] and q["code_challenge_method"] == ["S256"]
     assert q["client_id"] == ["key"] and q["state"] == ["st"]
-    assert "listings_w" not in ea.SCOPES["read"]
+    # Etsy keeps one scope set per app and user, so both modes must ask for the same union (incident 2026-11-27).
+    assert ea.SCOPES["read"] == ea.SCOPES["write"] and "transactions_r" in ea.SCOPES["write"]
 
 
 def test_authorize_url_requires_https():

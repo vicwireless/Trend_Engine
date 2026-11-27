@@ -19,7 +19,7 @@ Run locally: `python -m src.metrics.collect && python -m src.metrics.weekly`.
 |---|---|---|
 | Per-listing views | Lifetime total only | `views` on `shops/{id}/listings` and `listings/{id}`. Daily = delta between snapshots, so day 1 has no daily number |
 | Per-listing favorites | Lifetime total only | `num_favorers` |
-| Orders, units, revenue | Yes | `shops/{id}/receipts` (+ transactions). Needs `transactions_r`, which the READ token has and the write token does not |
+| Orders, units, revenue | Yes | `shops/{id}/receipts` (+ transactions). Needs `transactions_r`. Since 2026-11-27 both tokens are minted with the same scopes, because Etsy keeps one scope set per app and user (incident 2026-11-27) |
 | Shop totals | Yes | `shops/{id}`: active/digital listing count, sold count, favorers, reviews |
 | Fees and payouts | Shop level | `shops/{id}/payment-account/ledger-entries`: fee and credit entries go to `data/spend/etsy_ledger.csv` daily (docs/spend-and-time.md) |
 | Stats endpoints | No | `shops/{id}/stats`, `listings/{id}/stats` return 404 |
